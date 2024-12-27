@@ -6,7 +6,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="top-0 fixed left-0 right-0 bg-black/10 backdrop-filter  backdrop-blur-md text-white py-4 z-[999]">
-      <div className="mx-auto xl:max-w-[1280px] w-full flex justify-between items-center px-4">
+      <div className=" maxWidthForSections w-full flex justify-between items-center px-4">
         {/* Logo */}
         <div>
           <Image
@@ -19,37 +19,37 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="flex items-center gap-x-6 text-lg">
           <li className='nav-item' >
-            <Link href="#home" scroll={false}>
+            <Link href="#home" >
               Home
             </Link>
           </li>
           <li className='nav-item' >
-            <Link href="#about" scroll={false}>
+            <Link href="#about" >
               About
             </Link>
           </li>
           <li className='nav-item' >
-            <Link href="#events" scroll={false}>
+            <Link href="#events" >
               Events
             </Link>
           </li>
           <li className='nav-item' >
-            <Link href="#timeline" scroll={false}>
+            <Link href="#timeline" >
               Timeline
             </Link>
           </li>
           <li className='nav-item' >
-            <Link href="#team" scroll={false}>
+            <Link href="#team" >
               Team
             </Link>
           </li>
           <li className='nav-item' >
-            <Link href="#faq" scroll={false}>
+            <Link href="#faq" >
               FAQ
             </Link>
           </li>
           <li className='nav-item' >
-            <Link href="#contact" scroll={false}>
+            <Link href="#contact" >
               Contact
             </Link>
           </li>

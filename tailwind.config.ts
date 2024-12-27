@@ -11,11 +11,16 @@ export default {
       colors: {
         // background: "var(--background)",
         // foreground: "var(--foreground)",
-        darkBlue: "00092B",
-        softPurple:"48279A",
+        darkBlue: "#00092B",
+        softPurple:"#48279A",
       },
       backgroundImage: {
-        'radial-darkBlue-to-purple': 'radial-gradient(circle, #48279A, #00092B)',
+        'radial-darkBlue-to-purple': 'radial-gradient(circle, #48279A 0%, #00092B 40%)',
+        'aboutBg':"url('/aboutusBg.png')",
+        'aboutGradient':'linear-gradient(10deg, rgba(72, 39, 154, 0.6) 0%, #1A0F52 36%, #00092B 100%)'
+      },
+      boxShadow: {
+        'shadowAbout': '4px 4px 75px 17px rgba(72, 39, 154, 1)', // Using the specified color and values
       },
       animation: {
         'spin-slow': 'spin 10s linear infinite', // Spins in 10 seconds clockwise

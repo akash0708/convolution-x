@@ -14,7 +14,7 @@ import ConvoIcon from '@/assets/images/HeroSectionImages/ConvoSvg.svg';
 
 const HomeHero = () => {
   return (
-    <div className=" h-[100svh] relative bg-radial-darkBlue-to-purple overflow-hidden flex justify-center items-center ">
+    <div className=" min-h-[100svh] relative bg-radial-darkBlue-to-purple flex justify-center items-center ">
       {/* --------------------clouds------------- */}
       <div className="">
         {/* --------------left Clouds------------ */}
