@@ -20,12 +20,43 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
+html{
+  scroll-behavior: smooth
+}
+
 @layer utilities {
   .nav-item {
-    transition: all ease-in-out 300ms;
-    &:hover {
+    @apply transition-all ease-in-out duration-300;
+  }
+  .nav-item:hover {
       transform: scale(1.2);
       color: #ec4899; /* This is Tailwind's pink-500 */
-    }
+  }
+  .maxWidthForSections{
+    @apply xl:max-w-[1280px] mx-auto
+  }
+  .iconBoxes{
+    @apply bg-white/65 backdrop-blur-sm rounded-md p-2 cursor-pointer transition-all text-darkBlue
+  }
+  .iconBoxes:hover{
+    @apply bg-white/90 
+  }
+  .iconsFooter{
+    @apply size-7 
+  }
+  .listFooter{
+    @apply grid grid-cols-[50px_1fr] gap-6
+  }
+  .listHead{
+    @apply text-white font-medium text-lg
+  }
+  .listPara{
+    @apply text-white/80 font-thin
+  }
+  .eventLinks{
+    @apply text-white/90 cursor-pointer text-lg transition-all
+  }
+  .eventLinks:hover{
+    @apply text-pink-400 scale-[1.05]
   }
 }
