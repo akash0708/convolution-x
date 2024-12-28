@@ -32,7 +32,7 @@ const PreFooterImage = () => {
         <Image
           src={deepBluePlanet}
           alt="Asteroid"
-          className="absolute left-1/2 z-30 top-10 animate-spin-slow opacity-80  w-24 object-cover"
+          className="absolute left-1/2 z-30 top-10 animate-float opacity-80  w-24 object-cover"
         ></Image>
       </div>
       {/* ------------------red blue planet------------- */}
