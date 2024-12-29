@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import whiteStar from "@/assets/images/Footer/stars white.png";
@@ -6,7 +7,35 @@ import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.p
 import yellowRocket from "@/assets/images/Footer/rocket4.png";
 import pinkrocket from '@/assets/images/Team/rocket.png'
 
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+
+import { Tilt } from 'react-tilt'
+
+interface TiltOptions {
+  reverse: boolean;          // Reverse the tilt direction
+  max: number;               // Max tilt rotation (degrees)
+  perspective: number;       // Transform perspective
+  scale: number;             // Scale effect
+  speed: number;             // Speed of enter/exit transition
+  transition: boolean;       // Enable/disable transition
+  axis: "X" | "Y" | null;    // Disabled axis, can be "X", "Y", or null
+  reset: boolean;            // Reset tilt effect on exit
+  easing: string;            // Easing function
+}
+
+const defaultOptions: TiltOptions = {
+  reverse: false,
+  max: 35,
+  perspective: 1000,
+  scale: 1.1,
+  speed: 1000,
+  transition: true,
+  axis: null,
+  reset: true,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+};
+
 
 type TeamMember = {
   name: string;
@@ -28,6 +57,14 @@ const teamMembers: TeamMember[] = [
     instagram:
       "https://www.instagram.com/ritamkundu.__/profilecard/?igsh=MTJxZ2NibmMxcW1pNw==",
     facebook: "",
+  },
+  {
+    name: "Siddhanta Ghosh",
+    post: "Treasurer",
+    image: "https://res.cloudinary.com/dybvod0l2/image/upload/v1735440589/RI2_9702_-_Siddhanta_Ghosh_kun6bu.jpg",
+    linkedin: "https://www.linkedin.com/in/siddhanta-ghosh",
+    instagram: "https://www.instagram.com/ghosh_siddhanta2k3/",
+    facebook: "https://www.facebook.com/profile.php?id=100089382764364&mibextid=ZbWKwL",
   },
 
   {
@@ -194,7 +231,7 @@ const Team: React.FC = () => {
               */}
 
               {/* ----------this for bigger screens------------- */}
-            <div
+            <Tilt options={defaultOptions}
               className=" relative w-[220px] h-[280px] bg-white/5 bg-base-100  rounded-xl shadow-black/20 shadow-md backdrop-blur-md overflow-hidden teamCard"
               
             >
@@ -214,7 +251,7 @@ const Team: React.FC = () => {
                   </h2>
                   <p className="text-sm text-white/80">{member.post}</p>
                   <ul className="sci card-actions flex gap-2 justify-evenly mt-6">
-                    <li className="" style={{ "--i": 1 }}>
+                    <li className="" style={{ "--i": 1 } as React.CSSProperties}>
                       <a
                         href={member.instagram}
                         target="_blank"
@@ -223,28 +260,28 @@ const Team: React.FC = () => {
                         <FaInstagram className="size-6 text-white/80" />
                       </a>
                     </li>
-                    <li className="" style={{ "--i": 2 }}>
+                    <li className="" style={{ "--i": 2 } as React.CSSProperties}>
                       <a
                         href={member.facebook}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaFacebookF className="size-6 text-white/80" />
+                        <FaFacebookSquare className="size-6 text-white/80" />
                       </a>
                     </li>
-                    <li className="" style={{ "--i": 3 }}>
+                    <li className="" style={{ "--i": 3 } as React.CSSProperties}>
                       <a
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaLinkedinIn className="size-6 text-white/80" />
+                        <FaLinkedin className="size-6 text-white/80" />
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-            </div>
+            </Tilt>
             </div>
           ))}
         </div>
