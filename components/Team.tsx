@@ -143,7 +143,7 @@ const teamMembers: TeamMember[] = [
 
 const Team: React.FC = () => {
   return (
-    <div id="team" className="relative py-16">
+    <div id="team" className="relative py-16 ">
       <div className="bg-darkBlue absolute -z-10 top-0 bottom-0 w-full">
         <div className="animate-twinkle">
 

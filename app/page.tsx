@@ -11,14 +11,14 @@ import Team from "@/components/Team";
 export default function Home() {
   return (
     <div className="relative overflow-x-hidden">
+      {/* <Events /> */}
       <Navbar />
       <HomeHero />
       <HomeAbout />
-      <Events />
       <Team />
       <Sponsors/>
       <FAQ />
-      <PreFooterImage />
+      <PreFooterImage /> 
       <Footer />
     </div>
   );

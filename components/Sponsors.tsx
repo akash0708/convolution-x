@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
+import "../app/sponsors.css";
+
 
 const Sponsors: React.FC = () => {
   const sponsors = [
