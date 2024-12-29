@@ -60,3 +60,29 @@ html{
     @apply text-pink-400 scale-[1.05]
   }
 }
+
+/* --------------for card animation ---------------- */
+.cardContent{
+  position: absolute;
+  /* backdrop-filter: blur(10px); */
+  opacity: 0.7;
+  transition: 0.5s;
+  transform: translateY(30px);
+}
+.teamCard:hover .cardContent{
+  opacity: 1;
+  transform: translateY(0px);
+
+}
+
+.cardContent .sci li{
+  transform: translateY(40px);
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  opacity: 0;
+}
+.teamCard:hover .sci li{
+  transform: translateY(0px);
+  opacity: 1;
+  
+}
