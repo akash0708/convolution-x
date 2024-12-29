@@ -4,10 +4,10 @@ import React from "react";
 import whiteStar from "@/assets/images/Footer/stars white.png";
 import asteroidRinged from "@/assets/images/Footer/asteroid ringed.png";
 import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.png";
-import yellowRocket from "@/assets/images/Footer/rocket4.png";
+// import yellowRocket from "@/assets/images/Footer/rocket4.png";
 import pinkrocket from '@/assets/images/Team/rocket.png'
 
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 
 import { Tilt } from 'react-tilt'
@@ -145,8 +145,16 @@ const Team: React.FC = () => {
   return (
     <div id="team" className="relative py-16">
       <div className="bg-darkBlue absolute -z-10 top-0 bottom-0 w-full">
-        <Image src={whiteStar} alt="white star bg"></Image>
-        {/* ----------------------yellow Rocket--------------- */}
+        <div className="animate-twinkle">
+
+        <Image src={whiteStar} alt="white star bg "></Image>
+        <Image
+          src={whiteStar}
+          alt="white star bg"
+          className="-scale-100"
+        ></Image>
+        </div>
+        {/* ----------------------pink Rocket--------------- */}
       <div>
         <Image
           src={pinkrocket}
@@ -154,11 +162,7 @@ const Team: React.FC = () => {
           className="absolute left-[5%]  bottom-[15%]   w-20 object-cover"
         ></Image>
       </div>
-        <Image
-          src={whiteStar}
-          alt="white star bg"
-          className="-scale-100"
-        ></Image>
+        
         {/* ----------------------------asteroid ringed---------------- */}
         <div>
           <Image
