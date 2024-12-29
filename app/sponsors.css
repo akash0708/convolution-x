@@ -39,7 +39,7 @@
 .slider .item:hover{
     filter: grayscale(0);
 }
-.slider[reverse="true"] .item{
+.slider[data-reverse="true"] .item{
     animation: reversePlay 10s linear infinite;
 }
 @keyframes reversePlay{

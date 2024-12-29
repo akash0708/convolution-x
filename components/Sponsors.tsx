@@ -44,7 +44,7 @@ const Sponsors: React.FC = () => {
           ))}
         </div>
       </div>
-      <div reverse="true"
+      <div data-reverse="true"
         className="slider mt-6"
         style={{
           '--width': '150px',
