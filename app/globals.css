@@ -33,28 +33,28 @@ html{
       color: #ec4899; /* This is Tailwind's pink-500 */
   }
   .maxWidthForSections{
-    @apply xl:max-w-[1280px] mx-auto
+    @apply 2xl:max-w-[1280px] xl:max-w-[1200px] mx-auto xl:px-0 px-[3vw] sm:px-[5vw]
   }
   .iconBoxes{
-    @apply bg-white/65 backdrop-blur-sm rounded-md p-2 cursor-pointer transition-all text-darkBlue
+    @apply bg-white/65 backdrop-blur-sm rounded-md sm:p-2 p-1 cursor-pointer transition-all text-darkBlue
   }
   .iconBoxes:hover{
     @apply bg-white/90 
   }
   .iconsFooter{
-    @apply size-7 
+    @apply size-7 text-darkBlue
   }
   .listFooter{
-    @apply grid grid-cols-[50px_1fr] gap-6
+    @apply grid grid-cols-[50px_1fr] lg:gap-6 md:gap-4 sm:gap-2
   }
   .listHead{
-    @apply text-white font-medium text-lg
+    @apply text-white font-medium md:text-lg
   }
   .listPara{
-    @apply text-white/80 font-thin
+    @apply text-white/80 font-thin md:text-base text-sm
   }
   .eventLinks{
-    @apply text-white/90 cursor-pointer text-lg transition-all
+    @apply text-white/90 cursor-pointer text-lg transition-all sm:text-left text-center
   }
   .eventLinks:hover{
     @apply text-pink-400 scale-[1.05]

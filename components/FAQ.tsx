@@ -37,7 +37,7 @@ const FAQ = () => {
       <div className="maxWidthForSections ">
 
       <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-2 gap-4">
 
 {/* -------------the questions---------------------------- */}
 
@@ -47,7 +47,7 @@ const FAQ = () => {
         {faqData.map((faq, index) => (
           <div key={index} className="collapse  bg-white/10  collapse-arrow backdrop-blur-sm  shadow-md text-white/90 shadow-white/50">
             <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title  text-xl font-medium">
+            <div className="collapse-title  md:text-xl font-medium">
               {faq.question}
             </div>
             <div className="collapse-content flex items-center">
@@ -90,12 +90,12 @@ const FAQ = () => {
       </div> */}
 
       {/* -------------right image--------------- */}
-      <div className="flex items-center  justify-center">
+      <div className="lg:flex items-center hidden   justify-center">
 
       <Image src={astroGuy} 
       alt="right bg" 
       
-      className="md:w-[80%] w-full object-cover animate-float-slow"/>
+      className=" lg:max-h-[500px] w-full lg:w-auto object-cover animate-float-slow"/>
       </div>
 
       

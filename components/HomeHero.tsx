@@ -115,9 +115,10 @@ const HomeHero = () => {
 
         </div>
       </div>
-
+{/* ---------------the main section ------------------------- */}
+<div className="">
       {/* --------------Blur Center planet------------- */}
-
+  
       <Image
         src={centerPlanet}
         alt="Picture pink stars"
@@ -130,7 +131,7 @@ const HomeHero = () => {
       <Image
           src={centerPlanet}
           alt="Picture pink stars"
-          className="w-[52.47vw] object-cover animate-spin-slow-ccw"
+          className="w-[52.47vw] min-w-[450px] object-cover animate-spin-slow-ccw"
         ></Image>
         {/* ------------convo logo---------- */}
       <Image
@@ -147,9 +148,10 @@ const HomeHero = () => {
         <Image
           src={rockets}
           alt="Rotating Rockets"
-          className="w-[30vw] object-cover animate-spin-slow "
+          className="w-[30vw] min-w-[290px] object-cover animate-spin-slow "
         ></Image>
       </div>
+</div>
       
     </div>
   );
