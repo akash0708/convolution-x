@@ -24,6 +24,41 @@ html{
   scroll-behavior: smooth
 }
 
+/* ---------------for navbar-------------- */
+.nav-itemMobile {
+  transition: opacity 2s, transform 1.5s; 
+  transition-delay: calc( 0.1s * var(--i-nav));
+  opacity: 0;
+  transform: translateX(50px); /* Initial transform state */
+}
+
+.nav-itemMobile.is-visible {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+.nav-itemMobile.is-hidden {
+  transition: none; /* Disable transition for instant reset */
+  opacity: 0;
+  transform: translateX(50px);
+}
+.close-itemMobile {
+  transition: opacity 2s, transform 1.5s; 
+  transition-delay: calc( 0.1s * var(--i-nav));
+  opacity: 0;
+  transform: translateY(-50px); /* Initial transform state */
+}
+
+.close-itemMobile.icon-is-visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+.close-itemMobile.icon-is-hidden {
+  transition: none; /* Disable transition for instant reset */
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
 @layer utilities {
   .nav-item {
     @apply transition-all ease-in-out duration-300;
@@ -36,13 +71,13 @@ html{
     @apply 2xl:max-w-[1280px] xl:max-w-[1200px] mx-auto xl:px-0 px-[3vw] sm:px-[5vw]
   }
   .iconBoxes{
-    @apply bg-white/65 backdrop-blur-sm rounded-md sm:p-2 p-1 cursor-pointer transition-all text-darkBlue
+    @apply bg-white/65 backdrop-blur-sm rounded-sm sm:rounded-md sm:p-2 p-1 cursor-pointer transition-all text-darkBlue
   }
   .iconBoxes:hover{
     @apply bg-white/90 
   }
   .iconsFooter{
-    @apply size-7 text-darkBlue
+    @apply sm:size-7 size-6 text-darkBlue
   }
   .listFooter{
     @apply grid grid-cols-[50px_1fr] lg:gap-6 md:gap-4 sm:gap-2
@@ -86,4 +121,5 @@ html{
   opacity: 1;
   
 }
+
 

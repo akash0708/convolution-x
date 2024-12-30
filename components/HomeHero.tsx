@@ -14,7 +14,7 @@ import ConvoIcon from '@/assets/images/HeroSectionImages/ConvoSvg.svg';
 
 const HomeHero = () => {
   return (
-    <div className=" min-h-[100svh] relative bg-radial-darkBlue-to-purple flex justify-center items-center ">
+    <div id="home" className=" min-h-[100svh] relative bg-radial-darkBlue-to-purple flex justify-center items-center ">
       {/* --------------------clouds------------- */}
       <div className="">
         {/* --------------left Clouds------------ */}
@@ -58,7 +58,7 @@ const HomeHero = () => {
             <Image
               src={bluePlanet}
               alt="Blue Planets"
-              className="absolute right-10 bottom-1/4 animate-float  w-24 object-cover"
+              className="absolute right-10 sm:block hidden bottom-1/4 animate-float  w-24 object-cover"
             ></Image>
           </div>
           {/* -----------left top blue planet------------- */}
@@ -66,7 +66,7 @@ const HomeHero = () => {
             <Image
               src={bluePlanet}
               alt="Rotating Rockets"
-              className="absolute left-[25%] top-[12%] animate-spin-slow w-20 object-cover"
+              className="absolute sm:left-[25%] left-[10%] sm:top-[12%] top-[20%] animate-spin-slow sm:w-20 w-10 object-cover"
             ></Image>
           </div>
           {/* -----------leftbottom pink planet------------- */}
@@ -74,7 +74,7 @@ const HomeHero = () => {
             <Image
               src={pinkPlanet}
               alt="Blue Planets"
-              className="absolute left-[25%] bottom-[5%] animate-spin-slow-ccw  w-16 object-cover"
+              className="absolute sm:block hidden left-[25%] bottom-[5%] animate-spin-slow-ccw  w-16 object-cover"
             ></Image>
           </div>
           {/* -----------right top pink planet------------- */}
@@ -91,7 +91,7 @@ const HomeHero = () => {
             <Image
               src={blueRedPlanet}
               alt="Blue red Planets"
-              className="absolute left-[15%] bottom-[32%] animate-float-fast  w-36 object-cover"
+              className="absolute left-[12%] bottom-[15%] sm:bottom-[32%] animate-float-fast w-20  sm:w-36 object-cover"
             ></Image>
           </div>
           {/* -----------right top yellow blue planet------------- */}
@@ -99,7 +99,7 @@ const HomeHero = () => {
             <Image
               src={yellowBluePlanet}
               alt="yellow blue"
-              className="absolute right-[13%] top-[27%] animate-spin-slow w-28 object-cover"
+              className="absolute right-[-10%] sm:right-[13%] top-[17%] sm:top-[27%] animate-spin-slow w-28 object-cover"
             ></Image>
           </div>
 
@@ -108,7 +108,7 @@ const HomeHero = () => {
             <Image
               src={pinkBluePlanet}
               alt="yellow blue"
-              className="absolute right-[25%] bottom-[4%] animate-float-medium w-32 object-cover"
+              className="absolute sm:right-[25%] right-[10%] bottom-[4%] animate-float-medium sm:w-32 w-20 object-cover"
             ></Image>
           </div>
 
@@ -131,7 +131,7 @@ const HomeHero = () => {
       <Image
           src={centerPlanet}
           alt="Picture pink stars"
-          className="w-[52.47vw] min-w-[450px] object-cover animate-spin-slow-ccw"
+          className="w-[52.47vw] sm:min-w-[600px] min-w-[480px] object-cover animate-spin-slow-ccw"
         ></Image>
         {/* ------------convo logo---------- */}
       <Image
@@ -148,7 +148,7 @@ const HomeHero = () => {
         <Image
           src={rockets}
           alt="Rotating Rockets"
-          className="w-[30vw] min-w-[290px] object-cover animate-spin-slow "
+          className="w-[30vw]  sm:min-w-[390px]  min-w-[300px] object-cover animate-spin-slow "
         ></Image>
       </div>
 </div>

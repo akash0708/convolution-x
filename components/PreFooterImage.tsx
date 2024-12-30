@@ -139,7 +139,7 @@ const PreFooterImage = () => {
         <Image
           src={redBluePlanet}
           alt="Asteroid"
-          className="absolute right-10 z-30 top-[40%] animate-float-slow opacity-[0.7]  w-20 object-cover"
+          className="absolute right-10 z-30 top-[40%] animate-float-slow opacity-[0.7] w-10  sm:w-20 object-cover"
         ></Image>
       </div>
       <div className="absolute h-2 w-full bottom-0 bg-darkBlue"></div>
