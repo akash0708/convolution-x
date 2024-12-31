@@ -32,9 +32,9 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const handleToggle = (index) => {
+  const handleToggle = (index: number): void => {
     setOpenIndex(openIndex === index ? null : index); // Toggle open/close
   };
   return (
@@ -49,12 +49,12 @@ const FAQ = () => {
         </div>
       </div>
       <div className="maxWidthForSections ">
-        <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <h2 className="text-3xl font-bold text-white text-center sm:mb-12 mb-8">
           Frequently Asked Questions
         </h2>
         <div className="grid lg:grid-cols-2 gap-4">
           {/* -------------the questions---------------------------- */}
-          <div className="flex flex-col justify-center  gap-4">
+          <div className="flex flex-col justify-center sm:p-0 px-2  gap-4">
             {faqData.map((faq, index) => (
               <div
                 key={index}
@@ -63,9 +63,9 @@ const FAQ = () => {
                 <button
                   type="button"
                   onClick={() => handleToggle(index)}
-                  className="w-full text-left p-5 font-medium rounded-xl   flex items-center justify-between"
+                  className="w-full text-left sm:p-5 py-[10px] px-4 font-medium rounded-xl   flex items-center justify-between"
                 >
-                  <p>{faq.question}</p>
+                  <p className="sm:text-base text-sm">{faq.question}</p>
                   <svg
                     className={`w-3 h-3 transition-transform duration-300 ${
                       openIndex === index ? "" : "rotate-180"
@@ -92,61 +92,15 @@ const FAQ = () => {
                       : "opacity-0 max-h-0 "
                   }  transition-all duration-300 ease-in-out `}
                 >
-                  <div className="p-4 ">
-                    <p className="text-white ">{faq.answer}</p>
+                  <div className="sm:p-4 px-4 pb-4 pt-0 ">
+                    <p className="text-white/80 text-xs">{faq.answer}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* ------------the one didnt work for animation--------------- */}
-          {/* <div className="flex flex-col justify-center  gap-4">
-            {faqData.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm shadow-md text-white/90 shadow-white/50 rounded-lg"
-              >
-                <button
-                  type="button"
-                  onClick={() => handleToggle(index)}
-                  className="w-full text-left p-5 font-medium rounded-xl   flex items-center justify-between"
-                >
-                  <p>{faq.question}</p>
-                  <svg
-                    className={`w-3 h-3 transition-transform duration-300 ${
-                      openIndex === index ? "" : "rotate-180"
-                    }`}
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5 5 1 1 5"
-                    />
-                  </svg>
-                </button>
-
-                <div
-                  className={`${
-                    openIndex === index
-                      ? " opacity-1 grid-rows-1"
-                      : "opacity-0 grid "
-                  } grid-rows-[0] transition-[grid-template-rows] duration-700  `}
-                >
-                  <div className="p-4 ">
-                    <p className="text-gray-400 ">{faq.answer}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div> */}
-
+          
           {/* --------variant 1--------------- */}
 
           {/* <div className=" flex flex-col justify-center gap-4">
@@ -200,7 +154,7 @@ const FAQ = () => {
             <Image
               src={astroGuy}
               alt="right bg"
-              className=" lg:max-h-[500px] w-full lg:w-auto object-cover animate-float-slow"
+              className=" max-h-[500px] w-[90%]  object-cover animate-float-slow"
             />
           </div>
         </div>

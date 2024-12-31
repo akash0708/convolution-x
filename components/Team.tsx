@@ -202,7 +202,7 @@ const Team: React.FC = () => {
                 {/* --------------- this for mobile-------------------- */}
               
                <div
-                className="card  backdrop-filter teamCardbackdrop-blur-sm sm:h-[280px] w-[43vw] px-2 py-8 flex-col sm:hidden flex justify-center items-center bg-white/15 bg-base-100  rounded-xl shadow-black/60 shadow-md ">
+                className="backdrop-blur-sm teamCardbackdrop-blur-sm sm:h-[280px] w-[43vw] px-2 py-8 flex-col sm:hidden flex justify-center items-center bg-white/20  rounded-xl shadow-white/40 shadow-md">
                 <div className="flex justify-center">
                   <img
                     src={member.image}
@@ -214,8 +214,8 @@ const Team: React.FC = () => {
                 </div>
                 <div className=" flex flex-col items-center">
                   <h2 className=" text-white text-sm mt-2 font-semibold">{member.name}</h2>
-                  <p className="text-sm text-white/80">{member.post}</p>
-                  <div className="card-actions flex gap-2 justify-evenly mt-4">
+                  <p className="text-xs text-white/80">{member.post}</p>
+                  <div className="card-actions flex gap-2 justify-evenly mt-2">
                     <a
                       href={member.instagram}
                       target="_blank"
