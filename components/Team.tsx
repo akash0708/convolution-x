@@ -6,6 +6,7 @@ import asteroidRinged from "@/assets/images/Footer/asteroid ringed.png";
 import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.png";
 // import yellowRocket from "@/assets/images/Footer/rocket4.png";
 import pinkrocket from '@/assets/images/Team/rocket.png'
+import whiteStarPhone from "@/assets/images/phone white stars.png"
 
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -147,11 +148,21 @@ const Team: React.FC = () => {
       <div className="bg-darkBlue absolute -z-10 top-0 bottom-0 w-full">
         <div className="animate-twinkle">
 
-        <Image src={whiteStar} alt="white star bg "></Image>
+        <Image src={whiteStar} alt="white star bg "className="sm:block hidden"></Image>
         <Image
           src={whiteStar}
           alt="white star bg"
-          className="-scale-100"
+          className="-scale-100 sm:block hidden"
+        ></Image>
+        <Image
+          src={whiteStarPhone}
+          alt="white star bg"
+          className=" w-screen sm:hidden"
+        ></Image>
+         <Image
+          src={whiteStarPhone}
+          alt="white star bg"
+          className="-scale-100 w-screen sm:hidden"
         ></Image>
         </div>
         {/* ----------------------pink Rocket--------------- */}
@@ -181,62 +192,62 @@ const Team: React.FC = () => {
         </div>
       </div>
 
-      <div className=" maxWidthForSections">
+      <div className=" maxWidthForSections ">
         <h1 className="text-3xl font-bold text-center text-white">
           Meet Our Team
         </h1>
-        <div className="mt-8 flex flex-wrap justify-center gap-6 gap-y-8">
+        <div className="mt-8 flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
           {teamMembers.map((member) => (
             <div className="" key={member.name}>
                 {/* --------------- this for mobile-------------------- */}
-{/*               
+              
                <div
-                className="card backdrop-filter teamCardbackdrop-blur-sm w-full max-w-[220px] h-[280px] px-4 py-8 flex-col sm:hidden flex justify-center items-center bg-white/20 bg-base-100  rounded-xl shadow-black/60 shadow-md ">
+                className="backdrop-blur-sm teamCardbackdrop-blur-sm sm:h-[280px] w-[43vw] px-2 py-8 flex-col sm:hidden flex justify-center items-center bg-white/20  rounded-xl shadow-white/40 shadow-md">
                 <div className="flex justify-center">
                   <img
                     src={member.image}
                     alt={member.name}
-                    width={300}
-                    height={200}
-                    className="size-28 rounded-full object-cover "
+                    // width={300}
+                    // height={200}
+                    className="size-24 rounded-full object-cover "
                   />
                 </div>
                 <div className=" flex flex-col items-center">
-                  <h2 className=" text-white mt-2 font-semibold">{member.name}</h2>
-                  <p className="text-sm text-white/80">{member.post}</p>
-                  <div className="card-actions flex gap-2 justify-evenly mt-4">
+                  <h2 className=" text-white text-sm mt-2 font-semibold">{member.name}</h2>
+                  <p className="text-xs text-white/80">{member.post}</p>
+                  <div className="card-actions flex gap-2 justify-evenly mt-2">
                     <a
                       href={member.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="iconBoxes"
+                      className=""
                     >
-                      <FaInstagram></FaInstagram>
+                      <FaInstagram className="size-6 text-white"></FaInstagram>
                     </a>
                     <a
                       href={member.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="iconBoxes"
+                      className=""
                     >
-                      <FaFacebookF/>
+                      <FaFacebookSquare className="size-6 text-white/90"/>
                     </a>
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="iconBoxes"
+                      className=""
                     >
-                      <FaLinkedinIn/>
+                      <FaLinkedin className="size-6 text-white"/>
                     </a>
                   </div>
                 </div>
               </div> 
-              */}
+             
 
               {/* ----------this for bigger screens------------- */}
             <Tilt options={defaultOptions}
-              className=" relative w-[220px] h-[280px] bg-white/5 bg-base-100  rounded-xl shadow-black/20 shadow-md backdrop-blur-md overflow-hidden teamCard"
+              className="sm:block hidden relative w-[220px] h-[280px] bg-white/5 bg-base-100  rounded-xl shadow-black/20 shadow-md backdrop-blur-md overflow-hidden teamCard"
               
             >
               <div className="card px-4 py-8 flex-col flex justify-center items-center absolute top-0 right-0 left-0   cardContent">
