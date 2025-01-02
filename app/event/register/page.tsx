@@ -1,11 +1,13 @@
 import EventRegistrationForm from "@/components/EventRegistrationForm";
-import React from "react";
+import React, { Suspense } from "react";
 
 const page = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center ">
-      <EventRegistrationForm />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="w-full h-screen flex items-center justify-center ">
+        <EventRegistrationForm />
+      </div>
+    </Suspense>
   );
 };
 
