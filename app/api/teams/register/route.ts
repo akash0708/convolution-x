@@ -155,7 +155,12 @@ export async function POST(req: Request) {
       members: teamMembers,
     } = await req.json();
 
-    // console.log("team", await req.json());
+    console.log("team", {
+      teamName,
+      eventName,
+      leaderId,
+      teamMembers,
+    });
 
     // Input validation
     if (!teamName || !eventName || !leaderId || !Array.isArray(teamMembers)) {
@@ -164,6 +169,8 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+    // debug
+    console.log("input validated");
 
     // we will be getting emails of members and not ids, hence first we need to check if user with specified userid exists and then fetch the ids of the members
     // const memberEmails = members.map((member: string) => member.email);
@@ -174,7 +181,9 @@ export async function POST(req: Request) {
     // Check if all members exist
     if (existingUsers.length !== teamMembers.length) {
       return NextResponse.json(
-        { message: "One or more team members are not registered" },
+        {
+          message: "One or more team members are not registered on the website",
+        },
         { status: 400 }
       );
     }
@@ -218,6 +227,9 @@ export async function POST(req: Request) {
       );
     }
 
+    // debug
+    console.log("members validated");
+
     // Check if leader exists
     const leader = await prisma.user.findFirst({
       where: { id: leaderId },
@@ -260,6 +272,9 @@ export async function POST(req: Request) {
       );
     }
 
+    // debug
+    console.log("leader validated");
+
     // Ensure team size doesn't exceed maxSize
     const maxSize = 4;
     if (teamMembers.length + 1 > maxSize) {
@@ -268,6 +283,9 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+
+    // debug
+    console.log("team size validated");
 
     // Create the team
     const team = await prisma.team.create({
@@ -288,6 +306,9 @@ export async function POST(req: Request) {
         members: true,
       },
     });
+
+    // debug
+    console.log("team created");
 
     // Add notifications for team members (excluding the leader)
     const notifications = teamMembers.map((memberId: string) => ({
