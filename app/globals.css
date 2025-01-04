@@ -94,6 +94,12 @@ html{
   .eventLinks:hover{
     @apply text-pink-400 scale-[1.05]
   }
+  .input-box{
+    @apply bg-transparent border-b-[3px] border-white/80  rounded-sm   mt-1  w-full h-8 focus:border-white/80 focus:outline-none focus:bg-transparent text-sm sm:text-base
+  }
+  .input-div{
+    @apply w-full
+  }
 }
 
 /* --------------for card animation ---------------- */
@@ -121,5 +127,25 @@ html{
   opacity: 1;
   
 }
+
+
+/* Custom scrollbar with updated track and thumb colors */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+  padding: 0;
+  background: #00092B; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #48279A; /* Color of the scrollbar thumb */
+  border-radius: 100vw; /* Rounded corners for the thumb */
+   /* Border around the thumb to match the track */
+}
+
+
 
 

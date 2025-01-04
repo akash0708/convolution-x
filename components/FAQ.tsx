@@ -5,31 +5,32 @@ import astroGuy from "@/assets/images/faq/cute astroNut.png";
 import Image from "next/image";
 const faqData = [
   {
-    question: "What is the hackathon about?",
-    answer:
-      "This hackathon is focused on solving real-world problems using technology.",
+    question: "What is Convolution?",
+    answer: 
+      "Convolution is our annual tech fest, where technology, creativity, and innovation come together. It features exciting events, workshops, competitions, and opportunities to showcase talent.",
   },
   {
-    question: "Who can participate?",
-    answer:
-      "Anyone with a passion for technology and innovation can participate, including students and professionals.",
+    question: "When and where is Convolution happening?",
+    answer: 
+      "Convolution will take place from 20th to 22nd February, 2025 at Department of Electrical Engineering, Jadavpur University. Stay tuned for updates on our website and social media!",
   },
   {
-    question: "What are the key dates?",
-    answer:
-      "The hackathon will run from January 15th to January 17th, with submissions due by January 16th at midnight.",
+    question: "Who can participate in Convolution?",
+    answer: 
+      "Convolution is open to students enthusiastic about technology, enrolled in any undergraduate programme.",
   },
   {
-    question: "Are there any prizes?",
-    answer:
-      "Yes, there are exciting prizes for the top three teams and certificates for all participants.",
+    question: "How can I register for Convolution?",
+    answer: 
+      "Visit our official website [insert link] or contact [insert contact details] for registration details.",
   },
   {
-    question: "How do I register?",
-    answer:
-      "You can register on our official website by filling out the registration form.",
+    question: "Is there any registration fee?",
+    answer: 
+      "No, the registrations for the events are completely free of cost.",
   },
 ];
+
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -92,8 +93,8 @@ const FAQ = () => {
                       : "opacity-0 max-h-0 "
                   }  transition-all duration-300 ease-in-out `}
                 >
-                  <div className="sm:p-4 px-4 pb-4 pt-0 ">
-                    <p className="text-white/80 text-xs">{faq.answer}</p>
+                  <div className="sm:px-5 sm:pb-5 px-4 pb-4 pt-0 ">
+                    <p className="text-white/80 sm:text-sm text-xs">{faq.answer}</p>
                   </div>
                 </div>
               </div>
@@ -101,60 +102,14 @@ const FAQ = () => {
           </div>
 
           
-          {/* --------variant 1--------------- */}
-
-          {/* <div className=" flex flex-col justify-center gap-4">
-        {faqData.map((faq, index) => (
-          <div key={index} className="collapse  bg-white/10  collapse-arrow backdrop-blur-sm  shadow-md text-white/90 shadow-white/50">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title  md:text-xl font-medium">
-              {faq.question}
-            </div>
-            <div className="collapse-content flex items-center">
-              <p>{faq.answer}</p>
-            </div>
-          </div>
-        ))}
-      </div> */}
-
-          {/* --------variant 2--------------- */}
-          {/* <div className=" flex flex-col  ">
-        {faqData.map((faq, index) => (
-          <div key={index} className="collapse rounded-none collapse-plus   shadow-md text-white/90 pb-1">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title  text-xl font-medium">
-              {faq.question}
-            </div>
-            <div className="collapse-content flex items-center">
-              <p>{faq.answer}</p>
-            </div>
-            <div className="h-[1px] bg-white w-full rounded-full" ></div>
-          </div>
-        ))}
-      </div> */}
-
-          {/* --------variant 3--------------- */}
-          {/* <div className=" flex flex-col  ">
-        {faqData.map((faq, index) => (
-          <div key={index} className="collapse rounded-md  bg-darkBlue/80 collapse-arrow join-item   shadow-md text-white/90 pb-1">
-            <input type="radio" name="my-accordion-2" />
-            <div className="collapse-title  text-xl font-medium">
-              {faq.question}
-            </div>
-            <div className="collapse-content flex items-center">
-              <p>{faq.answer}</p>
-            </div>
-            <div className="h-[1px] bg-white/80 w-full rounded-full" ></div>
-          </div>
-        ))}
-      </div> */}
+         
 
           {/* -------------right image--------------- */}
           <div className="lg:flex items-center hidden   justify-center">
             <Image
               src={astroGuy}
               alt="right bg"
-              className=" max-h-[500px] w-[90%]  object-cover animate-float-slow"
+              className="  w-[80%]  object-cover animate-float-slow"
             />
           </div>
         </div>

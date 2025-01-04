@@ -5,7 +5,7 @@ import rocket from "@/assets/images/AboutImages/planet and rocket.png";
 
 const HomeAbout = () => {
   return (
-    <div id="about" className=" bg-darkBlue relative  py-8">
+    <div id="about" className=" md:min-h-screen flex items-center bg-darkBlue relative  py-8">
       {/* --------------Pink Star Bg------------- */}
       <div className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2  animate-twinkle">
         <Image
