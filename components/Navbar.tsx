@@ -60,7 +60,7 @@ const Navbar = () => {
       </div>
 
       {/* ------------------for mobile screens----------------------- */}
-      <div className="maxWidthForSections py-2 w-full md:hidden flex justify-between items-center px-4 ">
+      <div className="maxWidthForSections py-[10px] w-full md:hidden flex justify-between items-center px-4 ">
         {/* Logo */}
         <Link href='#home'>
           <Image
@@ -79,7 +79,7 @@ const Navbar = () => {
           onClick={toggleNavigation}
         >
           <div
-            className="h-full w-2/3 flex flex-col bg-gradient-to-b from-darkBlue/90 to-softPurple/90  items-end justify-start py-6 px-4"
+            className="h-full w-2/3 flex flex-col bg-gradient-to-b from-darkBlue to-softPurple/90  items-end justify-start py-6 px-4"
             onClick={toggleNavigation}
           >
             <IoClose className={`close-itemMobile  ${isNavOpen ? "icon-is-visible" : "icon-is-hidden"} hover:text-[#ec4899] size-8 `} onClick={toggleNavigation}  style={{  "--i-nav":  0.5 } as React.CSSProperties} />
