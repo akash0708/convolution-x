@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma"; // Adjust the path as per your project setup
+import axios from "axios";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -8,6 +9,7 @@ export async function POST(req: Request) {
       eventName,
       leaderId,
       members: teamMembers,
+      leaderEmail,
     } = await req.json();
 
     console.log("team", {
@@ -165,6 +167,24 @@ export async function POST(req: Request) {
     // debug
     console.log("team created");
 
+    // Prepare the list of emails for the members (excluding leader)
+    const emails = [leaderEmail, ...teamMembers];
+
+    // Prepare the payload for the email API
+    const emailPayload = {
+      emails,
+      teamName: team.teamName,
+      event: team.eventName,
+    };
+
+    try {
+      // Send the POST request to trigger email sending
+      await axios.post("http://localhost:3001/send-team-email", emailPayload);
+      console.log("Emails sent successfully!");
+    } catch (error) {
+      console.error("Error sending emails:", error);
+    }
+
     // Add notifications for team members (excluding the leader)
     const notifications = teamMembers.map((memberId: string) => ({
       email: memberId,
@@ -172,7 +192,14 @@ export async function POST(req: Request) {
       message: `You are now part of the team "${teamName}" for the event "${eventName}".`,
       type: "TEAM_INVITE",
     }));
-    await prisma.notification.createMany({ data: notifications });
+
+    await Promise.all(
+      notifications.map(async (notification) => {
+        await prisma.notification.create({
+          data: notification,
+        });
+      })
+    );
 
     return NextResponse.json(
       {

@@ -1,6 +1,7 @@
 // components/RegisterForm.tsx
 "use client";
 
+import { useUserStore } from "@/store/userStore";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -10,6 +11,9 @@ export default function RegisterForm() {
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const user = useUserStore((state) => state.user);
+  const setUser = useUserStore((state) => state.setUser);
 
   const handleEmailRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,7 +27,11 @@ export default function RegisterForm() {
 
     try {
       // First register the user
-      await axios.post("/api/signup", { email, password, name });
+      const res = await axios.post("/api/signup", { email, password, name });
+      console.log("User created:", res.data);
+
+      setUser({ id: res.data.id, name: res.data.name, email: res.data.email });
+      console.log("User set:", user);
       // redirect to verify email page
       router.push("/verify-email");
     } catch (error) {

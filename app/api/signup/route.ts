@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     // const hashedPassword = await bcrypt.hash(password, 10);
 
     // Store user in Prisma database
-    await prisma.user.create({
+    const newUser = await prisma.user.create({
       data: {
         email: userCredential.user.email!,
         name,
@@ -32,7 +32,12 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json(
-      { message: "User created successfully" },
+      {
+        message: "User created successfully",
+        id: newUser.id,
+        email: newUser.email,
+        name: newUser.name,
+      },
       { status: 201 }
     );
   } catch (error: any) {

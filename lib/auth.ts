@@ -1,3 +1,4 @@
+import axios from "axios";
 import { auth } from "./firebase";
 import {
   createUserWithEmailAndPassword,
@@ -29,11 +30,16 @@ export const signIn = async (email: string, password: string) => {
   );
 
   // Set a cookie with user information or token
-  Cookies.set("user", JSON.stringify(userCredential.user), { expires: 1 }); // Expires in 1 day
+  Cookies.set("user", JSON.stringify(userCredential.user), { expires: 30 }); // Expires in 30 day
 
   console.log("userCredential", JSON.stringify(userCredential.user));
   console.log("user", { ...userCredential.user });
   console.log("emailVerified", userCredential.user.emailVerified);
+
+  // await axios.post("http://localhost:3001/api/register", {
+  //   email,
+  //   userName: userCredential.user.displayName || "user",
+  // });
 
   return userCredential;
 };
