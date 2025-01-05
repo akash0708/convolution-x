@@ -23,7 +23,7 @@ const HomeAbout = () => {
                 About Us
               </h2>
               <p className="md:mt-6 mt-4 tracking-wide lg:text-lg sm:text-base text-sm text-white/80 md:text-left text-center">
-                Convolution 10.0 is the tenth edition of the annual
+                Convolution X is the tenth edition of the annual
                 techno-management fest organized by the Students' Forum of the
                 Department of Electrical Engineering, Jadavpur University.
                 Convolution acts as an umbrella event comprising of several
