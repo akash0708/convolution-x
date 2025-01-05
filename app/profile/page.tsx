@@ -1,20 +1,29 @@
 "use client";
-import { signOut, useSession } from "next-auth/react";
+import { logout } from "@/lib/auth";
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 
 export default function ProtectedComponent() {
-  const { data: session } = useSession();
+  const userCookie = Cookies.get("user");
+  const router = useRouter();
 
-  if (!session) {
+  if (!userCookie) {
     return <div>Please log in</div>;
   }
 
+  // get the username form zustand, for now use email
+  const email = userCookie ? JSON.parse(userCookie).email : null;
+
   async function handleSignout() {
-    await signOut();
+    // remove the user cookie
+    Cookies.remove("user");
+    await logout();
+    router.push("/login");
   }
 
   return (
     <>
-      <div>Welcome {session.user.name}</div>
+      <div>Welcome {email}</div>
       <button onClick={handleSignout}>logout</button>
     </>
   );
