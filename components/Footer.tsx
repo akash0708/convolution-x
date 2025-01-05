@@ -138,7 +138,7 @@ const Footer = () => {
               </div>
               <div className="">
                 <h1 className="listHead">Email</h1>
-                <p className="listPara">abcd@gmail.com</p>
+                <p className="listPara">comvolutionx2025@gmail.com</p>
               </div>
             </li>
             <li>
@@ -177,7 +177,7 @@ const Footer = () => {
             <li>Sparkhack</li>
             <li>Algomaniac</li>
             <li>Abol Tabol</li>
-            <li>Circustics</li>
+            <li>Circuistics</li>
             <li>Inquizzitive</li>
             <li>Eureka</li>
             <li>JU Talks</li>

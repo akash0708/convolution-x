@@ -22,7 +22,7 @@ import astroMedi from "@/assets/images/astroNot2.png";
 // import ass9 from "@/assets/images/asteroids/ass9.png"
 // import assThicc1 from "@/assets/images/asteroids/ass(thicc)1.png"
 
-export default function EventsCopy() {
+export default function Events() {
   const [showArrows, setShowArrows] = useState(false);
 
   const sliderRef = useRef();
