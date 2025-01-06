@@ -4,7 +4,7 @@ import flake from "@/assets/images/SparkHack/flake.png";
 import logo from "@/assets/images/SparkHack/Sparkhack logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import flakebg from "@/assets/images/SparkHack/flakebg.png"
+import flakebg from "@/assets/images/SparkHack/flakeBg.png"
 const HeroSpark = () => {
   return (
     <div
