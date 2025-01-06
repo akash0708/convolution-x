@@ -17,10 +17,12 @@ export default {
       backgroundImage: {
         'radial-darkBlue-to-purple': 'radial-gradient(circle, #48279A 0%, #00092B 40%)',
         'aboutBg':"url('/aboutusBg.png')",
-        'aboutGradient':'linear-gradient(10deg, rgba(72, 39, 154, 0.6) 0%, #1A0F52 36%, #00092B 100%)'
+        'aboutGradient':'linear-gradient(10deg, rgba(72, 39, 154, 0.6) 0%, #1A0F52 36%, #00092B 100%)',
       },
       boxShadow: {
         'shadowAbout': '4px 4px 75px 17px rgba(72, 39, 154, 1)', // Using the specified color and values
+        'sparkhack-register': '4px 4px 14px 7px rgba(255, 255, 255, 0.9)',
+        'sparkhack-register-hover': '4px 4px 14px 7px rgba(58, 173, 217, 0.9)'
       },
       animation: {
         'spin-slow': 'spin 10s linear infinite', // Spins in 10 seconds clockwise

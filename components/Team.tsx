@@ -4,6 +4,8 @@ import React from "react";
 import whiteStar from "@/assets/images/Footer/stars white.png";
 import asteroidRinged from "@/assets/images/Footer/asteroid ringed.png";
 import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.png";
+import cloud1 from "@/assets/images/HeroSectionImages/cloud1.png";
+import cloud2 from "@/assets/images/HeroSectionImages/cloud2.png";
 // import yellowRocket from "@/assets/images/Footer/rocket4.png";
 import pinkrocket from "@/assets/images/Team/rocket.png";
 import whiteStarPhone from "@/assets/images/phone white stars.png";
@@ -51,7 +53,7 @@ const teamMembers: TeamMember[] = [
     name: "Jahid Mamud",
     post: "Secretary",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735387703/WhatsApp_Image_2024-12-28_at_10.27.44_-_Jahid_frcaii.jpg",
+      "jahid.png",
     linkedin: "www.linkedin.com/in/jahid-mamud",
     instagram:
       "https://www.instagram.com/jem_.__/profilecard/?igsh=b2o0ZjlqZ3pkeW5t",
@@ -61,7 +63,7 @@ const teamMembers: TeamMember[] = [
     name: "Ritam Kundu",
     post: "Joint secretary",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735387704/IMG_7737_-_Ritam_Kundu_kwkd1w.jpg",
+      "ritam.png",
     linkedin:
       "https://www.linkedin.com/in/ritam-kundu-394612257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram:
@@ -72,7 +74,7 @@ const teamMembers: TeamMember[] = [
     name: "Siddhanta Ghosh",
     post: "Treasurer",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735440589/RI2_9702_-_Siddhanta_Ghosh_kun6bu.jpg",
+      "sid.png",
     linkedin: "https://www.linkedin.com/in/siddhanta-ghosh",
     instagram: "https://www.instagram.com/ghosh_siddhanta2k3/",
     facebook:
@@ -82,7 +84,7 @@ const teamMembers: TeamMember[] = [
     name: "Akash Bag",
     post: "Tech Lead",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735387703/WhatsApp_Image_2024-12-28_at_5.21.01_PM_-_Akash_Bag_tvmum6.jpg",
+      "akash.png",
     linkedin: "https://www.linkedin.com/in/akashbag0903/",
     instagram: "https://www.instagram.com/akash09.dev/",
     facebook: "",
@@ -91,7 +93,7 @@ const teamMembers: TeamMember[] = [
     name: "Arindam Pradhan",
     post: "Design Lead",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735387702/WhatsApp_Image_2024-12-28_at_10.03.24_-_Arindam_Pradhan_etjnft.jpg",
+      "arindam.png",
     linkedin:
       "https://www.linkedin.com/in/arindam-pradhan/?originalSubdomain=in",
     instagram: "https://www.instagram.com/arindam_ju01/",
@@ -101,7 +103,7 @@ const teamMembers: TeamMember[] = [
     name: "Aritra Kumar Dutta",
     post: "Sponsorship Lead",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735387701/IMG-20241214-WA0024_-_ARITRA_DUTTA_wtizxj.jpg",
+      "aritra.png",
     linkedin:
       "https://www.linkedin.com/in/aritra-dutta-1752b4304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
@@ -112,7 +114,7 @@ const teamMembers: TeamMember[] = [
     name: "Reejul Chattaraj",
     post: "Content Lead",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735387702/IMG_6495_-_Reejul_Chattaraj_lelnnp.jpg",
+      "rc.png",
     linkedin:
       "https://www.linkedin.com/in/reejul-chattaraj-85a09727a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram:
@@ -123,7 +125,7 @@ const teamMembers: TeamMember[] = [
     name: "Sinjan Dinda",
     post: "Logistics Lead",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735387702/link_-_Sinjan_Dinda_viyusr.png",
+      "dinda.png",
     linkedin:
       "https://www.linkedin.com/in/sinjan-dinda-a70861276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/dinda_sinjan?igsh=bWc4eGJnMDJ0MTc4",
@@ -133,7 +135,7 @@ const teamMembers: TeamMember[] = [
     name: "Arunava Roy",
     post: "PR Lead",
     image:
-      "https://res.cloudinary.com/dybvod0l2/image/upload/v1735387703/profile_pic_-_Arunava_Roy_tam9so.jpg",
+      "arunava.png",
     linkedin:
       "https://www.linkedin.com/in/arunava-roy-176a4527b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
@@ -168,6 +170,32 @@ const Team: React.FC = () => {
             className="-scale-100 w-screen sm:hidden"
           ></Image>
         </div>
+
+        <div className="">
+        {/* --------------left Clouds------------ */}
+        <Image
+          src={cloud2}
+          alt="Rotating Rockets"
+          className="absolute top-0 left-0 w-[50vw] h-auto "
+        ></Image>
+        <Image
+          src={cloud1}
+          alt="Rotating Rockets"
+          className="absolute top-0 left-0 w-[35vw] h-auto "
+        ></Image>
+        {/* --------------right Clouds------------ */}
+        <Image
+          src={cloud2}
+          alt="Rotating Rockets"
+          className="absolute top-0 right-0 w-[50vw] h-auto scale-x-[-1]"
+        ></Image>
+        <Image
+          src={cloud1}
+          alt="Rotating Rockets"
+          className="absolute top-0 right-0 w-[35vw] h-auto scale-x-[-1]"
+        ></Image>{" "}
+      </div>
+
         {/* ----------------------pink Rocket--------------- */}
         <div>
           <Image
@@ -207,7 +235,7 @@ const Team: React.FC = () => {
               <div className="backdrop-blur-sm teamCard  sm:h-[280px] w-[43vw] px-2 py-8 flex-col  flex justify-center items-center bg-white/20  rounded-xl shadow-white/40 shadow-md">
                 <div className="flex justify-center">
                   <Image
-                    src={member.image}
+                    src={`/peoplePics/`+member.image}
                     alt={member.name}
                     width={96}
                     height={96}
@@ -261,7 +289,7 @@ const Team: React.FC = () => {
                 <div className="card px-4 py-8 flex-col flex justify-center items-center absolute top-0 right-0 left-0   cardContent">
                   <div className="flex justify-center">
                     <Image
-                      src={member.image}
+                      src={`/peoplePics/`+ member.image}
                       alt={member.name}
                       width={112}
                       height={112}

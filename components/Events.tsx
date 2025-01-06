@@ -10,6 +10,7 @@ import Image from "next/image";
 import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.png";
 import astro from "@/assets/images/astroNotMoon.png";
 import astroMedi from "@/assets/images/astroNot2.png";
+import Link from "next/link";
 
 // import ass1 from "@/assets/images/asteroids/ass1.png"
 // import ass2 from "@/assets/images/asteroids/ass2.png"
@@ -47,50 +48,51 @@ export default function Events() {
   const events = [
     {
       event: "Decisia",
-      punchLine: "Master the art of decision-making!",
+      redirectTo: "decisia",
       img: "planet_1.png",
     },
     {
       event: "Sparkhack",
-      punchLine: "Ignite your ideas, hack the future!",
+      redirectTo: "sparkhack",
       img: "planet_2.png",
     },
     {
       event: "Ju Talks",
-      punchLine: "Where ideas meet words!",
+      redirectTo: "ju_talks",
       img: "planet_3.png",
     },
     {
       event: "Abol Tabol",
-      punchLine: "Chaos fuels creativity!",
+      redirectTo: "abol_tabol",
       img: "planet_4.png",
     },
     {
       event: "Eureka",
-      punchLine: "Discover brilliance within!",
+      redirectTo: "eureka",
       img: "planet_5.png",
     },
     {
       event: "Inquizitive",
-      punchLine: "Quench your thirst for knowledge!",
+      redirectTo: "inquizitive",
       img: "planet_6.png",
     },
     {
       event: "Circuistics",
-      punchLine: "Engineering ideas into circuits!",
+      redirectTo: "circuistics",
       img: "planet_7.png",
     },
     {
       event: "Algomaniac",
-      punchLine: "Algorithms, the language of innovation!",
+      redirectTo: "algomaniac",
       img: "planet_8.png",
     },
     {
       event: "24 Frames",
-      punchLine: "Crafting stories one frame at a time!",
+      redirectTo: "24_frames",
       img: "planet_9.png",
     },
   ];
+  
 
   const sliderMobileRef = useRef();
 
@@ -288,18 +290,19 @@ export default function Events() {
           style={{ backgroundImage: `url('/sun.png')` }}
         >
           {events.map((src, index) => (
-            <div
+            <Link href={`/event/`+ src.redirectTo}
               className="planet "
               key={index}
               onMouseEnter={() => (isPaused.current = true)}
               onMouseLeave={() => (isPaused.current = false)}
             >
-              <img
+              <Image 
+              height={300} width={300}
                 className="h-[15vw] w-auto"
-                src={`eventPlanets/` + src.img}
+                src={`/eventPlanets/` + src.img}
                 alt={`Planet ${index + 1}`}
               />
-            </div>
+            </Link>
           ))}
         </div>
         <div className="buttons lg:block hidden absolute w-full">
@@ -329,13 +332,13 @@ export default function Events() {
               return (
 
               <div key={eventDetails.event} className="text-white py-4 px-2  rounded-xl flex flex-col items-center animate-float-medium delay-75  min-w-[200px]" style={{ animationDelay: `${ Math.random()}s` }}>
-                <img
-                  src={`mobileEventPlanets/` + eventDetails.img}
+                <Image
+                  src={`/mobileEventPlanets/` + eventDetails.img}
                   className="object-cover "
                   height={400}
                   width={400}
                   alt={eventDetails.event}
-                ></img>
+                ></Image>
                 {/* <h1 className="mt-2 text-center">{eventDetails.punchLine}</h1> */}
               </div>
               )

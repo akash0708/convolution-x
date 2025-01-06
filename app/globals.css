@@ -100,6 +100,12 @@ html{
   .input-div{
     @apply w-full
   }
+  .text-shadow-light{
+    text-shadow: 0.5px 0.5px #fff;
+  }
+  .text-shadow-dark{
+    text-shadow: 1px 1px #000000, -1px 0px #00000060;
+  }
 }
 
 /* --------------for card animation ---------------- */

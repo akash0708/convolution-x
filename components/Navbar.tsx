@@ -6,7 +6,7 @@ import Link from "next/link";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
 
 const navItems = [
-  { href: "#home", label: "Home" },
+  { href: "/", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#events", label: "Events" },
   { href: "#timeline", label: "Timeline" },
@@ -36,7 +36,7 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="flex items-center gap-x-6 text-lg">
           <li className="nav-item">
-            <Link href="#home">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className="nav-item">
             <Link href="#about">About</Link>

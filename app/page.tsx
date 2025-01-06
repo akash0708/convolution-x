@@ -19,7 +19,7 @@ export default function Home() {
       <HomeAbout />
       <Events/>
       <Timeline></Timeline>
-      {/* <Team /> */}
+      <Team />
       <Sponsors/>
       {/* ----------------note that the slider hover has been commented for optimisation */}
       <FAQ />
