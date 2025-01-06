@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
-import { useSession } from "next-auth/react";
+import Cookies from "js-cookie";
 
 const teamSchema = z.object({
   teamName: z.string().min(3, "Team name must be at least 3 characters long"),
@@ -18,9 +18,27 @@ const teamSchema = z.object({
 type TeamFormValues = z.infer<typeof teamSchema>;
 
 const EventRegistrationForm: React.FC = () => {
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+
   const searchParams = useSearchParams(); // Extract event name from params
   const eventName = searchParams.get("eventName");
-  const { data: session } = useSession();
+  const userCookie = Cookies.get("user");
+  const email = userCookie ? JSON.parse(userCookie).email : null;
+
+  useEffect(() => {
+    // Fetch user details using post request to /api/user endpoint with email
+    const fetchUser = async () => {
+      try {
+        const response = await axios.post("/api/users", { email });
+        setId(response.data.id);
+        setName(response.data.name);
+      } catch (error: any) {
+        console.log("Error fetching user:", error);
+      }
+    };
+    fetchUser();
+  }, []);
 
   const {
     register,
@@ -43,21 +61,21 @@ const EventRegistrationForm: React.FC = () => {
       console.log("Submitting form:", {
         teamName: data.teamName,
         eventName,
-        leaderId: session?.user?.id,
+        leaderId: id,
         members: data.members,
       });
       const response = await axios.post("/api/teams/register", {
         teamName: data.teamName,
         eventName, // Use the event name from the URL
-        leaderId: session?.user?.id, // Use the user ID from the session
+        leaderId: id, // Use the user ID from the session
         members: data.members,
+        leaderEmail: email,
       });
       console.log("Team created:", response.data);
 
       alert("Team created successfully!");
       reset(); // Reset the form after successful submission
     } catch (error: any) {
-      console.error("Error creating team:", error);
       alert(error.response?.data?.message || "Failed to create team");
     }
   };
@@ -97,6 +115,7 @@ const EventRegistrationForm: React.FC = () => {
           <label className="block font-medium text-gray-700">
             Team Members
           </label>
+          <label>Team Leader: {name}</label>
           {Array.from({ length: memberCount }).map((_, index) => (
             <div key={index} className="flex space-x-2 mb-2">
               <input

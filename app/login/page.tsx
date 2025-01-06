@@ -1,8 +1,6 @@
-// components/RegisterForm.tsx
 "use client";
 
-import { useUserStore } from "@/store/userStore";
-import axios from "axios";
+import { signIn } from "@/lib/auth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -12,28 +10,21 @@ export default function RegisterForm() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const user = useUserStore((state) => state.user);
-  const setUser = useUserStore((state) => state.setUser);
-
-  const handleEmailRegister = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
     const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
     try {
-      // First register the user
-      const res = await axios.post("/api/signup", { email, password, name });
-      console.log("User created:", res.data);
-
-      setUser({ id: res.data.id, name: res.data.name, email: res.data.email });
-      console.log("User set:", user);
-      // redirect to verify email page
-      router.push("/verify-email");
+      const res = await signIn(email, password);
+      if (res.status === "error") {
+        throw new Error(res.message);
+      }
+      router.push("/profile"); // Redirect after successful login
     } catch (error) {
       setError(error instanceof Error ? error.message : "An error occurred");
     } finally {
@@ -95,7 +86,7 @@ export default function RegisterForm() {
 
           {/* ------------------email form starts here------------------- */}
           <form
-            onSubmit={handleEmailRegister}
+            onSubmit={handleLogin}
             className="flex flex-col w-full items-center gap-y-4 [&>*]:input-div"
           >
             {error && (
@@ -104,7 +95,7 @@ export default function RegisterForm() {
               </div>
             )}
 
-            <div>
+            {/* <div>
               <label
                 htmlFor="name"
                 className="block text-sm font-medium text-white/90"
@@ -119,7 +110,7 @@ export default function RegisterForm() {
                 placeholder="Enter your name"
                 className="input-box"
               />
-            </div>
+            </div> */}
 
             <div>
               <label
@@ -157,10 +148,10 @@ export default function RegisterForm() {
             </div>
 
             <Link
-              href="/login"
+              href="/register"
               className="text-center hover:text-white/80 text-sm sm:text-base text-white/90"
             >
-              Already have an account?
+              Don&apos;t have an account?
             </Link>
 
             <button
@@ -200,7 +191,7 @@ export default function RegisterForm() {
                   <p className="inline ">Creating account...</p>
                 </>
               ) : (
-                "Register with Email"
+                "Log in"
               )}
             </button>
           </form>
