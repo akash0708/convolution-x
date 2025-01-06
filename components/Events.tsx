@@ -331,7 +331,7 @@ export default function Events() {
             {events.map((eventDetails,index) => {
               return (
 
-              <div key={eventDetails.event} className="text-white py-4 px-2  rounded-xl flex flex-col items-center animate-float-medium delay-75  min-w-[200px]" style={{ animationDelay: `${ Math.random()}s` }}>
+              <Link href={`/event/`+ eventDetails.redirectTo} key={eventDetails.event} className="text-white py-4 px-2  rounded-xl flex flex-col items-center animate-float-medium delay-75  min-w-[200px]" style={{ animationDelay: `${ Math.random()}s` }}>
                 <Image
                   src={`/mobileEventPlanets/` + eventDetails.img}
                   className="object-cover "
@@ -340,7 +340,7 @@ export default function Events() {
                   alt={eventDetails.event}
                 ></Image>
                 {/* <h1 className="mt-2 text-center">{eventDetails.punchLine}</h1> */}
-              </div>
+              </Link>
               )
             })}
           </div>
