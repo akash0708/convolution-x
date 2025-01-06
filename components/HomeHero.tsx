@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
 import centerPlanet from "@/assets/images/HeroSectionImages/bowling ball planet.png";
 import rockets from "@/assets/images/HeroSectionImages/rotating rockets.png";
 import bluePlanet from "@/assets/images/HeroSectionImages/blue planet.png";
@@ -8,6 +7,7 @@ import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.png
 import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.png";
 import yellowBluePlanet from "@/assets/images/HeroSectionImages/yellow planet.png";
 import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.png";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
 import cloud1 from "@/assets/images/HeroSectionImages/cloud1.png";
 import cloud2 from "@/assets/images/HeroSectionImages/cloud2.png";
 import ConvoIcon from '@/assets/images/HeroSectionImages/ConvoSvg.svg';
@@ -42,7 +42,7 @@ const HomeHero = () => {
       </div>
 
       {/* --------------Pink Star Bg------------- */}
-      <div className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle, rgba(255, 255, 255, 0.5) 20%, rgba(0, 0, 0, 0.8) 80%)] animate-twinkle">
+      <div className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2  animate-twinkle">
         <Image
           src={pinkStar}
           alt="Picture pink stars"

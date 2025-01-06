@@ -5,16 +5,16 @@ import "@/app/sponsors.css";
 
 const Sponsors: React.FC = () => {
   const sponsors = [
-    '/images/slider1_1.png',
-    '/images/slider1_2.png',
-    '/images/slider1_3.png',
-    '/images/slider1_4.png',
-    '/images/slider1_5.png',
-    '/images/slider1_6.png',
-    '/images/slider1_7.png',
-    '/images/slider1_8.png',
-    '/images/slider1_9.png',
-    '/images/slider1_10.png',
+    '/sponsorImages/slider1_1.png',
+    '/sponsorImages/slider1_2.png',
+    '/sponsorImages/slider1_3.png',
+    '/sponsorImages/slider1_4.png',
+    '/sponsorImages/slider1_5.png',
+    '/sponsorImages/slider1_6.png',
+    '/sponsorImages/slider1_7.png',
+    '/sponsorImages/slider1_8.png',
+    '/sponsorImages/slider1_9.png',
+    '/sponsorImages/slider1_10.png',
   ];
 
   return (
