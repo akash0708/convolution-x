@@ -105,7 +105,7 @@ export async function POST(req: Request) {
     );
 
     // Send email to the leader
-    await axios.post("http://localhost:8080/api/event", {
+    await axios.post(`${process.env.EMAIL_URL}/api/event`, {
       to: leaderEmail,
       subject: `Registration Successful for ${eventName}`,
       name: teamName,

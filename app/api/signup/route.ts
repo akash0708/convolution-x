@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       },
     });
 
-    await axios.post("http://localhost:8080/api/register", {
+    await axios.post(`${process.env.EMAIL_URL}/api/register`, {
       to: newUser.email,
       subject: "ConvolutionX - Decade of Innovation",
       name: newUser.name,

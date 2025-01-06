@@ -26,7 +26,7 @@ const VerifyEmail = () => {
       setMessage("Verification email has been sent!");
     } catch (error) {
       setMessage("Failed to send verification email. Please try again.");
-      console.error(error);
+      console.log(error);
     } finally {
       setIsSending(false);
     }

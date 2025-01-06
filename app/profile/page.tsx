@@ -29,7 +29,7 @@ export default function ProtectedComponent() {
           email: response.data.email,
         });
       } catch (error: any) {
-        console.error("Error fetching user:", error);
+        console.log("Error fetching user:", error);
       }
     };
     fetchUser();

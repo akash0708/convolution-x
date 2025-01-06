@@ -34,7 +34,7 @@ const EventRegistrationForm: React.FC = () => {
         setId(response.data.id);
         setName(response.data.name);
       } catch (error: any) {
-        console.error("Error fetching user:", error);
+        console.log("Error fetching user:", error);
       }
     };
     fetchUser();
@@ -76,7 +76,6 @@ const EventRegistrationForm: React.FC = () => {
       alert("Team created successfully!");
       reset(); // Reset the form after successful submission
     } catch (error: any) {
-      console.error("Error creating team:", error);
       alert(error.response?.data?.message || "Failed to create team");
     }
   };

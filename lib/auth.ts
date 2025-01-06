@@ -1,4 +1,3 @@
-import axios from "axios";
 import { auth } from "./firebase";
 import {
   createUserWithEmailAndPassword,
