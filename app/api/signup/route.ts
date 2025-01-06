@@ -6,6 +6,7 @@ import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
 } from "firebase/auth";
+import axios from "axios";
 
 export async function POST(req: Request) {
   try {
@@ -29,6 +30,12 @@ export async function POST(req: Request) {
         name,
         password: password,
       },
+    });
+
+    await axios.post("http://localhost:8080/api/register", {
+      to: newUser.email,
+      subject: "ConvolutionX - Decade of Innovation",
+      name: newUser.name,
     });
 
     return NextResponse.json(

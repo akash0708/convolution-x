@@ -12,125 +12,54 @@ export async function POST(req: Request) {
       leaderEmail,
     } = await req.json();
 
-    console.log("team", {
-      teamName,
-      eventName,
-      leaderId,
-      teamMembers,
-    });
-
     // Input validation
-    if (!teamName || !eventName || !leaderId || !Array.isArray(teamMembers)) {
+    if (
+      !teamName ||
+      !eventName ||
+      !leaderId ||
+      !leaderEmail ||
+      !Array.isArray(teamMembers)
+    ) {
       return NextResponse.json(
         { message: "Missing required fields" },
         { status: 400 }
       );
     }
-    // debug
-    console.log("input validated");
 
-    // we will be getting emails of members and not ids, hence first we need to check if user with specified userid exists and then fetch the ids of the members
-    // const memberEmails = members.map((member: string) => member.email);
-    const existingUsers = await prisma.user.findMany({
-      where: { email: { in: teamMembers } },
+    // Combine leader and team members for validation
+    const allMembers = [...teamMembers, leaderEmail];
+
+    // Check if the leader or any member is already in a team for this event
+    const existingTeams = await prisma.team.findMany({
+      where: {
+        eventName,
+        OR: [
+          { leaderId },
+          { members: { some: { email: { in: allMembers } } } },
+        ],
+      },
+      include: { members: true },
     });
 
-    // Check if all members exist
-    if (existingUsers.length !== teamMembers.length) {
+    if (existingTeams.length > 0) {
+      // If leader or any member is already in a team
+      const existingTeam = existingTeams[0];
+      const isLeaderInTeam = existingTeam.leaderId === leaderId;
+      const existingMembers = existingTeam.members.filter((member) =>
+        allMembers.includes(member.email)
+      );
+
       return NextResponse.json(
         {
-          message: "One or more team members are not registered on the website",
+          message: isLeaderInTeam
+            ? "You are already part of a team for this event."
+            : `One or more members (${existingMembers
+                .map((m) => m.email)
+                .join(", ")}) are already part of a team for this event.`,
         },
         { status: 400 }
       );
     }
-
-    // Check if any member is already in a team for this event
-    const existingMembers = await prisma.team.findFirst({
-      where: {
-        members: {
-          some: {
-            id: { in: existingUsers.map((u) => u.id) },
-          },
-        },
-        eventName,
-      },
-    });
-
-    if (existingMembers) {
-      return NextResponse.json(
-        {
-          message: "One or more members are already registered for this event",
-        },
-        { status: 400 }
-      );
-    }
-
-    // Check if any member is already a leader for another team for this event
-    const existingLeader = await prisma.team.findFirst({
-      where: {
-        leaderId: { in: existingUsers.map((u) => u.id) },
-        eventName,
-      },
-    });
-
-    if (existingLeader) {
-      return NextResponse.json(
-        {
-          message:
-            "One or more members are already a leader for another team in this event",
-        },
-        { status: 400 }
-      );
-    }
-
-    // debug
-    console.log("members validated");
-
-    // Check if leader exists
-    const leader = await prisma.user.findFirst({
-      where: { id: leaderId },
-    });
-
-    if (!leader) {
-      return NextResponse.json(
-        { message: "Leader not found" },
-        { status: 404 }
-      );
-    }
-
-    // Check if the leader already has a team for this event
-    const existingTeam = await prisma.team.findFirst({
-      where: { eventName, leaderId },
-    });
-    if (existingTeam) {
-      return NextResponse.json(
-        { message: "Leader already has a team for this event" },
-        { status: 400 }
-      );
-    }
-
-    // Check if leader is a member of any other team for this event
-    const existingMember = await prisma.team.findFirst({
-      where: {
-        members: {
-          some: {
-            id: leaderId,
-          },
-        },
-        eventName,
-      },
-    });
-
-    if (existingMember) {
-      return NextResponse.json(
-        { message: "Leader is already a member of another team" },
-        { status: 400 }
-      );
-    }
-
-    // debug
-    console.log("leader validated");
 
     // Ensure team size doesn't exceed maxSize
     const maxSize = 4;
@@ -140,9 +69,6 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
-
-    // debug
-    console.log("team size validated");
 
     // Create the team
     const team = await prisma.team.create({
@@ -159,35 +85,12 @@ export async function POST(req: Request) {
           ],
         },
       },
-      include: {
-        members: true,
-      },
+      include: { members: true },
     });
 
-    // debug
-    console.log("team created");
-
-    // Prepare the list of emails for the members (excluding leader)
-    const emails = [leaderEmail, ...teamMembers];
-
-    // Prepare the payload for the email API
-    const emailPayload = {
-      emails,
-      teamName: team.teamName,
-      event: team.eventName,
-    };
-
-    try {
-      // Send the POST request to trigger email sending
-      await axios.post("http://localhost:3001/send-team-email", emailPayload);
-      console.log("Emails sent successfully!");
-    } catch (error) {
-      console.error("Error sending emails:", error);
-    }
-
-    // Add notifications for team members (excluding the leader)
-    const notifications = teamMembers.map((memberId: string) => ({
-      email: memberId,
+    // Notify team members
+    const notifications = teamMembers.map((email: string) => ({
+      email,
       title: `You've been added to the team "${teamName}"`,
       message: `You are now part of the team "${teamName}" for the event "${eventName}".`,
       type: "TEAM_INVITE",
@@ -201,6 +104,14 @@ export async function POST(req: Request) {
       })
     );
 
+    // Send email to the leader
+    await axios.post("http://localhost:8080/api/event", {
+      to: leaderEmail,
+      subject: `Registration Successful for ${eventName}`,
+      name: teamName,
+      eventName,
+    });
+
     return NextResponse.json(
       {
         message: "Team created successfully",
@@ -209,8 +120,7 @@ export async function POST(req: Request) {
       { status: 201 }
     );
   } catch (error: any) {
-    // console.error("Error creating team:", error);
-    console.log(JSON.stringify(error)); // this will not cause any issue
+    console.error("Error creating team:", error);
     return NextResponse.json(
       { message: "Internal server error", error: error.message },
       { status: 500 }

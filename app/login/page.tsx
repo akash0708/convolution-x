@@ -20,10 +20,13 @@ export default function RegisterForm() {
     const password = formData.get("password") as string;
 
     try {
-      await signIn(email, password);
+      const res = await signIn(email, password);
+      if (res.status === "error") {
+        throw new Error(res.message);
+      }
       router.push("/profile"); // Redirect after successful login
     } catch (error) {
-      console.error(error);
+      setError(error instanceof Error ? error.message : "An error occurred");
     } finally {
       setLoading(false);
     }
