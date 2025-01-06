@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useUserStore } from "@/store/userStore";
 import { useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 export default function ProtectedComponent() {
   const userCookie = Cookies.get("user");
@@ -49,9 +50,26 @@ export default function ProtectedComponent() {
 
   return (
     <>
-      <div>Welcome {email}</div>
-      <div>Name: {user?.name}</div>
-      <button onClick={handleSignout}>logout</button>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 font-sans">
+        <div className="text-2xl font-bold text-gray-800 mb-4">
+          Welcome, {email}
+        </div>
+        <div className="text-lg text-gray-600 mb-6">Name: {user?.name}</div>
+        <div className="flex space-x-4">
+          <button
+            onClick={handleSignout}
+            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition duration-200"
+          >
+            Logout
+          </button>
+          <Link
+            href={"/"}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200"
+          >
+            Go to Home
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
