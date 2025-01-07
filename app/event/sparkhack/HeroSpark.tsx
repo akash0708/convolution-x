@@ -37,7 +37,7 @@ const HeroSpark = () => {
               className="sm:w-full h-auto sm:max-w-[400px] w-[70vw] animate-float-slow"
               src={planet}
               alt="sparkhack planet"
-            ></Image>
+            ></Image> 
           </div>
 
           <div className="flex flex-col justify-center items-center gap-y-6">
