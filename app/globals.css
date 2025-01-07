@@ -83,10 +83,10 @@ html{
     @apply grid grid-cols-[50px_1fr] lg:gap-6 md:gap-4 sm:gap-2
   }
   .listHead{
-    @apply text-white font-medium md:text-lg
+    @apply text-white font-medium md:text-lg text-shadow-dark
   }
   .listPara{
-    @apply text-white/80 font-thin md:text-base text-sm
+    @apply text-white/90 font-thin md:text-base text-sm
   }
   .eventLinks{
     @apply text-white/90 cursor-pointer text-lg transition-all sm:text-left text-center
@@ -104,15 +104,16 @@ html{
     text-shadow: 0.5px 0.5px #fff;
   }
   .text-shadow-dark{
-    text-shadow: 1px 1px #000000, -1px 0px #00000060;
+    text-shadow: 1px 1px #00000080, -1px 0px #00000060;
   }
+  
 }
 
 /* --------------for card animation ---------------- */
 .cardContent{
   position: absolute;
   /* backdrop-filter: blur(10px); */
-  opacity: 0.7;
+  opacity: 0.8;
   transition: 0.5s;
   transform: translateY(30px);
 }

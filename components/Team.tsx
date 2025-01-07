@@ -52,8 +52,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jahid Mamud",
     post: "Secretary",
-    image:
-      "jahid.png",
+    image: "jahid.png",
     linkedin: "www.linkedin.com/in/jahid-mamud",
     instagram:
       "https://www.instagram.com/jem_.__/profilecard/?igsh=b2o0ZjlqZ3pkeW5t",
@@ -62,8 +61,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Ritam Kundu",
     post: "Joint secretary",
-    image:
-      "ritam.png",
+    image: "ritam.png",
     linkedin:
       "https://www.linkedin.com/in/ritam-kundu-394612257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram:
@@ -73,8 +71,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Siddhanta Ghosh",
     post: "Treasurer",
-    image:
-      "sid.png",
+    image: "sid.png",
     linkedin: "https://www.linkedin.com/in/siddhanta-ghosh",
     instagram: "https://www.instagram.com/ghosh_siddhanta2k3/",
     facebook:
@@ -83,8 +80,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Akash Bag",
     post: "Tech Lead",
-    image:
-      "akash.png",
+    image: "akash.png",
     linkedin: "https://www.linkedin.com/in/akashbag0903/",
     instagram: "https://www.instagram.com/akash09.dev/",
     facebook: "",
@@ -92,8 +88,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Arindam Pradhan",
     post: "Design Lead",
-    image:
-      "arindam.png",
+    image: "arindam.png",
     linkedin:
       "https://www.linkedin.com/in/arindam-pradhan/?originalSubdomain=in",
     instagram: "https://www.instagram.com/arindam_ju01/",
@@ -102,8 +97,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Aritra Kumar Dutta",
     post: "Sponsorship Lead",
-    image:
-      "aritra.png",
+    image: "aritra.png",
     linkedin:
       "https://www.linkedin.com/in/aritra-dutta-1752b4304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
@@ -113,8 +107,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Reejul Chattaraj",
     post: "Content Lead",
-    image:
-      "rc.png",
+    image: "rc.png",
     linkedin:
       "https://www.linkedin.com/in/reejul-chattaraj-85a09727a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram:
@@ -124,8 +117,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Sinjan Dinda",
     post: "Logistics Lead",
-    image:
-      "dinda.png",
+    image: "dinda.png",
     linkedin:
       "https://www.linkedin.com/in/sinjan-dinda-a70861276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/dinda_sinjan?igsh=bWc4eGJnMDJ0MTc4",
@@ -134,8 +126,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Arunava Roy",
     post: "PR Lead",
-    image:
-      "arunava.png",
+    image: "arunava.png",
     linkedin:
       "https://www.linkedin.com/in/arunava-roy-176a4527b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
@@ -172,29 +163,29 @@ const Team: React.FC = () => {
         </div>
 
         <div className="">
-        {/* --------------left Clouds------------ */}
-        <Image
-          src={cloud2}
-          alt="Rotating Rockets"
-          className="absolute top-0 left-0 w-[50vw] h-auto "
-        ></Image>
-        <Image
-          src={cloud1}
-          alt="Rotating Rockets"
-          className="absolute top-0 left-0 w-[35vw] h-auto "
-        ></Image>
-        {/* --------------right Clouds------------ */}
-        <Image
-          src={cloud2}
-          alt="Rotating Rockets"
-          className="absolute top-0 right-0 w-[50vw] h-auto scale-x-[-1]"
-        ></Image>
-        <Image
-          src={cloud1}
-          alt="Rotating Rockets"
-          className="absolute top-0 right-0 w-[35vw] h-auto scale-x-[-1]"
-        ></Image>{" "}
-      </div>
+          {/* --------------left Clouds------------ */}
+          <Image
+            src={cloud2}
+            alt="Rotating Rockets"
+            className="absolute top-0 left-0 w-[50vw] h-auto "
+          ></Image>
+          <Image
+            src={cloud1}
+            alt="Rotating Rockets"
+            className="absolute top-0 left-0 w-[35vw] h-auto "
+          ></Image>
+          {/* --------------right Clouds------------ */}
+          <Image
+            src={cloud2}
+            alt="Rotating Rockets"
+            className="absolute top-0 right-0 w-[50vw] h-auto scale-x-[-1]"
+          ></Image>
+          <Image
+            src={cloud1}
+            alt="Rotating Rockets"
+            className="absolute top-0 right-0 w-[35vw] h-auto scale-x-[-1]"
+          ></Image>{" "}
+        </div>
 
         {/* ----------------------pink Rocket--------------- */}
         <div>
@@ -213,7 +204,7 @@ const Team: React.FC = () => {
             className="absolute right-[15%] z-30 bottom-[20%] animate-float opacity-80  w-[25vw] object-cover"
           ></Image>
         </div>
-        {/* --------------------------huge pink blue planet ------------------------- */}
+        {/* ----------------------huge pink blue planet ------------------------- */}
         <div>
           <Image
             src={pinkBluePlanet}
@@ -227,15 +218,14 @@ const Team: React.FC = () => {
         <h1 className="text-3xl font-bold text-center text-white">
           Meet Our Team
         </h1>
-          {/* --------------- this for mobile-------------------- */}
+        {/* ------------ this for mobile- ------------------- */}
         <div className="mt-8 sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
           {teamMembers.map((member) => (
             <div className="" key={member.name}>
-
-              <div className="backdrop-blur-sm teamCard  sm:h-[280px] w-[43vw] px-2 py-8 flex-col  flex justify-center items-center bg-white/20  rounded-xl shadow-white/40 shadow-md">
+              <div className="backdrop-blur-sm sm:h-[280px] w-[43vw] px-2 py-8 flex-col  flex justify-center items-center bg-white/20  rounded-xl shadow-white/40 shadow-md">
                 <div className="flex justify-center">
                   <Image
-                    src={`/peoplePics/`+member.image}
+                    src={`/peoplePics/` + member.image}
                     alt={member.name}
                     width={96}
                     height={96}
@@ -262,7 +252,7 @@ const Team: React.FC = () => {
                       rel="noopener noreferrer"
                       className=""
                     >
-                      <FaFacebookSquare className="size-6 text-white/90" />
+                      <FaFacebookSquare className="size-6 text-white" />
                     </a>
                     <a
                       href={member.linkedin}
@@ -277,9 +267,9 @@ const Team: React.FC = () => {
               </div>
             </div>
           ))}
-          </div>
-  {/* ----------this for bigger screens------------- */}
-<div className="mt-8 hidden sm:flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
+        </div>
+        {/* ----------this for bigger screens------------- */}
+        <div className="mt-8 hidden sm:flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
           {teamMembers.map((member) => (
             <div className="" key={member.name}>
               <Tilt
@@ -289,7 +279,7 @@ const Team: React.FC = () => {
                 <div className="card px-4 py-8 flex-col flex justify-center items-center absolute top-0 right-0 left-0   cardContent">
                   <div className="flex justify-center">
                     <Image
-                      src={`/peoplePics/`+ member.image}
+                      src={`/peoplePics/` + member.image}
                       alt={member.name}
                       width={112}
                       height={112}
@@ -301,7 +291,7 @@ const Team: React.FC = () => {
                       {member.name}
                     </h2>
                     <p className="text-sm text-white/80">{member.post}</p>
-                    <ul className="sci card-actions flex gap-2 justify-evenly mt-6">
+                    <ul className="sci card-actions flex gap-2 justify-evenly mt-4">
                       <li
                         className=""
                         style={{ "--i": 1 } as React.CSSProperties}

@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import trees from "@/assets/images/SparkHack/trees.png";
 import pendant1 from "@/assets/images/SparkHack/pendant1.png";
 import pendant3 from "@/assets/images/SparkHack/pendant3.png";
 import pendant2 from "@/assets/images/SparkHack/pendant2.png";
-
+import flakebg from "@/assets/images/SparkHack/flakeBg.png"
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png"
 const sparkhackRules = [
   "Sparkhack will feature various tracks, where teams select one to create a feasible real-world solution for the given problem.",
   "Upon event registration, participants will receive the problem statements via their email.",
@@ -19,10 +19,15 @@ const AboutSpark = () => {
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-[#8FE3F0] via-[#67C6DD] 
     via-[#3AADD9] to-[#2CB1DF] -z-20"
       ></div>
-
+{/* --------------------------flake Images background-------------- */}
       <Image
-        src={trees}
-        className=" h-[70%] w-auto opacity-80 absolute   -bottom-0 right-0 -z-10"
+        src={flakebg}
+        className=" h-auto hidden sm:block w-full  absolute opacity-40 object-cover  top-0 right-0 -z-10"
+        alt="trees"
+      />
+      <Image
+        src={flakebgMobile}
+        className=" sm:hidden block h-full  object-cover absolute opacity-60   bottom-0 right-0 -z-10"
         alt="trees"
       />
       <div className="maxWidthForSections flex flex-col items-center">
@@ -33,32 +38,32 @@ const AboutSpark = () => {
           <>
           <Image
         src={pendant1}
-        className="absolute sm:block hidden top-0 left-[10%] w-10 h-auto"
+        className="absolute md:block hidden top-0 left-[10%] w-10 h-auto"
         alt="trees"
       />
        <Image
         src={pendant2}
-        className="absolute sm:block hidden top-0 left-[17.5%] w-10 h-auto"
+        className="absolute md:block hidden top-0 left-[17.5%] w-10 h-auto"
         alt="trees"
       />
        <Image
         src={pendant3}
-        className="absolute sm:block hidden top-0 left-[25%] w-10 h-auto"
+        className="absolute md:block hidden top-0 left-[25%] w-10 h-auto"
         alt="trees"
       />
       <Image
         src={pendant1}
-        className="absolute sm:block hidden top-0 right-[10%] w-10 h-auto"
+        className="absolute md:block hidden top-0 right-[10%] w-10 h-auto"
         alt="trees"
       />
        <Image
         src={pendant2}
-        className="absolute sm:block hidden top-0 right-[17.5%] w-10 h-auto"
+        className="absolute md:block hidden top-0 right-[17.5%] w-10 h-auto"
         alt="trees"
       />
        <Image
         src={pendant3}
-        className="absolute sm:block hidden top-0 right-[25%] w-10 h-auto"
+        className="absolute md:block hidden top-0 right-[25%] w-10 h-auto"
         alt="trees"
       />
           </>
