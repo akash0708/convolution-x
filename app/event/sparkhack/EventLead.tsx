@@ -74,7 +74,6 @@ const EventLead = () => {
                   <h2 className="  text-sm mt-2 font-semibold">
                     {member.name}
                   </h2>
-                  <p className="text-xs opacity-90">{member.post}</p>
                   <div className="card-actions flex gap-2 justify-evenly mt-2">
                     {member.instagram && <a
                       href={member.instagram}
