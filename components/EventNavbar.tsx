@@ -8,13 +8,18 @@ import { IoClose, IoMenuOutline } from "react-icons/io5";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#events", label: "Events" },
+  { href: "#rules", label: "Rules" },
   { href: "#timeline", label: "Timeline" },
+  { href: "#judges", label: "Judges" },
+  { href: "#prizes", label: "Prizes" },
   { href: "#team", label: "Team" },
   { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
 ];
-const Navbar = () => {
+interface EventNavbarProps {
+  navTheme: string; 
+}
+
+const EventNavbar: React.FC<EventNavbarProps>  = ({navTheme}) => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const toggleNavigation = (): void => {
     setIsNavOpen((prevState) => !prevState);
@@ -46,7 +51,7 @@ const Navbar = () => {
       {/* ------------------for mobile screens----------------------- */}
       <div className="maxWidthForSections py-[10px] w-full md:hidden flex justify-between items-center px-4 ">
         {/* Logo */}
-        <Link href='#home'>
+        <Link href="#home">
           <Image
             src={ConvoIcon}
             alt="convo logo"
@@ -63,19 +68,28 @@ const Navbar = () => {
           onClick={toggleNavigation}
         >
           <div
-            className="h-full w-2/3 flex flex-col bg-gradient-to-b from-darkBlue to-softPurple/90  items-end justify-start py-6 px-4"
+            className={`h-full w-2/3 sm:w-full sm:max-w-[350px] flex flex-col ${navTheme}  items-end justify-start py-6 px-4`}
             onClick={toggleNavigation}
           >
-            <IoClose className={`close-itemMobile  ${isNavOpen ? "icon-is-visible" : "icon-is-hidden"} hover:text-[#ec4899] size-8 `} onClick={toggleNavigation}  style={{  "--i-nav":  0.5 } as React.CSSProperties} />
+            <IoClose
+              className={`close-itemMobile text-inherit  ${
+                isNavOpen ? "icon-is-visible" : "icon-is-hidden"
+              } hover:text-[#ec4899] size-8 `}
+              onClick={toggleNavigation}
+              style={{ "--i-nav": 0.5 } as React.CSSProperties}
+            />
 
             <ul
               className={` flex flex-col items-center gap-y-6 text-lg w-full mt-6`}
             >
               {navItems.map((item, index) => (
-                <li onClick={toggleNavigation}
+                <li
+                  onClick={toggleNavigation}
                   key={index}
-                  className={`nav-itemMobile nav-item ${isNavOpen ? "is-visible" : "is-hidden"}`}
-                  style={{  "--i-nav": index + 1 } as React.CSSProperties}
+                  className={`nav-itemMobile nav-item ${
+                    isNavOpen ? "is-visible" : "is-hidden"
+                  }`}
+                  style={{ "--i-nav": index + 1 } as React.CSSProperties}
                 >
                   <Link href={item.href}>{item.label}</Link>
                 </li>
@@ -88,4 +102,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default EventNavbar;

@@ -3,8 +3,8 @@ import Image from "next/image";
 import pendant1 from "@/assets/images/SparkHack/pendant1.png";
 import pendant3 from "@/assets/images/SparkHack/pendant3.png";
 import pendant2 from "@/assets/images/SparkHack/pendant2.png";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png"
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png"
+import flakebg from "@/assets/images/SparkHack/flakeBg.png";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 const sparkhackRules = [
   "Sparkhack will feature various tracks, where teams select one to create a feasible real-world solution for the given problem.",
   "Upon event registration, participants will receive the problem statements via their email.",
@@ -14,12 +14,15 @@ const sparkhackRules = [
 ];
 const AboutSpark = () => {
   return (
-    <div className={`py-12 relative  flex items-center  overflow-hidden  `}>
+    <div
+      id="rules"
+      className={`py-12 relative  flex items-center  overflow-hidden  `}
+    >
       <div
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-[#8FE3F0] via-[#67C6DD] 
     via-[#3AADD9] to-[#2CB1DF] -z-20"
       ></div>
-{/* --------------------------flake Images background-------------- */}
+      {/* --------------------------flake Images background-------------- */}
       <Image
         src={flakebg}
         className=" h-auto hidden sm:block w-full  absolute opacity-40 object-cover  top-0 right-0 -z-10"
@@ -36,36 +39,36 @@ const AboutSpark = () => {
         >
           {/* ----------------------pendant hanging-------------------------- */}
           <>
-          <Image
-        src={pendant1}
-        className="absolute md:block hidden top-0 left-[10%] w-10 h-auto"
-        alt="trees"
-      />
-       <Image
-        src={pendant2}
-        className="absolute md:block hidden top-0 left-[17.5%] w-10 h-auto"
-        alt="trees"
-      />
-       <Image
-        src={pendant3}
-        className="absolute md:block hidden top-0 left-[25%] w-10 h-auto"
-        alt="trees"
-      />
-      <Image
-        src={pendant1}
-        className="absolute md:block hidden top-0 right-[10%] w-10 h-auto"
-        alt="trees"
-      />
-       <Image
-        src={pendant2}
-        className="absolute md:block hidden top-0 right-[17.5%] w-10 h-auto"
-        alt="trees"
-      />
-       <Image
-        src={pendant3}
-        className="absolute md:block hidden top-0 right-[25%] w-10 h-auto"
-        alt="trees"
-      />
+            <Image
+              src={pendant1}
+              className="absolute md:block hidden top-0 left-[10%] w-10 h-auto"
+              alt="trees"
+            />
+            <Image
+              src={pendant2}
+              className="absolute md:block hidden top-0 left-[17.5%] w-10 h-auto"
+              alt="trees"
+            />
+            <Image
+              src={pendant3}
+              className="absolute md:block hidden top-0 left-[25%] w-10 h-auto"
+              alt="trees"
+            />
+            <Image
+              src={pendant1}
+              className="absolute md:block hidden top-0 right-[10%] w-10 h-auto"
+              alt="trees"
+            />
+            <Image
+              src={pendant2}
+              className="absolute md:block hidden top-0 right-[17.5%] w-10 h-auto"
+              alt="trees"
+            />
+            <Image
+              src={pendant3}
+              className="absolute md:block hidden top-0 right-[25%] w-10 h-auto"
+              alt="trees"
+            />
           </>
           <h1 className="uppercase text-center text-2xl sm:text-4xl mb-8 text-white text-shadow-dark">
             Rules & Regulations
@@ -84,10 +87,8 @@ const AboutSpark = () => {
           </ul>
         </div>
         <button className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#3AADD9] shadow-white/80 hover:shadow-white/40 shadow-md text-white hover:opacity-100 opacity-80 transition-all duration-300 ">
-                <p className="     ">
-                  Know More
-                </p>
-            </button>
+          <p className="     ">Know More</p>
+        </button>
       </div>
     </div>
   );

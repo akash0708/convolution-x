@@ -8,8 +8,8 @@ import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 const PreFooter = () => {
   return (
     <div className="pt-8  overflow-hidden relative">
-              <div className="absolute top-0 bottom-0 left-0 right-0 w-full  bg-gradient-to-b from-[#8FE3F0]  
-    via-[#3AADD9] to-[#2CB1DF] 
+              <div className="absolute top-0 bottom-0 left-0 right-0 w-full  bg-gradient-to-b from-[#67C6DD]  
+    to-[#3AADD9] to-[#2CB1DF] 
      -z-20"></div>
       <Image
         src={flakebg}

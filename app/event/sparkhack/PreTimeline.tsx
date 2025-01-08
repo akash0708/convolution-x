@@ -6,7 +6,7 @@ import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 
 const PreTimeline = () => {
   return (
-    <div
+    <div id="timeline"
       className="bg-gradient-to-br from-[#8FE3F0] via-[#67C6DD] 
     via-[#3AADD9] to-[#2CB1DF] flex justify-center  relative overflow-hidden"
     >

@@ -7,7 +7,6 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 type TeamMember = {
   name: string;
-  post: string;
   instagram: string;
   facebook: string;
   linkedin: string;
@@ -16,31 +15,29 @@ type TeamMember = {
 
 const teamLead: TeamMember[] = [
   {
-    name: "Jahid Mamud",
-    post: "Secretary",
-    image: "jahid.png",
+    name: "Sheetali Maity",
+    image: "didi.png",
     linkedin: "www.linkedin.com/in/jahid-mamud",
     instagram:
       "https://www.instagram.com/jem_.__/profilecard/?igsh=b2o0ZjlqZ3pkeW5t",
     facebook: "",
   },
   {
-    name: "Ritam Kundu",
-    post: "Joint secretary",
-    image: "ritam.png",
+    name: "Soham Saha",
+    image: "soham.png",
     linkedin:
-      "https://www.linkedin.com/in/ritam-kundu-394612257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "https://www.linkedin.com/in/soham-saha-529291250/",
     instagram:
-      "https://www.instagram.com/ritamkundu.__/profilecard/?igsh=MTJxZ2NibmMxcW1pNw==",
+      "",
     facebook: "",
   },
 ];
 
 const EventLead = () => {
   return (
-    <div className="relative  py-12">
+    <div id="team" className="relative  py-12">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-t from-[#8FE3F0] via-[#67C6DD] 
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#67C6DD] 
     via-[#3AADD9] to-[#2CB1DF]"
       ></div>
       <Image
@@ -54,10 +51,10 @@ const EventLead = () => {
         alt="trees"
       />
       <div className="maxWidthForSections">
-        <h2 className="text-4xl font-medium text-darkBlue text-center ">
+        <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
           Event Leads
         </h2>
-        <p className="opacity-80 text-center mt-2 text-sm sm:text-lg font-medium">Meet the event leads of SparkHack! We are ready to address all your queries.</p>
+        <p className="opacity-80 text-center text-white text-shadow-dark mt-2 text-base sm:text-lg font-medium">Meet the event leads of SparkHack! We are ready to address all your queries.</p>
 
         {/* ---------------------------For Mobile---------------------------- */}
         <div className="mt-8 sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
@@ -79,22 +76,22 @@ const EventLead = () => {
                   </h2>
                   <p className="text-xs opacity-90">{member.post}</p>
                   <div className="card-actions flex gap-2 justify-evenly mt-2">
-                    <a
+                    {member.instagram && <a
                       href={member.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
                       className=""
                     >
                       <FaInstagram className="size-6 opacity-80"></FaInstagram>
-                    </a>
-                    <a
+                    </a>}
+                    {member.facebook &&<a
                       href={member.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
                       className=""
                     >
                       <FaFacebookSquare className="size-6 opacity-80" />
-                    </a>
+                    </a>}
                     <a
                       href={member.linkedin}
                       target="_blank"
@@ -114,8 +111,8 @@ const EventLead = () => {
         <div className="mt-8 hidden sm:flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2 font-sans">
           {teamLead.map((member) => (
             <div className="" key={member.name}>
-              <div className="sm:block hidden relative w-[220px] h-[280px] bg-white/5 bg-base-100  rounded-xl shadow-black/20 shadow-md backdrop-blur-md overflow-hidden teamCard">
-                <div className="card px-4 py-8 flex-col flex justify-center items-center absolute top-0 right-0 left-0   cardContent">
+              <div className="sm:block hidden relative w-[220px] h-[250px] bg-white/25   rounded-xl shadow-black/20 shadow-md backdrop-blur-md overflow-hidden teamCard">
+                <div className=" px-4 py-6 flex-col flex justify-center items-center absolute top-0 right-0 left-0   cardContent">
                   <div className="flex justify-center">
                     <Image
                       src={`/peoplePics/` + member.image}
@@ -129,31 +126,30 @@ const EventLead = () => {
                     <h2 className="  mt-2 font-semibold">
                       {member.name}
                     </h2>
-                    <p className="text-sm opacity-90">{member.post}</p>
                     <ul className="sci card-actions flex gap-2 justify-evenly mt-4">
                       <li
                         className=""
                         style={{ "--i": 1 } as React.CSSProperties}
                       >
-                        <a
+                        {member.instagram &&<a
                           href={member.instagram}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <FaInstagram className="size-6 opacity-80" />
-                        </a>
+                        </a>}
                       </li>
                       <li
                         className=""
                         style={{ "--i": 2 } as React.CSSProperties}
                       >
-                        <a
+                        {member.facebook &&<a
                           href={member.facebook}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <FaFacebookSquare className="size-6 opacity-80" />
-                        </a>
+                        </a>}
                       </li>
                       <li
                         className=""
