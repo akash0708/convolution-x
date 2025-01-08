@@ -30,13 +30,13 @@ const EventNavbar: React.FC<EventNavbarProps>  = ({navTheme}) => {
       {/* ------for large screens -------------------- */}
       <div className="hidden py-4 maxWidthForSections w-full md:flex justify-between items-center px-4">
         {/* Logo */}
-        <div>
+        <Link href='/'>
           <Image
             src={ConvoIcon}
             alt="convo logo"
             className="object-cover h-12 w-auto"
           />
-        </div>
+        </Link>
 
         {/* Navigation Links */}
         <ul className="flex items-center gap-x-6 text-lg">
@@ -51,7 +51,7 @@ const EventNavbar: React.FC<EventNavbarProps>  = ({navTheme}) => {
       {/* ------------------for mobile screens----------------------- */}
       <div className="maxWidthForSections py-[10px] w-full md:hidden flex justify-between items-center px-4 ">
         {/* Logo */}
-        <Link href="#home">
+        <Link href="/">
           <Image
             src={ConvoIcon}
             alt="convo logo"

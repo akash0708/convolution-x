@@ -49,7 +49,7 @@ const Mentors = () => {
         <h2 className="text-4xl font-medium text-black text-center ">
           Judges & Mentors
         </h2>
-        <p className="opacity-80 text-center mt-2 text-sm sm:text-lg font-medium">
+        <p className="opacity-80 text-center mt-2 text-base sm:text-xl font-medium">
           Meet the Judges and Mentors of Sparkhack!
         </p>
 

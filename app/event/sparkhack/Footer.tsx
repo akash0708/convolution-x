@@ -7,6 +7,7 @@ import ConvoIcon from "@/assets/images/HeroSectionImages/ConvoSvg.svg";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { MdCall, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import Link from "next/link";
+import EventFooter from "@/components/EventFooter";
 
 const Footer = () => {
   return (
@@ -26,8 +27,7 @@ const Footer = () => {
        
       </div>
 
-      <div className="sm:grid maxWidthForSections  w-full grid-cols-2  md:grid-cols-3 mt-4 flex flex-col items-center gap-x-2 gap-y-8 text-shadow">
-        {/* -----------------Logo And Socials------------- */}
+      {/* <div className="sm:grid maxWidthForSections  w-full grid-cols-2  md:grid-cols-3 mt-4 flex flex-col items-center gap-x-2 gap-y-8 text-shadow">
         <div>
           <div className="flex sm:justify-start justify-center">
             <Image
@@ -79,7 +79,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* ----------Get in touch------------- */}
         <div className="flex flex-col items-center">
           <h2 className="text-3xl  font-me text-white text-shadow-dark">Get In Touch</h2>
 
@@ -123,7 +122,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* ----------------Event Link--------------- */}
         <div className="flex flex-col items-center sm:items-start md:items-center">
           <h2 className="text-3xl font-medium text-white text-shadow-dark">Events</h2>
           <span className="h-1 w-14 mt-2 rounded-full bg-white"></span>
@@ -155,7 +153,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="h-1 mt-10 w-[80vw] mx-auto rounded-sm bg-white/80"></div>
+      <div className="h-1 mt-10 w-[80vw] mx-auto rounded-sm bg-white/80"></div> */}
+
+      <EventFooter linkText="hover:scale-105 text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor="darkBlue"></EventFooter>
     </div>
   );
 };

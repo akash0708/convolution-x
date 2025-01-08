@@ -25,13 +25,13 @@ const Navbar = () => {
       {/* ------for large screens -------------------- */}
       <div className="hidden py-4 maxWidthForSections w-full md:flex justify-between items-center px-4">
         {/* Logo */}
-        <div>
+        <Link href='/'>
           <Image
             src={ConvoIcon}
             alt="convo logo"
             className="object-cover h-12 w-auto"
           />
-        </div>
+        </Link>
 
         {/* Navigation Links */}
         <ul className="flex items-center gap-x-6 text-lg">

@@ -16,7 +16,7 @@ const AboutDecisia = () => {
       {/* --------------------------about Image background-------------- */}
       <Image
         src={aboutbg}
-        className=" absolute h-full top-0 object-cover left-1/2 -translate-x-1/2 -z-10"
+        className=" absolute lg:w-full lg:h-auto h-full top-0 object-cover left-1/2 -translate-x-1/2 -z-10"
         alt="trees"
       />
     

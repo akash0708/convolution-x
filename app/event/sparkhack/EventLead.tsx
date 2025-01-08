@@ -17,9 +17,9 @@ const teamLead: TeamMember[] = [
   {
     name: "Sheetali Maity",
     image: "didi.png",
-    linkedin: "www.linkedin.com/in/jahid-mamud",
+    linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
     instagram:
-      "https://www.instagram.com/jem_.__/profilecard/?igsh=b2o0ZjlqZ3pkeW5t",
+      "https://www.instagram.com/sheetali.csv",
     facebook: "",
   },
   {

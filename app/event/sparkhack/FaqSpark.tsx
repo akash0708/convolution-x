@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import flakebg from "@/assets/images/SparkHack/flakeBg.png";
 import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+import FaqEvent from '@/components/FaqEvent';
 const faqData = [
     {
       question: "What is Convolution?",
@@ -31,11 +32,7 @@ const faqData = [
     },
   ];
 const FaqSpark = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
     
-      const handleToggle = (index: number): void => {
-        setOpenIndex(openIndex === index ? null : index); // Toggle open/close
-      };
   return (
     <div id='faq' className='min-h-[80vh] relative flex justify-center items-center  '>
       <div className="absolute top-0 bottom-0 left-0 right-0 w-full  bg-gradient-to-b from-[#2CB1DF] via-[#3AADD9] to-[#67C6DD] 
@@ -56,51 +53,8 @@ const FaqSpark = () => {
         </h2>
         
 
-      <div className="flex mt-6  flex-col justify-center sm:p-0 px-2  gap-4 ">
-            {faqData.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm shadow-md text-white/90 shadow-white/50 rounded-lg"
-              >
-                <button
-                  type="button"
-                  onClick={() => handleToggle(index)}
-                  className="w-full text-left sm:p-5 py-[10px] px-4 font-medium rounded-xl   flex items-center justify-between"
-                >
-                  <p className="sm:text-base text-sm">{faq.question}</p>
-                  <svg
-                    className={`w-3 h-3 transition-transform duration-300 ${
-                      openIndex === index ? "" : "rotate-180"
-                    }`}
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5 5 1 1 5"
-                    />
-                  </svg>
-                </button>
+        <FaqEvent faq={faqData} questionStyle="text-white text-shadow-dark" answerStyle='text-white text-shadow-dark'></FaqEvent>
 
-                <div
-                  className={`${
-                    openIndex === index
-                      ? " opacity-1 max-h-screen"
-                      : "opacity-0 max-h-0 "
-                  }  transition-all duration-300 ease-in-out `}
-                >
-                  <div className="sm:px-5 sm:pb-5 px-4 pb-4 pt-0 ">
-                    <p className="text-white/80 sm:text-sm text-xs">{faq.answer}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
     </div>
   )
