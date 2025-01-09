@@ -12,16 +12,7 @@ import astro from "@/assets/images/astroNotMoon.png";
 import astroMedi from "@/assets/images/astroNot2.png";
 import Link from "next/link";
 
-// import ass1 from "@/assets/images/asteroids/ass1.png"
-// import ass2 from "@/assets/images/asteroids/ass2.png"
-// import ass3 from "@/assets/images/asteroids/ass3.png"
-// import ass4 from "@/assets/images/asteroids/ass4.png"
-// import ass5 from "@/assets/images/asteroids/ass5.png"
-// import ass6 from "@/assets/images/asteroids/ass6.png"
-// import ass7 from "@/assets/images/asteroids/ass7.png"
-// import ass8 from "@/assets/images/asteroids/ass8.png"
-// import ass9 from "@/assets/images/asteroids/ass9.png"
-// import assThicc1 from "@/assets/images/asteroids/ass(thicc)1.png"
+
 
 export default function Events() {
   const [showArrows, setShowArrows] = useState(false);
@@ -49,47 +40,47 @@ export default function Events() {
     {
       event: "Decisia",
       redirectTo: "decisia",
-      img: "planet_1.png",
+      img: "decisia.png",
     },
     {
       event: "Sparkhack",
       redirectTo: "sparkhack",
-      img: "planet_2.png",
+      img: "sparkhack.png",
     },
     {
       event: "Ju Talks",
       redirectTo: "ju_talks",
-      img: "planet_3.png",
+      img: "jutalks.png",
     },
     {
       event: "Abol Tabol",
       redirectTo: "abol_tabol",
-      img: "planet_4.png",
+      img: "aboltabol.png",
     },
     {
       event: "Eureka",
       redirectTo: "eureka",
-      img: "planet_5.png",
+      img: "eureka.png",
     },
     {
       event: "Inquizitive",
       redirectTo: "inquizitive",
-      img: "planet_6.png",
+      img: "inquizzitive.png",
     },
     {
       event: "Circuistics",
       redirectTo: "circuistics",
-      img: "planet_7.png",
+      img: "circustics.png",
     },
     {
       event: "Algomaniac",
       redirectTo: "algomaniac",
-      img: "planet_8.png",
+      img: "algomaniac.png",
     },
     {
       event: "24 Frames",
       redirectTo: "24_frames",
-      img: "planet_9.png",
+      img: "24frames.png",
     },
   ];
   
@@ -215,7 +206,8 @@ export default function Events() {
   function positionPlanets(planets, totalPlanets) {
     const angleStep = 360 / totalPlanets;
     for (let i = 0; i < totalPlanets; i++) {
-      const angle = targetAngle + i * angleStep;
+      const angle = (targetAngle + i * angleStep) > (Math.PI*2)? 
+      (targetAngle + i * angleStep)%(Math.PI*2) : (targetAngle + i * angleStep);
       const radian = (angle * Math.PI) / 180;
 
       const x = Math.sin(radian) * 300;
