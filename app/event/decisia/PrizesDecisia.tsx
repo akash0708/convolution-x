@@ -7,7 +7,7 @@ import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 import Image from "next/image";
 const PrizesDecisia = () => {
   return (
-    <div id="prizes" className="py-12  relative">
+    <div id="prizes" className="py-20  relative">
       <div
         className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-t from-[#67C6DD]     
      via-[#2CB1DF] to-[#2CB1DF]"

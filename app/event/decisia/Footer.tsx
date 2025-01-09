@@ -23,11 +23,11 @@ const Footer = () => {
         alt="trees"
       /> */}
       
-      <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-b from-[#77340F]  via-[#931308]  to-[#5B0804] -z-20 ">
+      <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-b from-[#840301]  via-[#710505]  to-[#540404] -z-20 ">
        
       </div>      
 
-      <EventFooter linkText="hover:scale-105 text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor="darkBlue"></EventFooter>
+      <EventFooter linkText="hover:scale-105 text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor=" text-[#540404]"></EventFooter>
     </div>
   );
 };
