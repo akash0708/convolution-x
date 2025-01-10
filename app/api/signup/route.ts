@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     await sendEmailVerification(userCredential.user);
 
     // Hash the password
-    // const hashedPassword = await bcrypt.hash(password, 10);
+    // const hashedPassword = await bcrypt.hash(password, 10) ;
 
     // Store user in Prisma database
     const newUser = await prisma.user.create({
