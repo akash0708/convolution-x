@@ -1,32 +1,22 @@
 import FaqEvent from '@/components/FaqEvent'
 import React from 'react'
 const faqData = [
-    {
-      question: "What is Convolution?",
+  {
+      question: "Will there be any opportunities to showcase interdisciplinary projects?",
       answer: 
-        "Convolution is our annual tech fest, where technology, creativity, and innovation come together. It features exciting events, workshops, competitions, and opportunities to showcase talent.",
-    },
-    {
-      question: "When and where is Convolution happening?",
+        "Indeed, inter-college events often highlight interdisciplinary collaboration and innovation. It's worth inquiring about platforms to showcase projects spanning multiple disciplines, which can be advantageous for students seeking to explore cross-cutting themes and tackle complex challenges. Organizers typically provide details on participation in interdisciplinary showcases within the event program or through designated communication channels.",
+  },
+  {
+      question: "Can we bring prototypes, samples to enhance our pitch presentations?",
       answer: 
-        "Convolution will take place from 20th to 22nd February, 2025 at Department of Electrical Engineering, Jadavpur University. Stay tuned for updates on our website and social media!",
-    },
-    {
-      question: "Who can participate in Convolution?",
+        "Participants are encouraged to use prototypes or visual aids to enhance pitch presentations, providing clarity and engagement. However, it's crucial to ensure relevance, seamless integration, and confirmation of logistical requirements for a successful presentation.",
+  },
+  {
+      question: "Are there intellectual property or confidentiality issues to be considered?",
       answer: 
-        "Convolution is open to students enthusiastic about technology, enrolled in any undergraduate programme.",
-    },
-    {
-      question: "How can I register for Convolution?",
-      answer: 
-        "Visit our official website [insert link] or contact [insert contact details] for registration details.",
-    },
-    {
-      question: "Is there any registration fee?",
-      answer: 
-        "No, the registrations for the events are completely free of cost.",
-    },
-  ];
+        "Consider IP and confidentiality when sharing plans. Check event organizer agreements for information treatment. Mark materials as confidential and limit information dissemination. Seek legal counsel for IP protection if needed.",
+  },
+];
   
 const FaqDecisia = () => {
   return (

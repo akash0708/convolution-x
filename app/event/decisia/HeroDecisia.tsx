@@ -3,6 +3,8 @@ import planet from "@/assets/images/Decisia/planet.png";
 import logo from "@/assets/images/Decisia/decisia logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import EventHero from "@/components/EventHero";
+const aboutDecisia=`Decisia is like our version of "Shark Tank." It's your platform to pitch that dream business idea. You can be the CEO, create the product, showcase your profit margins, and pitch it to the "sharks'' for potential investment. Dive into the opportunity to turn your business dreams into reality!`
 const HeroDecisia = () => {
   return (
     <div id="about"
@@ -31,7 +33,7 @@ const HeroDecisia = () => {
 
       {/* ---------main content---------- */}
       <div className="h-full w-full  maxWidthForSections">
-        <div className=" grid grid-cols-1 gap-y-2 md:grid-cols-2 ">
+        {/* <div className=" grid grid-cols-1 gap-y-2 md:grid-cols-2 ">
           <div className="flex justify-center items-center ">
             <Image
               className="sm:w-full h-auto sm:max-w-[400px] w-[70vw] animate-float-slow"
@@ -52,7 +54,9 @@ const HeroDecisia = () => {
             </Link>
            
           </div>
-        </div>
+        </div> */}
+
+        <EventHero about={aboutDecisia} logo='/Decisia/decisia logo.png' buttonDesign='hover:bg-[#D11100] shadow-[#D11100] hover:shadow-[#5B0804] text-shadow-dark bg-[#DE5C00] hover:opacity-90 text-white' planet='/Decisia/planet.png'></EventHero>
       </div>
     </div>
   );

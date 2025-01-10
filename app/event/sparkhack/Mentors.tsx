@@ -34,7 +34,9 @@ const Mentors = () => {
       <div
         className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-white    
      to-[#2CB1DF]"
-      ></div>
+      >
+        
+      </div>
       <Image
         src={flakebg}
         className=" h-auto hidden sm:block w-full  absolute opacity-40   bottom-0 right-0 -z-10"

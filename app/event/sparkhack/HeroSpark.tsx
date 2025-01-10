@@ -48,7 +48,7 @@ const HeroSpark = () => {
               with notable social impact. The ideas will be judged by academics
               and industry experts.
             </p>
-            <Link href="/event/register?eventName=sparkhack" className="bg-[#8FE3F0] shadow-sparkhack-register py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full hover:bg-[#3AADD9] hover:opacity-90 text-white transition-all duration-300 hover:shadow-sparkhack-register-hover text-shadow-dark">
+            <Link href="/event/register?eventName=sparkhack" className="bg-[#8FE3F0] shadow-sparkhack-register py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full hover:bg-white hover:text-[#8FE3F0] hover:text-shadow-light hover:opacity-90 text-white transition-all duration-300 hover:shadow-sparkhack-register-hover text-shadow-dark">
                 <p className="    ">
                   Register Now
                 </p>
