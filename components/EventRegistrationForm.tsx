@@ -1,22 +1,36 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useSearchParams } from "next/navigation";
 import axios from "axios";
 import Cookies from "js-cookie";
-import toast, { Toast } from "react-hot-toast";
+import { useSearchParams } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { BiTrash } from "react-icons/bi";
+import { z } from "zod";
 
-const teamSchema = z.object({
-  teamName: z.string().min(3, "Team name must be at least 3 characters long"),
-  members: z
-    .array(z.string().email("Invalid email address").optional())
-    .min(1, "At least one member is required")
-    .max(3, "Team members cannot exceed 3"),
-});
+const eventConfigurations = [
+  { eventName: "circuistics", min: 3, max: 4 },
+  { eventName: "sparkhack", min: 4, max: 5 },
+  { eventName: "eureka", min: 3, max: 4 },
+  { eventName: "inquizzitive", min: 2, max: 4 },
+  { eventName: "decisia", min: 3, max: 5 },
+];
 
-type TeamFormValues = z.infer<typeof teamSchema>;
+const teamSchema = (min: number, max: number) =>
+  z.object({
+    teamName: z.string().min(3, "Team name must be at least 3 characters long"),
+    members: z
+      .array(z.string().email("Invalid email address"))
+      .min(min, `At least ${min} member(s) required`)
+      .max(max, `Cannot exceed ${max} member(s)`)
+      .refine(
+        (members) => members.filter(Boolean).length >= min,
+        `At least ${min} team member${min > 1 ? "s are" : " is"} required`
+      ),
+  });
+
+// type TeamFormValues = z.infer<typeof teamSchema>;
 
 const EventRegistrationForm: React.FC = () => {
   const [id, setId] = useState("");
@@ -24,6 +38,17 @@ const EventRegistrationForm: React.FC = () => {
 
   const searchParams = useSearchParams(); // Extract event name from params
   const eventName = searchParams.get("eventName");
+
+  const eventConfig = eventConfigurations.find(
+    (event) => event.eventName === eventName
+  ) || {
+    min: 1,
+    max: 3, // Default values if no match is found
+  };
+
+  const schema = teamSchema(eventConfig.min, eventConfig.max);
+  type TeamFormValues = z.infer<typeof schema>;
+
   const userCookie = Cookies.get("user");
   const email = userCookie ? JSON.parse(userCookie).email : null;
 
@@ -46,16 +71,18 @@ const EventRegistrationForm: React.FC = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    watch,
     setValue,
   } = useForm<TeamFormValues>({
-    resolver: zodResolver(teamSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       teamName: "",
-      members: [""], // Start with one empty member input
+      members: Array(eventConfig.min).fill(""),
     },
   });
 
-  const [memberCount, setMemberCount] = useState(1);
+  const members = watch("members");
+  const [memberCount, setMemberCount] = useState(eventConfig.min);
 
   const onSubmit = async (data: TeamFormValues) => {
     try {
@@ -75,77 +102,82 @@ const EventRegistrationForm: React.FC = () => {
       console.log("Team created:", response.data);
 
       // alert("Team created successfully!");
-      toast.custom((t: Toast) => (
-        <div
-          className={`${
-            t.visible ? "animate-enter" : "animate-leave"
-          } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
-        >
-          <div className="flex-1 w-0 p-4">
-            <div className="flex items-start">
-              <div className="ml-3 flex-1">
-                <p className="text-sm font-medium text-gray-900">
-                  Team Created
-                </p>
-                <p className="mt-1 text-sm text-gray-500">
-                  Your team has been successfully created.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex border-l border-gray-200">
-            <button
-              onClick={() => toast.dismiss(t.id)}
-              className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      ));
+      // toast.custom((t: Toast) => (
+      //   <div
+      //     className={`${
+      //       t.visible ? "animate-enter" : "animate-leave"
+      //     } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+      //   >
+      //     <div className="flex-1 w-0 p-4">
+      //       <div className="flex items-start">
+      //         <div className="ml-3 flex-1">
+      //           <p className="text-sm font-medium text-gray-900">
+      //             Team Created
+      //           </p>
+      //           <p className="mt-1 text-sm text-gray-500">
+      //             Your team has been successfully created.
+      //           </p>
+      //         </div>
+      //       </div>
+      //     </div>
+      //     <div className="flex border-l border-gray-200">
+      //       <button
+      //         onClick={() => toast.dismiss(t.id)}
+      //         className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      //       >
+      //         Close
+      //       </button>
+      //     </div>
+      //   </div>
+      // ));
+      // replace custom toast with toast.success("Team Created Successfully")
+      toast.success("Team Created Successfully");
       reset(); // Reset the form after successful submission
     } catch (error: any) {
-      toast.custom((t: Toast) => (
-        <div
-          className={`${
-            t.visible ? "animate-enter" : "animate-leave"
-          } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
-        >
-          <div className="flex-1 w-0 p-4">
-            <div className="flex items-start">
-              <div className="ml-3 flex-1">
-                <p className="text-sm font-medium text-gray-900">
-                  Failed to Create Team
-                </p>
-                <p className="mt-1 text-sm text-gray-500">
-                  {error.response?.data?.message || "Failed to create team"}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex border-l border-gray-200">
-            <button
-              onClick={() => toast.dismiss(t.id)}
-              className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      ));
+      // toast.custom((t: Toast) => (
+      //   <div
+      //     className={`${
+      //       t.visible ? "animate-enter" : "animate-leave"
+      //     } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+      //   >
+      //     <div className="flex-1 w-0 p-4">
+      //       <div className="flex items-start">
+      //         <div className="ml-3 flex-1">
+      //           <p className="text-sm font-medium text-gray-900">
+      //             Failed to Create Team
+      //           </p>
+      //           <p className="mt-1 text-sm text-gray-500">
+      //             {error.response?.data?.message || "Failed to create team"}
+      //           </p>
+      //         </div>
+      //       </div>
+      //     </div>
+      //     <div className="flex border-l border-gray-200">
+      //       <button
+      //         onClick={() => toast.dismiss(t.id)}
+      //         className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      //       >
+      //         Close
+      //       </button>
+      //     </div>
+      //   </div>
+      // ));
+      toast.error(`Failed to create team: ${error.response?.data?.message}`);
     }
   };
 
   const addMember = () => {
-    if (memberCount < 3) {
-      setMemberCount((prevCount) => prevCount + 1);
+    if (memberCount < eventConfig.max) {
+      setMemberCount(memberCount + 1);
+      setValue("members", [...members, ""]);
     }
   };
 
   const removeMember = (index: number) => {
-    if (memberCount > 1) {
-      setMemberCount((prevCount) => prevCount - 1);
-      setValue(`members.${index}`, ""); // Clear the email field when removing
+    if (memberCount > eventConfig.min) {
+      const updatedMembers = members.filter((_, i) => i !== index);
+      setValue("members", updatedMembers);
+      setMemberCount(updatedMembers.length);
     }
   };
 
@@ -180,22 +212,27 @@ const EventRegistrationForm: React.FC = () => {
                 placeholder={`Member ${index + 1} Email`}
                 className="w-full p-2 border rounded-md"
               />
-              {memberCount > 1 && (
+              {/* replace the obnoxious looking button with a trash icon from radix */}
+              {memberCount > eventConfig.min && (
                 <button
                   type="button"
                   onClick={() => removeMember(index)}
                   className="px-3 py-1 bg-red-500 text-white rounded-md"
                 >
-                  Remove
+                  <BiTrash />
                 </button>
               )}
             </div>
           ))}
           {errors.members && (
-            <p className="text-red-500 text-sm">{errors.members.message}</p>
+            <p className="text-red-500 text-sm">
+              {Array.isArray(errors.members)
+                ? errors.members[0]?.message
+                : errors.members.message}
+            </p>
           )}
           {/* Add Member Button */}
-          {memberCount < 3 && (
+          {memberCount < eventConfig.max && (
             <button
               type="button"
               onClick={addMember}
