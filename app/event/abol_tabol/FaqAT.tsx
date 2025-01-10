@@ -27,12 +27,12 @@ const FaqAT = () => {
     <div id='faq' className='min-h-[80vh]  relative flex justify-center items-center '>
         <div
         className="absolute top-0 left-0 w-full h-full  bg-gradient-to-br from-[#0215C5] via-[#020F92] 
-     to-[#010A5F] -z-20"
+     to-[#010A5F] -z-40"
       >
         <div className="relative">
         <Image
           src={wave}
-          className="hidden md:block absolute lg:w-[full] lg:h-auto h-1/2 top-1/2 object-cover left-1/2 opacity-30 -translate-x-1/2 -z-20"
+          className="hidden md:block absolute w-[full] lg:h-auto  object-cover left-1/2 opacity-30 -translate-x-1/2 -z-20"
           alt="trees"
         />
         <Image

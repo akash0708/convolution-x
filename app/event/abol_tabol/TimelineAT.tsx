@@ -31,12 +31,17 @@ const TimelineAT = () => {
     <div id="timeline" className="relative min-h-screen   py-16">
       <div
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0215C5] via-[#020F92] 
-     to-[#010A5F] -z-20"
+     to-[#010A5F] -z-30"
       >
        
         <Image
           src={wave}
           className="hidden md:block absolute lg:w-[full] lg:h-auto h-1/2 top-1/2 object-cover left-1/2 opacity-30 -translate-x-1/2 "
+          alt="trees"
+        />
+        <Image
+          src={wave1}
+          className="hidden md:block absolute lg:w-[full] lg:h-auto h-1/2 -top-0 object-cover left-1/2 opacity-30 -translate-x-1/2 "
           alt="trees"
         />
          <Image

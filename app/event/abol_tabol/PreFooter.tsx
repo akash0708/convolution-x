@@ -9,13 +9,13 @@ const PreFooter = () => {
     <div className="pt-8  overflow-hidden relative">
       <div
         className="absolute top-0 bottom-0 left-0  w-full  bg-gradient-to-tr from-[#0215C5] via-[#020F92] 
-     to-[#010A5F] -z-30"
+     to-[#010A5F] -z-50"
       ></div>
       <div className="relative">
         <Image
           src={prefooter}
           alt="preefooter ship"
-          className="min-h-[320px] lg:opacity-100 opacity-0"
+          className="min-h-[320px] w-full  lg:opacity-100 opacity-0"
         ></Image>
         <Image
           src={prefooter}

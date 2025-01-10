@@ -30,7 +30,7 @@ const Mentors = () => {
     <div id="judges" className="relative  py-20">
          <div
         className="absolute top-0 left-0 w-full h-full  bg-gradient-to-tr from-[#0215C5] via-[#020F92] 
-     to-[#010A5F] -z-30"
+     to-[#010A5F] -z-40"
       >
         <div className="relative">
 
