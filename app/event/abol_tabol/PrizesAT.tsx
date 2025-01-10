@@ -1,27 +1,29 @@
-import React from "react";
-import gold from "@/assets/images/Decisia/gold prize.png";
-import silver from "@/assets/images/Decisia/silver prize.png";
-import bronze from "@/assets/images/Decisia/bronze prize.png";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 import Image from "next/image";
-const PrizesDecisia = () => {
+import React from "react";
+import gold from "@/assets/images/AbolTabol/gold prize.png";
+import silver from "@/assets/images/AbolTabol/silver prize.png";
+import bronze from "@/assets/images/AbolTabol/bronze prize.png";
+import wavemobile from "@/assets/images/AbolTabol/wavesMobile.png";
+import wave1 from "@/assets/images/AbolTabol/layer1 timeline.png";
+
+const PrizesAT = () => {
   return (
     <div id="prizes" className="py-20  relative">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-t from-[#67C6DD]     
-     via-[#2CB1DF] to-[#2CB1DF]"
-      ></div>
-      {/* <Image
-        src={flakebg}
-        className=" h-auto hidden sm:block w-full  absolute opacity-40   bottom-0 right-0 -z-20"
-        alt="trees"
-      />
-      <Image
-        src={flakebgMobile}
-        className=" sm:hidden block h-auto w-full  absolute opacity-60   bottom-0 right-0 -z-20"
-        alt="trees"
-      /> */}
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-br from-[#0215C5] via-[#020F92] 
+     to-[#010A5F]"
+      >
+        <Image
+          src={wavemobile}
+          className="block md:hidden absolute  object-cover left-1/2 opacity-30 -translate-x-1/2 "
+          alt="trees"
+        />
+        <Image
+          src={wave1}
+          className="hidden md:block absolute lg:w-[full] lg:h-auto h-1/2 top-0 object-cover left-1/2 opacity-30 -translate-x-1/2 "
+          alt="trees"
+        />
+      </div>
       <div className="maxWidthForSections">
         <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
           Prizes
@@ -69,4 +71,4 @@ const PrizesDecisia = () => {
   );
 };
 
-export default PrizesDecisia;
+export default PrizesAT;

@@ -4,6 +4,7 @@ import flakebg from "@/assets/images/SparkHack/flakeBg.png";
 import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
+import EventLeadTemplate from "@/components/EventLeadTemplate";
 
 type TeamMember = {
   name: string;
@@ -57,7 +58,7 @@ const EventLead = () => {
         <p className="opacity-80 text-center text-white text-shadow-dark mt-2 text-base sm:text-lg font-medium">Meet the event leads of Decisia! We are ready to address all your queries.</p>
 
         {/* ---------------------------For Mobile---------------------------- */}
-        <div className="mt-8 sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
+        {/* <div className="mt-8 sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
           {teamLead.map((member) => (
             <div className="" key={member.name}>
               <div className="backdrop-blur-sm sm:h-[280px] w-[43vw] px-2 py-8 flex-col  flex justify-center items-center bg-white/20  rounded-xl shadow-black/20 shadow-md font-sans ">
@@ -104,10 +105,10 @@ const EventLead = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* ---------------------this for bigger screens --------------- */}
-        <div className="mt-8 hidden sm:flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2 font-sans">
+        {/* <div className="mt-8 hidden sm:flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2 font-sans">
           {teamLead.map((member) => (
             <div className="" key={member.name}>
               <div className="sm:block hidden relative w-[220px] h-[250px] bg-white/25   rounded-xl shadow-black/20 shadow-md backdrop-blur-md overflow-hidden teamCard">
@@ -168,7 +169,9 @@ const EventLead = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
+
+<EventLeadTemplate teamLead={teamLead} textColor='text-white'></EventLeadTemplate>
       </div>
     </div>
   );

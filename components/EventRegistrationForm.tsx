@@ -150,16 +150,22 @@ const EventRegistrationForm: React.FC = () => {
   };
 
   return (
-    <div className="w-1/4 mx-auto p-4 bg-white shadow-md rounded-lg">
+    <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-12 py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
+      <div className="absolute top-5 left-5 flex gap-x-1">
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+        </div>
+        <div className="flex flex-col gap-y-2 items-center">
       <h1 className="text-2xl font-semibold mb-4">Register a Team</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="flex flex-col w-full items-center  [&>*]:input-div" onSubmit={handleSubmit(onSubmit)}>
         {/* Team Name */}
         <div className="mb-4">
-          <label className="block font-medium text-gray-700">Team Name</label>
+          <label className="block text-sm font-medium text-white/90">Team Name</label>
           <input
             type="text"
             {...register("teamName")}
-            className="w-full p-2 border rounded-md"
+            className="input-box"
           />
           {errors.teamName && (
             <p className="text-red-500 text-sm">{errors.teamName.message}</p>
@@ -167,18 +173,18 @@ const EventRegistrationForm: React.FC = () => {
         </div>
 
         {/* Team Members */}
-        <div className="mb-4">
-          <label className="block font-medium text-gray-700">
+        <div className="mb-4 ">
+          <label className="block text-lg text-center font-medium text-white/90">
             Team Members
           </label>
           <label>Team Leader: {name}</label>
           {Array.from({ length: memberCount }).map((_, index) => (
-            <div key={index} className="flex space-x-2 mb-2">
+            <div key={index} className="flex space-x-2 mb-4">
               <input
                 type="email"
                 {...register(`members.${index}` as const)}
                 placeholder={`Member ${index + 1} Email`}
-                className="w-full p-2 border rounded-md"
+                className="input-box"
               />
               {memberCount > 1 && (
                 <button
@@ -199,7 +205,7 @@ const EventRegistrationForm: React.FC = () => {
             <button
               type="button"
               onClick={addMember}
-              className="text-blue-600 font-semibold"
+              className="text-white hover:text-white/80 transition-colors duration-300 font-semibold mt-2"
             >
               + Add Member
             </button>
@@ -210,11 +216,12 @@ const EventRegistrationForm: React.FC = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full p-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700"
+          className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? "Registering..." : "Register Team"}
         </button>
       </form>
+          </div>
     </div>
   );
 };

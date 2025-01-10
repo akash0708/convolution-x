@@ -56,6 +56,7 @@ export default function RegisterForm() {
           <h2 className="sm:text-2xl text-lg font-bold mb-2">
             Create an Account
           </h2>
+          <>
           {/* <p className="text-white/90 text-sm sm:text-base">Choose your registration method</p> */}
           {/* Google Sign In Button */}
           {/* <button
@@ -92,6 +93,7 @@ export default function RegisterForm() {
             <span className="text-nowrap px-2 text-sm sm:text-base">Or continue with email</span>
             <div className="w-full h-[1px] rounded-r-full bg-white/80"></div>
           </div> */}
+          </>
 
           {/* ------------------email form starts here------------------- */}
           <form

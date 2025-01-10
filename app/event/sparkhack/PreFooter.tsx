@@ -24,7 +24,7 @@ const PreFooter = () => {
       />
         {/* -----------------rocket svg--------------- */}        
 
-        <EventPreFooter rocketColor="white" smokeColor="[#8FE3F0]" windowColor="[#2cb1df]"></EventPreFooter>
+        <EventPreFooter rocketColor="text-white" smokeColor="text-[#8FE3F0]" windowColor="text-[#2cb1df]"></EventPreFooter>
       
      
       <div className="absolute h-2 w-full bottom-0 bg-[#8FE3F0]"></div>

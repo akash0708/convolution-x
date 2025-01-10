@@ -1,12 +1,7 @@
 import Image from "next/image";
 import React from "react";
 // import whiteStar from '@/assets/images/Footer/stars white.png'
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
-import ConvoIcon from "@/assets/images/HeroSectionImages/ConvoSvg.svg";
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { MdCall, MdLocationOn, MdOutlineEmail } from "react-icons/md";
-import Link from "next/link";
+
 import EventFooter from "@/components/EventFooter";
 
 const Footer = () => {
@@ -23,11 +18,11 @@ const Footer = () => {
         alt="trees"
       /> */}
       
-      <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-b from-[#77340F]  via-[#931308]  to-[#5B0804] -z-20 ">
+      <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-b from-[#840301]  via-[#710505]  to-[#540404] -z-20 ">
        
       </div>      
 
-      <EventFooter linkText="hover:scale-105 text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor="darkBlue"></EventFooter>
+      <EventFooter linkText="hover:scale-105 text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor=" text-[#540404]"></EventFooter>
     </div>
   );
 };
