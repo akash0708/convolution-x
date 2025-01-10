@@ -24,10 +24,22 @@ export default function RegisterForm() {
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
+    const phone = formData.get("phone") as string;
+    const institution = formData.get("institution") as string;
+    const department = formData.get("department") as string;
+    const year = formData.get("year") as string;
 
     try {
       // First register the user
-      const res = await axios.post("/api/signup", { email, password, name });
+      const res = await axios.post("/api/signup", {
+        email,
+        password,
+        name,
+        phone,
+        institution,
+        department,
+        year,
+      });
       console.log("User created:", res.data);
 
       setUser({ id: res.data.id, name: res.data.name, email: res.data.email });
@@ -133,6 +145,74 @@ export default function RegisterForm() {
                 type="email"
                 id="email"
                 name="email"
+                required
+                className="input-box"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-white/90"
+              >
+                Phone
+              </label>
+              <input
+                placeholder="Enter your phone number"
+                type="text"
+                id="phone"
+                name="phone"
+                required
+                className="input-box"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="institution"
+                className="block text-sm font-medium text-white/90"
+              >
+                Institution
+              </label>
+              <input
+                placeholder="Institution Name"
+                type="text"
+                id="institution"
+                name="institution"
+                required
+                className="input-box"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="department"
+                className="block text-sm font-medium text-white/90"
+              >
+                Department
+              </label>
+              <input
+                placeholder="Department of Study"
+                type="text"
+                id="department"
+                name="department"
+                required
+                className="input-box"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="year"
+                className="block text-sm font-medium text-white/90"
+              >
+                Year
+              </label>
+              <input
+                placeholder="Year of Study (eg. UG1, PG1)"
+                type="text"
+                id="year"
+                name="year"
                 required
                 className="input-box"
               />
