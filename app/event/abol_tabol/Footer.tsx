@@ -14,10 +14,10 @@ const Footer = () => {
       />
       <Image
         src={footerBgMobile}
-        className=" h-full block md:hidden  object-cover absolute opacity-50   bottom-0 right-0 -z-10"
+        className=" h-full block md:hidden  object-cover absolute opacity-40   bottom-0 right-0 -z-10"
         alt="trees"
       />
-        <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-tr from-[#0215C5] via-[#020F92] 
+        <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-br from-[#0215C5] via-[#020F92] 
      to-[#010A5F] -z-20 ">
        
        </div> 

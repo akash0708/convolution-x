@@ -19,7 +19,7 @@ const AboutAT = () => {
         <div className="relative w-full h-full top-0 left-0">
           <Image
             src={wave}
-            className=" absolute lg:w-full lg:h-auto h-full top-0 object-cover left-1/2 opacity-50 -translate-x-1/2 "
+            className=" absolute lg:w-full lg:h-auto h-full top-0 object-cover left-1/2 opacity-50 -z-20 -translate-x-1/2 "
             alt="trees"
           />
            <Image

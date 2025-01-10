@@ -9,6 +9,7 @@ import EventLead from "./EventLead";
 import FaqDecisia from "./FaqDecisia";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import Judges from "./Judges";
 import { Protest_Riot } from "next/font/google";
 
 const protestRiot = Protest_Riot({
@@ -27,6 +28,7 @@ const page = () => {
         <AboutDecisia></AboutDecisia>
         <Timeline></Timeline>
         <Mentors></Mentors>
+        <Judges></Judges>
         <PrizesDecisia></PrizesDecisia>
         <EventLead></EventLead>
         <FaqDecisia></FaqDecisia>

@@ -10,17 +10,17 @@ const PrizesAT = () => {
   return (
     <div id="prizes" className="py-20  relative">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-br from-[#0215C5] via-[#020F92] 
+        className="absolute top-0 left-0 w-full h-full -z-50 bg-gradient-to-br from-[#0215C5] via-[#020F92] 
      to-[#010A5F]"
       >
         <Image
           src={wavemobile}
-          className="block md:hidden absolute  object-cover left-1/2 opacity-30 -translate-x-1/2 "
+          className="block md:hidden absolute  object-cover left-1/2 opacity-30 -translate-x-1/2 -z-20"
           alt="trees"
         />
         <Image
           src={wave1}
-          className="hidden md:block absolute lg:w-[full] lg:h-auto h-1/2 top-0 object-cover left-1/2 opacity-30 -translate-x-1/2 "
+          className="hidden md:block absolute   top-0 object-cover left-1/2 opacity-30 -translate-x-1/2 -z-10"
           alt="trees"
         />
       </div>

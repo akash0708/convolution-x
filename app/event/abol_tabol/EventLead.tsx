@@ -14,20 +14,20 @@ type TeamMember = {
   
   const teamLead: TeamMember[] = [
     {
-      name: "Sheetali Maity",
-      image: "didi.png",
+      name: "Satrajit Mukherjee",
+      image: "satrajit.png",
       linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
       instagram:
         "https://www.instagram.com/sheetali.csv",
       facebook: "",
     },
     {
-      name: "Soham Saha",
-      image: "soham.png",
+      name: "Subha Bhattacharya",
+      image: "l.png",
       linkedin:
-        "https://www.linkedin.com/in/soham-saha-529291250/",
+        "https://www.linkedin.com/in/subha-bhattacharya-ab6907250",
       instagram:
-        "",
+        "https://www.instagram.com/subha._bh?igsh=MTBncDNtdGJtMXBvNA==",
       facebook: "",
     },
   ];
@@ -35,17 +35,17 @@ const EventLead = () => {
   return (
     <div id="team" className="relative  py-20">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20  bg-gradient-to-tr from-[#0215C5] via-[#020F92] 
+        className="absolute top-0 left-0 w-full h-full -z-30  bg-gradient-to-tr from-[#0215C5] via-[#020F92] 
      to-[#010A5F]"
       >
         <Image
           src={wavemobile}
-          className="block md:hidden absolute -bottom-1/4 object-cover left-1/2 opacity-30 -translate-x-1/2 "
+          className="block md:hidden absolute -bottom-1/4 object-cover left-1/2 opacity-30 -z-20 -translate-x-1/2 "
           alt="trees"
         />
         <Image
           src={wave}
-          className="hidden md:block absolute lg:w-[full] lg:h-auto h-1/2 top-0 object-cover left-1/2 opacity-30 -translate-x-1/2 "
+          className="hidden md:block absolute w-[full]   top-0 object-cover left-1/2 opacity-30 -translate-x-1/2 "
           alt="trees"
         />
       </div>

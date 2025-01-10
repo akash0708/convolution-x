@@ -11,18 +11,18 @@ type Professor = {
 
 const professors: Professor[] = [
     {
-      name: "Debangshu Dey",
+      name: "Sugata Munshi",
       profession:
         "Professor at Department of Electrical Engineering, Jadavpur University",
-      researchPoint: "https://scholar.google.com/citations?user=tlzV8CAAAAAJ&hl=en",
-      img: "dsd.png", // Replace with the actual image path or import
+      researchPoint: "https://scholar.google.com/citations?user=4QDUROsAAAAJ&hl=en",
+      img: "sgm.png", 
     },
     {
-      name: "Suddhasatwa Chakraborty",
+      name: "Arabinda Das",
       profession:
         "Professor at Department of Electrical Engineering, Jadavpur University",
-      researchPoint: "https://www.researchgate.net/profile/Suddhasatwa-Chakraborty",
-      img: "sdc.png", // Replace with the actual image path or import
+      researchPoint: "https://scholar.google.com/citations?user=Oxu-8WcAAAAJ&hl=en",
+      img: "ad.png", 
     },
   ];
 const Mentors = () => {
@@ -30,7 +30,7 @@ const Mentors = () => {
     <div id="judges" className="relative  py-20">
          <div
         className="absolute top-0 left-0 w-full h-full  bg-gradient-to-tr from-[#0215C5] via-[#020F92] 
-     to-[#010A5F] -z-30"
+     to-[#010A5F] -z-40"
       >
         <div className="relative">
 
