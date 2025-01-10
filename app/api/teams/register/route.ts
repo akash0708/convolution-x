@@ -12,6 +12,10 @@ export async function POST(req: Request) {
       leaderEmail,
     } = await req.json();
 
+    // send a get request to / route of email service to avoid failure due to cold start
+    const response = await axios.get(`${process.env.EMAIL_URL}`);
+    console.log("Email service response:", response.data);
+
     // Input validation
     if (
       !teamName ||
@@ -22,6 +26,17 @@ export async function POST(req: Request) {
     ) {
       return NextResponse.json(
         { message: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    // check if leaderEmail is same as any of the teamMembers
+    if (teamMembers.includes(leaderEmail)) {
+      return NextResponse.json(
+        {
+          message:
+            "You cannot be add your name as a member while registering as a Leader",
+        },
         { status: 400 }
       );
     }
@@ -62,7 +77,7 @@ export async function POST(req: Request) {
     }
 
     // Ensure team size doesn't exceed maxSize
-    const maxSize = 4;
+    const maxSize = 5;
     if (teamMembers.length + 1 > maxSize) {
       return NextResponse.json(
         { message: `Team size cannot exceed ${maxSize}` },
