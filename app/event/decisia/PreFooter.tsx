@@ -5,8 +5,8 @@ const PreFooter = () => {
   return (
     <div className="pt-8  overflow-hidden relative">
     <div className="absolute top-0 bottom-0 left-0 right-0 w-full  
- bg-gradient-to-t from-[#DE5C00] via-[#77340F] 
-    to-[#931308] 
+ bg-gradient-to-b from-[#D33D18] 
+    to-[#fe0c0c] 
 -z-20"></div>
  {/* <Image
         src={flakebg}
@@ -18,7 +18,7 @@ const PreFooter = () => {
         className=" sm:hidden block h-auto w-full  absolute opacity-60   bottom-0 right-0 -z-10"
         alt="trees"
       /> */}
-      <EventPreFooter rocketColor="text-white" smokeColor="text-[#840301]" windowColor="text-[#2cb1df]"></EventPreFooter>
+      <EventPreFooter rocketColor="text-[#540400]" smokeColor="text-[#a90808]" windowColor="text-[#D33D18]"></EventPreFooter>
 </div>
   )
 }

@@ -20,7 +20,8 @@ const faqData = [
   
 const FaqDecisia = () => {
   return (
-    <div id='faq' className='min-h-[80vh] bg-red-700 relative flex justify-center items-center '>
+    <div id='faq' className='min-h-[80vh] bg-gradient-to-b from-[#981B0B]     
+      to-[#D33D18] relative flex justify-center items-center '>
         <div className="maxWidthForSections">
         <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
           Frequently Asked Questions

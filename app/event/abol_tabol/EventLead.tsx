@@ -14,20 +14,20 @@ type TeamMember = {
   
   const teamLead: TeamMember[] = [
     {
-      name: "Sheetali Maity",
-      image: "didi.png",
+      name: "Satrajit Mukherjee",
+      image: "satrajit.png",
       linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
       instagram:
         "https://www.instagram.com/sheetali.csv",
       facebook: "",
     },
     {
-      name: "Soham Saha",
-      image: "soham.png",
+      name: "Subha Bhattacharya",
+      image: "l.png",
       linkedin:
-        "https://www.linkedin.com/in/soham-saha-529291250/",
+        "https://www.linkedin.com/in/subha-bhattacharya-ab6907250",
       instagram:
-        "",
+        "https://www.instagram.com/subha._bh?igsh=MTBncDNtdGJtMXBvNA==",
       facebook: "",
     },
   ];

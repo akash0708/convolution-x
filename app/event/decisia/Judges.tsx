@@ -2,6 +2,12 @@ import Image from "next/image";
 import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
+import { Protest_Riot } from "next/font/google";
+
+const protestRiot = Protest_Riot({
+  subsets: ["latin"], 
+  weight: "400", 
+});
 type Professor = {
   name: string;
   profession: string;
@@ -10,21 +16,15 @@ type Professor = {
 };
 
 const professors: Professor[] = [
-  {
-    name: "Arpan Kumar Pradhan",
-    profession:
-      "Professor at Department of Electrical Engineering, Jadavpur University",
-    researchPoint: "https://scholar.google.co.in/citations?user=fqBBOAYAAAAJ&hl=en",
-    img: "ap.png", // Replace with the actual image path or import
-  },
+  
  
 ];
 
-const Mentors = () => {
+const Judges = () => {
   return (
     <div id="judges" className="relative  py-12">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#D33D18]  to-[#A7200D]"
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#A7200D]  to-[#981B0B]"
       ></div>
       {/* <Image
         src={flakebg}
@@ -38,10 +38,10 @@ const Mentors = () => {
       /> */}
       <div className="maxWidthForSections">
         <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
-          Mentors
+          Judges
         </h2>
         <p className="opacity-80 text-white text-center mt-2 text-base sm:text-xl font-medium">
-          Meet the Mentors of Sparkhack!
+          Meet the Judges of Sparkhack!
         </p>
 
         <div className="mx-auto flex justify-center mt-6">
@@ -49,7 +49,7 @@ const Mentors = () => {
           <div
             className={`font-sans flex justify-center flex-col sm:flex-row gap-2 md:gap-x-12`}
           >
-            {professors.map((professor, index) => (
+            {professors.length>0 && professors.map((professor, index) => (
               <div
                 key={index}
                 className="rounded-xl bg-white/20 shadow-black/20 shadow-md backdrop-blur-sm flex  py-6 px-4 items-center gap-x-4  sm:max-w-[500px] text-white "
@@ -74,6 +74,9 @@ const Mentors = () => {
                 </div>
               </div>
             ))}
+            {professors.length==0 && (
+              <p className={`text-white text-xl ${protestRiot.className}`} >To be declared soon ...</p>
+            )}
           </div>
         </div>
       </div>
@@ -81,4 +84,4 @@ const Mentors = () => {
   );
 };
 
-export default Mentors;
+export default Judges;

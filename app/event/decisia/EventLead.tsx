@@ -1,9 +1,5 @@
-import Image from "next/image";
 import React from "react";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
+
 import EventLeadTemplate from "@/components/EventLeadTemplate";
 
 type TeamMember = {
@@ -16,21 +12,21 @@ type TeamMember = {
 
 const teamLead: TeamMember[] = [
   {
-    name: "Sheetali Maity",
-    image: "didi.png",
-    linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
+    name: "Sayar Paul",
+    image: "sayar.png",
+    linkedin: "https://www.linkedin.com/in/sayar-paul?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
-      "https://www.instagram.com/sheetali.csv",
-    facebook: "",
+      "https://www.instagram.com/sayar.paul.58?utm_source=qr&igsh=MThkN3pzb3ZqYzh4cQ==",
+    facebook: "https://www.facebook.com/share/154BbZXNkH/",
   },
   {
-    name: "Soham Saha",
-    image: "soham.png",
+    name: " Jeson Paul Kerketta",
+    image: "jason.png",
     linkedin:
       "https://www.linkedin.com/in/soham-saha-529291250/",
     instagram:
-      "",
-    facebook: "",
+      "https://www.instagram.com/jeson_kerketta_20?igsh=MXMycDJnMzQybGVh",
+    facebook: "https://www.facebook.com/share/159kUFWye2/",
   },
 ];
 
@@ -38,8 +34,8 @@ const EventLead = () => {
   return (
     <div id="team" className="relative  py-12">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#67C6DD] 
-    via-[#3AADD9] to-[#2CB1DF]"
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-t from-[#981B0B]     
+      to-[#D33D18]"
       ></div>
       {/* <Image
         src={flakebg}

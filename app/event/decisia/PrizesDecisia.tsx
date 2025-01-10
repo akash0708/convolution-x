@@ -9,8 +9,8 @@ const PrizesDecisia = () => {
   return (
     <div id="prizes" className="py-20  relative">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-t from-[#67C6DD]     
-     via-[#2CB1DF] to-[#2CB1DF]"
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#981B0B]     
+      to-[#D33D18]"
       ></div>
       {/* <Image
         src={flakebg}

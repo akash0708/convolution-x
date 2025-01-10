@@ -18,7 +18,7 @@ const Footer = () => {
         alt="trees"
       /> */}
       
-      <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-b from-[#840301]  via-[#710505]  to-[#540404] -z-20 ">
+      <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-b from-[#a90808]  via-[#7e0606]  to-[#540404] -z-20 ">
        
       </div>      
 
