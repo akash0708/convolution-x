@@ -10,7 +10,21 @@ import axios from "axios";
 
 export async function POST(req: Request) {
   try {
-    const { email, password, name } = await req.json();
+    const { email, password, name, department, year, institution, phone } =
+      await req.json();
+
+    console.log("Signup request:", {
+      email,
+      name,
+      department,
+      year,
+      institution,
+      phone,
+    });
+
+    // Health check for email service
+    const response = await axios.get(`${process.env.EMAIL_URL}`);
+    console.log("Email service response:", response.data);
 
     // Create user with Firebase
     const userCredential = await createUserWithEmailAndPassword(
@@ -21,7 +35,7 @@ export async function POST(req: Request) {
     await sendEmailVerification(userCredential.user);
 
     // Hash the password
-    // const hashedPassword = await bcrypt.hash(password, 10);
+    // const hashedPassword = await bcrypt.hash(password, 10) ;
 
     // Store user in Prisma database
     const newUser = await prisma.user.create({
@@ -29,6 +43,10 @@ export async function POST(req: Request) {
         email: userCredential.user.email!,
         name,
         password: password,
+        department: department,
+        year: year,
+        institution: institution,
+        phone: phone,
       },
     });
 
