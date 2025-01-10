@@ -7,10 +7,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// department, year, college/university, phone number
+
 model User {
   id            String         @id @default(cuid())
   name          String
   email         String         @unique
+  department    String
+  year          String
+  institution   String
+  phone         String
   password      String?
   teams         Team[]         @relation("TeamMembers")
   notifications Notification[]
@@ -24,7 +30,7 @@ model Team {
   eventName String // Store event name for easy querying
   leaderId  String // Reference to the team leader's user ID
   members   User[]   @relation("TeamMembers")
-  maxSize   Int      @default(4)
+  maxSize   Int      @default(5)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
