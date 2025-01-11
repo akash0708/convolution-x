@@ -35,7 +35,7 @@ export async function POST(req: Request) {
         password
       );
       await sendEmailVerification(userCredential.user, {
-        url: `${process.env.NEXT_PUBLIC_URL}/verify-email`,
+        url: `${process.env.NEXT_PUBLIC_URL}/login`,
         handleCodeInApp: true,
       });
     } catch (firebaseError: any) {
