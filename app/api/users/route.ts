@@ -9,13 +9,22 @@ export async function POST(request: Request) {
     // Check if email already exists
     const existingUser = await prisma.user.findUnique({
       where: { email: body.email },
+      include: {
+        teams: true, // Include related teams
+        notifications: true, // Include related notifications
+      },
     });
+
+    // console.log("Existing user:", existingUser);
 
     return NextResponse.json(
       {
         id: existingUser?.id,
         email: existingUser?.email,
         name: existingUser?.name,
+        institution: existingUser?.institution,
+        teams: existingUser?.teams, // Include teams in response
+        notifications: existingUser?.notifications, // Include notifications in response
       },
       { status: 201 }
     );

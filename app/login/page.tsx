@@ -1,14 +1,33 @@
 "use client";
 
 import { signIn } from "@/lib/auth";
+import { applyActionCode, getAuth } from "firebase/auth";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function RegisterForm() {
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const searchParams = useSearchParams();
+
+  const mode = searchParams.get("mode");
+  const oobCode = searchParams.get("oobCode");
+
+  if (mode == "VerifyEmail" && oobCode) {
+    const auth = getAuth();
+    applyActionCode(auth, oobCode)
+      .then(() => {
+        toast.success("Email verified successfully!");
+      })
+      .catch((error) => {
+        toast.error("Failed to verify email. Please try again.");
+        console.log(error);
+      });
+  }
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
