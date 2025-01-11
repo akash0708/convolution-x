@@ -23,8 +23,11 @@ export async function POST(req: Request) {
     // });
 
     // Health check for email service
-    const response = await axios.get(`${process.env.EMAIL_URL}`);
-    console.log("Email service response:", response.data);
+    axios
+      .get(`${process.env.EMAIL_URL}`)
+      .catch((err) =>
+        console.error("Failed to warm up email service:", err.message)
+      );
 
     // Create user with Firebase
     let userCredential;
