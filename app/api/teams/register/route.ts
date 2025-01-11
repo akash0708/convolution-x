@@ -10,6 +10,7 @@ export async function POST(req: Request) {
       leaderId,
       members: teamMembers,
       leaderEmail,
+      leaderName,
     } = await req.json();
 
     // send a get request to / route of email service to avoid failure due to cold start
@@ -111,6 +112,14 @@ export async function POST(req: Request) {
       type: "TEAM_INVITE",
     }));
 
+    // Notify leader
+    notifications.push({
+      email: leaderEmail,
+      title: `Team "${teamName}" created successfully`,
+      message: `Yay! Team "${teamName}" has been created successfully for the event "${eventName}".`,
+      type: "TEAM_CREATE",
+    });
+
     await Promise.all(
       notifications.map(async (notification) => {
         await prisma.notification.create({
@@ -120,16 +129,26 @@ export async function POST(req: Request) {
     );
 
     // Send email to the leader
-    await axios.post(`${process.env.EMAIL_URL}/api/event`, {
-      to: leaderEmail,
-      subject: `Registration Successful for ${eventName}`,
-      name: teamName,
-      eventName,
-    });
+    let emailSent = true;
+    try {
+      await axios.post(`${process.env.EMAIL_URL}/api/event`, {
+        to: leaderEmail,
+        subject: `Registration Successful for ${eventName}`,
+        name: leaderName,
+        eventName,
+      });
+    } catch (emailError: any) {
+      console.error("Failed to send email:", emailError.message);
+      emailSent = false;
+    }
+
+    const responseMessage = emailSent
+      ? "Solo registration successful."
+      : "Solo registration successful. However, we couldn't send a confirmation email. Please contact the organizers for assistance.";
 
     return NextResponse.json(
       {
-        message: "Team created successfully",
+        message: responseMessage,
         team,
       },
       { status: 201 }

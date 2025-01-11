@@ -93,6 +93,7 @@ const EventRegistrationForm: React.FC = () => {
         leaderId: id, // Use the user ID from the session
         members: data.members,
         leaderEmail: email,
+        leaderName: name,
       });
       // console.log("Team created:", response.data);
 
