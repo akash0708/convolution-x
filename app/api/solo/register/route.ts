@@ -67,16 +67,27 @@ export async function POST(req: Request) {
     await prisma.notification.create({ data: notification });
 
     // Send confirmation email to the leader
-    await axios.post(`${process.env.EMAIL_URL}/api/event`, {
-      to: leaderEmail,
-      subject: `Registration Successful for ${eventName}`,
-      name: leaderName,
-      eventName,
-    });
+    let emailSent = true;
+    try {
+      await axios.post(`${process.env.EMAIL_URL}/api/event`, {
+        to: leaderEmail,
+        subject: `Registration Successful for ${eventName}`,
+        name: leaderName,
+        eventName,
+      });
+    } catch (emailError: any) {
+      console.error("Failed to send email:", emailError.message);
+      emailSent = false;
+    }
+
+    // Construct the response message
+    const responseMessage = emailSent
+      ? "Solo registration successful."
+      : "Solo registration successful. However, we couldn't send a confirmation email. Please contact the organizers for assistance.";
 
     return NextResponse.json(
       {
-        message: "Solo registration successful",
+        message: responseMessage,
         team,
       },
       { status: 201 }
