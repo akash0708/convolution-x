@@ -27,38 +27,79 @@ export async function POST(req: Request) {
     console.log("Email service response:", response.data);
 
     // Create user with Firebase
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    await sendEmailVerification(userCredential.user);
-
-    // Hash the password
-    // const hashedPassword = await bcrypt.hash(password, 10) ;
+    let userCredential;
+    try {
+      userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      await sendEmailVerification(userCredential.user, {
+        url: "http://localhost:3000/login",
+        handleCodeInApp: true,
+      });
+    } catch (firebaseError: any) {
+      console.error("Firebase error:", firebaseError);
+      let errorMessage = "An error occurred while creating your account.";
+      if (firebaseError.code === "auth/email-already-in-use") {
+        errorMessage =
+          "This email is already registered. Please use a different email.";
+      } else if (firebaseError.code === "auth/weak-password") {
+        errorMessage =
+          "The password is too weak. Please use a stronger password.";
+      } else if (firebaseError.code === "auth/invalid-email") {
+        errorMessage =
+          "The email address is invalid. Please provide a valid email.";
+      }
+      return NextResponse.json({ error: errorMessage }, { status: 400 });
+    }
 
     // Store user in Prisma database
-    const newUser = await prisma.user.create({
-      data: {
-        email: userCredential.user.email!,
-        name,
-        password: password,
-        department: department,
-        year: year,
-        institution: institution,
-        phone: phone,
-      },
-    });
+    let newUser;
+    try {
+      newUser = await prisma.user.create({
+        data: {
+          email: userCredential.user.email!,
+          name,
+          password: password, // Ideally, hash the password before storing
+          department: department,
+          year: year,
+          institution: institution,
+          phone: phone,
+        },
+      });
+    } catch (prismaError: any) {
+      console.error("Prisma error:", prismaError);
+      return NextResponse.json(
+        {
+          error: "There was an issue saving your data. Please try again later.",
+        },
+        { status: 500 }
+      );
+    }
 
-    await axios.post(`${process.env.EMAIL_URL}/api/register`, {
-      to: newUser.email,
-      subject: "ConvolutionX - Decade of Innovation",
-      name: newUser.name,
-    });
+    // Send confirmation email
+    try {
+      await axios.post(`${process.env.EMAIL_URL}/api/register`, {
+        to: newUser.email,
+        subject: "ConvolutionX - Decade of Innovation",
+        name: newUser.name,
+      });
+    } catch (emailError: any) {
+      console.error("Error sending confirmation email:", emailError);
+      return NextResponse.json(
+        {
+          error:
+            "Your account was created, but we could not send the confirmation email.",
+        },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       {
-        message: "User created successfully",
+        message:
+          "User created successfully. Please verify your email to complete the registration process.",
         id: newUser.id,
         email: newUser.email,
         name: newUser.name,
@@ -66,7 +107,11 @@ export async function POST(req: Request) {
       { status: 201 }
     );
   } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 400 });
+    console.error("Unexpected error:", error);
+    return NextResponse.json(
+      { error: "An unexpected error occurred. Please try again later." },
+      { status: 500 }
+    );
   }
 }
 
