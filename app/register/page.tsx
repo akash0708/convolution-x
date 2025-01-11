@@ -42,10 +42,12 @@ export default function RegisterForm() {
         year,
       });
 
-      console.log("Signup response:", res);
-
-      setUser({ id: res.data.id, name: res.data.name, email: res.data.email });
-      console.log("User set:", user);
+      setUser({
+        id: res.data.id,
+        name: res.data.name,
+        email: res.data.email,
+        institution: res.data.institution,
+      });
       // redirect to verify email page
       router.push("/verify-email");
     } catch (error: any) {

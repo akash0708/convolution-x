@@ -23,6 +23,8 @@ export default function ProtectedComponent() {
 
   // -------------------for frontend constants etc --------------
   const [showArrows, setShowArrows] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+  const [teams, setTeams] = useState([]);
 
   const sliderMobileRef = useRef();
 
@@ -51,7 +53,14 @@ export default function ProtectedComponent() {
             id: response.data.id,
             name: response.data.name,
             email: response.data.email,
+            institution: response.data.institution,
           });
+
+          setNotifications(response.data.notifications);
+          const eventNames = response.data.teams.map(
+            (team: { eventName: string }) => team.eventName
+          );
+          setTeams(eventNames);
         } else {
           // User not found
           setLoading(false);
@@ -106,48 +115,6 @@ export default function ProtectedComponent() {
     "decisia",
     "decisia",
   ];
-  const notification = [
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-    {
-      event: "decisia",
-      message: "Yay !! You have been added to a new team for Eureka",
-    },
-  ];
 
   return (
     <div className="relative min-h-screen overflow-hidden pt-24 pb-8">
@@ -174,16 +141,14 @@ export default function ProtectedComponent() {
             ></Image>
           </div>
           <div className="text-white ">
-            <h1 className="font-bold md:text-4xl text-xl mb-4">
-              Sheetali Maity
-            </h1>
+            <h1 className="font-bold md:text-4xl text-xl mb-4">{user.name}</h1>
             <div className="flex items-center gap-4 mb-1">
               <GiGraduateCap className="text-2xl" />
-              <p className="text-sm sm:text-base">Jadavpur University</p>
+              <p className="text-sm sm:text-base">{user.institution}</p>
             </div>
             <div className="flex items-center gap-4">
               <MdOutlineEmail className="text-2xl" />
-              <p className="text-sm sm:text-base">dustudidi@gmail.com </p>
+              <p className="text-sm sm:text-base">{email}</p>
             </div>
           </div>
         </div>
@@ -253,20 +218,20 @@ export default function ProtectedComponent() {
               </h1>
               <FaBell className="text-white md:text-xl text-lg" />
             </div>
-            {notification.length == 0 && (
+            {notifications.length == 0 && (
               <div className="flex justify-center items-center  h-full w-full">
                 <h1 className="px-2 font-semibold text-xl ">
                   Your messages will appear here.
                 </h1>
               </div>
             )}
-            {notification.length > 0 && (
+            {notifications.length > 0 && (
               <div className="flex flex-col gap-y-4  overflow-y-scroll h-[88%] scrollbar-hide">
-                {notification.map((data, index) => {
+                {notifications.map((data, index) => {
                   return (
                     <Link
-                      key={data.event + index}
-                      href={`/event/` + data.event}
+                      key={data.id + index}
+                      href={`/event/` + data.title}
                       className="bg-white/80 rounded-md"
                     >
                       <div className="flex items-center gap-2 py-2 px-4">

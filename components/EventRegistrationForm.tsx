@@ -11,7 +11,7 @@ import { z } from "zod";
 
 const eventConfigurations = [
   { eventName: "circuistics", min: 3, max: 4 },
-  { eventName: "sparkhack", min: 4, max: 5 },
+  { eventName: "sparkhack", min: 3, max: 4 },
   { eventName: "eureka", min: 3, max: 4 },
   { eventName: "inquizzitive", min: 2, max: 4 },
   { eventName: "decisia", min: 3, max: 5 },
@@ -86,20 +86,15 @@ const EventRegistrationForm: React.FC = () => {
 
   const onSubmit = async (data: TeamFormValues) => {
     try {
-      console.log("Submitting form:", {
-        teamName: data.teamName,
-        eventName,
-        leaderId: id,
-        members: data.members,
-      });
-      const response = await axios.post("/api/teams/register", {
+      // const response =
+      await axios.post("/api/teams/register", {
         teamName: data.teamName,
         eventName, // Use the event name from the URL
         leaderId: id, // Use the user ID from the session
         members: data.members,
         leaderEmail: email,
       });
-      console.log("Team created:", response.data);
+      // console.log("Team created:", response.data);
 
       toast.success("Team Created Successfully");
       reset(); // Reset the form after successful submission

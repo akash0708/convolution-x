@@ -6,12 +6,12 @@ export async function POST(req: Request) {
   try {
     const { eventName, leaderId, leaderEmail, leaderName } = await req.json();
 
-    console.log("Solo registration request:", {
-      eventName,
-      leaderId,
-      leaderEmail,
-      leaderName,
-    });
+    // console.log("Solo registration request:", {
+    //   eventName,
+    //   leaderId,
+    //   leaderEmail,
+    //   leaderName,
+    // });
 
     // Send a get request to / route of email service to avoid failure due to cold start
     const response = await axios.get(`${process.env.EMAIL_URL}`);
@@ -55,6 +55,16 @@ export async function POST(req: Request) {
       },
       include: { members: true },
     });
+
+    // send notification to the user
+    const notification = {
+      email: leaderEmail,
+      title: `Yay! You have registered for "${eventName}"`,
+      message: `Yay! You have registered for "${eventName}"`,
+      type: "SOLO_REGISTRATION",
+    };
+
+    await prisma.notification.create({ data: notification });
 
     // Send confirmation email to the leader
     await axios.post(`${process.env.EMAIL_URL}/api/event`, {

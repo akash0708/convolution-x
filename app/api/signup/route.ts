@@ -13,14 +13,14 @@ export async function POST(req: Request) {
     const { email, password, name, department, year, institution, phone } =
       await req.json();
 
-    console.log("Signup request:", {
-      email,
-      name,
-      department,
-      year,
-      institution,
-      phone,
-    });
+    // console.log("Signup request:", {
+    //   email,
+    //   name,
+    //   department,
+    //   year,
+    //   institution,
+    //   phone,
+    // });
 
     // Health check for email service
     const response = await axios.get(`${process.env.EMAIL_URL}`);
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
         password
       );
       await sendEmailVerification(userCredential.user, {
-        url: "http://localhost:3000/login",
+        url: `${process.env.NEXT_PUBLIC_URL}/verify-email`,
         handleCodeInApp: true,
       });
     } catch (firebaseError: any) {
@@ -103,6 +103,7 @@ export async function POST(req: Request) {
         id: newUser.id,
         email: newUser.email,
         name: newUser.name,
+        institution: newUser.institution,
       },
       { status: 201 }
     );

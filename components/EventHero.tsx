@@ -6,8 +6,10 @@ interface MyComponentProps {
     about: string; // Custom text style
     buttonDesign: string; // Custom text style
     logo: string; // Custom text style
+    mode: string;
+    name: string; 
   }
-const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo }) => {
+const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo,mode,name }) => {
   return (
     <div>
       <div className=" grid grid-cols-1 gap-y-2 md:grid-cols-2 ">
@@ -24,9 +26,10 @@ const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo
             <p className="text-white text-center sm:text-xl text-base text-shadow-dark">
             {about}
             </p>
-            <Link href="/event/register?eventName=sparkhack" className={`
-            shadow-lg py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full  transition-all duration-300 ${buttonDesign}`}>
-                <p className="    ">
+            <Link 
+              href={`/event/register-${mode}?eventName=${name}`} 
+              className={`shadow-lg py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full  transition-all duration-300 ${buttonDesign}`}>
+                <p className="">
                   Register Now
                 </p>
             </Link>
