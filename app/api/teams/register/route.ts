@@ -14,8 +14,11 @@ export async function POST(req: Request) {
     } = await req.json();
 
     // send a get request to / route of email service to avoid failure due to cold start
-    const response = await axios.get(`${process.env.EMAIL_URL}`);
-    console.log("Email service response:", response.data);
+    axios
+      .get(`${process.env.EMAIL_URL}`)
+      .catch((err) =>
+        console.error("Failed to warm up email service:", err.message)
+      );
 
     // Input validation
     if (
