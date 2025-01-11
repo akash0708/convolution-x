@@ -249,7 +249,7 @@ const EventFooter: React.FC<MyComponentProps> = ({
             Events
           </h2>
           <span className="h-1 w-14 mt-2 rounded-full bg-white"></span>
-          <ul className={`mt-6 hover:scale-100 ${linkText}`}>
+          <ul className={`mt-6 ${linkText} hover:scale-100`}>
             {events.map((event, index) => (
               <li key={index} className="hover:scale-105 text-lg sm:text-left text-center">
                 <Link href={event.href}>{event.name}</Link>

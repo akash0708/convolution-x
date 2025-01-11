@@ -31,7 +31,7 @@ const HeroAT = () => {
         />
         <Image
           src={ray}
-          className=" object-cover top-0 left-0 md:h-full md:w-auto h-1/2 sm:opacity-30 opacity-25"
+          className=" object-cover top-0 left-0 md:h-[92%] md:w-auto h-1/2 sm:opacity-30 opacity-25"
           alt="trees"
         />
          <Image
