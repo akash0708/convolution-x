@@ -31,7 +31,7 @@ const FaqEvent: React.FC<MyComponentProps> = ({ faq, questionStyle,answerStyle }
             onClick={() => handleToggle(index)}
             className={` ${questionStyle} ${index==openIndex?`bg-white/30`:`bg-white/10`} w-full text-left sm:p-5 py-[10px] px-4 font-medium rounded-t-xl flex items-center justify-between `}
           >
-            <p className={`sm:text-base text-sm`}>{faqItem.question}</p>
+            <p className={`sm:text-base md:text-lg text-sm`}>{faqItem.question}</p>
             <svg
               className={`w-3 h-3 transition-transform duration-300 ${
                 openIndex === index ? "" : "rotate-180"
@@ -59,7 +59,7 @@ const FaqEvent: React.FC<MyComponentProps> = ({ faq, questionStyle,answerStyle }
             } transition-all duration-300 bg-white/10 ease-in-out`}
           >
             <div className="sm:px-5 sm:py-5 px-4 py-4 ">
-              <p className={`sm:text-sm text-xs ${answerStyle}`}>
+              <p className={`sm:text-sm md:text-base text-xs ${answerStyle}`}>
                 {faqItem.answer}
               </p>
             </div>

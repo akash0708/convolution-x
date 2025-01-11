@@ -48,15 +48,16 @@ export default function Events() {
       img: "sparkhack.png",
     },
     {
-      event: "Ju Talks",
-      redirectTo: "ju_talks",
-      img: "jutalks.png",
-    },
-    {
       event: "Abol Tabol",
       redirectTo: "abol_tabol",
       img: "aboltabol.png",
     },
+    {
+      event: "Ju Talks",
+      redirectTo: "ju_talks",
+      img: "jutalks.png",
+    },
+    
     {
       event: "Eureka",
       redirectTo: "eureka",
