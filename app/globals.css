@@ -59,6 +59,22 @@ html{
   opacity: 0;
   transform: translateY(-50px);
 }
+.navButtonAuth {
+  transition: opacity 2s, transform 1.5s; 
+  transition-delay: 1s;
+  /* opacity: 0; */
+  transform: translateX(50px); /* Initial transform state */
+}
+
+.navButtonAuth.is-visible {
+  opacity: 1;
+  transform: translateX(0); 
+}
+.navButtonAuth.is-hidden {
+  transition: none; /* Disable transition for instant reset */
+  opacity: 0;
+  transform: translateX(50px);
+}
 
 @layer utilities {
   .nav-item {

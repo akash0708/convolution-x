@@ -14,9 +14,12 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import profilePic from "@/assets/images/profileImg.png";
 import stars from "@/assets/images/white variant of pink stars.png";
+import starsMobile from "@/assets/images/white variant of pink stars Mobile.png";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
+import NotiIcon from "@/assets/images/notification icon.png"
 import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { IoMdLogOut } from "react-icons/io";
 export default function ProtectedComponent() {
   const userCookie = Cookies.get("user");
   const router = useRouter();
@@ -109,11 +112,12 @@ export default function ProtectedComponent() {
 
   const events = [
     "decisia",
-    "decisia",
-    "decisia",
-    "decisia",
-    "decisia",
-    "decisia",
+    "aboltabol",
+    "sparkhack",
+    "eureka",
+    "jutalks",
+    "24frames",
+    "circuistics",
   ];
 
   return (
@@ -124,11 +128,16 @@ export default function ProtectedComponent() {
       -z-20"
       ></div>
       {/* --------------------------stars Bg ------------------ */}
-      <div className="absolute top-0 left-0 w-full h-full   animate-twinkle">
+      <div className="absolute top-0 left-0 w-full h-full   animate-twinkle -z-20">
         <Image
           src={stars}
           alt="Picture pink stars"
-          className="absolute  w-full object-cover top-0 left-0"
+          className="absolute sm:block hidden  w-full object-cover top-0 left-0 -z-10"
+        />
+        <Image
+          src={starsMobile}
+          alt="Picture pink stars"
+          className="absolute sm:hidden block  w-full object-cover top-0 left-1/2 -translate-x-1/2 -z-10"
         />
       </div>
       <div className="maxWidthForSections   ">
@@ -141,21 +150,27 @@ export default function ProtectedComponent() {
             ></Image>
           </div>
           <div className="text-white ">
-            <h1 className="font-bold md:text-4xl text-xl mb-4">{user.name}</h1>
-            <div className="flex items-center gap-4 mb-1">
-              <GiGraduateCap className="text-2xl" />
+            
+
+            <h1 className="font-bold md:text-4xl text-xl  mb-2">{user.name}</h1>
+            
+            <div className="flex items-center sm:gap-4 gap-2 mb-1">
+              <GiGraduateCap className="sm:text-2xl text-lg" />
               <p className="text-sm sm:text-base">{user.institution}</p>
             </div>
-            <div className="flex items-center gap-4">
-              <MdOutlineEmail className="text-2xl" />
+            <div className="flex items-center sm:gap-4 gap-2">
+              <MdOutlineEmail className="sm:text-2xl text-lg" />
               <p className="text-sm sm:text-base">{email}</p>
             </div>
+            <button onClick={()=>{handleSignout()}} className="  w-full py-1 rounded-full bg-white text-darkBlue hover:text-white hover:bg-softPurple transition-colors duration-300 font-semibold mt-2 flex items-center justify-center gap-x-2">
+              <span><IoMdLogOut className="text-lg"/></span>Logout
+              </button>
           </div>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mt-12">
           {/* --------------------------cardsslider----------------- */}
           <div
-            className="relative  bg-white/10 shadow-md shadow-white/20 backdrop-blur-sm rounded-lg text-white py-4 md:py-6 px-4"
+            className="relative  bg-white/20 shadow-md shadow-white/20 backdrop-blur-sm rounded-lg text-white py-4 md:py-6 px-4"
             onMouseEnter={() => setShowArrows(true)}
             onMouseLeave={() => setShowArrows(false)}
           >
@@ -211,7 +226,7 @@ export default function ProtectedComponent() {
           </div>
 
           {/* --------------------notification------------------- */}
-          <div className="py-6 px-4 bg-white/10 shadow-md shadow-white/20 backdrop-blur-sm rounded-lg text-white overflow-hidden max-h-[380px]">
+          <div className="py-6 px-4 bg-white/20 shadow-md shadow-white/20 backdrop-blur-sm rounded-lg text-white overflow-hidden max-h-[380px]">
             <div className="px-2 flex justify-between items-center">
               <h1 className="font-semibold md:text-xl text-lg mb-4">
                 Notifications
@@ -235,7 +250,9 @@ export default function ProtectedComponent() {
                       className="bg-white/80 rounded-md"
                     >
                       <div className="flex items-center gap-2 py-2 px-4">
-                        <FaBell className="text-darkBlue text-lg" />
+                        {/* <FaBell className="text-darkBlue text-lg" /> */}
+            <Image src={NotiIcon} alt="bell icon" height={24} width={24} className="size-6  object-cover"></Image>
+
                         <p className="text-darkBlue md:text-base text-sm font-medium">
                           {data.message}
                         </p>

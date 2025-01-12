@@ -1,5 +1,8 @@
 import FaqEvent from '@/components/FaqEvent'
+import Image from 'next/image';
 import React from 'react'
+import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
+import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
 const faqData = [
   {
       question: "Will there be any opportunities to showcase interdisciplinary projects?",
@@ -20,8 +23,22 @@ const faqData = [
   
 const FaqDecisia = () => {
   return (
-    <div id='faq' className='min-h-[80vh] bg-gradient-to-b from-[#981B0B]     
-      to-[#D33D18] relative flex justify-center items-center '>
+    <div id='faq' className='min-h-[80vh]  relative flex justify-center items-center '>
+        <div
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#981B0B]     
+      to-[#D33D18]"
+      >
+        <Image
+        src={decisiaBg}
+        className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-90   top-0 right-0 -z-10"
+        alt="trees"
+      />
+      <Image
+        src={decisiaBgMobile}
+        className=" sm:hidden animate-twinkle block h-auto w-full  absolute opacity-90   top-0 right-0 -z-10"
+        alt="trees"
+      />
+      </div>
         <div className="maxWidthForSections">
         <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
           Frequently Asked Questions

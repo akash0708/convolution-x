@@ -25,7 +25,7 @@ const PreTimeline = () => {
       <Image
         src={pretimeline}
         alt="pretimeline"
-        className="min-h-[320px] w-full lg:opacity-100 opacity-0 bg-cover"
+        className="min-h-[320px] top-0 w-full lg:opacity-100 opacity-0 bg-cover"
       />
       <Image
         src={pretimeline}

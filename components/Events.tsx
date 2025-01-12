@@ -71,7 +71,7 @@ export default function Events() {
     {
       event: "Circuistics",
       redirectTo: "circuistics",
-      img: "circustics.png",
+      img: "circuistics.png",
     },
     {
       event: "Algomaniac",
@@ -103,40 +103,7 @@ export default function Events() {
       });
   };
 
-  useEffect(() => {
-    const slider = sliderRef.current;
-    let startX = 0,
-      endX = 0;
-
-    const handleTouchStart = (e) => {
-      startX = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = () => {
-      const swipeDistance = endX - startX;
-
-      if (swipeDistance > 50) {
-        pauseAndRotate("left"); // Swipe right to move left
-      } else if (swipeDistance < -50) {
-        pauseAndRotate("right"); // Swipe left to move right
-      }
-    };
-
-    const handleTouchMove = (e) => {
-      endX = e.touches[0].clientX;
-    };
-
-    slider.addEventListener("touchstart", handleTouchStart);
-    slider.addEventListener("touchmove", handleTouchMove);
-    slider.addEventListener("touchend", handleTouchEnd);
-
-    return () => {
-      slider.removeEventListener("touchstart", handleTouchStart);
-      slider.removeEventListener("touchmove", handleTouchMove);
-      slider.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, []);
-
+  
   useEffect(() => {
     const slider = sliderRef.current;
     const planets = slider.children;
@@ -153,7 +120,7 @@ export default function Events() {
         const y = -z / -3; // Vertical translation based on depth
         // const opacity = 300 + z > 300 ? 100 : (100 + z/3);
         // const opacity =(z/6) + 50;
-        const opacity = opacityY1 + opacitym * (z - x1);
+        // const opacity = opacityY1 + opacitym * (z - x1);
         const scale = scaleY1 + scalem * (z - x1);
         const blur = blurY1 + blurm * (z - x1);
 
@@ -165,7 +132,12 @@ export default function Events() {
     }
 
     function rotateSlider() {
-      if (!isPaused.current) targetAngle -= 0.07;
+      if (!isPaused.current) {
+        if(Math.abs(targetAngle) <360)
+        targetAngle -= 0.07
+      else 
+      targetAngle= (targetAngle%360)-0.07
+      }
       positionPlanets();
       requestAnimationFrame(rotateSlider);
     }
@@ -174,33 +146,35 @@ export default function Events() {
     rotateSlider();
   }, []);
 
-  function pauseAndRotate(direction) {
-    isPaused.current = true;
-    setTimeout(() => {
-      isPaused.current = false;
-    }, 2000);
+  let isTransitioning = false; // Flag to prevent overlapping transitions
 
+  function pauseAndRotate(direction) {
+    if (isTransitioning) return; // Prevent starting a new rotation during an ongoing transition
+    isTransitioning = true;
+    isPaused.current = true;
+  
     const slider = sliderRef.current;
     const totalPlanets = slider.children.length;
     const angleStep = 360 / totalPlanets;
-
+  
     // Calculate the new target angle
     const newAngle =
       direction === "right" ? targetAngle - angleStep : targetAngle + angleStep;
-
+  
     // Interpolate to the new target angle
     function smoothTransition() {
       const diff = newAngle - targetAngle;
       if (Math.abs(diff) > 0.1) {
         targetAngle += diff * 0.1; // Adjust this value to control the smoothness
-        positionPlanets();
+        positionPlanets(); // Update planet positions
         requestAnimationFrame(smoothTransition);
       } else {
         targetAngle = newAngle;
-        positionPlanets();
+        isPaused.current = false;
+        isTransitioning = false; // Allow new transitions
       }
     }
-
+  
     smoothTransition();
   }
 

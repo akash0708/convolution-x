@@ -22,7 +22,9 @@ export default {
       boxShadow: {
         'shadowAbout': '4px 4px 75px 17px rgba(72, 39, 154, 1)', // Using the specified color and values
         'sparkhack-register': '4px 4px 14px 7px rgba(255, 255, 255, 0.9)',
-        'sparkhack-register-hover': '4px 4px 14px 7px rgba(58, 173, 217, 0.9)'
+        'sparkhack-register-hover': '4px 4px 14px 7px rgba(58, 173, 217, 0.9)',
+        'register-home': '4px 4px 14px 7px rgba(58, 173, 217, 0.9)',
+        'login-home': '4px 4px 14px 4px rgba(255, 255, 255, 0.7)',
       },
       animation: {
         'spin-slow': 'spin 10s linear infinite', // Spins in 10 seconds clockwise

@@ -11,7 +11,7 @@ const AboutDecisia = () => {
     >
       <div
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-[#DE5C00] via-[#77340F] 
-    via-[#931308] to-[#5B0804] -z-20"
+    via-[#931308] to-[#5B0804] -z-30"
       ></div>
       {/* --------------------------about Image background-------------- */}
       <Image
