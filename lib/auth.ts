@@ -32,9 +32,9 @@ export const signIn = async (email: string, password: string) => {
     // Set a cookie with user information or token
     Cookies.set("user", JSON.stringify(userCredential.user), { expires: 30 }); // Expires in 30 days
 
-    console.log("userCredential", JSON.stringify(userCredential.user));
-    console.log("user", { ...userCredential.user });
-    console.log("emailVerified", userCredential.user.emailVerified);
+    // console.log("userCredential", JSON.stringify(userCredential.user));
+    // console.log("user", { ...userCredential.user });
+    // console.log("emailVerified", userCredential.user.emailVerified);
 
     return {
       status: "success",

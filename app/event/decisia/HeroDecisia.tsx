@@ -58,7 +58,7 @@ const HeroDecisia = () => {
         </div> */}
         </>
 
-        <EventHero about={aboutDecisia} logo='/Decisia/decisia logo.png' buttonDesign='hover:bg-[#D11100] shadow-[#D11100] hover:shadow-[#5B0804] text-shadow-dark bg-[#DE5C00] hover:opacity-90 text-white' planet='/Decisia/planet.png'></EventHero>
+        <EventHero about={aboutDecisia} logo='/Decisia/decisia logo.png' buttonDesign='hover:bg-[#D11100] shadow-[#D11100] hover:shadow-[#5B0804] text-shadow-dark bg-[#DE5C00] hover:opacity-90 text-white' planet='/Decisia/planet.png' mode="team" name="decisia"></EventHero>
       </div>
     </div>
   );

@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
 import { getAuth, sendEmailVerification } from "firebase/auth";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const VerifyEmail = () => {
   const [isSending, setIsSending] = useState(false);
   const [message, setMessage] = useState("");
-
-  const router = useRouter();
 
   const handleResendEmail = async () => {
     setIsSending(true);
@@ -56,14 +53,6 @@ const VerifyEmail = () => {
         }`}
         >
           {isSending ? "Sending..." : "Resend Verification Email"}
-        </button>
-        <button
-          onClick={() => {
-            router.push("/login");
-          }}
-          className="px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 font-medium text-white transition"
-        >
-          Head to Login
         </button>
       </div>
       {message && <p className="mt-6 text-gray-500 text-center">{message}</p>}

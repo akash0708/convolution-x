@@ -6,6 +6,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function RegisterForm() {
   const router = useRouter();
@@ -40,14 +41,19 @@ export default function RegisterForm() {
         department,
         year,
       });
-      console.log("User created:", res.data);
 
-      setUser({ id: res.data.id, name: res.data.name, email: res.data.email });
-      console.log("User set:", user);
+      setUser({
+        id: res.data.id,
+        name: res.data.name,
+        email: res.data.email,
+        institution: res.data.institution,
+      });
       // redirect to verify email page
       router.push("/verify-email");
-    } catch (error) {
-      setError(error instanceof Error ? error.message : "An error occurred");
+    } catch (error: any) {
+      const errorMessage =
+        error.response?.data?.error || "An error occurred. Please try again.";
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -69,9 +75,9 @@ export default function RegisterForm() {
             Create an Account
           </h2>
           <>
-          {/* <p className="text-white/90 text-sm sm:text-base">Choose your registration method</p> */}
-          {/* Google Sign In Button */}
-          {/* <button
+            {/* <p className="text-white/90 text-sm sm:text-base">Choose your registration method</p> */}
+            {/* Google Sign In Button */}
+            {/* <button
             type="button"
             onClick={handleGoogleSignIn}
             className="w-full flex items-center justify-center gap-x-2 bg-transparent border border-gray-300 rounded-full px-4 py-2 transition-colors duration-300  hover:bg-white hover:text-darkBlue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "
@@ -100,7 +106,7 @@ export default function RegisterForm() {
             </p>
           </button> */}
 
-          {/* <div className="flex w-full justify-center items-center">
+            {/* <div className="flex w-full justify-center items-center">
             <div className="w-full h-[1px] rounded-l-full bg-white/80"></div>
             <span className="text-nowrap px-2 text-sm sm:text-base">Or continue with email</span>
             <div className="w-full h-[1px] rounded-r-full bg-white/80"></div>

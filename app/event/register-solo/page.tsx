@@ -47,12 +47,12 @@ const SoloRegistrationForm: React.FC = () => {
   const onSubmit = async () => {
     try {
       setLoading(true);
-      console.log("Submitting registration:", {
-        eventName,
-        leaderId: id,
-        leaderName: name,
-        leaderEmail: email,
-      });
+      // console.log("Submitting registration:", {
+      //   eventName,
+      //   leaderId: id,
+      //   leaderName: name,
+      //   leaderEmail: email,
+      // });
 
       const response = await axios.post("/api/solo/register", {
         eventName,
@@ -61,13 +61,13 @@ const SoloRegistrationForm: React.FC = () => {
         leaderEmail: email,
       });
 
-      console.log("Solo registration successful:", response.data);
+      // console.log("Solo registration successful:", response.data);
 
       // Show success notification
       toast.success("Registration successful!");
       router.push("/");
     } catch (error: any) {
-      console.log("Error registering solo:", error);
+      // console.log("Error registering solo:", error);
 
       // Show error notification
       toast.error(
