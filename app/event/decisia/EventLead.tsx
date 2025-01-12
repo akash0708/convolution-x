@@ -34,7 +34,7 @@ const EventLead = () => {
   return (
     <div id="team" className="relative  py-12">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-t from-[#981B0B]     
+        className="absolute top-0 left-0 w-full h-full -z-30 bg-gradient-to-t from-[#981B0B]     
       to-[#D33D18]"
       ></div>
       {/* <Image

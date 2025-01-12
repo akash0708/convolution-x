@@ -24,7 +24,7 @@ const Judges = () => {
   return (
     <div id="judges" className="relative  py-12">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#A7200D]  to-[#981B0B]"
+        className="absolute top-0 left-0 w-full h-full -z-30 bg-gradient-to-b from-[#A7200D]  to-[#981B0B]"
       ></div>
       {/* <Image
         src={flakebg}

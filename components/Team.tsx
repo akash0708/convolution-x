@@ -246,14 +246,14 @@ const Team: React.FC = () => {
                     >
                       <FaInstagram className="size-6 text-white"></FaInstagram>
                     </a>
-                    <a
+                    {member.facebook &&<a
                       href={member.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
                       className=""
                     >
                       <FaFacebookSquare className="size-6 text-white" />
-                    </a>
+                    </a>}
                     <a
                       href={member.linkedin}
                       target="_blank"
@@ -308,13 +308,13 @@ const Team: React.FC = () => {
                         className=""
                         style={{ "--i": 2 } as React.CSSProperties}
                       >
-                        <a
+                        {member.facebook &&<a
                           href={member.facebook}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <FaFacebookSquare className="size-6 text-white/80" />
-                        </a>
+                        </a>}
                       </li>
                       <li
                         className=""

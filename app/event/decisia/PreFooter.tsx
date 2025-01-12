@@ -7,7 +7,7 @@ const PreFooter = () => {
     <div className="absolute top-0 bottom-0 left-0 right-0 w-full  
  bg-gradient-to-b from-[#D33D18] 
     to-[#fe0c0c] 
--z-20"></div>
+-z-30"></div>
  {/* <Image
         src={flakebg}
         className=" h-auto hidden sm:block w-full  absolute opacity-40  top-0 right-0 -z-10"

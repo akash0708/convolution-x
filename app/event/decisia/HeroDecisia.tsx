@@ -17,15 +17,15 @@ const HeroDecisia = () => {
     via-[#931308] to-[#5B0804] -z-20">
 
       {/* ----------------for bg image--------------- */}
-        <div className="relative w-full h-full -z-10">
+        <div className="relative w-full h-full ">
         <Image
         src={decisiaBg}
-        className=" hidden md:block lg:w-full lg:h-auto h-full object-cover  absolute opacity-90  top-[0]  right-0 "
+        className=" hidden md:block lg:w-full lg:h-auto h-full object-cover animate-twinkle  absolute opacity-90  top-[0]  right-0 "
         alt="trees"
       />
       <Image
         src={decisiaBgMobile}
-        className=" md:hidden block h-full  object-cover absolute opacity-60   top-1/2 -translate-y-1/2 right-0 z-10"
+        className=" md:hidden block w-full  object-cover absolute opacity-80   left-1/2 -translate-x-1/2 bottom-0 "
         alt="trees"
       />
         </div>

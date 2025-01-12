@@ -4,6 +4,7 @@ import ConvoIcon from "@/assets/images/HeroSectionImages/ConvoSvg.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
+import { useUserStore } from "@/store/userStore";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -20,6 +21,8 @@ interface EventNavbarProps {
 }
 
 const EventNavbar: React.FC<EventNavbarProps>  = ({navTheme}) => {
+    const { isLogged} = useUserStore();
+  
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const toggleNavigation = (): void => {
     setIsNavOpen((prevState) => !prevState);
@@ -95,6 +98,34 @@ const EventNavbar: React.FC<EventNavbarProps>  = ({navTheme}) => {
                 </li>
               ))}
             </ul>
+            {/* ----------------------login / profile/ register button --------------- */}
+            {isLogged && (
+              <div className= {`navButtonAuth w-full mt-4 text-lg font-semibold text-center ${
+                isNavOpen ? "is-visible" : "is-hidden"
+              }`}>
+                <Link href="/profile">
+                  <p>Profile</p>
+                </Link>
+              </div>
+            )}
+            {!isLogged && (
+              <>
+              <div className= {`navButtonAuth w-full bg-white/10 border-[1px] border-white py-[5px] rounded-full mt-4  font-semibold text-center ${
+                isNavOpen ? "is-visible" : "is-hidden"
+              }`} >
+                <Link href="/register">
+                  Register
+                </Link>
+              </div>
+              <div className= {`navButtonAuth w-full bg-white text-black/80 py-[5px] rounded-full mt-2  font-semibold text-center ${
+                isNavOpen ? "is-visible" : "is-hidden"
+              }`} >
+                <Link href="/login">
+                  Login
+                </Link>
+              </div>
+              </>
+            )}
           </div>
         </div>
       </div>

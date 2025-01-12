@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import centerPlanet from "@/assets/images/HeroSectionImages/bowling ball planet.png";
@@ -8,13 +9,19 @@ import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.p
 import yellowBluePlanet from "@/assets/images/HeroSectionImages/yellow planet.png";
 import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.png";
 import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
+import pinkStarMobile from "@/assets/images/HeroSectionImages/starbg-mobile.png";
+
 import cloud1 from "@/assets/images/HeroSectionImages/cloud1.png";
 import cloud2 from "@/assets/images/HeroSectionImages/cloud2.png";
 import ConvoIcon from '@/assets/images/HeroSectionImages/ConvoSvg.svg';
+import { useUserStore } from "@/store/userStore";
+import Link from "next/link";
 
 const HomeHero = () => {
+    const { isLogged} = useUserStore();
+  
   return (
-    <div id="home" className=" min-h-[100svh] relative bg-radial-darkBlue-to-purple flex justify-center items-center ">
+    <div id="home" className=" h-[100svh] relative bg-radial-darkBlue-to-purple flex justify-center items-center ">
       {/* --------------------clouds------------- */}
       <div className="">
         {/* --------------left Clouds------------ */}
@@ -46,8 +53,13 @@ const HomeHero = () => {
         <Image
           src={pinkStar}
           alt="Picture pink stars"
-          className="absolute object-cover w-full h-full top-0 left-0"
+          className="md:block hidden absolute object-cover w-full h-full top-0 left-0"
         />
+        <Image
+        src={pinkStarMobile}
+        className=" md:hidden block h-full  object-cover absolute opacity-60   top-1/2 -translate-y-1/2 right-0 z-10"
+        alt="trees"
+      />
       </div>
 
       {/* ----------------other planets---------- */}
@@ -151,6 +163,18 @@ const HomeHero = () => {
           className="w-[30vw]  sm:min-w-[390px]  min-w-[300px] object-cover animate-spin-slow "
         ></Image>
       </div>
+     {!isLogged && <div className="hidden absolute top-[85%] left-1/2 -translate-x-1/2  md:flex gap-6 "> 
+      <Link href='/register'>
+      <button className="bg-softPurple   rounded-full py-2 w-[150px] shadow-login-home shadow-softPurple text-white font-semibold   hover:bg-white  hover:text-darkBlue hover:shadow-white/80 transition-all duration-300 ">
+        Register
+      </button>
+      </Link>
+      <Link href='/login' >
+      <button className="bg-[#FB23D5] rounded-full py-2 w-[150px]   font-semibold shadow-login-home shadow-[#FB23D5] hover:bg-white hover:text-[#FB23D5] hover:shadow-white/80 transition-all duration-300 text-white   ">Login
+        </button>
+        </Link>
+      
+      </div>}
 </div>
       
     </div>

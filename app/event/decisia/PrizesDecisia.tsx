@@ -2,8 +2,8 @@ import React from "react";
 import gold from "@/assets/images/Decisia/gold prize.png";
 import silver from "@/assets/images/Decisia/silver prize.png";
 import bronze from "@/assets/images/Decisia/bronze prize.png";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
+import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
 import Image from "next/image";
 const PrizesDecisia = () => {
   return (
@@ -11,17 +11,19 @@ const PrizesDecisia = () => {
       <div
         className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#981B0B]     
       to-[#D33D18]"
-      ></div>
-      {/* <Image
-        src={flakebg}
-        className=" h-auto hidden sm:block w-full  absolute opacity-40   bottom-0 right-0 -z-20"
+      >
+        <Image
+        src={decisiaBg}
+        className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-90   top-0 right-0 -z-10"
         alt="trees"
       />
       <Image
-        src={flakebgMobile}
-        className=" sm:hidden block h-auto w-full  absolute opacity-60   bottom-0 right-0 -z-20"
+        src={decisiaBgMobile}
+        className=" sm:hidden animate-twinkle block h-auto w-full  absolute opacity-90   top-0 right-0 -z-10"
         alt="trees"
-      /> */}
+      />
+      </div>
+      
       <div className="maxWidthForSections">
         <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
           Prizes

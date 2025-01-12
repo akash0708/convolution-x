@@ -71,7 +71,7 @@ export default function Events() {
     {
       event: "Circuistics",
       redirectTo: "circuistics",
-      img: "circustics.png",
+      img: "circuistics.png",
     },
     {
       event: "Algomaniac",
@@ -132,7 +132,12 @@ export default function Events() {
     }
 
     function rotateSlider() {
-      if (!isPaused.current) targetAngle -= 0.07;
+      if (!isPaused.current) {
+        if(Math.abs(targetAngle) <360)
+        targetAngle -= 0.07
+      else 
+      targetAngle= (targetAngle%360)-0.07
+      }
       positionPlanets();
       requestAnimationFrame(rotateSlider);
     }
