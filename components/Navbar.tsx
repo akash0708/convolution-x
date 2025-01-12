@@ -46,7 +46,7 @@ const Navbar = () => {
       {/* ------------------for mobile screens----------------------- */}
       <div className="maxWidthForSections py-[10px] w-full md:hidden flex justify-between items-center px-4 ">
         {/* Logo */}
-        <Link href='#home'>
+        <Link href='/'>
           <Image
             src={ConvoIcon}
             alt="convo logo"

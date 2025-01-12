@@ -15,6 +15,7 @@ import profilePic from "@/assets/images/profileImg.png";
 import stars from "@/assets/images/white variant of pink stars.png";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
+import NotiIcon from "@/assets/images/notification icon.png"
 import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 export default function ProtectedComponent() {
   const userCookie = Cookies.get("user");
@@ -250,7 +251,9 @@ export default function ProtectedComponent() {
                       className="bg-white/80 rounded-md"
                     >
                       <div className="flex items-center gap-2 py-2 px-4">
-                      <FaBell className="text-darkBlue text-lg" />
+                      {/* <FaBell className="text-darkBlue text-lg" /> */}
+            <Image src={NotiIcon} alt="" className="w-6"></Image>
+
                         <p className="text-darkBlue md:text-base text-sm font-medium">{data.message}</p>
                       </div>
                     </Link>
