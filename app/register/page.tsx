@@ -64,7 +64,7 @@ export default function RegisterForm() {
       className="h-[100svh] bg-no-repeat bg-center bg-cover flex justify-center items-center "
       style={{ backgroundImage: `url('/RegisterBg.png')` }}
     >
-      <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-20 py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
+      <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px]  py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
         <div className="absolute top-5 left-5 flex gap-x-1">
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
@@ -157,6 +157,23 @@ export default function RegisterForm() {
                 className="input-box"
               />
             </div>
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-white/90"
+              >
+                Password
+              </label>
+              <input
+                placeholder="Enter your password"
+                type="password"
+                id="password"
+                name="password"
+                required
+                minLength={6}
+                className="input-box"
+              />
+            </div>
 
             <div>
               <label
@@ -191,58 +208,43 @@ export default function RegisterForm() {
                 className="input-box"
               />
             </div>
+            <div className="flex gap-2">
+              <div>
+                <label
+                  htmlFor="department"
+                  className="block text-sm font-medium text-white/90"
+                >
+                  Department
+                </label>
+                <input
+                  placeholder="Dept. of Study"
+                  type="text"
+                  id="department"
+                  name="department"
+                  required
+                  className="input-box"
+                />
+              </div>
 
-            <div>
-              <label
-                htmlFor="department"
-                className="block text-sm font-medium text-white/90"
-              >
-                Department
-              </label>
-              <input
-                placeholder="Department of Study"
-                type="text"
-                id="department"
-                name="department"
-                required
-                className="input-box"
-              />
+              <div>
+                <label
+                  htmlFor="year"
+                  className="block text-sm font-medium text-white/90"
+                >
+                  Year
+                </label>
+                <input
+                  placeholder="(eg. UG1, PG1)"
+                  type="text"
+                  id="year"
+                  name="year"
+                  required
+                  className="input-box"
+                />
+              </div>
             </div>
 
-            <div>
-              <label
-                htmlFor="year"
-                className="block text-sm font-medium text-white/90"
-              >
-                Year
-              </label>
-              <input
-                placeholder="Year of Study (eg. UG1, PG1)"
-                type="text"
-                id="year"
-                name="year"
-                required
-                className="input-box"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-white/90"
-              >
-                Password
-              </label>
-              <input
-                placeholder="Enter your password"
-                type="password"
-                id="password"
-                name="password"
-                required
-                minLength={6}
-                className="input-box"
-              />
-            </div>
+           
 
             <Link
               href="/login"

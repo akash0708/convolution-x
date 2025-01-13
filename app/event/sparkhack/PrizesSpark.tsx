@@ -9,14 +9,14 @@ const PrizesSpark = () => {
   return (
     <div id="prizes" className="py-20  relative">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-t from-[#67C6DD]     
+        className="absolute top-0 left-0 w-full h-full -z-30 bg-gradient-to-t from-[#67C6DD]     
      via-[#2CB1DF] to-[#2CB1DF]"
       ></div>
-      <Image
+      {/* <Image
         src={flakebg}
         className=" h-auto hidden sm:block w-full  absolute opacity-40   bottom-0 right-0 -z-20"
         alt="trees"
-      />
+      /> */}
       <Image
         src={flakebgMobile}
         className=" sm:hidden block h-auto w-full  absolute opacity-60   bottom-0 right-0 -z-20"

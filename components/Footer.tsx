@@ -17,7 +17,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div id="contact" className="py-16 overflow-hidden relative ">
-      <div className="absolute  top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2  animate-twinkle -z-10">
+      <div className="absolute  top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2  animate-twinkle -z-30">
         <Image
           src={pinkStar}
           alt="Picture pink stars"
