@@ -65,7 +65,7 @@ const HeroAT = () => {
           buttonDesign="shadow-white/70 hover:shadow-white/30  bg-[#0212B4] hover:bg-white  hover:text-[#0212B4] text-[#ffff]"
           planet="/AbolTabol/planet.png"
           mode="solo"
-          name="abolTabol"
+          name="aboltabol"
         ></EventHero>
       </div>
     </div>
