@@ -53,6 +53,13 @@ export default function RegisterForm() {
     } catch (error: any) {
       const errorMessage =
         error.response?.data?.error || "An error occurred. Please try again.";
+
+      if (
+        errorMessage ===
+        "Your account was created, but we could not send the confirmation email."
+      ) {
+        router.push("/verify-email");
+      }
       toast.error(errorMessage);
     } finally {
       setLoading(false);
