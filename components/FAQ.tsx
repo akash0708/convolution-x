@@ -50,7 +50,7 @@ const FAQ = () => {
         </div>
       </div>
       <div className="maxWidthForSections ">
-        <h2 className="text-3xl font-bold text-white text-center sm:mb-12 mb-8">
+        <h2 className="sm:text-5xl text-3xl  text-white text-center sm:mb-12 mb-8">
           Frequently Asked Questions
         </h2>
         <div className="grid lg:grid-cols-2 gap-4">

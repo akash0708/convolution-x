@@ -2,7 +2,15 @@ import React from "react";
 import Image from "next/image";
 
 import aboutbg from '@/assets/images/Decisia/aboutbg.png'
-
+const rulesDecisia = [
+  "Teams will register from the official Convolution website with their team name, email, phone no., and college name of each member in the group.",
+  "Teams will comprise of 3-5 members (including the team lead).",
+  "Teams may consist of participants from the same or different streams, same or different years.",
+  "Prelims will be held online, where participants have to submit a 2-minute elevator pitch and a presentation with a maximum of 6 slides (preferably in PDF).",
+  "Participants can provide an additional executive summary (within 2 slides) of the B-plan.",
+  "Finals will be offline (participants can bring prototypes or samples if they want), with a pitching time of 6+3 minutes (pitch + QnA) in front of the judges. (Open room pitching).",
+  "Number of teams qualifying for finals: 10 (can change under exceptional circumstances)."
+];
 const AboutDecisia = () => {
   return (
     <div
@@ -29,28 +37,9 @@ const AboutDecisia = () => {
             Rules & Regulations
           </h1>
           <ul className="space-y-3 list-disc  list-inside text-shadow-dark text-white sm:text-xl text-sm">
-            <li>
-              A team may consist participants of same or different streams
-              and/or same or different years but not from different colleges.
-              Teams must comprise 2-4 members.", "The rounds are as follows:
-            </li>
-            <li>
-              The rounds are as follows:
-              <ol  style={{ listStyleType: 'lower-alpha' }} className=" ml-6 list-inside">
-                <li>
-                  Prelims : Online; 2 minutes elevator pitch and 3-5 slides
-                  presentation about the B-plan
-                </li>
-                <li>
-                  Finals : Offline
-                  <ol className="list-inside ml-6" style={{ listStyleType: 'lower-roman' }}>
-                    <li>Full pitch deck has no cap on the number of slides</li>
-                    <li>7+3 minutes (Pitch+ QnA) in front of the judges</li>
-                    <li>Open Room Pitching</li>
-                  </ol>
-                </li>
-              </ol>
-            </li>
+            {rulesDecisia.map((text,index)=>{return (
+              <li key={index}>{text}</li>
+            )})}
             <li>
               The teams will be evaluated based on:
               <ol className="ml-6 list-inside" style={{ listStyleType: 'lower-alpha' }}>

@@ -165,12 +165,12 @@ const HomeHero = () => {
       </div>
      {!isLogged && <div className="hidden absolute top-[85%] left-1/2 -translate-x-1/2  md:flex gap-6 "> 
       <Link href='/register'>
-      <button className="bg-softPurple   rounded-full py-2 w-[150px] shadow-login-home shadow-softPurple text-white font-semibold   hover:bg-white  hover:text-darkBlue hover:shadow-white/80 transition-all duration-300 ">
+      <button className="bg-softPurple   rounded-full py-2 w-[150px] shadow-login-home shadow-softPurple text-white hover:bg-white  hover:text-darkBlue hover:shadow-white/80 transition-all duration-300 ">
         Register
       </button>
       </Link>
       <Link href='/login' >
-      <button className="bg-[#FB23D5] rounded-full py-2 w-[150px]   font-semibold shadow-login-home shadow-[#FB23D5] hover:bg-white hover:text-[#FB23D5] hover:shadow-white/80 transition-all duration-300 text-white   ">Login
+      <button className="bg-[#FB23D5] rounded-full py-2 w-[150px]    shadow-login-home shadow-[#FB23D5] hover:bg-white hover:text-[#FB23D5] hover:shadow-white/80 transition-all duration-300 text-white   ">Login
         </button>
         </Link>
       

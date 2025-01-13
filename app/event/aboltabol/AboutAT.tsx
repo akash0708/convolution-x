@@ -48,7 +48,8 @@ const AboutAT = () => {
           <h1 className="uppercase text-center text-2xl sm:text-4xl mb-8 text-white text-shadow-dark">
             Rules & Regulations
           </h1>
-          <ul className="space-y-3 list-disc  list-inside text-shadow-dark text-white sm:text-xl text-sm">
+          <ul className="space-y-3   list-inside text-shadow-dark text-white sm:text-xl text-sm"
+          style={{ listStyleImage: "url('/AbolTabol/starList.png')" }}>
             <li>
             This event is based on 'Bahfest', for more clarification <span><Link href='http://bahfest.com/' className="underline underline-offset-2">click here</Link></span>
             </li>
@@ -59,11 +60,11 @@ const AboutAT = () => {
                 Online Screening round
                 </li>
                 <li>
-                Offline Presentation round. Each team can have 2-4 members.
+                Offline Presentation round. Each team can have 1-4 members.
                 </li>
               </ol>
             </li>
-            <li>The teams have to submit an abstract for their ideas for the first round. Top 8-12 teams will be shortlisted for the offline presentation round.
+            <li>The teams have to submit an abstract for their ideas for the first round. Top 9 teams will be shortlisted for the offline presentation round.
             </li>
             <li>
             Judging criteria are as follows:
@@ -75,7 +76,7 @@ const AboutAT = () => {
               </ol>
             </li>
             <li>
-            There will be a maximum of 30 slides and a minimum of 6 slides for the presentation. Each team will have to complete their presentation within 15 minutes.
+            There will be a maximum of 20 slides and a minimum of 6 slides for the presentation. Each team will have to complete their presentation within 9 minutes.
             </li>
           </ul>
         </div>

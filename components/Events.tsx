@@ -49,7 +49,7 @@ export default function Events() {
     },
     {
       event: "Abol Tabol",
-      redirectTo: "abol_tabol",
+      redirectTo: "aboltabol",
       img: "aboltabol.png",
     },
     {
@@ -247,7 +247,7 @@ export default function Events() {
 
       {/* ------------------for desktop screens------------------------- */}
       <div className="carousel3 h-[90vh] hidden md:flex overflow-hidden md:overflow-visible flex-col items-start justify-center py-12 relative z-10">
-        <h1 className="text-4xl absolute top-10 w-full text-center font-bold">
+        <h1 className="sm:text-5xl text-3xl absolute top-10 w-full text-center ">
           Events
         </h1>
 

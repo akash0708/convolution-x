@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
         {/* ----------Get in touch------------- */}
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl  font-semibold text-white">Get In Touch</h2>
+          <h2 className="text-3xl   text-white">Get In Touch</h2>
           <span className="h-1 w-14 mt-2 rounded-full bg-white"></span>
           <ul className="mt-6 flex flex-col gap-y-4 [&>*]:listFooter">
             <li>
@@ -171,7 +171,7 @@ const Footer = () => {
         </div>
         {/* ----------------Event Link--------------- */}
         <div className="flex flex-col items-center sm:items-start md:items-center">
-          <h2 className="text-3xl font-semibold text-white">Events</h2>
+          <h2 className="text-3xl  text-white">Events</h2>
           <span className="h-1 w-14 mt-2 rounded-full bg-white"></span>
           <ul className="mt-6 [&>*]:eventLinks">
           <li>

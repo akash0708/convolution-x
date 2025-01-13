@@ -137,7 +137,7 @@ const teamMembers: TeamMember[] = [
 
 const Team: React.FC = () => {
   return (
-    <div id="team" className="relative py-16 ">
+    <div id="team" className="relative py-20 ">
       <div className="bg-darkBlue absolute -z-10 top-0 bottom-0 w-full">
         <div className="animate-twinkle">
           <Image
@@ -215,11 +215,11 @@ const Team: React.FC = () => {
       </div>
 
       <div className=" maxWidthForSections ">
-        <h1 className="text-3xl font-bold text-center text-white">
+        <h1 className="sm:text-5xl text-3xl text-center text-white">
           Meet Our Team
         </h1>
         {/* ------------ this for mobile- ------------------- */}
-        <div className="mt-8 sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
+        <div className="mt-12  sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
           {teamMembers.map((member) => (
             <div className="" key={member.name}>
               <div className="backdrop-blur-sm sm:h-[280px] w-[43vw] px-2 py-8 flex-col  flex justify-center items-center bg-white/20  rounded-xl shadow-white/40 shadow-md">
@@ -233,7 +233,7 @@ const Team: React.FC = () => {
                   />
                 </div>
                 <div className=" flex flex-col items-center">
-                  <h2 className=" text-white text-sm mt-2 font-semibold">
+                  <h2 className=" text-white text-sm mt-2 ">
                     {member.name}
                   </h2>
                   <p className="text-xs text-white/80">{member.post}</p>
@@ -269,7 +269,7 @@ const Team: React.FC = () => {
           ))}
         </div>
         {/* ----------this for bigger screens------------- */}
-        <div className="mt-8 hidden sm:flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
+        <div className="mt-12 hidden sm:flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
           {teamMembers.map((member) => (
             <div className="" key={member.name}>
               <Tilt
@@ -287,7 +287,7 @@ const Team: React.FC = () => {
                     />
                   </div>
                   <div className=" flex flex-col items-center">
-                    <h2 className=" text-white mt-2 font-semibold">
+                    <h2 className=" text-white mt-2 ">
                       {member.name}
                     </h2>
                     <p className="text-sm text-white/80">{member.post}</p>
