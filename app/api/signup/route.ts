@@ -94,8 +94,12 @@ export async function POST(req: Request) {
         {
           error:
             "Your account was created, but we could not send the confirmation email.",
+          id: newUser.id,
+          email: newUser.email,
+          name: newUser.name,
+          institution: newUser.institution,
         },
-        { status: 500 }
+        { status: 207 }
       );
     }
 

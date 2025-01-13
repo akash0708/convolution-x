@@ -17,7 +17,7 @@ import stars from "@/assets/images/white variant of pink stars.png";
 import starsMobile from "@/assets/images/white variant of pink stars Mobile.png";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
-import NotiIcon from "@/assets/images/notification icon.png"
+import NotiIcon from "@/assets/images/notification icon.png";
 import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
 export default function ProtectedComponent() {
@@ -61,7 +61,7 @@ export default function ProtectedComponent() {
 
           setNotifications(response.data.notifications);
           const eventNames = response.data.teams.map(
-            (team: { eventName: string }) => team.eventName
+            (team: { eventName: string }) => team.eventName.toLowerCase()
           );
           setTeams(eventNames);
         } else {
@@ -150,10 +150,8 @@ export default function ProtectedComponent() {
             ></Image>
           </div>
           <div className="text-white ">
-            
-
             <h1 className="font-bold md:text-4xl text-xl  mb-2">{user.name}</h1>
-            
+
             <div className="flex items-center sm:gap-4 gap-2 mb-1">
               <GiGraduateCap className="sm:text-2xl text-lg" />
               <p className="text-sm sm:text-base">{user.institution}</p>
@@ -162,9 +160,17 @@ export default function ProtectedComponent() {
               <MdOutlineEmail className="sm:text-2xl text-lg" />
               <p className="text-sm sm:text-base">{email}</p>
             </div>
-            <button onClick={()=>{handleSignout()}} className="  w-full py-1 rounded-full bg-white text-darkBlue hover:text-white hover:bg-softPurple transition-colors duration-300 font-semibold mt-2 flex items-center justify-center gap-x-2">
-              <span><IoMdLogOut className="text-lg"/></span>Logout
-              </button>
+            <button
+              onClick={() => {
+                handleSignout();
+              }}
+              className="  w-full py-1 rounded-full bg-white text-darkBlue hover:text-white hover:bg-softPurple transition-colors duration-300 font-semibold mt-2 flex items-center justify-center gap-x-2"
+            >
+              <span>
+                <IoMdLogOut className="text-lg" />
+              </span>
+              Logout
+            </button>
           </div>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mt-12">
@@ -180,7 +186,7 @@ export default function ProtectedComponent() {
                 className="flex items-center gap-x-0 overflow-x-scroll scrollbar-hide md:mt-2 "
                 ref={sliderMobileRef}
               >
-                {events.map((imgSrc, index) => {
+                {teams.map((imgSrc, index) => {
                   return (
                     <Link
                       href={`/event/` + imgSrc}
@@ -251,7 +257,13 @@ export default function ProtectedComponent() {
                     >
                       <div className="flex items-center gap-2 py-2 px-4">
                         {/* <FaBell className="text-darkBlue text-lg" /> */}
-            <Image src={NotiIcon} alt="bell icon" height={24} width={24} className="size-6  object-cover"></Image>
+                        <Image
+                          src={NotiIcon}
+                          alt="bell icon"
+                          height={24}
+                          width={24}
+                          className="size-6  object-cover"
+                        ></Image>
 
                         <p className="text-darkBlue md:text-base text-sm font-medium">
                           {data.message}
