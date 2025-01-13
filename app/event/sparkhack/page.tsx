@@ -1,7 +1,6 @@
 import React from "react";
 import HeroSpark from "./HeroSpark";
 import AboutSpark from "./AboutSpark";
-import { Protest_Riot } from "next/font/google";
 import PreTimeline from "./PreTimeline";
 import Timeline from "./Timeline";
 import Mentors from "./Mentors";
@@ -11,6 +10,7 @@ import Footer from "./Footer";
 import FaqSpark from "./FaqSpark";
 import EventNavbar from "@/components/EventNavbar";
 import PrizesSpark from "./PrizesSpark";
+import { Protest_Riot } from "next/font/google";
 const protestRiot = Protest_Riot({
   subsets: ["latin"], // You can specify subsets if needed
   weight: "400", // Adjust the weight based on your requirements

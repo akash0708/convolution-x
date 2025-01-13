@@ -50,7 +50,7 @@ const FAQ = () => {
         </div>
       </div>
       <div className="maxWidthForSections ">
-        <h2 className="text-3xl font-bold text-white text-center sm:mb-12 mb-8">
+        <h2 className="sm:text-5xl text-3xl  text-white text-center sm:mb-12 mb-8">
           Frequently Asked Questions
         </h2>
         <div className="grid lg:grid-cols-2 gap-4">
@@ -64,9 +64,9 @@ const FAQ = () => {
                 <button
                   type="button"
                   onClick={() => handleToggle(index)}
-                  className="w-full text-left sm:p-5 py-[10px] px-4 font-medium rounded-xl   flex items-center justify-between"
+                  className={`${openIndex==index? 'bg-white/10 ' :''} w-full text-left sm:p-5 py-[10px] px-4 font-medium rounded-t-xl   flex items-center justify-between`}
                 >
-                  <p className="sm:text-base text-sm">{faq.question}</p>
+                  <p className="sm:text-lg text-sm">{faq.question}</p>
                   <svg
                     className={`w-3 h-3 transition-transform duration-300 ${
                       openIndex === index ? "" : "rotate-180"
@@ -93,8 +93,8 @@ const FAQ = () => {
                       : "opacity-0 max-h-0 "
                   }  transition-all duration-300 ease-in-out `}
                 >
-                  <div className="sm:px-5 sm:pb-5 px-4 pb-4 pt-0 ">
-                    <p className="text-white/80 sm:text-sm text-xs">{faq.answer}</p>
+                  <div className="sm:px-5 sm:pb-5 px-4 py-4  ">
+                    <p className="text-white/90 sm:text-sm text-xs">{faq.answer}</p>
                   </div>
                 </div>
               </div>

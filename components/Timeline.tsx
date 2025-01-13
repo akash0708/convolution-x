@@ -41,7 +41,7 @@ const Timeline = () => {
         ></Image>{" "}
       </div>
       <div className="absolute bg-darkBlue h-full w-full left-0 top-0 -z-30"></div>
-      <h2 className="text-3xl font-bold text-white text-center sm:mb-12 mb-8">
+      <h2 className="sm:text-5xl text-3xl text-white text-center sm:mb-12 mb-8">
           Timeline
         </h2>
       <div className="2xl:max-w-[1280px] xl:max-w-[1200px] mx-auto px-0">

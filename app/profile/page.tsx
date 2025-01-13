@@ -14,12 +14,16 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import profilePic from "@/assets/images/profileImg.png";
 import stars from "@/assets/images/white variant of pink stars.png";
+import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.png";
+
+
 import starsMobile from "@/assets/images/white variant of pink stars Mobile.png";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import NotiIcon from "@/assets/images/notification icon.png";
 import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
+import { RiLogoutBoxRLine } from "react-icons/ri";
 export default function ProtectedComponent() {
   const userCookie = Cookies.get("user");
   const router = useRouter();
@@ -118,6 +122,8 @@ export default function ProtectedComponent() {
     "jutalks",
     "24frames",
     "circuistics",
+    "algomaniac",
+    "inquizzitive",
   ];
 
   return (
@@ -128,17 +134,27 @@ export default function ProtectedComponent() {
       -z-20"
       ></div>
       {/* --------------------------stars Bg ------------------ */}
-      <div className="absolute top-0 left-0 w-full h-full   animate-twinkle -z-20">
+      <div className="absolute top-0 left-0 w-full h-full    -z-20">
         <Image
           src={stars}
           alt="Picture pink stars"
-          className="absolute sm:block hidden  w-full object-cover top-0 left-0 -z-10"
+          className="absolute sm:block hidden animate-twinkle w-full object-cover top-0 left-0 -z-10"
+        />
+        <Image
+          src={starsMobile}
+          alt="Picture pink stars"
+          className="absolute sm:hidden block  animate-twinkle w-full object-cover top-0 left-1/2 -translate-x-1/2 -z-10"
         />
         <Image
           src={starsMobile}
           alt="Picture pink stars"
           className="absolute sm:hidden block  w-full object-cover top-0 left-1/2 -translate-x-1/2 -z-10"
         />
+        <Image
+          src={blueRedPlanet}
+          alt="Asteroid"
+          className="absolute  sm:block hidden top-[16%]  right-[12%] animate-spin-slow  sm:w-42 w-32 object-cover"
+        ></Image>
       </div>
       <div className="maxWidthForSections   ">
         <div className="flex md:gap-x-8 gap-x-2 items-center">
@@ -150,7 +166,21 @@ export default function ProtectedComponent() {
             ></Image>
           </div>
           <div className="text-white ">
-            <h1 className="font-bold md:text-4xl text-xl  mb-2">{user.name}</h1>
+            <div className="flex items-start gap-4 justify-between">
+              <h1 className="font-bold md:text-4xl text-xl gap-4 mb-2 capitalize">
+                {user.name}
+              </h1>
+              <button
+                onClick={() => {
+                  handleSignout();
+                }}
+                className="p-2 rounded-full  text-darkBlue hover:text-white hover:bg-softPurple transition-colors duration-300 font-semibold  flex items-center justify-center gap-x-2"
+              >
+                <span>
+                  <RiLogoutBoxRLine className="text-2xl text-white font-semibold" />
+                </span>
+              </button>
+            </div>
 
             <div className="flex items-center sm:gap-4 gap-2 mb-1">
               <GiGraduateCap className="sm:text-2xl text-lg" />
@@ -160,7 +190,7 @@ export default function ProtectedComponent() {
               <MdOutlineEmail className="sm:text-2xl text-lg" />
               <p className="text-sm sm:text-base">{email}</p>
             </div>
-            <button
+            {/* <button
               onClick={() => {
                 handleSignout();
               }}
@@ -170,7 +200,7 @@ export default function ProtectedComponent() {
                 <IoMdLogOut className="text-lg" />
               </span>
               Logout
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mt-12">
@@ -198,11 +228,30 @@ export default function ProtectedComponent() {
                         className="object-cover sm:min-w-44 min-w-36"
                         height={400}
                         width={400}
-                        alt={imgSrc.event}
+                        alt={imgSrc}
                       ></Image>
                       {/* <h1 className="mt-2 text-center">{imgSrc.punchLine}</h1> */}
                     </Link>
                   );
+                })}
+                {events.map((imgSrc, index) => {
+                  if (!teams.includes(imgSrc))
+                    return (
+                      <Link
+                        href={`/event/` + imgSrc}
+                        key={imgSrc + index}
+                        className="text-white py-4 px-2  rounded-xl flex flex-col items-center"
+                      >
+                        <Image
+                          src={`/CardsEvent/` + imgSrc + ".png"}
+                          className="object-cover sm:min-w-44 min-w-36 grayscale"
+                          height={400}
+                          width={400}
+                          alt={imgSrc}
+                        ></Image>
+                        {/* <h1 className="mt-2 text-center">{imgSrc.punchLine}</h1> */}
+                      </Link>
+                    );
                 })}
               </div>
 
@@ -250,9 +299,8 @@ export default function ProtectedComponent() {
               <div className="flex flex-col gap-y-4  overflow-y-scroll h-[88%] scrollbar-hide">
                 {notifications.map((data, index) => {
                   return (
-                    <Link
+                    <div
                       key={data.id + index}
-                      href={`/event/` + data.title}
                       className="bg-white/80 rounded-md"
                     >
                       <div className="flex items-center gap-2 py-2 px-4">
@@ -269,7 +317,7 @@ export default function ProtectedComponent() {
                           {data.message}
                         </p>
                       </div>
-                    </Link>
+                    </div>
                   );
                 })}
               </div>

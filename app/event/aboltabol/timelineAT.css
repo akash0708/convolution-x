@@ -1,0 +1,6 @@
+.pseudo-left ::after{
+content: "";
+background-color: white;
+size: 40px;
+position: absolute
+}

@@ -17,7 +17,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div id="contact" className="py-16 overflow-hidden relative ">
-      <div className="absolute  top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2  animate-twinkle -z-10">
+      <div className="absolute  top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2  animate-twinkle -z-30">
         <Image
           src={pinkStar}
           alt="Picture pink stars"
@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
         {/* ----------Get in touch------------- */}
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl  font-semibold text-white">Get In Touch</h2>
+          <h2 className="text-3xl   text-white">Get In Touch</h2>
           <span className="h-1 w-14 mt-2 rounded-full bg-white"></span>
           <ul className="mt-6 flex flex-col gap-y-4 [&>*]:listFooter">
             <li>
@@ -171,7 +171,7 @@ const Footer = () => {
         </div>
         {/* ----------------Event Link--------------- */}
         <div className="flex flex-col items-center sm:items-start md:items-center">
-          <h2 className="text-3xl font-semibold text-white">Events</h2>
+          <h2 className="text-3xl  text-white">Events</h2>
           <span className="h-1 w-14 mt-2 rounded-full bg-white"></span>
           <ul className="mt-6 [&>*]:eventLinks">
           <li>

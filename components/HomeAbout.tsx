@@ -19,7 +19,7 @@ const HomeAbout = () => {
         <div className=" overflow-hidden md:rounded-3xl rounded-2xl w-full bg-aboutGradient  shadow-shadowAbout">
           <div className="md:grid flex flex-col-reverse bg-aboutBg bg-cover bg-right grid-cols-2 lg:px-10 lg:py-16 px-4 py-8 sm:p-8">
             <div className="flex flex-col justify-center">
-              <h2 className="md:text-4xl text-3xl text-white font-bold md:text-left text-center">
+              <h2 className="md:text-5xl text-3xl text-white  md:text-left text-center">
                 About Us
               </h2>
               <p className="md:mt-6 mt-4 tracking-wide lg:text-lg sm:text-base text-sm text-white/80 md:text-left text-center">

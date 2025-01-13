@@ -140,6 +140,7 @@ const EventRegistrationForm: React.FC = () => {
             <input
               type="text"
               {...register("teamName")}
+              placeholder="Enter your Team Name"
               className="input-box"
             />
             {errors.teamName && (
@@ -149,10 +150,13 @@ const EventRegistrationForm: React.FC = () => {
 
           {/* Team Members */}
           <div className="mb-4 ">
-            <label className="block text-lg text-center font-medium text-white/90">
+            <label className="block text-xl text-center font-semibold text-white/90 mb-2">
               Team Members
             </label>
-            <label>Team Leader: {name}</label>
+            <p className="text-center w-full font-semibold">Team Leader: <span className="font-normal">
+            {name}
+              </span>
+              </p>
             {Array.from({ length: memberCount }).map((_, index) => (
               <div key={index} className="flex space-x-2 mb-4">
                 <input

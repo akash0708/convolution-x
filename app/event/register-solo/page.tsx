@@ -79,31 +79,82 @@ const SoloRegistrationForm: React.FC = () => {
   };
 
   return (
-    <div className="w-1/4 mx-auto p-4 bg-white shadow-md rounded-lg">
-      <h1 className="text-2xl font-semibold mb-4">Registration</h1>
+    <div
+      className="h-screen bg-no-repeat bg-center bg-cover flex justify-center items-center w-full"
+      style={{ backgroundImage: `url('/RegisterBg.png')` }}
+    >
+      <div className=" text-white space-y-6 bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-16  py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
+        <div className="absolute top-5 left-5 flex gap-x-1">
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+        </div>
+        <h1 className="sm:text-2xl text-center text-lg font-bold ">Registration</h1>
 
-      {/* Participant Details */}
-      <div className="mb-4">
-        <label className="block font-medium text-gray-700">Name</label>
-        <p className="p-2 border bg-gray-100 rounded-md">{name}</p>
-      </div>
-      <div className="mb-4">
-        <label className="block font-medium text-gray-700">Email</label>
-        <p className="p-2 border bg-gray-100 rounded-md">{email}</p>
-      </div>
-      <div className="mb-4">
-        <label className="block font-medium text-gray-700">Event</label>
-        <p className="p-2 border bg-gray-100 rounded-md">{eventName}</p>
-      </div>
+        {/* Participant Details */}
+        <div className="">
+          <label className="block text-sm font-medium text-white/90">
+            Name
+          </label>
+          <p className="bg-transparent border-b-[3px] border-white/80  rounded-sm text-white/90  mt-1 min-h-6 w-full  text-sm sm:text-base">
+            {name}
+          </p>
+        </div>
+        <div className="">
+          <label className="block text-sm font-medium text-white/90">
+            Email
+          </label>
+          <p className="bg-transparent border-b-[3px] border-white/80  rounded-sm text-white/90  mt-1 min-h-6  w-full  text-sm sm:text-base">
+            {email}
+          </p>
+        </div>
+        <div className="">
+          <label className="block text-sm font-medium text-white/90">
+            Event
+          </label>
+          <p className="bg-transparent border-b-[3px] border-white/80  rounded-sm text-white/90  mt-1 min-h-6  w-full  text-sm sm:text-base">
+            {eventName}
+          </p>
+        </div>
 
-      {/* Confirm Button */}
-      <button
-        onClick={onSubmit}
-        disabled={loading}
-        className="w-full p-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700"
-      >
-        {loading ? "Registering..." : "Confirm Registration"}
-      </button>
+        {/* Confirm Button */}
+        <button
+          onClick={onSubmit}
+          disabled={loading}
+          className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
+        >
+          {loading ? <>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="text-darkBlue"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <style>
+                      {`
+          .spinner {
+            transform-origin: center;
+            animation: spinner-animation 0.75s infinite linear;
+          }
+          @keyframes spinner-animation {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        `}
+                    </style>
+                    <path
+                      d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
+                      className="spinner"
+                    />
+                  </svg>
+
+                  <p className="inline ">Registering...</p>
+                </> : "Confirm Registration"}
+        </button>
+      </div>
     </div>
   );
 };

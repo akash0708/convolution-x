@@ -19,9 +19,9 @@ const Sponsors: React.FC = () => {
 
   return (
     <div className="bg-darkBlue py-8">
-        <h1 className='text-center text-white font-bold text-3xl mb-8'>Our Sponsors</h1>
+        <h1 className='text-center text-white sm:text-5xl text-3xl mb-12'>Our Sponsors</h1>
       <div
-        className="slider"
+        className="slider "
         style={{
           '--width': '150px',
           '--height': '80px',

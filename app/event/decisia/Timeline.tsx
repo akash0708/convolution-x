@@ -9,20 +9,20 @@ import boy1 from "@/assets/images/Decisia/character.png";
 
 const timelineDetails: { date: string; task: string }[] = [
   {
-    date: "15th Feb",
-    task: "Abstract Submission Starts- the participants will have to submit an abstract of their business ideas",
+    date: "18th Jan",
+    task: "Abstract Submission Starts - the participants will have to submit an abstract of their business ideas",
   },
   {
-    date: "15th Feb",
-    task: "Abstract Submission Starts- the participants will have to submit an abstract of their business ideas",
+    date: "11th Feb",
+    task: "Abstract Submission Ends - Participants will have to submit their abstracts by 11:59pm on 11th February.",
   },
   {
-    date: "15th Feb",
-    task: "Abstract Submission Starts- the participants will have to submit an abstract of their business ideas",
+    date: "18th Feb",
+    task: "Result Announcement of Prelims - Top 10 teams will be shortlisted for the 2nd round after their online pitching",
   },
   {
-    date: "15th Feb",
-    task: "Abstract Submission Starts- the participants will have to submit an abstract of their business ideas",
+    date: "21st Feb",
+    task: "Finals - The shortlisted participants will have to pitch their ideas in front of the judges.",
   },
 ];
 

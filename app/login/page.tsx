@@ -64,9 +64,11 @@ export default function RegisterForm() {
         </div>
         <div className="flex flex-col gap-y-2 items-center">
           <h2 className="sm:text-2xl text-lg font-bold mb-2">
-            Create an Account
+            Welcome back!
           </h2>
-          {/* <p className="text-white/90 text-sm sm:text-base">Choose your registration method</p> */}
+          <>
+          {/*
+           <p className="text-white/90 text-sm sm:text-base">Choose your registration method</p> */}
           {/* Google Sign In Button */}
           {/* <button
             type="button"
@@ -101,7 +103,9 @@ export default function RegisterForm() {
             <div className="w-full h-[1px] rounded-l-full bg-white/80"></div>
             <span className="text-nowrap px-2 text-sm sm:text-base">Or continue with email</span>
             <div className="w-full h-[1px] rounded-r-full bg-white/80"></div>
-          </div> */}
+          </div> 
+          */}
+          </>
 
           {/* ------------------email form starts here------------------- */}
           <form
@@ -114,6 +118,7 @@ export default function RegisterForm() {
               </div>
             )}
 
+<>
             {/* <div>
               <label
                 htmlFor="name"
@@ -130,6 +135,7 @@ export default function RegisterForm() {
                 className="input-box"
               />
             </div> */}
+</>
 
             <div>
               <label
@@ -176,7 +182,7 @@ export default function RegisterForm() {
             <button
               type="submit"
               disabled={loading}
-              className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <>
