@@ -22,7 +22,7 @@ const faqData = [
   {
     question: "How can I register for Convolution?",
     answer: 
-      "Visit our official website [insert link] or contact [insert contact details] for registration details.",
+      "To register for Convolution, start by creating an account [create an account page link]. Once registered, log in [log in page link] using your credentials and navigate to the \"Events\" page to explore and register for individual events of your choice. For any assistance, contact us [contact us page link].",
   },
   {
     question: "Is there any registration fee?",

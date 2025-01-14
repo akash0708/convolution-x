@@ -63,6 +63,7 @@ const HeroAT = () => {
           about={aboutAbolTabol}
           logo="/AbolTabol/Abol Tabol logo.png"
           buttonDesign="shadow-white/70 hover:shadow-white/30  bg-[#0212B4] hover:bg-white  hover:text-[#0212B4] text-[#ffff]"
+          registeredUiBtn='text-[#0212B4] bg-white'
           planet="/AbolTabol/planet.png"
           mode="solo"
           name="aboltabol"

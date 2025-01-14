@@ -1,3 +1,5 @@
+"use client"
+import { useUserStore } from '@/store/userStore';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
@@ -8,8 +10,12 @@ interface MyComponentProps {
     logo: string; // Custom text style
     mode: string;
     name: string; 
+    registeredUiBtn:string;
   }
-const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo,mode,name }) => {
+  const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo,mode,name,registeredUiBtn }) => {
+  const {teams} = useUserStore()
+  const isRegistered=teams.includes(name)
+  console.log(isRegistered)
   return (
     <div>
       <div className=" grid grid-cols-1 gap-y-2 md:grid-cols-2 ">
@@ -26,13 +32,14 @@ const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo
             <p className="text-white text-center sm:text-xl text-base text-shadow-dark">
             {about}
             </p>
+            {isRegistered? <p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full ${registeredUiBtn}`}>You have Registered for this Event</p>:
             <Link 
               href={`/event/register-${mode}?eventName=${name}`} 
               className={`shadow-lg py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full  transition-all duration-300 ${buttonDesign}`}>
                 <p className="">
                   Register Now
                 </p>
-            </Link>
+            </Link>}
            
           </div>
         </div>

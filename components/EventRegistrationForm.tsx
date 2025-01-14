@@ -2,11 +2,13 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import Cookies from "js-cookie";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { BiTrash } from "react-icons/bi";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import { z } from "zod";
 
 const eventConfigurations = [
@@ -121,11 +123,14 @@ const EventRegistrationForm: React.FC = () => {
 
   return (
     <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-12 py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
-      <div className="absolute top-5 left-5 flex gap-x-1">
-        <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
-        <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
-        <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
-      </div>
+      <div className="absolute top-5 right-5 flex gap-x-1">
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+        </div>
+        <Link href='/' className="absolute top-5 left-5">
+        <IoMdArrowRoundBack className="text-white text-2xl" />
+        </Link>
       <div className="flex flex-col gap-y-2 items-center">
         <h1 className="text-2xl font-semibold mb-4">Register a Team</h1>
         <form
