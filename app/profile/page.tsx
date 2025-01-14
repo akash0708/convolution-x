@@ -47,6 +47,7 @@ export default function ProtectedComponent() {
 
   // useEffect to fetch user data
   useEffect(() => {
+    // console.log(user.email);
     if (!email) {
       setLoading(false);
       return;
