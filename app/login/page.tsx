@@ -16,7 +16,7 @@ export default function RegisterForm() {
   const [loading, setLoading] = useState(false);
 
   const {user} = useUserStore();
-  if(user)  router.push("/profile");
+  // if(user)  router.push("/profile");
   const {setUser} = useUserStore();
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
