@@ -6,6 +6,15 @@ export async function POST(req: Request) {
   try {
     const { eventName, leaderId, leaderEmail, leaderName } = await req.json();
 
+    const solo_events = ["aboltabol", "jutalks", "algomaniac"];
+
+    if (!solo_events.includes(eventName.toLowerCase())) {
+      return NextResponse.json(
+        { message: "This event does not support solo registration." },
+        { status: 400 }
+      );
+    }
+
     // console.log("Solo registration request:", {
     //   eventName,
     //   leaderId,
