@@ -1,6 +1,8 @@
 "use client";
 
 import { signIn } from "@/lib/auth";
+import { useUserStore } from "@/store/userStore";
+import axios from "axios";
 import { applyActionCode, getAuth } from "firebase/auth";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -12,22 +14,8 @@ export default function RegisterForm() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const searchParams = useSearchParams();
-
-  const mode = searchParams.get("mode");
-  const oobCode = searchParams.get("oobCode");
-
-  if (mode == "VerifyEmail" && oobCode) {
-    const auth = getAuth();
-    applyActionCode(auth, oobCode)
-      .then(() => {
-        toast.success("Email verified successfully!");
-      })
-      .catch((error) => {
-        toast.error("Failed to verify email. Please try again.");
-        console.log(error);
-      });
-  }
+  const user = useUserStore((state) => state.user);
+  const setUser = useUserStore((state) => state.setUser);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,9 +28,29 @@ export default function RegisterForm() {
 
     try {
       const res = await signIn(email, password);
+
+      console.log("email from res", res.data?.email);
+
+      const userEmail = res.data?.email;
+
       if (res.status === "error") {
         throw new Error(res.message);
       }
+
+      // api call to get user details based on email
+      const response = await axios.post("/api/users", { email: userEmail });
+
+      console.log("response after registration", response.data);
+
+      if (response.data) {
+        setUser({
+          id: response.data.id,
+          name: response.data.name,
+          email: response.data.email,
+          institution: response.data.institution,
+        });
+      }
+
       router.push("/profile"); // Redirect after successful login
     } catch (error) {
       setError(error instanceof Error ? error.message : "An error occurred");

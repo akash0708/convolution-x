@@ -13,6 +13,21 @@ export async function POST(req: Request) {
       leaderName,
     } = await req.json();
 
+    const team_events = [
+      "sparkhack",
+      "eureka",
+      "decisia",
+      "inquizzitive",
+      "circuistics",
+    ];
+
+    if (!team_events.includes(eventName.toLowerCase())) {
+      return NextResponse.json(
+        { message: "This event does not support team registration." },
+        { status: 400 }
+      );
+    }
+
     // send a get request to / route of email service to avoid failure due to cold start
     axios
       .get(`${process.env.EMAIL_URL}`)

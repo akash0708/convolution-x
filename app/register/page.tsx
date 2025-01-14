@@ -48,6 +48,7 @@ export default function RegisterForm() {
         email: res.data.email,
         institution: res.data.institution,
       });
+      console.log("User registered updated in zustand:", user);
       // redirect to verify email page
       router.push("/verify-email");
     } catch (error: any) {
