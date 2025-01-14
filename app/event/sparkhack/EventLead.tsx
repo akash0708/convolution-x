@@ -52,10 +52,10 @@ const EventLead = () => {
         alt="trees"
       />
       <div className="maxWidthForSections">
-        <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
+        <h2 className="text-3xl sm:text-5xl font-medium text-white text-shadow-dark text-center ">
           Event Leads
         </h2>
-        <p className="opacity-80 text-center text-white text-shadow-dark mt-2 text-base sm:text-lg font-medium">Meet the event leads of SparkHack! We are ready to address all your queries.</p>
+        <p className="opacity-80 text-center text-white text-shadow-dark mt-2 text-base sm:text-xl font-medium">Meet the event leads of SparkHack! We are ready to address all your queries.</p>
 
         {/* ---------------------------For Mobile---------------------------- */}
         {/* <div className="mt-8 sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">

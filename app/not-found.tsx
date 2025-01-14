@@ -20,7 +20,7 @@ export default function NotFound() {
       </div>
 
       <Image src={error404} alt='error img' className='object-cover w-[80vw] max-w-[500px]'></Image>
-      <p className='text-xl text-white font-semibold my-4'>You are lost in Space.</p>
+      <p className='text-xl text-white font-semibold my-4'>You are lost in Space!</p>
       <Link href="/" className='bg-[#FB23D5] rounded-full py-2 px-8   font-semibold  hover:bg-white hover:text-[#FB23D5] hover:shadow-white/80 transition-all duration-300 text-white hover:border-white'>Return Home</Link>
     </div>
   )

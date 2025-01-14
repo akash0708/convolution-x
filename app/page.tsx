@@ -1,6 +1,7 @@
 import Events from "@/components/Events";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import Gallery from "@/components/Gallery";
 import HomeAbout from "@/components/HomeAbout";
 import HomeHero from "@/components/HomeHero";
 import Navbar from "@/components/Navbar";
@@ -27,6 +28,7 @@ export default function Home() {
       <Timeline></Timeline>
       <Team />
       <Sponsors/>
+      <Gallery></Gallery>
       {/* ----------------note that the slider hover has been commented for optimisation */}
       <FAQ />
       <PreFooterImage /> 

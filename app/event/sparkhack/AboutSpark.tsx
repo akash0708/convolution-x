@@ -6,11 +6,11 @@ import pendant2 from "@/assets/images/SparkHack/pendant2.png";
 import flakebg from "@/assets/images/SparkHack/flakeBg.png";
 import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 const sparkhackRules = [
-  "Sparkhack will feature various tracks, where teams select one to create a feasible real-world solution for the given problem.",
-  "Upon event registration, participants will receive the problem statements via their email.",
-  "Preliminary round: The teams have to present their ideas to the judges on a Google Meet. The judges will shortlist 8 teams for the next rounds. The teams then have to pitch their ideas and present their prototype to the judges in-person.",
-  "Prototype creating round: The shortlisted teams will have to implement a prototype based on their ideation which will be held via offline mode in Jadavpur University Electrical Engineering Department.",
-  "Pitching round: The teams will have to pitch their ideas in offline mode to the panel of judges.",
+  "SparkHack features multiple tracks where teams (2-4 members, including a team lead) work on a problem statement to create real-world solutions. Teams can consist of members from different streams and academic years, but all must belong to the same institution.",
+  "Round 1 : PPT Shortlisting : Teams must submit a concise PowerPoint presentation (max 15 slides) outlining their proposed solution. Judges will review the submissions and shortlist the top 30 teams. ",
+  "Round 2 : Online Pitching : Shortlisted teams will present their ideas to the judges via Google Meet. Based on their pitches, the judges will select the top 10 teams for the next round.",
+  "Round 3 : Prototype Creation:  The top 10 teams will develop and showcase their prototypes offline at the Electrical Engineering Department, Jadavpur University.",
+ 
 ];
 const AboutSpark = () => {
   return (
@@ -70,7 +70,7 @@ const AboutSpark = () => {
               alt="trees"
             />
           </>
-          <h1 className="uppercase text-center text-2xl sm:text-4xl mb-8 text-white text-shadow-dark">
+          <h1 className="uppercase text-center text-3xl sm:text-5xl mb-8 text-white text-shadow-dark">
             Rules & Regulations
           </h1>
           <ul className="space-y-3 list-disc list-inside">

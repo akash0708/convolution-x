@@ -143,11 +143,11 @@ const Footer = () => {
               </div>
             </li>
             <li>
-              <div className="flex items-center justify-normal">
+              <a target="_blank" href="https://www.google.com/maps/dir/22.4807733,88.3919015/electrical+dept+ju+ee+maps+google/@22.4889584,88.3620656,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3a0271233b03a041:0x3ab416d1f7084129!2m2!1d88.3716105!2d22.4963675?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D" className="flex items-center justify-normal">
                 <div className="iconBoxes">
                   <MdLocationOn className="iconsFooter" />
                 </div>
-              </div>
+              </a>
               <div className="">
                 <h1 className="listHead">Location</h1>
                 <p className="listPara">

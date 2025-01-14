@@ -1,40 +1,44 @@
 "use client"
 import Image from 'next/image';
-import React, { useState } from 'react'
 import flakebg from "@/assets/images/SparkHack/flakeBg.png";
 import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 import FaqEvent from '@/components/FaqEvent';
 const faqData = [
     {
-      question: "What is Convolution?",
+      question: " Is SparkHack an offline or online event?",
       answer: 
-        "Convolution is our annual tech fest, where technology, creativity, and innovation come together. It features exciting events, workshops, competitions, and opportunities to showcase talent.",
+        " Round 1 and 2 are conducted online, with teams submitting presentations and pitching ideas remotely. After the results of Round 2 are released on 17th February, the top 10 teams can build their prototypes remotely from 17th to 20th February. However, to be eligible for prizes, the top 10 teams must present their prototypes offline on 21st February at the Electrical Engineering Department of Jadavpur University.",
     },
     {
-      question: "When and where is Convolution happening?",
+      question: " Is coding experience required to participate in SparkHack?",
       answer: 
-        "Convolution will take place from 20th to 22nd February, 2025 at Department of Electrical Engineering, Jadavpur University. Stay tuned for updates on our website and social media!",
+        "SparkHack welcomes beginners-anyone who is enthusiastic about technology with a zeal for learning to try , learn and contribute.",
     },
     {
-      question: "Who can participate in Convolution?",
+      question: "Can a team work on multiple problem statements during SparkHack?",
       answer: 
-        "Convolution is open to students enthusiastic about technology, enrolled in any undergraduate programme.",
+        "No, each team must choose one problem statement to work on throughout the competition.",
     },
     {
-      question: "How can I register for Convolution?",
+      question: "Are only software-based solutions allowed in SparkHack?",
       answer: 
-        "Visit our official website [insert link] or contact [insert contact details] for registration details.",
+        "No, both hardware and software-based solutions are allowed. Teams can choose problem statements based on their expertise and interests, whether they involve hardware implementation, software development, or a combination of both.",
     },
     {
-      question: "Is there any registration fee?",
+      question: "Will the necessary equipment be provided for the offline round?",
       answer: 
-        "No, the registrations for the events are completely free of cost.",
+        "No, participants must bring their own equipment. Teams working on hardware problem statements are required to bring their own hardware kits, while those working on software problem statements must bring their own laptops.",
+    },
+    {
+      question: " When will registration start and end?",
+      answer: 
+        "Registration for SparkHack will start on 21st January and end on 10th February at 11:59 PM, which is also the deadline for abstract submissions.",
     },
   ];
 const FaqSpark = () => {
     
   return (
-    <div id='faq' className='min-h-[80vh] relative flex justify-center items-center  '>
+    <div id='faq' className='min-h-screen relative flex justify-center items-center  '>
       <div className="absolute top-0 bottom-0 left-0 right-0 w-full  bg-gradient-to-b from-[#2CB1DF] via-[#3AADD9] to-[#67C6DD] 
      -z-20"></div>
  <Image
@@ -44,11 +48,11 @@ const FaqSpark = () => {
       />
       <Image
         src={flakebgMobile}
-        className=" sm:hidden block h-auto w-full  absolute opacity-60   bottom-0 right-0 -z-10"
+        className=" sm:hidden block h-full w-auto object-cover  absolute opacity-60   bottom-0 right-0 -z-10"
         alt="trees"
       />
         <div className="maxWidthForSections">
-        <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
+        <h2 className="sm:text-5xl text-3xl mb-8 font-medium text-white text-shadow-dark text-center ">
           Frequently Asked Questions
         </h2>
         

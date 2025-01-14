@@ -162,7 +162,7 @@ html{
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #48279A; /* Color of the scrollbar thumb */
+  background: #fff; /* Color of the scrollbar thumb */
   border-radius: 100vw; /* Rounded corners for the thumb */
    /* Border around the thumb to match the track */
 }

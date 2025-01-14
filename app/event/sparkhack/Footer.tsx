@@ -26,7 +26,7 @@ const Footer = () => {
       <div className="absolute  top-0 left-0 w-full h-full  bg-gradient-to-b from-[#8FE3F0] via-[#3AADD9] to-[#2CB1DF] -z-20 ">
        
       </div>
-
+<>
       {/* <div className="sm:grid maxWidthForSections  w-full grid-cols-2  md:grid-cols-3 mt-4 flex flex-col items-center gap-x-2 gap-y-8 text-shadow">
         <div>
           <div className="flex sm:justify-start justify-center">
@@ -154,8 +154,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="h-1 mt-10 w-[80vw] mx-auto rounded-sm bg-white/80"></div> */}
+</>
 
-      <EventFooter linkText="hover:scale-105 text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor="darkBlue"></EventFooter>
+      <EventFooter linkText="text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor="darkBlue"></EventFooter>
     </div>
   );
 };

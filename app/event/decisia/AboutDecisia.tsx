@@ -5,7 +5,7 @@ import aboutbg from '@/assets/images/Decisia/aboutbg.png'
 const rulesDecisia = [
   "Teams will register from the official Convolution website with their team name, email, phone no., and college name of each member in the group.",
   "Teams will comprise of 3-5 members (including the team lead).",
-  "Teams may consist of participants from the same or different streams, same or different years.",
+  "Teams may consist participants from same or different streams, same or different years,but not from different institutions",
   "Prelims will be held online, where participants have to submit a 2-minute elevator pitch and a presentation with a maximum of 6 slides (preferably in PDF).",
   "Participants can provide an additional executive summary (within 2 slides) of the B-plan.",
   "Finals will be offline (participants can bring prototypes or samples if they want), with a pitching time of 6+3 minutes (pitch + QnA) in front of the judges. (Open room pitching).",
