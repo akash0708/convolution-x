@@ -3,27 +3,26 @@ import wave from "@/assets/images/AbolTabol/wavesUnderwater.png";
 import wave1 from "@/assets/images/AbolTabol/layer1 timeline.png";
 import wavemobile from "@/assets/images/AbolTabol/wavesMobile.png";
 import Image from "next/image";
-import "./timelineAT.css";
 const timelineDetails: { date: string; head: string; task: string }[] = [
   {
-    date: "15th Feb",
+    date: "8th Feb",
     head: "Abstract Submission starts",
-    task: "Abstract Submission Starts- the participants will have to submit an abstract of their business ideas",
+    task: "The fray begins! All registered participants will be submitting a presentation.",
+  },
+  {
+    date: "12th Feb",
+    head: "Abstract Submission Ends",
+    task: "All abstracts to be submitted by 11:59pm on 12th February.",
   },
   {
     date: "15th Feb",
-    head: "Abstract Submission starts",
-    task: "Abstract Submission Starts- the participants will have to submit an abstract of their business ideas",
+    head: "Announcing Results of Prelims",
+    task: "The top 9 teams will be shortlisted for the final round.",
   },
   {
-    date: "15th Feb",
-    head: "Abstract Submission starts",
-    task: "Abstract Submission Starts- the participants will have to submit an abstract of their business ideas",
-  },
-  {
-    date: "15th Feb",
-    head: "Abstract Submission starts",
-    task: "Abstract Submission Starts- the participants will have to submit an abstract of their business ideas",
+    date: "21st Feb",
+    head: "Final Round",
+    task: "The shortlisted teams will have to pitch their concepts before the judges and chief guest.",
   },
 ];
 const TimelineAT = () => {
@@ -129,7 +128,7 @@ const TimelineAT = () => {
             );
           })}
         </div>
-
+{/* ----------------------for mobile ---------------------- */}
         <div className="flex sm:hidden flex-col gap-6 mt-12">
           {timelineDetails.map((data, index) => {
             return (
@@ -137,26 +136,20 @@ const TimelineAT = () => {
                 key={index}
                 className={`flex w-full relative ${index % 2 == 0 ? "justify-end" : ""}`}
               >
-               {index < (timelineDetails.length-1) && <div className="absolute h-[110%]  bg-transparent z-10 top-1/2 -translate-x-1/2 left-4 border-l-[3px] border-dashed border-[#FC9D1D] "></div>}
-                <div className="absolute size-4 rounded-full bg-white z-10 top-1/2 -translate-x-1/2 -translate-y-1/2  left-4"></div>
+               {index < (timelineDetails.length-1) && <div className="absolute h-[110%]  bg-transparent z-10 top-1/2 -translate-x-1/2 left-4 border-l-[3px] border-dashed border-white "></div>}
+                <div className="absolute size-4 rounded-full bg-[#FC9D1D] z-10 top-1/2 -translate-x-1/2 -translate-y-1/2  left-4"></div>
                 <div
-                  className={`bg-white/10 backdrop-blur-sm text-center shadow-lg h-auto ml-8 px-4 sm:px-8 py-8 rounded-xl text-white flex flex-col  gap-y-2  ${
-                    index % 2 == 0 ? "items-start" : "items-end"
-                  }`}
+                  className={`bg-white/10 backdrop-blur-sm shadow-lg h-auto ml-8 px-4 sm:px-8 py-8 rounded-xl text-white flex flex-col  gap-y-2  `}
                 >
                   <h1 className="sm:text-2xl text-xl">{data.date}</h1>
                   <div className="h-1 bg-[#FC9D1D] rounded-full w-[20%] min-w-[100px]"></div>
                   <p
-                    className={`text-[#FFBA00] ${
-                      index % 2 == 0 ? "text-left" : "text-right"
-                    }`}
+                    className={`text-[#FFBA00] `}
                   >
                     {data.head}
                   </p>
                   <p
-                    className={`${
-                      index % 2 == 0 ? "text-left" : "text-right"
-                    } sm:text-base text-sm`}
+                    className={` sm:text-base text-sm`}
                   >
                     {data.task}
                   </p>

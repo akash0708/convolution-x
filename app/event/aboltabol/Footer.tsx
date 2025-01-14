@@ -21,7 +21,7 @@ const Footer = () => {
      to-[#010A5F] -z-20 ">
        
        </div> 
-        <EventFooter linkText="hover:scale-105 text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor=" text-[#010A5F]"></EventFooter>
+        <EventFooter linkText=" text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor=" text-[#010A5F]"></EventFooter>
         </div>
   )
 }

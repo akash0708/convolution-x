@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import "@/app/sponsors.css";
-
+import exide from '@/assets/images/ConvoSponsors/Exide.png'
 
 const Sponsors: React.FC = () => {
   const sponsors = [
@@ -20,7 +20,7 @@ const Sponsors: React.FC = () => {
   return (
     <div className="bg-darkBlue py-8">
         <h1 className='text-center text-white sm:text-5xl text-3xl mb-12'>Our Sponsors</h1>
-      <div
+      {/* <div
         className="slider "
         style={{
           '--width': '150px',
@@ -71,6 +71,9 @@ const Sponsors: React.FC = () => {
             </div>
           ))}
         </div>
+      </div> */}
+      <div className="flex justify-center maxWidthForSections">
+        <Image src={exide} alt='exide image' className='bg-white/90 p-2 max-w-[150px] object-cover  rounded-md'></Image>
       </div>
     </div>
   );

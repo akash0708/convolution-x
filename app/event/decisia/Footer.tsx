@@ -28,7 +28,7 @@ const Footer = () => {
        
       </div>      
 
-      <EventFooter linkText="hover:scale-105 text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor=" text-[#540404]"></EventFooter>
+      <EventFooter linkText=" text-white text-shadow-dark" headerText="text-white text-shadow-dark" svgColor="white" listText="text-white text-shadow-dark " iconColor=" text-[#540404]"></EventFooter>
     </div>
   );
 };

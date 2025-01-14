@@ -30,7 +30,7 @@ const faqData = [
     
 const FaqAT = () => {
   return (
-    <div id='faq' className='min-h-[80vh]  relative flex justify-center items-center '>
+    <div id='faq' className='min-h-screen  relative flex justify-center items-center '>
         <div
         className="absolute top-0 left-0 w-full h-full  bg-gradient-to-br from-[#0215C5] via-[#020F92] 
      to-[#010A5F] -z-40"

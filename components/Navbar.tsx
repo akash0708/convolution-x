@@ -12,6 +12,7 @@ const navItems = [
   { href: "#events", label: "Events" },
   { href: "#timeline", label: "Timeline" },
   { href: "#team", label: "Team" },
+  { href: "#gallery", label: "Gallery" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
