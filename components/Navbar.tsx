@@ -8,13 +8,13 @@ import profileIcon from "@/assets/images/profileIcon.png";
 import { useUserStore } from "@/store/userStore";
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#events", label: "Events" },
-  { href: "#timeline", label: "Timeline" },
-  { href: "#team", label: "Team" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#events", label: "Events" },
+  { href: "/#timeline", label: "Timeline" },
+  { href: "/#team", label: "Team" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 // -----------------------is logged or not check---------------------

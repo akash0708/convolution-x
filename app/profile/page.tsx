@@ -219,7 +219,12 @@ export default function ProtectedComponent() {
                 className="flex items-center gap-x-0 overflow-x-scroll scrollbar-hide md:mt-2 "
                 ref={sliderMobileRef}
               >
-                {teams.map((imgSrc, index) => {
+                {!loading && (
+                  <div className="flex w-full-h-full">
+                    <p className="text-2xl text-center text-white">Fetching your data</p>
+                  </div>
+                )}
+                {loading && teams.map((imgSrc, index) => {
                   return (
                     <Link
                       href={`/event/` + imgSrc}
@@ -237,7 +242,7 @@ export default function ProtectedComponent() {
                     </Link>
                   );
                 })}
-                {events.map((imgSrc, index) => {
+                {loading && events.map((imgSrc, index) => {
                   if (!teams.includes(imgSrc))
                     return (
                       <Link
