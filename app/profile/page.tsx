@@ -16,7 +16,6 @@ import profilePic from "@/assets/images/profileImg.png";
 import stars from "@/assets/images/white variant of pink stars.png";
 import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.png";
 
-
 import starsMobile from "@/assets/images/white variant of pink stars Mobile.png";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
@@ -84,19 +83,25 @@ export default function ProtectedComponent() {
     fetchUser();
   }, [email, setUser]);
 
+  useEffect(() => {
+    if (!userCookie || !user) {
+      router.push("/login");
+    }
+  }, [userCookie, user, router]);
+
+  if (!userCookie) {
+    return null;
+  }
+
   if (loading) {
     return <ProfileSkeleton />;
   }
 
-  if (!userCookie || !user) {
-    return <div>Please log in</div>;
-  }
-
   async function handleSignout() {
     // remove the user cookie
-    Cookies.remove("user");
     await logout();
     removeUser();
+    Cookies.remove("user");
     router.push("/login");
   }
 

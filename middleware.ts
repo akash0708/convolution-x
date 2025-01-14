@@ -32,5 +32,21 @@ export function middleware(req: NextRequest) {
   // Allow access to /event/[id] without authentication
   // No specific check is needed here since it's allowed for everyone
 
+  // Prevent users with emailVerified: true from visiting /verify-email
+  if (userCookie && req.nextUrl.pathname.startsWith("/verify-email")) {
+    try {
+      const userCredential =
+        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
+
+      const emailVerified = JSON.parse(userCredential.value).emailVerified;
+
+      if (emailVerified) {
+        return NextResponse.redirect(new URL("/profile", req.url));
+      }
+    } catch (error) {
+      console.error("Error parsing userCookie:", error);
+    }
+  }
+
   return NextResponse.next();
 }
