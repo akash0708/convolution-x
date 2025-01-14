@@ -1,3 +1,4 @@
+"use client";
 import Events from "@/components/Events";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -10,29 +11,41 @@ import Sponsors from "@/components/Sponsors";
 // import Sponsors from "@/components/Sponsors2";
 import Team from "@/components/Team";
 import Timeline from "@/components/Timeline";
+import { useUserStore } from "@/store/userStore";
 import { Protest_Riot } from "next/font/google";
+import Cookies from "js-cookie";
+import { useEffect } from "react";
+
 const protestRiot = Protest_Riot({
   subsets: ["latin"], // You can specify subsets if needed
   weight: "400", // Adjust the weight based on your requirements
 });
 export default function Home() {
+  const { user, isLogged, loading, fetchUser } = useUserStore();
+  const userCookie = Cookies.get("user");
+  const email = userCookie ? JSON.parse(userCookie).email : null;
+  useEffect(() => {
+    if (!user && email) {
+      fetchUser(email);
+    }
+  }, [user]);
+  // get the username form zustand, for now use email
   return (
     <div className="relative overflow-x-hidden custom-scrollbar ">
       {/* <Events /> */}
       <Navbar />
       <div className={`${protestRiot.className}`}>
-
-      <HomeHero />
-      <HomeAbout />
-      <Events/>
-      <Timeline></Timeline>
-      <Team />
-      <Sponsors/>
-      <Gallery></Gallery>
-      {/* ----------------note that the slider hover has been commented for optimisation */}
-      <FAQ />
-      <PreFooterImage /> 
-      <Footer />
+        <HomeHero />
+        <HomeAbout />
+        <Events />
+        <Timeline></Timeline>
+        <Team />
+        <Sponsors />
+        <Gallery></Gallery>
+        {/* ----------------note that the slider hover has been commented for optimisation */}
+        <FAQ />
+        <PreFooterImage />
+        <Footer />
       </div>
     </div>
   );

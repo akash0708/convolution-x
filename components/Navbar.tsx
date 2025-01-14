@@ -83,7 +83,7 @@ const Navbar = () => {
           onClick={toggleNavigation}
         >
           <div
-            className="h-full w-2/3 flex flex-col bg-gradient-to-b from-darkBlue to-softPurple/90  items-end justify-start py-6 px-4"
+            className="h-full w-2/3 max-w-[300px] flex flex-col bg-gradient-to-b from-darkBlue to-softPurple/90  items-end justify-start py-6 px-4"
             onClick={toggleNavigation}
           >
             <IoClose
@@ -122,20 +122,16 @@ const Navbar = () => {
             )}
             {!isLogged && (
               <>
-              <div className= {`navButtonAuth w-full bg-[#FB23D5] py-[5px] rounded-full mt-4  font-semibold text-center ${
+              <Link href='/register' className= {`navButtonAuth w-full bg-[#FB23D5] py-[5px] rounded-full mt-4  font-semibold text-center ${
                 isNavOpen ? "is-visible" : "is-hidden"
               }`} >
-                <Link href="/register">
                   Register
-                </Link>
-              </div>
-              <div className= {`navButtonAuth w-full bg-white text-darkBlue py-[5px] rounded-full mt-2  font-semibold text-center ${
+              </Link>
+              <Link href="/login" className= {`navButtonAuth w-full bg-white text-darkBlue py-[5px] rounded-full mt-2  font-semibold text-center ${
                 isNavOpen ? "is-visible" : "is-hidden"
               }`} >
-                <Link href="/login">
                   Login
-                </Link>
-              </div>
+              </Link>
               </>
             )}
           </div>

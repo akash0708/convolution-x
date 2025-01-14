@@ -64,7 +64,7 @@ const Timeline = () => {
             
           </div>
           {/* ---------------day 1evening------------ */}
-          <div className="absolute text-right top-[12%] left-[2%] sm:left-[8%] ">
+          <div className="absolute text-right top-[12%] left-[2%] md:left-[5%] ">
             <h1 className=" md:text-3xl sm:text-lg text-xs">
               Day 1 (Afternoon)
             </h1>
@@ -95,7 +95,7 @@ const Timeline = () => {
             </p>
           </div>
           {/* ---------------day 2evening------------ */}
-          <div className="absolute text-right top-[30%] left-[2%] sm:left-[8%] ">
+          <div className="absolute text-right top-[30%] left-[2%] md:left-[5%] ">
             <h1 className=" md:text-3xl sm:text-lg text-xs">
               Day 2 (Afternoon)
             </h1>
@@ -124,7 +124,7 @@ const Timeline = () => {
             </p>
           </div>
           {/* ---------------day 3 evening------------ */}
-          <div className="absolute text-right top-[49%] left-[2%] sm:left-[8%] ">
+          <div className="absolute text-right top-[49%] left-[2%] md:left-[5%] ">
             <h1 className=" md:text-3xl sm:text-lg text-xs">
               Day 3 (Afternoon)
             </h1>
