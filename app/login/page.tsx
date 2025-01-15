@@ -8,14 +8,16 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 export default function RegisterForm() {
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const user = useUserStore((state) => state.user);
-  const setUser = useUserStore((state) => state.setUser);
+  const {user} = useUserStore();
+  // if(user)  router.push("/profile");
+  const {setUser} = useUserStore();
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -65,11 +67,14 @@ export default function RegisterForm() {
       style={{ backgroundImage: `url('/RegisterBg.png')` }}
     >
       <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-20 py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
-        <div className="absolute top-5 left-5 flex gap-x-1">
+        <div className="absolute top-5 right-5 flex gap-x-1">
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
         </div>
+        <Link href='/' className="absolute top-5 left-5">
+        <IoMdArrowRoundBack className="text-white text-2xl" />
+        </Link>
         <div className="flex flex-col gap-y-2 items-center">
           <h2 className="sm:text-2xl text-lg font-bold mb-2">
             Welcome back!
@@ -190,7 +195,7 @@ export default function RegisterForm() {
             <button
               type="submit"
               disabled={loading}
-              className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
+              className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:bg-white/80 disabled:opacity-80 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <>
@@ -221,7 +226,7 @@ export default function RegisterForm() {
                     />
                   </svg>
 
-                  <p className="inline ">Creating account...</p>
+                  <p className="inline ">Analyzing Credentials..</p>
                 </>
               ) : (
                 "Log in"

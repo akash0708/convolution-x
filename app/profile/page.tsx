@@ -24,64 +24,60 @@ import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 export default function ProtectedComponent() {
-  const userCookie = Cookies.get("user");
-  const router = useRouter();
-
   // -------------------for frontend constants etc --------------
   const [showArrows, setShowArrows] = useState(false);
-  const [notifications, setNotifications] = useState([]);
-  const [teams, setTeams] = useState([]);
+  // const [notifications, setNotifications] = useState([]);
+  // const [teams, setTeams] = useState([]);
+  const { notifications,removeUser, fetchUser, teams, loading, user } = useUserStore();
 
   const sliderMobileRef = useRef();
 
-  const user = useUserStore((state) => state.user);
-  const setUser = useUserStore((state) => state.setUser);
-  const removeUser = useUserStore((state) => state.removeUser);
-
+  
+  const userCookie = Cookies.get("user");
+  const router = useRouter();
   // get the username form zustand, for now use email
   const email = userCookie ? JSON.parse(userCookie).email : null;
 
   // Loading state to handle skeleton display
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   // useEffect to fetch user data
   useEffect(() => {
     // console.log(user.email);
     if (!email) {
-      setLoading(false);
       return;
     }
+    fetchUser(email)
 
-    const fetchUser = async () => {
-      try {
-        const response = await axios.post("/api/users", { email });
-        if (response.data) {
-          setUser({
-            id: response.data.id,
-            name: response.data.name,
-            email: response.data.email,
-            institution: response.data.institution,
-          });
+    // const fetchUser = async () => {
+    //   try {
+    //     const response = await axios.post("/api/users", { email });
+    //     if (response.data) {
+    //       setUser({
+    //         id: response.data.id,
+    //         name: response.data.name,
+    //         email: response.data.email,
+    //         institution: response.data.institution,
+    //       });
 
-          setNotifications(response.data.notifications);
-          const eventNames = response.data.teams.map(
-            (team: { eventName: string }) => team.eventName.toLowerCase()
-          );
-          setTeams(eventNames);
-        } else {
-          // User not found
-          setLoading(false);
-        }
-      } catch (error: any) {
-        console.log("Error fetching user:", error);
-        setLoading(false);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUser();
-  }, [email, setUser]);
+    //       setNotifications(response.data.notifications);
+    //       const eventNames = response.data.teams.map(
+    //         (team: { eventName: string }) => team.eventName.toLowerCase()
+    //       );
+    //       setTeams(eventNames);
+    //     } else {
+    //       // User not found
+    //       setLoading(false);
+    //     }
+    //   } catch (error: any) {
+    //     console.log("Error fetching user:", error);
+    //     setLoading(false);
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
+    
+  }, []);
 
   useEffect(() => {
     if (!userCookie || !user) {
@@ -174,7 +170,7 @@ export default function ProtectedComponent() {
           <div className="text-white ">
             <div className="flex items-start gap-4 justify-between">
               <h1 className="font-bold md:text-4xl text-xl gap-4 mb-2 capitalize">
-                {user.name}
+                {user?.name}
               </h1>
               <button
                 onClick={() => {
@@ -190,7 +186,7 @@ export default function ProtectedComponent() {
 
             <div className="flex items-center sm:gap-4 gap-2 mb-1">
               <GiGraduateCap className="sm:text-2xl text-lg" />
-              <p className="text-sm sm:text-base">{user.institution}</p>
+              <p className="text-sm sm:text-base">{user?.institution}</p>
             </div>
             <div className="flex items-center sm:gap-4 gap-2">
               <MdOutlineEmail className="sm:text-2xl text-lg" />
@@ -222,7 +218,12 @@ export default function ProtectedComponent() {
                 className="flex items-center gap-x-0 overflow-x-scroll scrollbar-hide md:mt-2 "
                 ref={sliderMobileRef}
               >
-                {teams.map((imgSrc, index) => {
+                {loading && (
+                  <div className="flex w-full-h-full">
+                    <p className="text-2xl text-center text-white">Fetching your data</p>
+                  </div>
+                )}
+                {!loading && teams.map((imgSrc, index) => {
                   return (
                     <Link
                       href={`/event/` + imgSrc}
@@ -240,7 +241,7 @@ export default function ProtectedComponent() {
                     </Link>
                   );
                 })}
-                {events.map((imgSrc, index) => {
+                {!loading && events.map((imgSrc, index) => {
                   if (!teams.includes(imgSrc))
                     return (
                       <Link

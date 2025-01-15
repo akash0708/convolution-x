@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import planet from "@/assets/images/SparkHack/SparkHackPlanet.png";
 import flakebg from "@/assets/images/SparkHack/flakeBg.png";
@@ -5,7 +6,11 @@ import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
 import logo from "@/assets/images/SparkHack/Sparkhack logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useUserStore } from "@/store/userStore";
+
 const HeroSpark = () => {
+  const {teams} = useUserStore()
+    const isRegistered=teams.includes('sparkhack')
   return (
     <div id="about"
       className="min-h-screen pt-24 md:pt-0 flex justify-center items-center  relative
@@ -48,11 +53,11 @@ const HeroSpark = () => {
               with notable social impact. The ideas will be judged by academics
               and industry experts.
             </p>
-            <Link href="/event/register-team?eventName=sparkhack" className="bg-[#8FE3F0] shadow-sparkhack-register py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full hover:bg-white hover:text-[#8FE3F0] hover:text-shadow-light hover:opacity-90 text-white transition-all duration-300 hover:shadow-sparkhack-register-hover text-shadow-dark">
+            {isRegistered?<p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full text-white text-shadow-dark bg-[#8FE3F0]`}>You have Registered for this Event</p> :<Link href="/event/register-team?eventName=sparkhack" className="bg-[#8FE3F0] shadow-sparkhack-register py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full hover:bg-white hover:text-[#8FE3F0] hover:text-shadow-light hover:opacity-90 text-white transition-all duration-300 hover:shadow-sparkhack-register-hover text-shadow-dark">
                 <p className="    ">
                   Register Now
                 </p>
-            </Link>
+            </Link>}
            
           </div>
         </div>

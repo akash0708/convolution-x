@@ -5,6 +5,8 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const page = () => {
   return (
@@ -84,11 +86,14 @@ const SoloRegistrationForm: React.FC = () => {
       style={{ backgroundImage: `url('/RegisterBg.png')` }}
     >
       <div className=" text-white space-y-6 bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-16  py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
-        <div className="absolute top-5 left-5 flex gap-x-1">
+      <div className="absolute top-5 right-5 flex gap-x-1">
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
         </div>
+        <Link href='/' className="absolute top-5 left-5">
+        <IoMdArrowRoundBack className="text-white text-2xl" />
+        </Link>
         <h1 className="sm:text-2xl text-center text-lg font-bold ">Registration</h1>
 
         {/* Participant Details */}
