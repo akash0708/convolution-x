@@ -1,6 +1,5 @@
 "use client";
 
-import AbolTabolPreloader from "@/components/AbolTabolPreloader";
 import { signIn } from "@/lib/auth";
 import { useUserStore } from "@/store/userStore";
 import axios from "axios";
@@ -63,7 +62,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <Suspense fallback={ <AbolTabolPreloader/>}>
+    <Suspense fallback={ <Loading/>}>
 
     <div
       className="h-[100svh] bg-no-repeat bg-center bg-cover flex justify-center items-center "
@@ -198,7 +197,7 @@ export default function RegisterForm() {
             <button
               type="submit"
               disabled={loading}
-              className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:bg-white/80 disabled:opacity-80 disabled:cursor-not-allowed"
+              className="group transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <>
@@ -207,7 +206,7 @@ export default function RegisterForm() {
                     height="24"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="text-darkBlue"
+                    className="text-darkBlue group-hover:text-white"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <style>

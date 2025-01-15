@@ -54,9 +54,9 @@ const AboutDecisia = () => {
             </li>
           </ul>
         </div>
-        <button className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#DE5C00] hover:shadow-[#D11100] hover:bg-[#931308] shadow-white/40 shadow-md text-white  transition-all duration-300 ">
+        <a href="https://drive.google.com/file/d/1sHXU9-0P-jWozBk5UGMEIgKQ54UaT1-A/view?usp=sharing" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#DE5C00] hover:shadow-[#D11100] hover:bg-[#931308] shadow-white/40 shadow-md text-white  transition-all duration-300 ">
           <p className="     ">Know More</p>
-        </button>
+        </a>
       </div>
     </div>
   );

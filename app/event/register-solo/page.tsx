@@ -8,10 +8,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { getFriendlyEventName } from "@/lib/friendlyEventNames";
+import Loading from "@/app/loading";
 
 const page = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loading/>}>
       <div className="w-full h-screen flex items-center justify-center ">
         <SoloRegistrationForm />
       </div>
@@ -129,16 +130,16 @@ const SoloRegistrationForm: React.FC = () => {
         <button
           onClick={onSubmit}
           disabled={loading}
-          className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
+          className="group transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
         >
-          {loading ? (
+          {true ? (
             <>
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="text-darkBlue"
+                className="text-darkBlue group-hover:text-white"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <style>

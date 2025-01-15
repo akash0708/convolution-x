@@ -13,7 +13,6 @@ import PreFooter from "./PreFooter";
 import Footer from "./Footer";
 import Judges from "./Judges";
 import { Protest_Riot } from "next/font/google";
-import AbolTabolPreloader from "@/components/AbolTabolPreloader";
 import { useUserStore } from "@/store/userStore";
 import Loading from "@/app/loading";
 
@@ -22,19 +21,21 @@ const protestRiot = Protest_Riot({
   weight: "400", 
 });
 const Page = () => {
-  const{user,authCheck,loading}=useUserStore();
+  const{user,authCheck,loading,setIsLogged}=useUserStore();
     useEffect(() => {
       // if (!user && email && !isLogged) {
       //   setLoading(true)
       //   fetchUser(email);
       // }
-      if (!user) authCheck();
+      if (!user) {
+        setIsLogged(true)
+        authCheck();}
     }, [user]);
      if (loading) {
         return <Loading />;
       }
   return (
-    <Suspense fallback={ <AbolTabolPreloader/>}>
+    <Suspense fallback={ <Loading/>}>
 
       <div>
         <EventNavbar
