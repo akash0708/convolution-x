@@ -14,8 +14,8 @@ import Timeline from "@/components/Timeline";
 import { useUserStore } from "@/store/userStore";
 import { Protest_Riot } from "next/font/google";
 import { Suspense, useEffect } from "react";
-import Loading from "./loading";
-import Loading2 from "./loading2";
+import Loading from "@/app/loading";
+
 
 const protestRiot = Protest_Riot({
   subsets: ["latin"], // You can specify subsets if needed
