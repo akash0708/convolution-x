@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import "@/app/sponsors.css";
-import techEle from '@/assets/images/ConvoSponsors/techno ele.png'
+import techEle from '@/assets/images/ConvoSponsors/techno ele.webp'
 import exide from '@/assets/images/ConvoSponsors/Exide.webp'
 
 const Sponsors: React.FC = () => {

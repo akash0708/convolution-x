@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import topRight from "@/assets/images/Coming Soon/right top.png";
-import bottomRight from "@/assets/images/Coming Soon/bottomright.png";
-import kolBalish from "@/assets/images/Coming Soon/kolBalish.png";
+import topRight from "@/assets/images/Coming Soon/right top.webp";
+import bottomRight from "@/assets/images/Coming Soon/bottomright.webp";
+import kolBalish from "@/assets/images/Coming Soon/kolBalish.webp";
 import Link from "next/link";
 
 const ComingSoon = () => {
