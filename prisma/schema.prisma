@@ -25,14 +25,14 @@ model User {
 }
 
 model Team {
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   teamName  String
-  eventName String // Store event name for easy querying
+  eventName EventName // Store event name for easy querying
   leaderId  String // Reference to the team leader's user ID
-  members   User[]   @relation("TeamMembers")
-  maxSize   Int      @default(5)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  members   User[]    @relation("TeamMembers")
+  maxSize   Int       @default(5)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 
   @@unique([eventName, leaderId]) // A leader can't create multiple teams for same event
 }
@@ -49,4 +49,16 @@ model Notification {
   user      User     @relation(fields: [email], references: [email], onDelete: Cascade)
 
   @@index([email, read]) // Index for fetching unread notifications
+}
+
+enum EventName {
+  sparkhack
+  decisia
+  aboltabol
+  circuistics
+  eureka
+  frames
+  inquizzitive
+  algomaniac
+  jutalks
 }
