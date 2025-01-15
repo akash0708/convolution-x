@@ -13,13 +13,7 @@ export async function POST(req: NextRequest) {
       leaderName,
     } = await req.json();
 
-    const team_events = [
-      "sparkhack",
-      "eureka",
-      "decisia",
-      "inquizzitive",
-      "circuistics",
-    ];
+    const team_events = ["sparkhack", "decisia"];
 
     const userCookie = req.cookies.get("user");
 
