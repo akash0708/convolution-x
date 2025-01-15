@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import gold from "@/assets/images/AbolTabol/gold prize.png";
-import silver from "@/assets/images/AbolTabol/silver prize.png";
-import bronze from "@/assets/images/AbolTabol/bronze prize.png";
-import wavemobile from "@/assets/images/AbolTabol/wavesMobile.png";
-import wave1 from "@/assets/images/AbolTabol/layer1 timeline.png";
+import gold from "@/assets/images/AbolTabol/gold prize.webp";
+import silver from "@/assets/images/AbolTabol/silver prize.webp";
+import bronze from "@/assets/images/AbolTabol/bronze prize.webp";
+import wavemobile from "@/assets/images/AbolTabol/wavesMobile.webp";
+import wave1 from "@/assets/images/AbolTabol/layer1 timeline.webp";
 
 const PrizesAT = () => {
   return (

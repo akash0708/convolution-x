@@ -1,6 +1,6 @@
 import React from "react";
-import timeline from "@/assets/images/SparkHack/timeline.png";
-import noTexttimeline from "@/assets/images/SparkHack/pretimeline-notext.png";
+import timeline from "@/assets/images/SparkHack/timeline.webp";
+import noTexttimeline from "@/assets/images/SparkHack/pretimeline-notext.webp";
 
 import Image from "next/image";
 const Timeline = () => {

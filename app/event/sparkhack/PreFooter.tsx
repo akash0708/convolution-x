@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 import EventPreFooter from "@/components/EventPreFooter";
-// import footerbg from "@/assets/images/Footer/footerImage2.png";
+// import footerbg from "@/assets/images/Footer/footerImage2.webp";
 
 
 const PreFooter = () => {

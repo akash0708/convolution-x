@@ -1,9 +1,9 @@
 import React from "react";
-import gold from "@/assets/images/SparkHack/gold prize.png";
-import silver from "@/assets/images/SparkHack/silver prize.png";
-import bronze from "@/assets/images/SparkHack/bronze prize.png";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+import gold from "@/assets/images/SparkHack/gold prize.webp";
+import silver from "@/assets/images/SparkHack/silver prize.webp";
+import bronze from "@/assets/images/SparkHack/bronze prize.webp";
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 import Image from "next/image";
 const PrizesSpark = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import aboutbg from '@/assets/images/Decisia/aboutbg.png'
+import aboutbg from '@/assets/images/Decisia/aboutbg.webp'
 const rulesDecisia = [
   "Teams will register from the official Convolution website with their team name, email, phone no., and college name of each member in the group.",
   "Teams will comprise of 3-5 members (including the team lead).",

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
 type Professor = {
@@ -17,14 +17,14 @@ const professors: Professor[] = [
     profession:
       "Professor at Department of Electrical Engineering, Jadavpur University",
     researchPoint: "https://scholar.google.com/citations?user=tlzV8CAAAAAJ&hl=en",
-    img: "dsd.png", // Replace with the actual image path or import
+    img: "dsd.webp", // Replace with the actual image path or import
   },
   {
     name: "Suddhasatwa Chakraborty",
     profession:
       "Professor at Department of Electrical Engineering, Jadavpur University",
     researchPoint: "https://www.researchgate.net/profile/Suddhasatwa-Chakraborty",
-    img: "sdc.png", // Replace with the actual image path or import
+    img: "sdc.webp", // Replace with the actual image path or import
   },
 ];
 

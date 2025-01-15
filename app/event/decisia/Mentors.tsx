@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
-import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
-import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
+import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.webp'
+import decisiaBg from '@/assets/images/Decisia/asteroid bg.webp'
 type Professor = {
   name: string;
   profession: string;
@@ -17,7 +17,7 @@ const professors: Professor[] = [
     profession:
       "Professor at Department of Electrical Engineering, Jadavpur University",
     researchPoint: "https://scholar.google.co.in/citations?user=fqBBOAYAAAAJ&hl=en",
-    img: "ap.png", // Replace with the actual image path or import
+    img: "ap.webp", // Replace with the actual image path or import
   },
  
 ];

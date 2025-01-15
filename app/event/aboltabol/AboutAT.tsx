@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import wave from "@/assets/images/AbolTabol/wavesUnderwater.png";
-import grass from "@/assets/images/AbolTabol/greemgrass.png";
-import flower from "@/assets/images/AbolTabol/redflower.png";
-import yellowsub from "@/assets/images/AbolTabol/yellowsub.png";
+import wave from "@/assets/images/AbolTabol/wavesUnderwater.webp";
+import grass from "@/assets/images/AbolTabol/greemgrass.webp";
+import flower from "@/assets/images/AbolTabol/redflower.webp";
+import yellowsub from "@/assets/images/AbolTabol/yellowsub.webp";
 import Link from "next/link";
 
 const AboutAT = () => {
@@ -49,7 +49,7 @@ const AboutAT = () => {
             Rules & Regulations
           </h1>
           <ul className="space-y-3   list-inside text-shadow-dark text-white sm:text-xl text-sm"
-          style={{ listStyleImage: "url('/AbolTabol/starList.png')" }}>
+          style={{ listStyleImage: "url('/AbolTabol/starList.webp')" }}>
             <li>
             This event is based on 'Bahfest', for more clarification <span><Link href='http://bahfest.com/' className="underline underline-offset-2">click here</Link></span>
             </li>

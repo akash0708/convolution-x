@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-// import footerbg from "@/assets/images/Footer/footerImage2.png";
+// import footerbg from "@/assets/images/Footer/footerImage2.webp";
 
-import asteroidRinged from "@/assets/images/Footer/asteroid ringed.png";
-import deepBluePlanet from "@/assets/images/Footer/deepblue planet.png";
-import redBluePlanet from "@/assets/images/Footer/redBlueGradient.png";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
-import whiteStarPhone from "@/assets/images/phone white stars.png"
+import asteroidRinged from "@/assets/images/Footer/asteroid ringed.webp";
+import deepBluePlanet from "@/assets/images/Footer/deepblue planet.webp";
+import redBluePlanet from "@/assets/images/Footer/redBlueGradient.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
+import whiteStarPhone from "@/assets/images/phone white stars.webp"
 
 const PreFooterImage = () => {
   return (

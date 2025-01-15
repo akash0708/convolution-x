@@ -1,9 +1,9 @@
 "use client"
 import React from "react";
-import planet from "@/assets/images/SparkHack/SparkHackPlanet.png";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
-import logo from "@/assets/images/SparkHack/Sparkhack logo.png";
+import planet from "@/assets/images/SparkHack/SparkHackPlanet.webp";
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
+import logo from "@/assets/images/SparkHack/Sparkhack logo.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { useUserStore } from "@/store/userStore";

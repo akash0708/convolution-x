@@ -89,6 +89,29 @@ export default function RegisterForm() {
               {/* <p className="text-white/90 text-sm sm:text-base">Choose your registration method</p> */}
               {/* Google Sign In Button */}
               {/* <button
+    <Suspense fallback={ <AbolTabolPreloader/>}>
+
+    <div
+      className="h-[100svh] bg-no-repeat bg-center bg-cover flex justify-center items-center "
+      style={{ backgroundImage: `url('/RegisterBg.webp')` }}
+    >
+      <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px]  py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
+      <div className="absolute top-5 right-5 flex gap-x-1">
+          <div className="bg-white/80 size-2 sm:size-3 rounded-full"></div>
+          <div className="bg-white/80 size-2 sm:size-3 rounded-full"></div>
+          <div className="bg-white/80 size-2 sm:size-3 rounded-full"></div>
+        </div>
+        <Link href='/' className="absolute top-5 left-5">
+        <IoMdArrowRoundBack className="text-white text-2xl" />
+        </Link>
+        <div className="flex flex-col gap-y-2 items-center">
+          <h2 className="sm:text-2xl text-lg font-bold mb-2">
+            Create an Account
+          </h2>
+          <>
+            {/* <p className="text-white/90 text-sm sm:text-base">Choose your registration method</p> */}
+            {/* Google Sign In Button */}
+            {/* <button
             type="button"
             onClick={handleGoogleSignIn}
             className="w-full flex items-center justify-center gap-x-2 bg-transparent border border-gray-300 rounded-full px-4 py-2 transition-colors duration-300  hover:bg-white hover:text-darkBlue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "

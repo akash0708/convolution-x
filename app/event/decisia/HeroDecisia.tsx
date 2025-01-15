@@ -2,8 +2,8 @@ import React from "react";
 
 import Image from "next/image";
 import EventHero from "@/components/EventHero";
-import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
-import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
+import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.webp'
+import decisiaBg from '@/assets/images/Decisia/asteroid bg.webp'
 const aboutDecisia=`Decisia is like our version of "Shark Tank." It's your platform to pitch that dream business idea. You can be the CEO, create the product, showcase your profit margins, and pitch it to the "sharks'' for potential investment. Dive into the opportunity to turn your business dreams into reality!`
 const HeroDecisia = () => {
   return (
@@ -58,7 +58,7 @@ const HeroDecisia = () => {
         </div> */}
         </>
 
-        <EventHero registeredUiBtn="bg-[#D11100] text-white" about={aboutDecisia} logo='/Decisia/decisia logo.png' buttonDesign='hover:bg-[#D11100] shadow-[#D11100] hover:shadow-[#5B0804] text-shadow-dark bg-[#DE5C00] hover:opacity-90 text-white' planet='/Decisia/planet.png' mode="team" name="decisia"></EventHero>
+        <EventHero registeredUiBtn="bg-[#D11100] text-white" about={aboutDecisia} logo='/Decisia/decisia logo.webp' buttonDesign='hover:bg-[#D11100] shadow-[#D11100] hover:shadow-[#5B0804] text-shadow-dark bg-[#DE5C00] hover:opacity-90 text-white' planet='/Decisia/planet.webp' mode="team" name="decisia"></EventHero>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-// import whiteStar from '@/assets/images/Footer/stars white.png'
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+// import whiteStar from '@/assets/images/Footer/stars white.webp'
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 // import ConvoIcon from "@/assets/images/HeroSectionImages/ConvoSvg.svg";
 // import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 // import { MdCall, MdLocationOn, MdOutlineEmail } from "react-icons/md";

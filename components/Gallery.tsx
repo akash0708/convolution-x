@@ -48,7 +48,7 @@ const Gallery = () => {
             <Image
               className="item first big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/1.png"
+              src="/Galleria/1.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -59,7 +59,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/2.png"
+              src="/Galleria/2.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -70,7 +70,7 @@ const Gallery = () => {
             <Image
               className="item big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/3.png"
+              src="/Galleria/3.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -81,7 +81,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/4.png"
+              src="/Galleria/4.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -92,7 +92,7 @@ const Gallery = () => {
             <Image
               className="item big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/5.png"
+              src="/Galleria/5.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -104,7 +104,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/6.png"
+              src="/Galleria/6.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -115,7 +115,7 @@ const Gallery = () => {
             <Image
               className="item big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/7.png"
+              src="/Galleria/7.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -126,7 +126,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/8.png"
+              src="/Galleria/8.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -137,7 +137,7 @@ const Gallery = () => {
             <Image
               className="item big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/9.png"
+              src="/Galleria/9.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -148,7 +148,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/10.png"
+              src="/Galleria/10.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -160,7 +160,7 @@ const Gallery = () => {
             <Image
               className="item first big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/11.png"
+              src="/Galleria/11.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -171,7 +171,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/12.png"
+              src="/Galleria/12.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -182,7 +182,7 @@ const Gallery = () => {
             <Image
               className="item big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/13.png"
+              src="/Galleria/13.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -193,7 +193,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/14.png"
+              src="/Galleria/14.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -204,7 +204,7 @@ const Gallery = () => {
             <Image
               className="item first big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/15.png"
+              src="/Galleria/15.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -216,7 +216,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/16.png"
+              src="/Galleria/16.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -227,7 +227,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/17.png"
+              src="/Galleria/17.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -238,7 +238,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/18.png"
+              src="/Galleria/18.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -249,7 +249,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/19.png"
+              src="/Galleria/19.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -260,7 +260,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/20.png"
+              src="/Galleria/20.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -272,7 +272,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/21.png"
+              src="/Galleria/21.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -283,7 +283,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/22.png"
+              src="/Galleria/22.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -294,7 +294,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/23.png"
+              src="/Galleria/23.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -305,7 +305,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/24.png"
+              src="/Galleria/24.webp"
               width={200}
               height={150}
               alt="gallery"
@@ -316,7 +316,7 @@ const Gallery = () => {
             <Image
               className="item object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/25.png"
+              src="/Galleria/25.webp"
               width={200}
               height={150}
               alt="gallery"

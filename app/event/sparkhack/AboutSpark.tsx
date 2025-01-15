@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import pendant1 from "@/assets/images/SparkHack/pendant1.png";
-import pendant3 from "@/assets/images/SparkHack/pendant3.png";
-import pendant2 from "@/assets/images/SparkHack/pendant2.png";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+import pendant1 from "@/assets/images/SparkHack/pendant1.webp";
+import pendant3 from "@/assets/images/SparkHack/pendant3.webp";
+import pendant2 from "@/assets/images/SparkHack/pendant2.webp";
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 const sparkhackRules = [
   "SparkHack features multiple tracks where teams (2-4 members, including a team lead) work on a problem statement to create real-world solutions. Teams can consist of members from different streams and academic years, but all must belong to the same institution.",
   "Round 1 : PPT Shortlisting : Teams must submit a concise PowerPoint presentation (max 15 slides) outlining their proposed solution. Judges will review the submissions and shortlist the top 30 teams. ",

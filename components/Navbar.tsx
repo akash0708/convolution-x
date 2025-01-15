@@ -4,7 +4,7 @@ import ConvoIcon from "@/assets/images/HeroSectionImages/ConvoSvg.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
-import profileIcon from "@/assets/images/profileIcon.png";
+import profileIcon from "@/assets/images/profileIcon.webp";
 import { useUserStore } from "@/store/userStore";
 const navItems = [
   { href: "/", label: "Home" },

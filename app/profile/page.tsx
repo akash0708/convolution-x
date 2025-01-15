@@ -11,14 +11,14 @@ import Link from "next/link";
 import ProfileSkeleton from "@/components/LoadingSkeleton";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import profilePic from "@/assets/images/profileImg.png";
-import stars from "@/assets/images/white variant of pink stars.png";
-import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.png";
+import profilePic from "@/assets/images/profileImg.webp";
+import stars from "@/assets/images/white variant of pink stars.webp";
+import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.webp";
 
-import starsMobile from "@/assets/images/white variant of pink stars Mobile.png";
+import starsMobile from "@/assets/images/white variant of pink stars Mobile.webp";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
-import NotiIcon from "@/assets/images/notification icon.png";
+import NotiIcon from "@/assets/images/notification icon.webp";
 import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import Loading from "../loading";
@@ -202,68 +202,64 @@ export default function ProtectedComponent() {
               </span>
               Logout
             </button> */}
-            </div>
           </div>
-          <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mt-12">
-            {/* --------------------------cardsslider----------------- */}
-            <div
-              className="relative  bg-white/20 shadow-md shadow-white/20 backdrop-blur-sm rounded-lg text-white py-4 md:py-6 px-4"
-              onMouseEnter={() => setShowArrows(true)}
-              onMouseLeave={() => setShowArrows(false)}
-            >
-              <h1 className="px-2 font-semibold text-xl">Registered events</h1>
-              <div className="relative">
-                <div
-                  className="flex items-center gap-x-0 overflow-x-scroll scrollbar-hide md:mt-2 "
-                  ref={sliderMobileRef}
-                >
-                  {loading && (
-                    <div className="flex w-full-h-full">
-                      <p className="text-2xl text-center text-white">
-                        Fetching your data
-                      </p>
-                    </div>
-                  )}
-                  {!loading &&
-                    teams.map((imgSrc, index) => {
-                      return (
-                        <Link
-                          href={`/event/` + imgSrc}
-                          key={imgSrc + index}
-                          className="text-white py-4 px-2  rounded-xl flex flex-col items-center"
-                        >
-                          <Image
-                            src={`/CardsEvent/` + imgSrc + ".png"}
-                            className="object-cover sm:min-w-44 min-w-36"
-                            height={400}
-                            width={400}
-                            alt={imgSrc}
-                          ></Image>
-                          {/* <h1 className="mt-2 text-center">{imgSrc.punchLine}</h1> */}
-                        </Link>
-                      );
-                    })}
-                  {!loading &&
-                    events.map((imgSrc, index) => {
-                      if (!teams.includes(imgSrc))
-                        return (
-                          <Link
-                            href={`/event/` + imgSrc}
-                            key={imgSrc + index}
-                            className="text-white py-4 px-2  rounded-xl flex flex-col items-center"
-                          >
-                            <Image
-                              src={`/CardsEvent/` + imgSrc + ".png"}
-                              className="object-cover sm:min-w-44 min-w-36 grayscale"
-                              height={400}
-                              width={400}
-                              alt={imgSrc}
-                            ></Image>
-                            {/* <h1 className="mt-2 text-center">{imgSrc.punchLine}</h1> */}
-                          </Link>
-                        );
-                    })}
-                </div>
+        </div>
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mt-12">
+          {/* --------------------------cardsslider----------------- */}
+          <div
+            className="relative  bg-white/20 shadow-md shadow-white/20 backdrop-blur-sm rounded-lg text-white py-4 md:py-6 px-4"
+            onMouseEnter={() => setShowArrows(true)}
+            onMouseLeave={() => setShowArrows(false)}
+          >
+            <h1 className="px-2 font-semibold text-xl">Registered events</h1>
+            <div className="relative">
+              <div
+                className="flex items-center gap-x-0 overflow-x-scroll scrollbar-hide md:mt-2 "
+                ref={sliderMobileRef}
+              >
+                {loading && (
+                  <div className="flex w-full-h-full">
+                    <p className="text-2xl text-center text-white">Fetching your data</p>
+                  </div>
+                )}
+                {!loading && teams.map((imgSrc, index) => {
+                  return (
+                    <Link
+                      href={`/event/` + imgSrc}
+                      key={imgSrc + index}
+                      className="text-white py-4 px-2  rounded-xl flex flex-col items-center"
+                    >
+                      <Image
+                        src={`/CardsEvent/` + imgSrc + ".webp"}
+                        className="object-cover sm:min-w-44 min-w-36"
+                        height={400}
+                        width={400}
+                        alt={imgSrc}
+                      ></Image>
+                      {/* <h1 className="mt-2 text-center">{imgSrc.punchLine}</h1> */}
+                    </Link>
+                  );
+                })}
+                {!loading && events.map((imgSrc, index) => {
+                  if (!teams.includes(imgSrc))
+                    return (
+                      <Link
+                        href={`/event/` + imgSrc}
+                        key={imgSrc + index}
+                        className="text-white py-4 px-2  rounded-xl flex flex-col items-center"
+                      >
+                        <Image
+                          src={`/CardsEvent/` + imgSrc + ".webp"}
+                          className="object-cover sm:min-w-44 min-w-36 grayscale"
+                          height={400}
+                          width={400}
+                          alt={imgSrc}
+                        ></Image>
+                        {/* <h1 className="mt-2 text-center">{imgSrc.punchLine}</h1> */}
+                      </Link>
+                    );
+                })}
+              </div>
 
                 {/* ---------hover buttons-------------- */}
                 {showArrows && (
