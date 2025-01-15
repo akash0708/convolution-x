@@ -15,7 +15,6 @@ import { useUserStore } from "@/store/userStore";
 import { Protest_Riot } from "next/font/google";
 import Cookies from "js-cookie";
 import { Suspense, useEffect } from "react";
-import HomePreloader from "@/components/HomePreloader";
 import Loading from "./loading";
 
 const protestRiot = Protest_Riot({
