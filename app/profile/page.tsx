@@ -6,7 +6,7 @@ import { logout } from "@/lib/auth";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { useUserStore } from "@/store/userStore";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 import axios from "axios";
 import Link from "next/link";
 import ProfileSkeleton from "@/components/LoadingSkeleton";
@@ -23,6 +23,7 @@ import NotiIcon from "@/assets/images/notification icon.png";
 import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
 import { RiLogoutBoxRLine } from "react-icons/ri";
+import AbolTabolPreloader from "@/components/AbolTabolPreloader";
 export default function ProtectedComponent() {
   // -------------------for frontend constants etc --------------
   const [showArrows, setShowArrows] = useState(false);
@@ -129,6 +130,8 @@ export default function ProtectedComponent() {
   ];
 
   return (
+    <Suspense fallback={ <AbolTabolPreloader/>}>
+      
     <div className="relative min-h-screen overflow-hidden pt-24 pb-8">
       <Navbar></Navbar>
       <div
@@ -333,5 +336,6 @@ export default function ProtectedComponent() {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 }

@@ -3,6 +3,7 @@
 // @ts-nocheck
 import axios from "axios";
 import { create } from "zustand";
+import Cookies from "js-cookie";
 
 interface User {
   id: string;
@@ -20,17 +21,29 @@ interface UserStore {
   setUser: (user: User) => void; // Sets the user data
   removeUser: () => void; // Removes the user data and logs out the user
   fetchUser: (email: string) => Promise<void>; // Fetches user data based on email
+  authCheck: () => void;
 }
 
 export const useUserStore = create<UserStore>((set,get) => ({
   user: null,
   notifications:[],
   teams:[],
-  loading:false,
+  loading:true,
+  authCheck:()=>{
+    set({loading:true})
+    const userCookie = Cookies.get("user");
+    const email = userCookie ? JSON.parse(userCookie).email : null;
+    if (!get().user && email) {
+      get().fetchUser(email);
+    }
+    set({loading:false})
+
+  },
   setUser:async(data)=>{
     set({user:data})
 
   },
+
   
 
   

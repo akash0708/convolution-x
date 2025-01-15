@@ -139,7 +139,7 @@ const Footer = () => {
               </div>
               <div className="">
                 <h1 className="listHead">Email</h1>
-                <p className="listPara">comvolutionx2025@gmail.com</p>
+                <p className="listPara">convolutionx2025@gmail.com</p>
               </div>
             </li>
             <li>

@@ -23,7 +23,7 @@ const teamLead: TeamMember[] = [
     name: " Jeson Paul Kerketta",
     image: "jason.png",
     linkedin:
-      "https://www.linkedin.com/in/soham-saha-529291250/",
+      "https://www.linkedin.com/in/jeson-paul-kerketta-32bbb3259/",
     instagram:
       "https://www.instagram.com/jeson_kerketta_20?igsh=MXMycDJnMzQybGVh",
     facebook: "https://www.facebook.com/share/159kUFWye2/",

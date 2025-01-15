@@ -43,7 +43,7 @@ const Mentors = () => {
           Mentors
         </h2>
         <p className="opacity-80 text-white text-center mt-2 text-base sm:text-xl font-medium">
-          Meet the Mentors of Sparkhack!
+          Meet the Mentors of Decisia!
         </p>
 
         <div className="mx-auto flex justify-center mt-6">

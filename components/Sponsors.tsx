@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import "@/app/sponsors.css";
 import exide from '@/assets/images/ConvoSponsors/Exide.png'
+import techEle from '@/assets/images/ConvoSponsors/techno ele.png'
 
 const Sponsors: React.FC = () => {
   const sponsors = [
@@ -72,8 +73,9 @@ const Sponsors: React.FC = () => {
           ))}
         </div>
       </div> */}
-      <div className="flex justify-center maxWidthForSections">
+      <div className="flex gap-4 justify-center maxWidthForSections">
         <Image src={exide} alt='exide image' className='bg-white/90 p-2 max-w-[150px] object-cover  rounded-md'></Image>
+        <Image src={techEle} alt='exide image' className='bg-white/90 p-2 max-w-[150px] object-cover  rounded-md'></Image>
       </div>
     </div>
   );

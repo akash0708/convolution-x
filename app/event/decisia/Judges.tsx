@@ -41,7 +41,7 @@ const Judges = () => {
           Judges
         </h2>
         <p className="opacity-80 text-white text-center mt-2 text-base sm:text-xl font-medium">
-          Meet the Judges of Sparkhack!
+          Meet the Judges of Decisia!
         </p>
 
         <div className="mx-auto flex justify-center mt-6">
