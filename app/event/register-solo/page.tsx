@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { getFriendlyEventName } from "@/lib/friendlyEventNames";
 
 const page = () => {
   return (
@@ -86,15 +87,17 @@ const SoloRegistrationForm: React.FC = () => {
       style={{ backgroundImage: `url('/RegisterBg.png')` }}
     >
       <div className=" text-white space-y-6 bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-16  py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
-      <div className="absolute top-5 right-5 flex gap-x-1">
+        <div className="absolute top-5 right-5 flex gap-x-1">
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
           <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
         </div>
-        <Link href='/' className="absolute top-5 left-5">
-        <IoMdArrowRoundBack className="text-white text-2xl" />
+        <Link href="/" className="absolute top-5 left-5">
+          <IoMdArrowRoundBack className="text-white text-2xl" />
         </Link>
-        <h1 className="sm:text-2xl text-center text-lg font-bold ">Registration</h1>
+        <h1 className="sm:text-2xl text-center text-lg font-bold ">
+          Registration
+        </h1>
 
         {/* Participant Details */}
         <div className="">
@@ -118,7 +121,7 @@ const SoloRegistrationForm: React.FC = () => {
             Event
           </label>
           <p className="bg-transparent border-b-[3px] border-white/80  rounded-sm text-white/90  mt-1 min-h-6  w-full  text-sm sm:text-base">
-            {eventName}
+            {getFriendlyEventName(eventName as string)}
           </p>
         </div>
 
@@ -128,17 +131,18 @@ const SoloRegistrationForm: React.FC = () => {
           disabled={loading}
           className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
         >
-          {loading ? <>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="text-darkBlue"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <style>
-                      {`
+          {loading ? (
+            <>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="text-darkBlue"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <style>
+                  {`
           .spinner {
             transform-origin: center;
             animation: spinner-animation 0.75s infinite linear;
@@ -149,15 +153,18 @@ const SoloRegistrationForm: React.FC = () => {
             }
           }
         `}
-                    </style>
-                    <path
-                      d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
-                      className="spinner"
-                    />
-                  </svg>
+                </style>
+                <path
+                  d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
+                  className="spinner"
+                />
+              </svg>
 
-                  <p className="inline ">Registering...</p>
-                </> : "Confirm Registration"}
+              <p className="inline ">Registering...</p>
+            </>
+          ) : (
+            "Confirm Registration"
+          )}
         </button>
       </div>
     </div>
