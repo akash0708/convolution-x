@@ -13,28 +13,27 @@ import Team from "@/components/Team";
 import Timeline from "@/components/Timeline";
 import { useUserStore } from "@/store/userStore";
 import { Protest_Riot } from "next/font/google";
-import Cookies from "js-cookie";
 import { Suspense, useEffect } from "react";
-import Loading from "./loading";
+import Loading from "@/app/loading";
+
 
 const protestRiot = Protest_Riot({
   subsets: ["latin"], // You can specify subsets if needed
   weight: "400", // Adjust the weight based on your requirements
 });
 export default function Home() {
-  const { user, isLogged, loading, authCheck, fetchUser } = useUserStore();
+  const { user, loading, authCheck,setIsLogged } = useUserStore();
   // const userCookie = Cookies.get("user");
   // const email = userCookie ? JSON.parse(userCookie).email : null;
   useEffect(() => {
-    // if (!user && email && !isLogged) {
-    //   setLoading(true)
-    //   fetchUser(email);
-    // }
-    if (!user) authCheck();
-  }, []);
+    if (!user) {
+      setIsLogged(true)
+      authCheck();}
+  }, [user]);
 
   if (loading) {
-    return (<Loading />);
+    console.log('im here')
+    return <Loading  />;
   }
   // get the username form zustand, for now use email
   else

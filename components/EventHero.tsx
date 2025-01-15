@@ -1,8 +1,9 @@
 "use client"
+import Loading from '@/app/loading';
 import { useUserStore } from '@/store/userStore';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect } from 'react'
 interface MyComponentProps {
     planet: string; // Custom text style
     about: string; // Custom text style

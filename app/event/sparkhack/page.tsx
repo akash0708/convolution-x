@@ -11,7 +11,6 @@ import Footer from "./Footer";
 import FaqSpark from "./FaqSpark";
 import EventNavbar from "@/components/EventNavbar";
 import PrizesSpark from "./PrizesSpark";
-import AbolTabolPreloader from "@/components/AbolTabolPreloader";
 import { Protest_Riot } from "next/font/google";
 import Loading from "@/app/loading";
 import { useUserStore } from "@/store/userStore";
@@ -21,19 +20,22 @@ const protestRiot = Protest_Riot({
 });
 
 const Page = () => {
-  const{user,authCheck,loading}=useUserStore();
+  const { user, authCheck,setIsLogged, loading } = useUserStore();
   useEffect(() => {
     // if (!user && email && !isLogged) {
     //   setLoading(true)
     //   fetchUser(email);
     // }
-    if (!user) authCheck();
+   if (!user) {
+        setIsLogged(true)
+        authCheck();}
+    
   }, [user]);
-   if (loading) {
-      return <Loading />;
-    }
+  if (loading) {
+    return <Loading />;
+  }
   return (
-    <Suspense fallback={<AbolTabolPreloader />}>
+    <Suspense fallback={<Loading />}>
       <div className="">
         <EventNavbar
           navTheme="bg-gradient-to-t from-[#8FE3F0] via-[#67C6DD] 

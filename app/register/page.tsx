@@ -1,7 +1,6 @@
 // components/RegisterForm.tsx
 "use client";
 
-import AbolTabolPreloader from "@/components/AbolTabolPreloader";
 import { useUserStore } from "@/store/userStore";
 import axios from "axios";
 import Link from "next/link";
@@ -9,14 +8,15 @@ import { useRouter } from "next/navigation";
 import { Suspense, useState } from "react";
 import toast from "react-hot-toast";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import Loading from "../loading";
 
 export default function RegisterForm() {
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const {user} = useUserStore();
-  const {setUser} = useUserStore();
+  const { user } = useUserStore();
+  const { setUser } = useUserStore();
 
   const handleEmailRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -68,6 +68,28 @@ export default function RegisterForm() {
   };
 
   return (
+    <Suspense fallback={<Loading />}>
+      <div
+        className="h-[100svh] bg-no-repeat bg-center bg-cover flex justify-center items-center "
+        style={{ backgroundImage: `url('/RegisterBg.webp')` }}
+      >
+        <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px]  py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
+          <div className="absolute top-5 right-5 flex gap-x-1">
+            <div className="bg-white/80 size-2 sm:size-3 rounded-full"></div>
+            <div className="bg-white/80 size-2 sm:size-3 rounded-full"></div>
+            <div className="bg-white/80 size-2 sm:size-3 rounded-full"></div>
+          </div>
+          <Link href="/" className="absolute top-5 left-5">
+            <IoMdArrowRoundBack className="text-white text-2xl" />
+          </Link>
+          <div className="flex flex-col gap-y-2 items-center">
+            <h2 className="sm:text-2xl text-lg font-bold mb-2">
+              Create an Account
+            </h2>
+            <>
+              {/* <p className="text-white/90 text-sm sm:text-base">Choose your registration method</p> */}
+              {/* Google Sign In Button */}
+              {/* <button
     <Suspense fallback={ <AbolTabolPreloader/>}>
 
     <div
@@ -119,127 +141,127 @@ export default function RegisterForm() {
             </p>
           </button> */}
 
-            {/* <div className="flex w-full justify-center items-center">
+              {/* <div className="flex w-full justify-center items-center">
             <div className="w-full h-[1px] rounded-l-full bg-white/80"></div>
             <span className="text-nowrap px-2 text-sm sm:text-base">Or continue with email</span>
             <div className="w-full h-[1px] rounded-r-full bg-white/80"></div>
           </div> */}
-          </>
+            </>
 
-          {/* ------------------email form starts here------------------- */}
-          <form
-            onSubmit={handleEmailRegister}
-            className="flex flex-col w-full items-center gap-y-4 [&>*]:input-div"
-          >
-            {error && (
-              <div className="p-3 text-sm text-red-500 bg-red-50 rounded-md">
-                {error}
-              </div>
-            )}
+            {/* ------------------email form starts here------------------- */}
+            <form
+              onSubmit={handleEmailRegister}
+              className="flex flex-col w-full items-center gap-y-4 [&>*]:input-div"
+            >
+              {error && (
+                <div className="p-3 text-sm text-red-500 bg-red-50 rounded-md">
+                  {error}
+                </div>
+              )}
 
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-white/90"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Enter your name"
-                className="input-box"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-white/90"
-              >
-                Email
-              </label>
-              <input
-                placeholder="Enter your email"
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="input-box"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-white/90"
-              >
-                Password
-              </label>
-              <input
-                placeholder="Enter your password"
-                type="password"
-                id="password"
-                name="password"
-                required
-                minLength={6}
-                className="input-box"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-white/90"
-              >
-                Phone
-              </label>
-              <input
-                placeholder="Enter your phone number"
-                type="text"
-                id="phone"
-                name="phone"
-                required
-                className="input-box"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="institution"
-                className="block text-sm font-medium text-white/90"
-              >
-                Institution
-              </label>
-              <input
-                placeholder="Institution Name"
-                type="text"
-                id="institution"
-                name="institution"
-                required
-                className="input-box"
-              />
-            </div>
-            <div className="flex gap-2">
               <div>
                 <label
-                  htmlFor="department"
+                  htmlFor="name"
                   className="block text-sm font-medium text-white/90"
                 >
-                  Department
+                  Name
                 </label>
                 <input
-                  placeholder="Dept. of Study"
                   type="text"
-                  id="department"
-                  name="department"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Enter your name"
+                  className="input-box"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-white/90"
+                >
+                  Email
+                </label>
+                <input
+                  placeholder="Enter your email"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="input-box"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-white/90"
+                >
+                  Password
+                </label>
+                <input
+                  placeholder="Enter your password"
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  minLength={6}
+                  className="input-box"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-white/90"
+                >
+                  Phone
+                </label>
+                <input
+                  placeholder="Enter your phone number"
+                  type="text"
+                  id="phone"
+                  name="phone"
                   required
                   className="input-box"
                 />
               </div>
 
               <div>
+                <label
+                  htmlFor="institution"
+                  className="block text-sm font-medium text-white/90"
+                >
+                  Institution
+                </label>
+                <input
+                  placeholder="Institution Name"
+                  type="text"
+                  id="institution"
+                  name="institution"
+                  required
+                  className="input-box"
+                />
+              </div>
+              <div className="flex gap-2">
+                <div>
+                  <label
+                    htmlFor="department"
+                    className="block text-sm font-medium text-white/90"
+                  >
+                    Department
+                  </label>
+                  <input
+                    placeholder="Dept. of Study"
+                    type="text"
+                    id="department"
+                    name="department"
+                    required
+                    className="input-box"
+                  />
+                </div>
+
+                {/* <div>
                 <label
                   htmlFor="year"
                   className="block text-sm font-medium text-white/90"
@@ -254,33 +276,59 @@ export default function RegisterForm() {
                   required
                   className="input-box"
                 />
+              </div> */}
+                <div className="w-1/2">
+  <label
+    htmlFor="year"
+    className="block text-sm font-medium text-white"
+  >
+    Year
+  </label>
+  <div className="relative  ">
+    <select
+      id="year"
+      name="year"
+      required
+      className="block w-full rounded-md border-white  bg-darkBlue/90 text-white py-2 shadow-sm focus:border-white focus:ring-white sm:text-base text-sm"
+    >
+      <option value="" disabled selected hidden >
+         (e.g., UG1, PG1)
+      </option>
+      <option value="UG1">UG1</option>
+      <option value="UG2">UG2</option>
+      <option value="UG3">UG3</option>
+      <option value="UG4">UG4</option>
+      <option value="PG">PG</option>
+    </select>
+  </div>
+</div>
+
               </div>
-            </div>
 
-            <Link
-              href="/login"
-              className="text-center hover:text-white/80 text-sm sm:text-base text-white/90"
-            >
-              Already have an account?
-            </Link>
+              <Link
+                href="/login"
+                className="text-center hover:text-white/80 text-sm sm:text-base text-white/90"
+              >
+                Already have an account?
+              </Link>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md  hover:bg-white/80 disabled:opacity-80 disabled:cursor-not-allowed"
-            >
-              {loading? (
-                <>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="text-darkBlue"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <style>
-                      {`
+              <button
+                type="submit"
+                disabled={loading}
+                className="group transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
+              >
+                {loading ? (
+                  <>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="text-darkBlue group-hover:text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <style>
+                        {`
           .spinner {
             transform-origin: center;
             animation: spinner-animation 0.75s infinite linear;

@@ -22,67 +22,73 @@ interface UserStore {
   removeUser: () => void; // Removes the user data and logs out the user
   fetchUser: (email: string) => Promise<void>; // Fetches user data based on email
   authCheck: () => void;
+  setIsLogged: (data) => void;
 }
 
-export const useUserStore = create<UserStore>((set,get) => ({
+export const useUserStore = create<UserStore>((set, get) => ({
   user: null,
-  notifications:[],
-  teams:[],
-  loading:true,
-  authCheck:()=>{
-    set({loading:true})
+  notifications: [],
+  teams: [],
+  isLogged: false,
+  loading: true,
+  setIsLogged:(data)=>{
+    set({isLogged:data})
+  },
+  authCheck: () => {
+    set({ loading: true });
     const userCookie = Cookies.get("user");
     const email = userCookie ? JSON.parse(userCookie).email : null;
     if (!get().user && email) {
       get().fetchUser(email);
     }
-    set({loading:false})
-
+    if (!email){
+      set({isLogged:false})
+    }
+    set({ loading: false });
   },
-  setUser:async(data)=>{
-    set({user:data})
-
+  setUser: async (data) => {
+    set({ user: data });
   },
 
-  
-
-  
-  removeUser: () => {set({ user: null })
-  set({isLogged:false})
-},
-  isLogged: false,
-  fetchUser: async(email)=>{
-    set({isLoading:true})
+  removeUser: () => {
+    set({ user: null });
+    set({ isLogged: false });
+  },
+  fetchUser: async (email) => {
+    set({ isLoading: true });
     try {
       const response = await axios.post("/api/users", { email });
 
       if (response.data) {
-        set({user:{
-          id: response.data.id,
-          name: response.data.name,
-          email: response.data.email,
-          institution: response.data.institution,
-        }});
-    console.log("we have entered the fetch user : ", get().user)
+        set({
+          user: {
+            id: response.data.id,
+            name: response.data.name,
+            email: response.data.email,
+            institution: response.data.institution,
+          },
+        });
 
-
-        set({notifications:response.data.notifications});
+        set({ notifications: response.data.notifications });
+        set({ isLogged: true });
         const eventNames = response.data.teams.map(
           (team: { eventName: string }) => team.eventName.toLowerCase()
         );
-        set({teams:eventNames});
-        set({isLogged:true})
+        set({ teams: eventNames });
       } else {
         // User not found
-        set({loading:false})
+        set({ loading: false });
+        set({ isLogged: false });
 
       }
     } catch (error) {
       console.log("Error fetching user:", error);
-      set({loading:false})
+      set({ loading: false });
+      set({ isLogged: false });
 
     } finally {
-      set({loading:false})
+      set({ loading: false });
+
     }
-  }
+  },
 }));

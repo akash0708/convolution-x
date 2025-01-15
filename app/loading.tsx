@@ -1,4 +1,6 @@
+import Image from "next/image";
 import "./loader.css";
+import gif from '@/assets/preloaders/try.gif'
 export default function Loading() {
   return (
     <div className="h-svh relative  overflow-hidden bg-darkBlue ">
@@ -50,5 +52,8 @@ export default function Loading() {
     <div className="schoolbag"></div>
   </div>
     </div>
+//   <div className="bg-darkBlue h-svh flex justify-center items-center">
+// <Image src={gif} alt="chalta hai" />
+//   </div>
   );
 }
