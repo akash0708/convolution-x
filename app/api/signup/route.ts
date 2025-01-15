@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma"; // Import Prisma client
 import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
+  deleteUser,
 } from "firebase/auth";
 import axios from "axios";
 
@@ -31,12 +32,14 @@ export async function POST(req: Request) {
 
     // Create user with Firebase
     let userCredential;
+    let firebaseUserId;
     try {
       userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
+      firebaseUserId = userCredential.user.uid;
       await sendEmailVerification(userCredential.user, {
         url: `${process.env.NEXT_PUBLIC_URL}/login`,
         handleCodeInApp: true,
@@ -73,6 +76,14 @@ export async function POST(req: Request) {
       });
     } catch (prismaError: any) {
       console.error("Prisma error:", prismaError);
+      if (firebaseUserId) {
+        await deleteUser(auth.currentUser!).catch((rollbackError) => {
+          console.error(
+            "Failed to rollback Firebase user creation:",
+            rollbackError
+          );
+        });
+      }
       return NextResponse.json(
         {
           error: "There was an issue saving your data. Please try again later.",

@@ -1,12 +1,65 @@
+import { getFriendlyEventName } from "@/lib/friendlyEventNames";
 import { prisma } from "@/lib/prisma";
 import axios from "axios";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
     const { eventName, leaderId, leaderEmail, leaderName } = await req.json();
 
-    const solo_events = ["aboltabol", "jutalks", "algomaniac"];
+    console.log("Solo registration request:", {
+      eventName,
+      leaderId,
+      leaderEmail,
+      leaderName,
+    });
+
+    // Check if user has signed up on the website
+
+    const userExists = await prisma.user.findUnique({
+      where: {
+        email: leaderEmail,
+      },
+    });
+
+    if (!userExists) {
+      return NextResponse.json(
+        {
+          message: `Signup on the website and verify your email before registering for an event .`,
+        },
+        { status: 400 }
+      );
+    }
+
+    // Check if email is verified
+    const userCookie = req.cookies.get("user");
+
+    console.log("userCookie", userCookie);
+
+    try {
+      console.log("in try catch");
+      const userCredential =
+        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
+
+      const emailVerified = JSON.parse(userCredential.value).emailVerified;
+
+      console.log("emailVerified", emailVerified);
+
+      if (!emailVerified) {
+        return NextResponse.json(
+          { message: "Please verify your email before registering." },
+          { status: 400 }
+        );
+      }
+    } catch (error) {
+      console.log("Error parsing userCookie:", error);
+      return NextResponse.json(
+        { message: "Something went wrong. Try again later" },
+        { status: 500 }
+      );
+    }
+
+    const solo_events = ["aboltabol"];
 
     if (!solo_events.includes(eventName.toLowerCase())) {
       return NextResponse.json(
@@ -71,8 +124,12 @@ export async function POST(req: Request) {
     // send notification to the user
     const notification = {
       email: leaderEmail,
-      title: `Yay! You have registered for "${eventName}"`,
-      message: `Yay! You have registered for "${eventName}"`,
+      title: `Yay! You have registered for "${getFriendlyEventName(
+        eventName
+      )}"`,
+      message: `Yay! You have registered for "${getFriendlyEventName(
+        eventName
+      )}"`,
       type: "SOLO_REGISTRATION",
     };
 
@@ -83,11 +140,21 @@ export async function POST(req: Request) {
     try {
       await axios.post(`${process.env.EMAIL_URL}/api/event`, {
         to: leaderEmail,
-        subject: `Registration Successful for ${eventName}`,
+        subject: getFriendlyEventName(eventName),
         name: leaderName,
         eventName,
       });
     } catch (emailError: any) {
+      console.log(
+        "to:",
+        leaderEmail,
+        "subject:",
+        getFriendlyEventName(eventName),
+        "name:",
+        leaderName,
+        "eventName:",
+        eventName
+      );
       console.error("Failed to send email:", emailError.message);
       emailSent = false;
     }

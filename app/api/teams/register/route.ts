@@ -1,8 +1,8 @@
 import { prisma } from "@/lib/prisma"; // Adjust the path as per your project setup
 import axios from "axios";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
     const {
       teamName,
@@ -13,13 +13,34 @@ export async function POST(req: Request) {
       leaderName,
     } = await req.json();
 
-    const team_events = [
-      "sparkhack",
-      "eureka",
-      "decisia",
-      "inquizzitive",
-      "circuistics",
-    ];
+    const team_events = ["sparkhack", "decisia"];
+
+    const userCookie = req.cookies.get("user");
+
+    console.log("userCookie", userCookie);
+
+    try {
+      console.log("in try catch");
+      const userCredential =
+        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
+
+      const emailVerified = JSON.parse(userCredential.value).emailVerified;
+
+      console.log("emailVerified", emailVerified);
+
+      if (!emailVerified) {
+        return NextResponse.json(
+          { message: "Please verify your email before registering." },
+          { status: 400 }
+        );
+      }
+    } catch (error) {
+      console.log("Error parsing userCookie:", error);
+      return NextResponse.json(
+        { message: "Something went wrong. Try again later" },
+        { status: 500 }
+      );
+    }
 
     if (!team_events.includes(eventName.toLowerCase())) {
       return NextResponse.json(
@@ -62,6 +83,29 @@ export async function POST(req: Request) {
 
     // Combine leader and team members for validation
     const allMembers = [...teamMembers, leaderEmail];
+
+    // Check if all users are in db
+    const missingUsers = await prisma.user.findMany({
+      where: {
+        email: { in: allMembers },
+      },
+    });
+
+    if (missingUsers.length !== allMembers.length) {
+      const existingEmails = missingUsers.map((user) => user.email);
+      const nonExistingUsers = allMembers.filter(
+        (email) => !existingEmails.includes(email)
+      );
+
+      return NextResponse.json(
+        {
+          message: `The following users have not signed up on the website: ${nonExistingUsers.join(
+            ", "
+          )}`,
+        },
+        { status: 400 }
+      );
+    }
 
     // Check if the leader or any member is already in a team for this event
     const existingTeams = await prisma.team.findMany({
