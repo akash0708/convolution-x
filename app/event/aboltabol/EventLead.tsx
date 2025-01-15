@@ -1,6 +1,6 @@
 import EventLeadTemplate from '@/components/EventLeadTemplate'
-import wavemobile from "@/assets/images/AbolTabol/wavesMobile.png";
-import wave from "@/assets/images/AbolTabol/wavesUnderwater.png";
+import wavemobile from "@/assets/images/AbolTabol/wavesMobile.webp";
+import wave from "@/assets/images/AbolTabol/wavesUnderwater.webp";
 
 import Image from 'next/image';
 import React from 'react'
@@ -15,7 +15,7 @@ type TeamMember = {
   const teamLead: TeamMember[] = [
     {
       name: "Satrajit Mukherjee",
-      image: "satrajit.png",
+      image: "satrajit.webp",
       linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
       instagram:
         "https://www.instagram.com/static.sm/",
@@ -23,7 +23,7 @@ type TeamMember = {
     },
     {
       name: "Subha Bhattacharya",
-      image: "l.png",
+      image: "l.webp",
       linkedin:
         "https://www.linkedin.com/in/subha-bhattacharya-ab6907250",
       instagram:

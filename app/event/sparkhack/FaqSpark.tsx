@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 import FaqEvent from '@/components/FaqEvent';
 const faqData = [
     {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import flakebg from "@/assets/images/SparkHack/flakeBg.png";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.png";
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import EventLeadTemplate from "@/components/EventLeadTemplate";
@@ -17,7 +17,7 @@ type TeamMember = {
 const teamLead: TeamMember[] = [
   {
     name: "Sheetali Maity",
-    image: "didi.png",
+    image: "didi.webp",
     linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
     instagram:
       "https://www.instagram.com/sheetali.csv",
@@ -25,7 +25,7 @@ const teamLead: TeamMember[] = [
   },
   {
     name: "Soham Saha",
-    image: "soham.png",
+    image: "soham.webp",
     linkedin:
       "https://www.linkedin.com/in/soham-saha-529291250/",
     instagram:

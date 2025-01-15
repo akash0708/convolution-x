@@ -12,14 +12,14 @@ import Link from "next/link";
 import ProfileSkeleton from "@/components/LoadingSkeleton";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import profilePic from "@/assets/images/profileImg.png";
-import stars from "@/assets/images/white variant of pink stars.png";
-import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.png";
+import profilePic from "@/assets/images/profileImg.webp";
+import stars from "@/assets/images/white variant of pink stars.webp";
+import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.webp";
 
-import starsMobile from "@/assets/images/white variant of pink stars Mobile.png";
+import starsMobile from "@/assets/images/white variant of pink stars Mobile.webp";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
-import NotiIcon from "@/assets/images/notification icon.png";
+import NotiIcon from "@/assets/images/notification icon.webp";
 import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
 import { RiLogoutBoxRLine } from "react-icons/ri";
@@ -234,7 +234,7 @@ export default function ProtectedComponent() {
                       className="text-white py-4 px-2  rounded-xl flex flex-col items-center"
                     >
                       <Image
-                        src={`/CardsEvent/` + imgSrc + ".png"}
+                        src={`/CardsEvent/` + imgSrc + ".webp"}
                         className="object-cover sm:min-w-44 min-w-36"
                         height={400}
                         width={400}
@@ -253,7 +253,7 @@ export default function ProtectedComponent() {
                         className="text-white py-4 px-2  rounded-xl flex flex-col items-center"
                       >
                         <Image
-                          src={`/CardsEvent/` + imgSrc + ".png"}
+                          src={`/CardsEvent/` + imgSrc + ".webp"}
                           className="object-cover sm:min-w-44 min-w-36 grayscale"
                           height={400}
                           width={400}

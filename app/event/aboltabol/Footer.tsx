@@ -1,8 +1,8 @@
 import EventFooter from '@/components/EventFooter'
 import Image from 'next/image'
 import React from 'react'
-import footerBg from "@/assets/images/AbolTabol/footerBg.png";
-import footerBgMobile from "@/assets/images/AbolTabol/footerbgmobile.png";
+import footerBg from "@/assets/images/AbolTabol/footerBg.webp";
+import footerBgMobile from "@/assets/images/AbolTabol/footerbgmobile.webp";
 
 const Footer = () => {
   return (

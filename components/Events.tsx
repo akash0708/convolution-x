@@ -4,12 +4,12 @@
 import { useEffect, useRef, useState } from "react";
 import "@/app/events.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
 import Image from "next/image";
 
-import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.png";
-import astro from "@/assets/images/astroNotMoon.png";
-import astroMedi from "@/assets/images/astroNot2.png";
+import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.webp";
+import astro from "@/assets/images/astroNotMoon.webp";
+import astroMedi from "@/assets/images/astroNot2.webp";
 import Link from "next/link";
 
 
@@ -40,48 +40,48 @@ export default function Events() {
     {
       event: "Decisia",
       redirectTo: "decisia",
-      img: "decisia.png",
+      img: "decisia.webp",
     },
     {
       event: "Sparkhack",
       redirectTo: "sparkhack",
-      img: "sparkhack.png",
+      img: "sparkhack.webp",
     },
     {
       event: "Abol Tabol",
       redirectTo: "aboltabol",
-      img: "aboltabol.png",
+      img: "aboltabol.webp",
     },
     {
       event: "Ju Talks",
       redirectTo: "ju_talks",
-      img: "jutalks.png",
+      img: "jutalks.webp",
     },
     
     {
       event: "Eureka",
       redirectTo: "eureka",
-      img: "eureka.png",
+      img: "eureka.webp",
     },
     {
       event: "Inquizitive",
       redirectTo: "inquizitive",
-      img: "inquizzitive.png",
+      img: "inquizzitive.webp",
     },
     {
       event: "Circuistics",
       redirectTo: "circuistics",
-      img: "circuistics.png",
+      img: "circuistics.webp",
     },
     {
       event: "Algomaniac",
       redirectTo: "algomaniac",
-      img: "algomaniac.png",
+      img: "algomaniac.webp",
     },
     {
       event: "24 Frames",
       redirectTo: "24_frames",
-      img: "24frames.png",
+      img: "24frames.webp",
     },
   ];
   
@@ -254,7 +254,7 @@ export default function Events() {
         <div
           className="slider3 bg-no-repeat bg-center bg-contain sun"
           ref={sliderRef}
-          style={{ backgroundImage: `url('/sun.png')` }}
+          style={{ backgroundImage: `url('/sun.webp')` }}
         >
           {events.map((src, index) => (
             <Link href={`/event/`+ src.redirectTo}

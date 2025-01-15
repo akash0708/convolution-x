@@ -1,18 +1,18 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import centerPlanet from "@/assets/images/HeroSectionImages/bowling ball planet.png";
-import rockets from "@/assets/images/HeroSectionImages/rotating rockets.png";
-import bluePlanet from "@/assets/images/HeroSectionImages/blue planet.png";
-import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.png";
-import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.png";
-import yellowBluePlanet from "@/assets/images/HeroSectionImages/yellow planet.png";
-import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.png";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
-import pinkStarMobile from "@/assets/images/HeroSectionImages/starbg-mobile.png";
+import centerPlanet from "@/assets/images/HeroSectionImages/bowling ball planet.webp";
+import rockets from "@/assets/images/HeroSectionImages/rotating rockets.webp";
+import bluePlanet from "@/assets/images/HeroSectionImages/blue planet.webp";
+import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.webp";
+import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.webp";
+import yellowBluePlanet from "@/assets/images/HeroSectionImages/yellow planet.webp";
+import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
+import pinkStarMobile from "@/assets/images/HeroSectionImages/starbg-mobile.webp";
 
-import cloud1 from "@/assets/images/HeroSectionImages/cloud1.png";
-import cloud2 from "@/assets/images/HeroSectionImages/cloud2.png";
+import cloud1 from "@/assets/images/HeroSectionImages/cloud1.webp";
+import cloud2 from "@/assets/images/HeroSectionImages/cloud2.webp";
 import ConvoIcon from '@/assets/images/HeroSectionImages/ConvoSvg.svg';
 import { useUserStore } from "@/store/userStore";
 import Link from "next/link";

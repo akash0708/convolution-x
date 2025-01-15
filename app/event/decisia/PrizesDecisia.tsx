@@ -1,9 +1,9 @@
 import React from "react";
-import gold from "@/assets/images/Decisia/gold prize.png";
-import silver from "@/assets/images/Decisia/silver prize.png";
-import bronze from "@/assets/images/Decisia/bronze prize.png";
-import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
-import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
+import gold from "@/assets/images/Decisia/gold prize.webp";
+import silver from "@/assets/images/Decisia/silver prize.webp";
+import bronze from "@/assets/images/Decisia/bronze prize.webp";
+import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.webp'
+import decisiaBg from '@/assets/images/Decisia/asteroid bg.webp'
 import Image from "next/image";
 const PrizesDecisia = () => {
   return (

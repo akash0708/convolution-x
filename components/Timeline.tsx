@@ -1,8 +1,8 @@
 import React from "react";
-import timeline from "@/assets/images/Timeline/timeline.png";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
-import cloud1 from "@/assets/images/HeroSectionImages/cloud1.png";
-import cloud2 from "@/assets/images/HeroSectionImages/cloud2.png";
+import timeline from "@/assets/images/Timeline/timeline.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
+import cloud1 from "@/assets/images/HeroSectionImages/cloud1.webp";
+import cloud2 from "@/assets/images/HeroSectionImages/cloud2.webp";
 
 import Image from "next/image";
 const Timeline = () => {
