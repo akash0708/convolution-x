@@ -1,11 +1,12 @@
 // components/RegisterForm.tsx
 "use client";
 
+import AbolTabolPreloader from "@/components/AbolTabolPreloader";
 import { useUserStore } from "@/store/userStore";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import toast from "react-hot-toast";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
@@ -67,6 +68,8 @@ export default function RegisterForm() {
   };
 
   return (
+    <Suspense fallback={ <AbolTabolPreloader/>}>
+
     <div
       className="h-[100svh] bg-no-repeat bg-center bg-cover flex justify-center items-center "
       style={{ backgroundImage: `url('/RegisterBg.png')` }}
@@ -305,5 +308,6 @@ export default function RegisterForm() {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 }

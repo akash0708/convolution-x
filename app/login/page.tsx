@@ -1,12 +1,13 @@
 "use client";
 
+import AbolTabolPreloader from "@/components/AbolTabolPreloader";
 import { signIn } from "@/lib/auth";
 import { useUserStore } from "@/store/userStore";
 import axios from "axios";
 import { applyActionCode, getAuth } from "firebase/auth";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import toast from "react-hot-toast";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
@@ -62,6 +63,8 @@ export default function RegisterForm() {
   };
 
   return (
+    <Suspense fallback={ <AbolTabolPreloader/>}>
+
     <div
       className="h-[100svh] bg-no-repeat bg-center bg-cover flex justify-center items-center "
       style={{ backgroundImage: `url('/RegisterBg.png')` }}
@@ -236,5 +239,6 @@ export default function RegisterForm() {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 }

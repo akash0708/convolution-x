@@ -1,4 +1,6 @@
-import React from 'react'
+"use client";
+
+import React, { Suspense, useEffect } from 'react'
 import { Protest_Riot } from "next/font/google";
 import EventNavbar from "@/components/EventNavbar";
 import HeroAT from './HeroAT';
@@ -10,13 +12,28 @@ import EventLead from './EventLead';
 import FaqAT from './FaqAT';
 import PreFooter from './PreFooter';
 import Footer from './Footer';
+import AbolTabolPreloader from '@/components/AbolTabolPreloader';
+import Loading from '@/app/loading';
+import { useUserStore } from '@/store/userStore';
 
 const protestRiot = Protest_Riot({
   subsets: ["latin"], 
   weight: "400", 
 });
-const page = () => {
+const Page = () => {
+  const{user,authCheck,loading}=useUserStore();
+    useEffect(() => {
+      // if (!user && email && !isLogged) {
+      //   setLoading(true)
+      //   fetchUser(email);
+      // }
+      if (!user) authCheck();
+    }, [user]);
+     if (loading) {
+        return <Loading />;
+      }
   return (
+    <Suspense fallback={ <AbolTabolPreloader/>}>
     <div>
      <EventNavbar
         navTheme="bg-gradient-to-t from-[#0215C5] to-[#020F92] 
@@ -34,7 +51,8 @@ const page = () => {
         <Footer></Footer>
       </div>
     </div>
+</Suspense>
   )
 }
 
-export default page
+export default Page

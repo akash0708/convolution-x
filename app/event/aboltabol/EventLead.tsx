@@ -18,7 +18,7 @@ type TeamMember = {
       image: "satrajit.png",
       linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
       instagram:
-        "https://www.instagram.com/sheetali.csv",
+        "https://www.instagram.com/static.sm/",
       facebook: "",
     },
     {
@@ -53,7 +53,7 @@ const EventLead = () => {
         <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
           Event Leads
         </h2>
-        <p className="opacity-80 text-center text-white text-shadow-dark mt-2 text-base sm:text-lg font-medium">Meet the event leads of SparkHack! We are ready to address all your queries.</p>
+        <p className="opacity-80 text-center text-white text-shadow-dark mt-2 text-base sm:text-lg font-medium">Meet the event leads of Abol Tabol! We are ready to address all your queries.</p>
         <EventLeadTemplate teamLead={teamLead} textColor='text-white'></EventLeadTemplate>
         </div>
       </div>

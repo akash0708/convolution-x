@@ -16,28 +16,28 @@ const Timeline = () => {
           className="absolute object-cover w-full h-full top-0 left-0"
         />
       </div>
-      <div className="-z-10">
+      <div className="">
         {/* --------------left Clouds------------ */}
         <Image
           src={cloud2}
           alt="Rotating Rockets"
-          className="absolute bottom-0 left-0 w-[50vw] h-auto scale-y-[-1]"
+          className="absolute z-10 bottom-0 left-0 w-[50vw] h-auto scale-y-[-1]"
         ></Image>
         <Image
           src={cloud1}
           alt="Rotating Rockets"
-          className="absolute bottom-0 left-0 w-[35vw] h-auto scale-y-[-1]"
+          className="absolute z-10 bottom-0 left-0 w-[35vw] h-auto scale-y-[-1]"
         ></Image>
         {/* --------------right Clouds------------ */}
         <Image
           src={cloud2}
           alt="Rotating Rockets"
-          className="absolute bottom-0 right-0 w-[50vw] h-auto scale-x-[-1] scale-y-[-1]"
+          className="absolute z-10 bottom-0 right-0 w-[50vw] h-auto scale-x-[-1] scale-y-[-1]"
         ></Image>
         <Image
           src={cloud1}
           alt="Rotating Rockets"
-          className="absolute bottom-0 right-0 w-[35vw] h-auto scale-x-[-1] scale-y-[-1]"
+          className="absolute z-10 bottom-0 right-0 w-[35vw] h-auto scale-x-[-1] scale-y-[-1]"
         ></Image>{" "}
       </div>
       <div className="absolute bg-darkBlue h-full w-full left-0 top-0 -z-30"></div>

@@ -15,7 +15,7 @@ interface MyComponentProps {
   const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo,mode,name,registeredUiBtn }) => {
   const {teams} = useUserStore()
   const isRegistered=teams.includes(name)
-  console.log(isRegistered)
+  // console.log(isRegistered)
   return (
     <div>
       <div className=" grid grid-cols-1 gap-y-2 md:grid-cols-2 ">

@@ -30,7 +30,7 @@ const faqData = [
         "No, participants must bring their own equipment. Teams working on hardware problem statements are required to bring their own hardware kits, while those working on software problem statements must bring their own laptops.",
     },
     {
-      question: "When will registration end",
+      question: "When will registration end?",
       answer: 
         "Registration for SparkHack will  end on 10th February at 5:30 PM .",
     },
