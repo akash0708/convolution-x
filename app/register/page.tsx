@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { Suspense, useState } from "react";
 import toast from "react-hot-toast";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import Loading from "../loading";
 
 export default function RegisterForm() {
   const router = useRouter();
@@ -70,7 +71,7 @@ export default function RegisterForm() {
     <Suspense fallback={<Loading />}>
       <div
         className="h-[100svh] bg-no-repeat bg-center bg-cover flex justify-center items-center "
-        style={{ backgroundImage: `url('/RegisterBg.png')` }}
+        style={{ backgroundImage: `url('/RegisterBg.webp')` }}
       >
         <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px]  py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
           <div className="absolute top-5 right-5 flex gap-x-1">
