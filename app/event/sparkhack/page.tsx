@@ -35,7 +35,7 @@ const Page = () => {
     return <Loading />;
   }
   return (
-    <Suspense fallback={<ALoading />}>
+    <Suspense fallback={<Loading />}>
       <div className="">
         <EventNavbar
           navTheme="bg-gradient-to-t from-[#8FE3F0] via-[#67C6DD] 
