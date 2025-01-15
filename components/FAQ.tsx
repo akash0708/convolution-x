@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import colorfulStars from "@/assets/images/faq/colorful stars.png";
-import astroGuy from "@/assets/images/faq/cute astroNut.png";
+import colorfulStars from "@/assets/images/faq/colorful stars.webp";
+import astroGuy from "@/assets/images/faq/cute astroNut.webp";
 import Image from "next/image";
 const faqData = [
   {

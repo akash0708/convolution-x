@@ -84,7 +84,7 @@ const SoloRegistrationForm: React.FC = () => {
   return (
     <div
       className="h-screen bg-no-repeat bg-center bg-cover flex justify-center items-center w-full"
-      style={{ backgroundImage: `url('/RegisterBg.png')` }}
+      style={{ backgroundImage: `url('/RegisterBg.webp')` }}
     >
       <div className=" text-white space-y-6 bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-16  py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
         <div className="absolute top-5 right-5 flex gap-x-1">

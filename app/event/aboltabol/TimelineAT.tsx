@@ -1,7 +1,7 @@
 import React from "react";
-import wave from "@/assets/images/AbolTabol/wavesUnderwater.png";
-import wave1 from "@/assets/images/AbolTabol/layer1 timeline.png";
-import wavemobile from "@/assets/images/AbolTabol/wavesMobile.png";
+import wave from "@/assets/images/AbolTabol/wavesUnderwater.webp";
+import wave1 from "@/assets/images/AbolTabol/layer1 timeline.webp";
+import wavemobile from "@/assets/images/AbolTabol/wavesMobile.webp";
 import Image from "next/image";
 const timelineDetails: { date: string; head: string; task: string }[] = [
   {

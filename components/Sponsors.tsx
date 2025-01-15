@@ -1,21 +1,21 @@
 import Image from 'next/image';
 import React from 'react';
 import "@/app/sponsors.css";
-import exide from '@/assets/images/ConvoSponsors/Exide.png'
-import techEle from '@/assets/images/ConvoSponsors/techno ele.png'
+import techEle from '@/assets/images/ConvoSponsors/techno ele.webp'
+import exide from '@/assets/images/ConvoSponsors/Exide.webp'
 
 const Sponsors: React.FC = () => {
   const sponsors = [
-    '/sponsorImages/slider1_1.png',
-    '/sponsorImages/slider1_2.png',
-    '/sponsorImages/slider1_3.png',
-    '/sponsorImages/slider1_4.png',
-    '/sponsorImages/slider1_5.png',
-    '/sponsorImages/slider1_6.png',
-    '/sponsorImages/slider1_7.png',
-    '/sponsorImages/slider1_8.png',
-    '/sponsorImages/slider1_9.png',
-    '/sponsorImages/slider1_10.png',
+    '/sponsorImages/slider1_1.webp',
+    '/sponsorImages/slider1_2.webp',
+    '/sponsorImages/slider1_3.webp',
+    '/sponsorImages/slider1_4.webp',
+    '/sponsorImages/slider1_5.webp',
+    '/sponsorImages/slider1_6.webp',
+    '/sponsorImages/slider1_7.webp',
+    '/sponsorImages/slider1_8.webp',
+    '/sponsorImages/slider1_9.webp',
+    '/sponsorImages/slider1_10.webp',
   ];
 
   return (

@@ -16,7 +16,7 @@ export default {
       },
       backgroundImage: {
         'radial-darkBlue-to-purple': 'radial-gradient(circle, #48279A 0%, #00092B 40%)',
-        'aboutBg':"url('/aboutusBg.png')",
+        'aboutBg':"url('/aboutusBg.webp')",
         'aboutGradient':'linear-gradient(10deg, rgba(72, 39, 154, 0.6) 0%, #1A0F52 36%, #00092B 100%)',
       },
       boxShadow: {

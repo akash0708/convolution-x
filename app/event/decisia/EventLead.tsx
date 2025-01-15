@@ -13,7 +13,7 @@ type TeamMember = {
 const teamLead: TeamMember[] = [
   {
     name: "Sayar Paul",
-    image: "sayar.png",
+    image: "sayar.webp",
     linkedin: "https://www.linkedin.com/in/sayar-paul?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
       "https://www.instagram.com/sayar.paul.58?utm_source=qr&igsh=MThkN3pzb3ZqYzh4cQ==",
@@ -21,7 +21,7 @@ const teamLead: TeamMember[] = [
   },
   {
     name: " Jeson Paul Kerketta",
-    image: "jason.png",
+    image: "jason.webp",
     linkedin:
       "https://www.linkedin.com/in/jeson-paul-kerketta-32bbb3259/",
     instagram:

@@ -1,7 +1,7 @@
 import FaqEvent from '@/components/FaqEvent';
 import Image from 'next/image';
-import wavemobile from "@/assets/images/AbolTabol/wavesMobile.png";
-import wave from "@/assets/images/AbolTabol/wavesUnderwater.png";
+import wavemobile from "@/assets/images/AbolTabol/wavesMobile.webp";
+import wave from "@/assets/images/AbolTabol/wavesUnderwater.webp";
 
 import React from 'react'
 const faqData = [

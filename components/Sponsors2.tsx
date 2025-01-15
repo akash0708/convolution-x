@@ -3,16 +3,16 @@ import "@/app/sponsor2.css";
 import Image from "next/image";
 
 const sponsors = [
-  "slider1_1.png",
-  "slider1_2.png",
-  "slider1_3.png",
-  "slider1_4.png",
-  "slider1_5.png",
-  "slider1_6.png",
-  "slider1_7.png",
-  "slider1_8.png",
-  "slider1_9.png",
-  "slider1_10.png",
+  "slider1_1.webp",
+  "slider1_2.webp",
+  "slider1_3.webp",
+  "slider1_4.webp",
+  "slider1_5.webp",
+  "slider1_6.webp",
+  "slider1_7.webp",
+  "slider1_8.webp",
+  "slider1_9.webp",
+  "slider1_10.webp",
 ];
 
 const Sponsors2 = () => {

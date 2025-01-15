@@ -1,6 +1,6 @@
 import EventJudges from '@/components/EventJudges'
 import Image from 'next/image';
-import wavemobile from "@/assets/images/AbolTabol/wavesMobile.png";
+import wavemobile from "@/assets/images/AbolTabol/wavesMobile.webp";
 import React from 'react'
 type Professor = {
   name: string;
@@ -15,14 +15,14 @@ const professors: Professor[] = [
       profession:
         "Professor at Department of Electrical Engineering, Jadavpur University",
       researchPoint: "https://scholar.google.com/citations?user=4QDUROsAAAAJ&hl=en",
-      img: "sgm.png", 
+      img: "sgm.webp", 
     },
     {
       name: "Arabinda Das",
       profession:
         "Professor at Department of Electrical Engineering, Jadavpur University",
       researchPoint: "https://scholar.google.com/citations?user=Oxu-8WcAAAAJ&hl=en",
-      img: "ad.png", 
+      img: "ad.webp", 
     },
   ];
 const Mentors = () => {

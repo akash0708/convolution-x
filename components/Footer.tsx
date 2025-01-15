@@ -1,16 +1,16 @@
 import Image from "next/image";
 import React from "react";
-// import whiteStar from '@/assets/images/Footer/stars white.png'
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
-import asteroidYellow from "@/assets/images/Footer/asteroid 2.png";
-import asteroidBlue from "@/assets/images/Footer/asteroid 1.png";
-import ringedPlanet from "@/assets/images/Footer/mid planet.png";
-import bluePlanet from "@/assets/images/Footer/blue planet.png";
-import yellowRocket from "@/assets/images/Footer/rocket4.png";
+// import whiteStar from '@/assets/images/Footer/stars white.webp'
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
+import asteroidYellow from "@/assets/images/Footer/asteroid 2.webp";
+import asteroidBlue from "@/assets/images/Footer/asteroid 1.webp";
+import ringedPlanet from "@/assets/images/Footer/mid planet.webp";
+import bluePlanet from "@/assets/images/Footer/blue planet.webp";
+import yellowRocket from "@/assets/images/Footer/rocket4.webp";
 import ConvoIcon from "@/assets/images/HeroSectionImages/ConvoSvg.svg";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { MdCall, MdLocationOn, MdOutlineEmail } from "react-icons/md";
-import whiteStarPhone from "@/assets/images/phone white stars.png"
+import whiteStarPhone from "@/assets/images/phone white stars.webp"
 import Link from "next/link";
 
 

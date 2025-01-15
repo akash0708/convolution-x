@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import timelineLandscape from "@/assets/images/Decisia/Timeline landscape.png";
-import stone1 from "@/assets/images/Decisia/stone1.png";
-import stone2 from "@/assets/images/Decisia/stone2.png";
-import stone3 from "@/assets/images/Decisia/stone3.png";
-import stone4 from "@/assets/images/Decisia/stone4.png";
-import boy1 from "@/assets/images/Decisia/character.png";
+import timelineLandscape from "@/assets/images/Decisia/Timeline landscape.webp";
+import stone1 from "@/assets/images/Decisia/stone1.webp";
+import stone2 from "@/assets/images/Decisia/stone2.webp";
+import stone3 from "@/assets/images/Decisia/stone3.webp";
+import stone4 from "@/assets/images/Decisia/stone4.webp";
+import boy1 from "@/assets/images/Decisia/character.webp";
 
 const timelineDetails: { date: string; task: string }[] = [
   {

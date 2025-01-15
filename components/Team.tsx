@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import whiteStar from "@/assets/images/Footer/stars white.png";
-import asteroidRinged from "@/assets/images/Footer/asteroid ringed.png";
-import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.png";
-import cloud1 from "@/assets/images/HeroSectionImages/cloud1.png";
-import cloud2 from "@/assets/images/HeroSectionImages/cloud2.png";
-// import yellowRocket from "@/assets/images/Footer/rocket4.png";
-import pinkrocket from "@/assets/images/Team/rocket.png";
-import whiteStarPhone from "@/assets/images/phone white stars.png";
+import whiteStar from "@/assets/images/Footer/stars white.webp";
+import asteroidRinged from "@/assets/images/Footer/asteroid ringed.webp";
+import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.webp";
+import cloud1 from "@/assets/images/HeroSectionImages/cloud1.webp";
+import cloud2 from "@/assets/images/HeroSectionImages/cloud2.webp";
+// import yellowRocket from "@/assets/images/Footer/rocket4.webp";
+import pinkrocket from "@/assets/images/Team/rocket.webp";
+import whiteStarPhone from "@/assets/images/phone white stars.webp";
 
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jahid Mamud",
     post: "Secretary",
-    image: "jahid.png",
+    image: "jahid.webp",
     linkedin: "www.linkedin.com/in/jahid-mamud",
     instagram:
       "https://www.instagram.com/jem_.__/profilecard/?igsh=b2o0ZjlqZ3pkeW5t",
@@ -61,7 +61,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Ritam Kundu",
     post: "Joint secretary",
-    image: "ritam.png",
+    image: "ritam.webp",
     linkedin:
       "https://www.linkedin.com/in/ritam-kundu-394612257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram:
@@ -71,7 +71,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Siddhanta Ghosh",
     post: "Treasurer",
-    image: "sid.png",
+    image: "sid.webp",
     linkedin: "https://www.linkedin.com/in/siddhanta-ghosh",
     instagram: "https://www.instagram.com/ghosh_siddhanta2k3/",
     facebook:
@@ -80,7 +80,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Akash Bag",
     post: "Tech Lead",
-    image: "akash.png",
+    image: "akash.webp",
     linkedin: "https://www.linkedin.com/in/akashbag0903/",
     instagram: "https://www.instagram.com/akash09.dev/",
     facebook: "",
@@ -88,7 +88,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Arindam Pradhan",
     post: "Design Lead",
-    image: "arindam.png",
+    image: "arindam.webp",
     linkedin:
       "https://www.linkedin.com/in/arindam-pradhan/?originalSubdomain=in",
     instagram: "https://www.instagram.com/arindam_ju01/",
@@ -97,7 +97,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Aritra Kumar Dutta",
     post: "Sponsorship Lead",
-    image: "aritra.png",
+    image: "aritra.webp",
     linkedin:
       "https://www.linkedin.com/in/aritra-dutta-1752b4304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
@@ -107,7 +107,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Reejul Chattaraj",
     post: "Content Lead",
-    image: "rc.png",
+    image: "rc.webp",
     linkedin:
       "https://www.linkedin.com/in/reejul-chattaraj-85a09727a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram:
@@ -117,7 +117,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Sinjan Dinda",
     post: "Logistics Lead",
-    image: "dinda.png",
+    image: "dinda.webp",
     linkedin:
       "https://www.linkedin.com/in/sinjan-dinda-a70861276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/dinda_sinjan?igsh=bWc4eGJnMDJ0MTc4",
@@ -126,7 +126,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Arunava Roy",
     post: "PR Lead",
-    image: "arunava.png",
+    image: "arunava.webp",
     linkedin:
       "https://www.linkedin.com/in/arunava-roy-176a4527b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:

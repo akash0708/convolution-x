@@ -1,12 +1,12 @@
 import EventHero from "@/components/EventHero";
 import Image from "next/image";
 import React from "react";
-import ray from "@/assets/images/AbolTabol/ray.png";
-import navImg from "@/assets/images/AbolTabol/navImage.png";
-import bubbles from "@/assets/images/AbolTabol/heroBubbles.png";
-import darkfishes from "@/assets/images/AbolTabol/darkfishes.png";
-import goldfish from "@/assets/images/AbolTabol/goldfish.png";
-import flow from "@/assets/images/AbolTabol/heroBottom flow.png";
+import ray from "@/assets/images/AbolTabol/ray.webp";
+import navImg from "@/assets/images/AbolTabol/navImage.webp";
+import bubbles from "@/assets/images/AbolTabol/heroBubbles.webp";
+import darkfishes from "@/assets/images/AbolTabol/darkfishes.webp";
+import goldfish from "@/assets/images/AbolTabol/goldfish.webp";
+import flow from "@/assets/images/AbolTabol/heroBottom flow.webp";
 const aboutAbolTabol =
   "Inspired by MIT’s ‘Bahfest’ & titled after Sukumar Ray’s cult classic, Abol Tabol is the sci-fi dream come true event for those young brilliant minds who not only imagine superficial things but also possess the ability to land them on real ground.";
 const HeroAT = () => {
@@ -61,10 +61,10 @@ const HeroAT = () => {
       <div className="h-full w-full  maxWidthForSections">
         <EventHero
           about={aboutAbolTabol}
-          logo="/AbolTabol/Abol Tabol logo.png"
+          logo="/AbolTabol/Abol Tabol logo.webp"
           buttonDesign="shadow-white/70 hover:shadow-white/30  bg-[#0212B4] hover:bg-white  hover:text-[#0212B4] text-[#ffff]"
           registeredUiBtn='text-[#0212B4] bg-white'
-          planet="/AbolTabol/planet.png"
+          planet="/AbolTabol/planet.webp"
           mode="solo"
           name="aboltabol"
         ></EventHero>
