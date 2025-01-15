@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const solo_events = ["aboltabol", "jutalks", "algomaniac"];
+    const solo_events = ["aboltabol"];
 
     if (!solo_events.includes(eventName.toLowerCase())) {
       return NextResponse.json(
