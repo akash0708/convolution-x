@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(req: NextRequest) {
-  const userCookie = req.cookies.get("user");
+  const userCookie = req.cookies.get("users");
 
   // Redirect authenticated users from /register and /login to /profile
   if (

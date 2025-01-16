@@ -1,3 +1,6 @@
+-- CreateEnum
+CREATE TYPE "EventName" AS ENUM ('sparkhack', 'decisia', 'aboltabol', 'circuistics', 'eureka', 'frames', 'inquizzitive', 'algomaniac', 'jutalks');
+
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
@@ -7,7 +10,8 @@ CREATE TABLE "User" (
     "year" TEXT NOT NULL,
     "institution" TEXT NOT NULL,
     "phone" TEXT NOT NULL,
-    "password" TEXT,
+    "password" TEXT NOT NULL,
+    "emailVerified" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
@@ -18,7 +22,7 @@ CREATE TABLE "User" (
 CREATE TABLE "Team" (
     "id" TEXT NOT NULL,
     "teamName" TEXT NOT NULL,
-    "eventName" TEXT NOT NULL,
+    "eventName" "EventName" NOT NULL,
     "leaderId" TEXT NOT NULL,
     "maxSize" INTEGER NOT NULL DEFAULT 5,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -31,7 +35,6 @@ CREATE TABLE "Team" (
 CREATE TABLE "Notification" (
     "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "title" TEXT NOT NULL,
     "message" TEXT NOT NULL,
     "read" BOOLEAN NOT NULL DEFAULT false,
     "type" TEXT NOT NULL,

@@ -12,7 +12,7 @@ import Loading from "@/app/loading";
 
 const page = () => {
   return (
-    <Suspense fallback={<Loading/>}>
+    <Suspense fallback={<Loading />}>
       <div className="w-full h-screen flex items-center justify-center ">
         <SoloRegistrationForm />
       </div>
@@ -29,7 +29,7 @@ const SoloRegistrationForm: React.FC = () => {
 
   const searchParams = useSearchParams(); // Extract event name from params
   const eventName = searchParams.get("eventName");
-  const userCookie = Cookies.get("user");
+  const userCookie = Cookies.get("users");
   const email = userCookie ? JSON.parse(userCookie).email : null;
 
   const router = useRouter();

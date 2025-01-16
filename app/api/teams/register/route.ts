@@ -1,3 +1,4 @@
+import { getFriendlyEventName } from "@/lib/friendlyEventNames";
 import { prisma } from "@/lib/prisma"; // Adjust the path as per your project setup
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
@@ -14,33 +15,6 @@ export async function POST(req: NextRequest) {
     } = await req.json();
 
     const team_events = ["sparkhack", "decisia"];
-
-    const userCookie = req.cookies.get("user");
-
-    console.log("userCookie", userCookie);
-
-    try {
-      console.log("in try catch");
-      const userCredential =
-        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
-
-      const emailVerified = JSON.parse(userCredential.value).emailVerified;
-
-      console.log("emailVerified", emailVerified);
-
-      if (!emailVerified) {
-        return NextResponse.json(
-          { message: "Please verify your email before registering." },
-          { status: 400 }
-        );
-      }
-    } catch (error) {
-      console.log("Error parsing userCookie:", error);
-      return NextResponse.json(
-        { message: "Something went wrong. Try again later" },
-        { status: 500 }
-      );
-    }
 
     if (!team_events.includes(eventName.toLowerCase())) {
       return NextResponse.json(
@@ -84,22 +58,37 @@ export async function POST(req: NextRequest) {
     // Combine leader and team members for validation
     const allMembers = [...teamMembers, leaderEmail];
 
-    // Check if all users are in db
-    const missingUsers = await prisma.user.findMany({
+    // Fetch users from the database
+    const users = await prisma.user.findMany({
       where: {
         email: { in: allMembers },
       },
     });
 
-    if (missingUsers.length !== allMembers.length) {
-      const existingEmails = missingUsers.map((user) => user.email);
-      const nonExistingUsers = allMembers.filter(
-        (email) => !existingEmails.includes(email)
-      );
+    // Map existing emails and check for email verification status
+    const existingEmails = users.map((user) => user.email);
+    const nonExistingUsers = allMembers.filter(
+      (email) => !existingEmails.includes(email)
+    );
+    const unverifiedUsers = users
+      .filter((user) => !user.emailVerified)
+      .map((user) => user.email);
 
+    if (nonExistingUsers.length > 0) {
       return NextResponse.json(
         {
           message: `The following users have not signed up on the website: ${nonExistingUsers.join(
+            ", "
+          )}`,
+        },
+        { status: 400 }
+      );
+    }
+
+    if (unverifiedUsers.length > 0) {
+      return NextResponse.json(
+        {
+          message: `The following users have not verified their email: ${unverifiedUsers.join(
             ", "
           )}`,
         },
@@ -169,16 +158,18 @@ export async function POST(req: NextRequest) {
     // Notify team members
     const notifications = teamMembers.map((email: string) => ({
       email,
-      title: `You've been added to the team "${teamName}"`,
-      message: `You are now part of the team "${teamName}" for the event "${eventName}".`,
+      message: `You are now part of the team "${teamName}" for the event "${getFriendlyEventName(
+        eventName
+      )}".`,
       type: "TEAM_INVITE",
     }));
 
     // Notify leader
     notifications.push({
       email: leaderEmail,
-      title: `Team "${teamName}" created successfully`,
-      message: `Yay! Team "${teamName}" has been created successfully for the event "${eventName}".`,
+      message: `Yay! Team "${teamName}" has been created successfully for the event "${getFriendlyEventName(
+        eventName
+      )}".`,
       type: "TEAM_CREATE",
     });
 

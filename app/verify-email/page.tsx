@@ -2,10 +2,12 @@
 
 import { getAuth, sendEmailVerification } from "firebase/auth";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const VerifyEmail = () => {
   const [isSending, setIsSending] = useState(false);
   const [message, setMessage] = useState("");
+  const router = useRouter(); // Next.js router for navigation
 
   const handleResendEmail = async () => {
     setIsSending(true);
@@ -26,10 +28,14 @@ const VerifyEmail = () => {
       setMessage("Verification email has been sent!");
     } catch (error) {
       setMessage("Failed to send verification email. Please try again.");
-      console.log(error);
+      console.error(error);
     } finally {
       setIsSending(false);
     }
+  };
+
+  const handleLoginRedirect = () => {
+    router.push("/login"); // Navigate to the login page
   };
 
   return (
@@ -53,6 +59,12 @@ const VerifyEmail = () => {
         }`}
         >
           {isSending ? "Sending..." : "Resend Verification Email"}
+        </button>
+        <button
+          onClick={handleLoginRedirect}
+          className="px-6 py-2 rounded-md font-medium text-white bg-green-500 hover:bg-green-600 transition"
+        >
+          Go to Login
         </button>
       </div>
       {message && <p className="mt-6 text-gray-500 text-center">{message}</p>}
