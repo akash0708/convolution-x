@@ -78,7 +78,7 @@ html{
 
 @layer utilities {
   .nav-item {
-    @apply transition-all ease-in-out duration-300 hover:scale-105 font-medium ;
+    @apply transition-all ease-in-out duration-300 hover:scale-110 font-medium ;
   }
   
   .maxWidthForSections{

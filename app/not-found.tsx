@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
-import pinkStarMobile from "@/assets/images/HeroSectionImages/starbg-mobile.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
+import pinkStarMobile from "@/assets/images/HeroSectionImages/starbg-mobile.png";
  import error404 from '@/assets/images/404.webp'
 export default function NotFound() {
   return (

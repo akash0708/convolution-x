@@ -17,14 +17,14 @@ const professors: Professor[] = [
     profession:
       "Professor at Department of Electrical Engineering, Jadavpur University",
     researchPoint: "https://scholar.google.com/citations?user=tlzV8CAAAAAJ&hl=en",
-    img: "dsd.webp", // Replace with the actual image path or import
+    img: "dsd.png", // Replace with the actual image path or import
   },
   {
     name: "Suddhasatwa Chakraborty",
     profession:
       "Professor at Department of Electrical Engineering, Jadavpur University",
     researchPoint: "https://www.researchgate.net/profile/Suddhasatwa-Chakraborty",
-    img: "sdc.webp", // Replace with the actual image path or import
+    img: "sdc.png", // Replace with the actual image path or import
   },
 ];
 

@@ -48,10 +48,7 @@ const HeroSpark = () => {
           <div className="flex flex-col justify-center items-center gap-y-6">
             <Image src={logo} alt="logo" className="sm:w-[35vw] object-cover w-[70vw]"></Image>
             <p className="text-white text-center sm:text-xl text-base text-shadow-dark">
-              Eastern India&apos;s BIGGEST hackathon, focused on engineering
-              technological solutions where teams build prototypes of products
-              with notable social impact. The ideas will be judged by academics
-              and industry experts.
+            Welcome to Eastern India&apos;s biggest hackathon event, which is solely focused on engineering technological solutions to modern world problems. Here, teams build prototypes of products with remarkable social impact. Your idea, judged by renowned academicians & industry experts, might just become the next groundbreaking innovation! Got the spark within you? Then don&apos;t procrastinate- register now for Sparkhack!!
             </p>
             {isRegistered?<p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full text-white text-shadow-dark bg-[#8FE3F0]`}>You have Registered for this Event</p> :<Link href="/event/register-team?eventName=sparkhack" className="bg-[#8FE3F0] shadow-sparkhack-register py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full hover:bg-white hover:text-[#8FE3F0] hover:text-shadow-light hover:opacity-90 text-white transition-all duration-300 hover:shadow-sparkhack-register-hover text-shadow-dark">
                 <p className="    ">

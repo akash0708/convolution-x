@@ -5,7 +5,7 @@ import React from "react";
 import asteroidRinged from "@/assets/images/Footer/asteroid ringed.webp";
 import deepBluePlanet from "@/assets/images/Footer/deepblue planet.webp";
 import redBluePlanet from "@/assets/images/Footer/redBlueGradient.webp";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
 import whiteStarPhone from "@/assets/images/phone white stars.webp"
 
 const PreFooterImage = () => {

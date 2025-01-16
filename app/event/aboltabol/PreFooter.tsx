@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import prefooter from "@/assets/images/AbolTabol/prefooterImage.webp";
+import prefooter from "@/assets/images/AbolTabol/prefooterImage.png";
 import darkfishes from "@/assets/images/AbolTabol/darkfishes.webp";
 import bluefishes from "@/assets/images/AbolTabol/bluefishes.webp";
 

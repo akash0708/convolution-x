@@ -17,7 +17,7 @@ type TeamMember = {
 const teamLead: TeamMember[] = [
   {
     name: "Sheetali Maity",
-    image: "didi.webp",
+    image: "didi.png",
     linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
     instagram:
       "https://www.instagram.com/sheetali.csv",
@@ -25,7 +25,7 @@ const teamLead: TeamMember[] = [
   },
   {
     name: "Soham Saha",
-    image: "soham.webp",
+    image: "soham.png",
     linkedin:
       "https://www.linkedin.com/in/soham-saha-529291250/",
     instagram:

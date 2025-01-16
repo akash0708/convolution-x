@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import "@/app/events.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
 import Image from "next/image";
 
 import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.webp";
@@ -76,7 +76,7 @@ export default function Events() {
     {
       event: "Algomaniac",
       redirectTo: "algomaniac",
-      img: "algomaniac.webp",
+      img: "algomaniac.png",
     },
     {
       event: "24 Frames",

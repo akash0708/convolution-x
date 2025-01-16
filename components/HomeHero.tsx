@@ -8,11 +8,11 @@ import blueRedPlanet from "@/assets/images/HeroSectionImages/blue-red planet.web
 import pinkBluePlanet from "@/assets/images/HeroSectionImages/pink-blue planet.webp";
 import yellowBluePlanet from "@/assets/images/HeroSectionImages/yellow planet.webp";
 import pinkPlanet from "@/assets/images/HeroSectionImages/pink planet.webp";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
-import pinkStarMobile from "@/assets/images/HeroSectionImages/starbg-mobile.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
+import pinkStarMobile from "@/assets/images/HeroSectionImages/starbg-mobile.png";
 
-import cloud1 from "@/assets/images/HeroSectionImages/cloud1.webp";
-import cloud2 from "@/assets/images/HeroSectionImages/cloud2.webp";
+import cloud1 from "@/assets/images/HeroSectionImages/cloud1.png";
+import cloud2 from "@/assets/images/HeroSectionImages/cloud2.png";
 import ConvoIcon from '@/assets/images/HeroSectionImages/ConvoSvg.svg';
 import { useUserStore } from "@/store/userStore";
 import Link from "next/link";
@@ -163,7 +163,7 @@ const HomeHero = () => {
           className="w-[30vw]  sm:min-w-[390px]  min-w-[300px] object-cover animate-spin-slow "
         ></Image>
       </div>
-     {!isLogged && <div className="hidden absolute top-[85%] left-1/2 -translate-x-1/2  md:flex gap-6 "> 
+     {!isLogged && <div className=" absolute top-[85%] left-1/2 -translate-x-1/2  flex gap-6 "> 
       <Link href='/register'>
       <button className="bg-softPurple   rounded-full py-2 w-[150px] shadow-login-home shadow-softPurple text-white hover:bg-white  hover:text-darkBlue hover:shadow-white/80 transition-all duration-300 ">
         Register
