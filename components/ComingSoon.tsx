@@ -20,15 +20,28 @@ const ComingSoon = () => {
           alt="top right"
           className="absolute bottom-[-55%] right-[-19%]"
         ></Image>
+       
+        <div className="w-full  absolute z-20 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex  items-center justify-center sm:flex-row flex-col "> 
+        <div className="">
+
         <Image
           src={kolBalish}
           alt="top right"
-          className="w-[600px] object-cover top-1/2 -translate-y-1/2 absolute z-10 left-[10%]"
+          className="w-[250px] object-cover "
         ></Image>
-      <Link href='/' className="absolute z-20 top-1/2 -translate-y-1/2 right-[30%] flex gap-6 items-center flex-col">
-        <h1 className="text-center text-white text-6xl uppercase">Coming Soon...</h1>
-        <button className="bg-[#FB23D5] rounded-full py-2 w-[150px]    shadow-login-home shadow-[#FB23D5] hover:bg-white hover:text-[#FB23D5] hover:shadow-white/80 transition-all duration-300 text-white">Go Home</button>
-      </Link>
+        </div>
+        <div className=" flex flex-col items-center gap-4">
+        <h1 className="text-center text-white sm:text-6xl text-3xl ">
+            Coming Soon...
+          </h1>
+          <Link href="/">
+            <button className="bg-[#FB23D5] rounded-full py-2 w-[150px]  sm:text-lg  shadow-login-home shadow-[#FB23D5] hover:bg-white hover:text-[#FB23D5] hover:shadow-white/80 transition-all duration-300 text-white">
+              Go Home
+            </button>
+          </Link>
+        </div>
+          
+        </div>
       </div>
     </div>
   );

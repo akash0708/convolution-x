@@ -185,19 +185,22 @@ const Footer = () => {
     <Link href="/event/algomaniac">Algomaniac</Link>
   </li>
   <li>
-    <Link href="/event/abol_tabol">Abol Tabol</Link>
+    <Link href="/event/aboltabol">Abol Tabol</Link>
   </li>
   <li>
     <Link href="/event/circuistics">Circuistics</Link>
   </li>
   <li>
-    <Link href="/event/inquizitive">Inquizzitive</Link>
+    <Link href="/event/inquizzitive">Inquizzitive</Link>
   </li>
   <li>
     <Link href="/event/eureka">Eureka</Link>
   </li>
   <li>
-    <Link href="/event/ju_talks">JU Talks</Link>
+    <Link href="/event/jutalks">JU Talks</Link>
+  </li>
+  <li>
+    <Link href="/event/24frames">24 Frames</Link>
   </li>
           </ul>
         </div>

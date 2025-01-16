@@ -19,6 +19,7 @@ const events = [
   { name: "Inquizzitive", href: "/event/inquizitive" },
   { name: "Eureka", href: "/event/eureka" },
   { name: "JU Talks", href: "/event/jutalks" },
+  { name: "24 Frames", href: "/event/24frames" },
 ];
 
 const EventFooter: React.FC<MyComponentProps> = ({

@@ -16,7 +16,7 @@ type TeamMember = {
     {
       name: "Satrajit Mukherjee",
       image: "satrajit.webp",
-      linkedin: "https://www.linkedin.com/in/sheetali-maity-1a0724210/",
+      linkedin: "https://www.linkedin.com/in/satrajit-mukherjee-1807442a9/",
       instagram:
         "https://www.instagram.com/static.sm/",
       facebook: "",

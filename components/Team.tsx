@@ -52,8 +52,8 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jahid Mamud",
     post: "Secretary",
-    image: "jahid.webp",
-    linkedin: "www.linkedin.com/in/jahid-mamud",
+    image: "jahid.png",
+    linkedin: "https://www.linkedin.com/in/jahid-mamud/",
     instagram:
       "https://www.instagram.com/jem_.__/profilecard/?igsh=b2o0ZjlqZ3pkeW5t",
     facebook: "",
@@ -61,7 +61,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Ritam Kundu",
     post: "Joint secretary",
-    image: "ritam.webp",
+    image: "ritam.png",
     linkedin:
       "https://www.linkedin.com/in/ritam-kundu-394612257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram:
@@ -71,7 +71,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Siddhanta Ghosh",
     post: "Treasurer",
-    image: "sid.webp",
+    image: "sid.png",
     linkedin: "https://www.linkedin.com/in/siddhanta-ghosh",
     instagram: "https://www.instagram.com/ghosh_siddhanta2k3/",
     facebook:
@@ -80,7 +80,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Akash Bag",
     post: "Tech Lead",
-    image: "akash.webp",
+    image: "akash.png",
     linkedin: "https://www.linkedin.com/in/akashbag0903/",
     instagram: "https://www.instagram.com/akash09.dev/",
     facebook: "",
@@ -88,7 +88,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Arindam Pradhan",
     post: "Design Lead",
-    image: "arindam.webp",
+    image: "arindam.png",
     linkedin:
       "https://www.linkedin.com/in/arindam-pradhan/?originalSubdomain=in",
     instagram: "https://www.instagram.com/arindam_ju01/",
@@ -97,7 +97,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Aritra Kumar Dutta",
     post: "Sponsorship Lead",
-    image: "aritra.webp",
+    image: "aritra.png",
     linkedin:
       "https://www.linkedin.com/in/aritra-dutta-1752b4304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
@@ -107,7 +107,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Reejul Chattaraj",
     post: "Content Lead",
-    image: "rc.webp",
+    image: "rc.png",
     linkedin:
       "https://www.linkedin.com/in/reejul-chattaraj-85a09727a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     instagram:
@@ -117,7 +117,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Sinjan Dinda",
     post: "Logistics Lead",
-    image: "dinda.webp",
+    image: "dinda.png",
     linkedin:
       "https://www.linkedin.com/in/sinjan-dinda-a70861276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/dinda_sinjan?igsh=bWc4eGJnMDJ0MTc4",
@@ -126,7 +126,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Arunava Roy",
     post: "PR Lead",
-    image: "arunava.webp",
+    image: "arunava.png",
     linkedin:
       "https://www.linkedin.com/in/arunava-roy-176a4527b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:

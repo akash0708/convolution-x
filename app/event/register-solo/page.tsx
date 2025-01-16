@@ -132,7 +132,7 @@ const SoloRegistrationForm: React.FC = () => {
           disabled={loading}
           className="group transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
         >
-          {true ? (
+          {loading ? (
             <>
               <svg
                 width="24"
