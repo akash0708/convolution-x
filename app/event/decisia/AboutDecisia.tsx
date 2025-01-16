@@ -30,13 +30,13 @@ const AboutDecisia = () => {
     
       <div className="maxWidthForSections flex flex-col items-center">
         <div
-          className={`rounded-xl sm:py-12 py-6 sm:px-8 px-4 bg-gradient-to-l from-white/20 to-white/5 backdrop-filter backdrop-blur-sm relative shadow-black/20 shadow-md `}
+          className={`rounded-xl sm:py-12 py-6 sm:px-8 px-4 bg-gradient-to-l from-black/30 to-black/30 backdrop-filter backdrop-blur-sm relative shadow-black/20 shadow-md `}
         >
           
           <h1 className="uppercase text-center text-2xl sm:text-4xl mb-8 text-white text-shadow-dark">
             Rules & Regulations
           </h1>
-          <ul className="space-y-3 list-disc  list-inside text-shadow-dark text-white sm:text-xl text-sm">
+          <ul className="space-y-3  list-disc  list-inside text-shadow-dark text-white sm:text-xl text-sm">
             {rulesDecisia.map((text,index)=>{return (
               <li key={index}>{text}</li>
             )})}
@@ -54,7 +54,7 @@ const AboutDecisia = () => {
             </li>
           </ul>
         </div>
-        <a href="https://drive.google.com/file/d/1sHXU9-0P-jWozBk5UGMEIgKQ54UaT1-A/view?usp=sharing" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#DE5C00] hover:shadow-[#D11100] hover:bg-[#931308] shadow-white/40 shadow-md text-white  transition-all duration-300 ">
+        <a href="https://drive.google.com/file/d/1VMUrPKmLmFYhNhm7bt_WseHlfmHQHKht/view?usp=sharing" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#DE5C00] hover:shadow-[#D11100] hover:bg-[#931308] shadow-white/40 shadow-md text-white  transition-all duration-300 ">
           <p className="     ">Know More</p>
         </a>
       </div>

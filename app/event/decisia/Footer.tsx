@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.webp'
-import decisiaBg from '@/assets/images/Decisia/asteroid bg.webp'
+import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
+import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
 
 import EventFooter from "@/components/EventFooter";
 

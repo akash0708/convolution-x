@@ -15,14 +15,14 @@ const professors: Professor[] = [
       profession:
         "Professor at Department of Electrical Engineering, Jadavpur University",
       researchPoint: "https://scholar.google.com/citations?user=4QDUROsAAAAJ&hl=en",
-      img: "sgm.webp", 
+      img: "sgm.png", 
     },
     {
       name: "Arabinda Das",
       profession:
         "Professor at Department of Electrical Engineering, Jadavpur University",
       researchPoint: "https://scholar.google.com/citations?user=Oxu-8WcAAAAJ&hl=en",
-      img: "ad.webp", 
+      img: "ad.png", 
     },
   ];
 const Mentors = () => {

@@ -8,7 +8,7 @@ import darkfishes from "@/assets/images/AbolTabol/darkfishes.webp";
 import goldfish from "@/assets/images/AbolTabol/goldfish.webp";
 import flow from "@/assets/images/AbolTabol/heroBottom flow.webp";
 const aboutAbolTabol =
-  "Inspired by MIT’s ‘Bahfest’ & titled after Sukumar Ray’s cult classic, Abol Tabol is the sci-fi dream come true event for those young brilliant minds who not only imagine superficial things but also possess the ability to land them on real ground.";
+  "Inspired by MIT’s ‘Bahfest’ & titled after Sukumar Ray’s cult classic, Abol Tabol is the dream come true event for those young brilliant minds who not only imagine scientifically impossible things but also possess the ability to land them on real ground. To re-imagine reality in your own way, register now for Abol Tabol !";
 const HeroAT = () => {
   return (
     <div

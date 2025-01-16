@@ -2,9 +2,9 @@ import React from "react";
 
 import Image from "next/image";
 import EventHero from "@/components/EventHero";
-import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.webp'
-import decisiaBg from '@/assets/images/Decisia/asteroid bg.webp'
-const aboutDecisia=`Decisia is like our version of "Shark Tank." It's your platform to pitch that dream business idea. You can be the CEO, create the product, showcase your profit margins, and pitch it to the "sharks'' for potential investment. Dive into the opportunity to turn your business dreams into reality!`
+import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
+import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
+const aboutDecisia=`Stop! You've come to the right place. This is it! This is your platform to pitch that dream business idea. If you can't get into “Shark Tank”, relax! We've got it from here. At Decisia, you can be the CEO, showcase your product, depict the profit margins & pitch it in front of our esteemed panel of judges. Well then, what are you waiting for? Dive in deep now, you've got to swim with the sharks!!`
 const HeroDecisia = () => {
   return (
     <div id="about"

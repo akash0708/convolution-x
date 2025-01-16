@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
 import rocket from "@/assets/images/AboutImages/planet and rocket.webp";
 
 const HomeAbout = () => {

@@ -73,9 +73,13 @@ const Sponsors: React.FC = () => {
           ))}
         </div>
       </div> */}
-      <div className="flex gap-4 justify-center maxWidthForSections">
+      <div className=" maxWidthForSections">
+        <div className="flex gap-4 justify-center">
+
         <Image src={exide} alt='exide image' className='bg-white/90 p-2 max-w-[150px] object-cover  rounded-md'></Image>
         <Image src={techEle} alt='exide image' className='bg-white/90 p-2 max-w-[150px] object-cover  rounded-md'></Image>
+        </div>
+      <p className='text-white text-center text-sm mt-8'>Want to be part of Convolution X? Join the event as a sponsor or partner! Reach out to our sponsorship lead for all the exciting details.</p>
       </div>
     </div>
   );

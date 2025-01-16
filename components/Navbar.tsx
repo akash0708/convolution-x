@@ -42,7 +42,7 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="flex items-center gap-x-6 text-lg">
           {navItems.map((item, index) => (
-            <li key={index} className="nav-item">
+            <li key={index} className="nav-item ">
               <Link href={item.href}>{item.label}</Link>
             </li>
           ))}

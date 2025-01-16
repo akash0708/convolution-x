@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 // import whiteStar from '@/assets/images/Footer/stars white.webp'
-import pinkStar from "@/assets/images/HeroSectionImages/star bg.webp";
+import pinkStar from "@/assets/images/HeroSectionImages/star bg.png";
 import asteroidYellow from "@/assets/images/Footer/asteroid 2.webp";
 import asteroidBlue from "@/assets/images/Footer/asteroid 1.webp";
 import ringedPlanet from "@/assets/images/Footer/mid planet.webp";

@@ -7,17 +7,17 @@ const faqData = [
   {
     question: "What is Convolution?",
     answer: 
-      "Convolution is our annual tech fest, where technology, creativity, and innovation come together. It features exciting events, workshops, competitions, and opportunities to showcase talent.",
+      "Convolution is the annual tech fest organised by JUEE, where technology, creativity, and innovation come together. It features exciting events, workshops, competitions, and opportunities to showcase talent.",
   },
   {
     question: "When and where is Convolution happening?",
     answer: 
-      "Convolution will take place from 20th to 22nd February, 2025 at Department of Electrical Engineering, Jadavpur University. Stay tuned for updates on our website and social media!",
+      "Convolution will take place from 20th to 22nd February, 2025 at the Department of Electrical Engineering, Jadavpur University. Further updates about the time, date and venue of specific events will be available on our website soon. Stay tuned for more updates !! ",
   },
   {
     question: "Who can participate in Convolution?",
     answer: 
-      "Convolution is open to students enthusiastic about technology, enrolled in any undergraduate programme.",
+      "Any student enrolled in any undergraduate programme interested in exploring, engaging in enthralling activities and undertaking mind boggling challenges are welcome to participate in Convolution. ",
   },
   
   {
