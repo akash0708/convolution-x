@@ -16,7 +16,7 @@ const ComingSoon = () => {
           className="absolute top-[-10%] left-[-5%]"
         ></Image>
         <Image
-          src={bottomRight}
+          src={bottomRight} 
           alt="top right"
           className="absolute bottom-[-55%] right-[-19%]"
         ></Image>
