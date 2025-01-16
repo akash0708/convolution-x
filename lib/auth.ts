@@ -1,3 +1,4 @@
+import axios from "axios";
 import { auth } from "./firebase";
 import {
   createUserWithEmailAndPassword,
@@ -30,7 +31,30 @@ export const signIn = async (email: string, password: string) => {
     );
 
     // Set a cookie with user information or token
-    Cookies.set("user", JSON.stringify(userCredential.user), { expires: 30 }); // Expires in 30 days
+    Cookies.set("users", JSON.stringify(userCredential.user), { expires: 45 }); // Expires in 45 days
+
+    // if email is not verified, return error, remove the set cookie and sign the user out
+    if (!userCredential.user.emailVerified) {
+      Cookies.remove("users");
+      await signOut(auth);
+      return {
+        status: "error",
+        message: "Verify your email in order to login.",
+      };
+    }
+
+    // make an api call to /users/verify-email to update the emailVerified status from the userCredential.user.emailVerified, with payload email and isEmailVerified
+    const res = await axios.post("/api/users/verify-email", {
+      email: userCredential.user.email,
+      isEmailVerified: userCredential.user.emailVerified,
+    });
+
+    if (res.status !== 200) {
+      return {
+        status: "error",
+        message: "Verify your email in order to login.",
+      };
+    }
 
     // console.log("userCredential", JSON.stringify(userCredential.user));
     // console.log("user", { ...userCredential.user });
@@ -76,5 +100,6 @@ export const signIn = async (email: string, password: string) => {
 };
 
 export const logout = async () => {
+  Cookies.remove("users");
   return await signOut(auth);
 };

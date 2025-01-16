@@ -10,6 +10,7 @@ import {
 import axios from "axios";
 
 export async function POST(req: Request) {
+  let firebaseUserId;
   try {
     const { email, password, name, department, year, institution, phone } =
       await req.json();
@@ -32,14 +33,15 @@ export async function POST(req: Request) {
 
     // Create user with Firebase
     let userCredential;
-    let firebaseUserId;
     try {
       userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
+
       firebaseUserId = userCredential.user.uid;
+
       await sendEmailVerification(userCredential.user, {
         url: `${process.env.NEXT_PUBLIC_URL}/login`,
         handleCodeInApp: true,
@@ -127,6 +129,14 @@ export async function POST(req: Request) {
     );
   } catch (error: any) {
     console.error("Unexpected error:", error);
+    if (firebaseUserId) {
+      await deleteUser(auth.currentUser!).catch((rollbackError) => {
+        console.error(
+          "Failed to rollback Firebase user creation:",
+          rollbackError
+        );
+      });
+    }
     return NextResponse.json(
       { error: "An unexpected error occurred. Please try again later." },
       { status: 500 }

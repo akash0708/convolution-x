@@ -36,7 +36,7 @@ export const useUserStore = create<UserStore>((set, get) => ({
   },
   authCheck: () => {
     set({ loading: true });
-    const userCookie = Cookies.get("user");
+    const userCookie = Cookies.get("users");
     const email = userCookie ? JSON.parse(userCookie).email : null;
     if (!get().user && email) {
       get().fetchUser(email);
