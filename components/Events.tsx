@@ -54,7 +54,7 @@ export default function Events() {
     },
     {
       event: "Ju Talks",
-      redirectTo: "ju_talks",
+      redirectTo: "jutalks",
       img: "jutalks.webp",
     },
     
@@ -65,7 +65,7 @@ export default function Events() {
     },
     {
       event: "Inquizitive",
-      redirectTo: "inquizitive",
+      redirectTo: "inquizzitive",
       img: "inquizzitive.webp",
     },
     {
@@ -80,7 +80,7 @@ export default function Events() {
     },
     {
       event: "24 Frames",
-      redirectTo: "24_frames",
+      redirectTo: "24frames",
       img: "24frames.webp",
     },
   ];

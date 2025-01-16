@@ -19,11 +19,7 @@ const faqData = [
     answer: 
       "Convolution is open to students enthusiastic about technology, enrolled in any undergraduate programme.",
   },
-  {
-    question: "How can I register for Convolution?",
-    answer: 
-      "To register for Convolution, start by creating an account [create an account page link]. Once registered, log in [log in page link] using your credentials and navigate to the \"Events\" page to explore and register for individual events of your choice. For any assistance, contact us [contact us page link].",
-  },
+  
   {
     question: "Is there any registration fee?",
     answer: 
@@ -94,7 +90,7 @@ const FAQ = () => {
                   }  transition-all duration-300 ease-in-out `}
                 >
                   <div className="sm:px-5 sm:pb-5 px-4 py-4  ">
-                    <p className="text-white/90 sm:text-sm text-xs">{faq.answer}</p>
+                    <p className="text-white/90 sm:text-base text-xs">{faq.answer}</p>
                   </div>
                 </div>
               </div>

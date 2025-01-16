@@ -7,7 +7,7 @@ import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
 import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 const sparkhackRules = [
   "SparkHack features multiple tracks where teams (2-4 members, including a team lead) work on a problem statement to create real-world solutions. Teams can consist of members from different streams and academic years, but all must belong to the same institution.",
-  "Round 1 : PPT Shortlisting : Teams must submit a concise PowerPoint presentation (max 15 slides) outlining their proposed solution. Judges will review the submissions and shortlist the top 30 teams. ",
+  "Round 1 : PPT Shortlisting : Teams must submit a concise PowerPoint presentation (max 10 slides) outlining their proposed solution. Judges will review the submissions and shortlist the top 30 teams. ",
   "Round 2 : Online Pitching : Shortlisted teams will present their ideas to the judges via Google Meet. Based on their pitches, the judges will select the top 10 teams for the next round.",
   "Round 3 : Prototype Creation:  The top 10 teams will develop and showcase their prototypes offline at the Electrical Engineering Department, Jadavpur University.",
  
