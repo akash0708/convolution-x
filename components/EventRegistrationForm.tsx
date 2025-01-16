@@ -13,10 +13,10 @@ import { z } from "zod";
 
 const eventConfigurations = [
   { eventName: "circuistics", min: 3, max: 4 },
-  { eventName: "sparkhack", min: 3, max: 4 },
+  { eventName: "sparkhack", min: 1, max: 3 },
   { eventName: "eureka", min: 3, max: 4 },
   { eventName: "inquizzitive", min: 2, max: 4 },
-  { eventName: "decisia", min: 3, max: 5 },
+  { eventName: "decisia", min: 2, max: 4 },
 ];
 
 const teamSchema = (min: number, max: number) =>
