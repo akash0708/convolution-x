@@ -12,7 +12,7 @@ import Loading from "@/app/loading";
 
 const page = () => {
   return (
-    <Suspense fallback={<Loading/>}>
+    <Suspense fallback={<Loading />}>
       <div className="w-full h-screen flex items-center justify-center ">
         <SoloRegistrationForm />
       </div>
@@ -29,7 +29,7 @@ const SoloRegistrationForm: React.FC = () => {
 
   const searchParams = useSearchParams(); // Extract event name from params
   const eventName = searchParams.get("eventName");
-  const userCookie = Cookies.get("user");
+  const userCookie = Cookies.get("users");
   const email = userCookie ? JSON.parse(userCookie).email : null;
 
   const router = useRouter();
@@ -132,7 +132,7 @@ const SoloRegistrationForm: React.FC = () => {
           disabled={loading}
           className="group transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
         >
-          {true ? (
+          {loading ? (
             <>
               <svg
                 width="24"

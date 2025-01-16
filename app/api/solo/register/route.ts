@@ -14,51 +14,6 @@ export async function POST(req: NextRequest) {
       leaderName,
     });
 
-    // Check if user has signed up on the website
-
-    const userExists = await prisma.user.findUnique({
-      where: {
-        email: leaderEmail,
-      },
-    });
-
-    if (!userExists) {
-      return NextResponse.json(
-        {
-          message: `Signup on the website and verify your email before registering for an event .`,
-        },
-        { status: 400 }
-      );
-    }
-
-    // Check if email is verified
-    const userCookie = req.cookies.get("user");
-
-    console.log("userCookie", userCookie);
-
-    try {
-      console.log("in try catch");
-      const userCredential =
-        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
-
-      const emailVerified = JSON.parse(userCredential.value).emailVerified;
-
-      console.log("emailVerified", emailVerified);
-
-      if (!emailVerified) {
-        return NextResponse.json(
-          { message: "Please verify your email before registering." },
-          { status: 400 }
-        );
-      }
-    } catch (error) {
-      console.log("Error parsing userCookie:", error);
-      return NextResponse.json(
-        { message: "Something went wrong. Try again later" },
-        { status: 500 }
-      );
-    }
-
     const solo_events = ["aboltabol"];
 
     if (!solo_events.includes(eventName.toLowerCase())) {
@@ -66,6 +21,20 @@ export async function POST(req: NextRequest) {
         { message: "This event does not support solo registration." },
         { status: 400 }
       );
+    }
+
+    // Check if user exists and email is verified
+    const userExists = await prisma.user.findUnique({
+      where: {
+        email: leaderEmail,
+      },
+    });
+
+    if (!userExists || !userExists.emailVerified) {
+      const message = !userExists
+        ? "Signup on the website and verify your email before registering for an event."
+        : "Please verify your email before registering for an event.";
+      return NextResponse.json({ message }, { status: 400 });
     }
 
     // console.log("Solo registration request:", {
@@ -124,9 +93,6 @@ export async function POST(req: NextRequest) {
     // send notification to the user
     const notification = {
       email: leaderEmail,
-      title: `Yay! You have registered for "${getFriendlyEventName(
-        eventName
-      )}"`,
       message: `Yay! You have registered for "${getFriendlyEventName(
         eventName
       )}"`,

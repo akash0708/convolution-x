@@ -51,7 +51,7 @@ const EventRegistrationForm: React.FC = () => {
   const schema = teamSchema(eventConfig.min, eventConfig.max);
   type TeamFormValues = z.infer<typeof schema>;
 
-  const userCookie = Cookies.get("user");
+  const userCookie = Cookies.get("users");
   const email = userCookie ? JSON.parse(userCookie).email : null;
 
   useEffect(() => {
@@ -124,13 +124,13 @@ const EventRegistrationForm: React.FC = () => {
   return (
     <div className="text-white bg-darkBlue/90 border-white/80 border-2 w-[80vw] sm:max-w-[400px] sm:py-12 py-8 sm:px-8 px-6 rounded-2xl sm:rounded-[25px] relative">
       <div className="absolute top-5 right-5 flex gap-x-1">
-          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
-          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
-          <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
-        </div>
-        <Link href='/' className="absolute top-5 left-5">
+        <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+        <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+        <div className="bg-white/80 size-2 sm:size-4 rounded-full"></div>
+      </div>
+      <Link href="/" className="absolute top-5 left-5">
         <IoMdArrowRoundBack className="text-white text-2xl" />
-        </Link>
+      </Link>
       <div className="flex flex-col gap-y-2 items-center">
         <h1 className="text-2xl font-semibold mb-4">Register a Team</h1>
         <form
@@ -158,10 +158,9 @@ const EventRegistrationForm: React.FC = () => {
             <label className="block text-xl text-center font-semibold text-white/90 mb-2">
               Team Members
             </label>
-            <p className="text-center w-full font-semibold">Team Leader: <span className="font-normal">
-            {name}
-              </span>
-              </p>
+            <p className="text-center w-full font-semibold">
+              Team Leader: <span className="font-normal">{name}</span>
+            </p>
             {Array.from({ length: memberCount }).map((_, index) => (
               <div key={index} className="flex space-x-2 mb-4">
                 <input
@@ -207,17 +206,18 @@ const EventRegistrationForm: React.FC = () => {
             disabled={isSubmitting}
             className="group transition-colors duration-300 w-full bg-white text-darkBlue font-semibold flex gap-x-1 justify-center items-center text-sm sm:text-base py-2 rounded-full border border-white border-md hover:text-white hover:bg-darkBlue/40 disabled:opacity-80 disabled:cursor-not-allowed"
           >
-            {isSubmitting ? <>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="text-darkBlue group-hover:text-white"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <style>
-                  {`
+            {isSubmitting ? (
+              <>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="text-darkBlue group-hover:text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <style>
+                    {`
           .spinner {
             transform-origin: center;
             animation: spinner-animation 0.75s infinite linear;
@@ -228,15 +228,18 @@ const EventRegistrationForm: React.FC = () => {
             }
           }
         `}
-                </style>
-                <path
-                  d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
-                  className="spinner"
-                />
-              </svg>
+                  </style>
+                  <path
+                    d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
+                    className="spinner"
+                  />
+                </svg>
 
-              <p className="inline ">Registering...</p>
-            </> : "Register Team"}
+                <p className="inline ">Registering...</p>
+              </>
+            ) : (
+              "Register Team"
+            )}
           </button>
         </form>
       </div>
