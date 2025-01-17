@@ -58,6 +58,19 @@ export async function POST(req: NextRequest) {
     // Combine leader and team members for validation
     const allMembers = [...teamMembers, leaderEmail];
 
+    // Check if all of the emails are unique
+    const uniqueMembers = new Set(allMembers);
+
+    if (uniqueMembers.size !== allMembers.length) {
+      return NextResponse.json(
+        {
+          message:
+            "Duplicate emails found in team members or leader. All emails should be unique",
+        },
+        { status: 400 }
+      );
+    }
+
     // Fetch users from the database
     const users = await prisma.user.findMany({
       where: {
