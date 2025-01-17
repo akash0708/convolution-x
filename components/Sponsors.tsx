@@ -86,7 +86,7 @@ const Sponsors: React.FC = () => {
         <Image src={techEle} alt='exide image' className=' max-w-[150px] object-cover '></Image>
 </a>
         </div>
-      <p className='text-white text-center sm:text-base text-sm mt-8'>Want to be part of Convolution X? Want to be a part of Convolution-X ? Join us as a sponsor of Convolution! Reach out to our team for all the details and queries.</p>
+      <p className='text-white text-center sm:text-base text-sm mt-8'>Want to be a part of Convolution-X ? Join us as a sponsor of Convolution! Reach out to our team for all the details and queries.</p>
       </div>
     </div>
   );
