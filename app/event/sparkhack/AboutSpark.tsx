@@ -86,7 +86,7 @@ const AboutSpark = () => {
             })}
           </ul>
         </div>
-        <a href="https://drive.google.com/file/d/1OA57qedl-NayL9hJAxgaOAYngQHQzfza/view" target="_blank"  className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#3AADD9] shadow-white/80 hover:shadow-white/40 shadow-md text-white hover:opacity-100 opacity-80 transition-all duration-300 ">
+        <a href="https://drive.google.com/file/d/1OFbBK5-B8_2WZrsywV4G_Dyrj3kTm502/view?usp=sharing" target="_blank"  className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#3AADD9] shadow-white/80 hover:shadow-white/40 shadow-md text-white hover:opacity-100 opacity-80 transition-all duration-300 ">
           <p className="     ">Know More</p>
         </a>
       </div>

@@ -116,7 +116,7 @@ const Timeline = () => {
             Decisia (Finals)
             </p>
             <p className=" md:text-2xl sm:text-lg text-[10px]">
-            Abol Tabol 
+            Abol Tabol (Finals) 
             </p>
           </div>
 

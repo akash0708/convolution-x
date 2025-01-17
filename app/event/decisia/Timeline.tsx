@@ -55,9 +55,9 @@ const Timeline = () => {
                 key={index}
                 className="text-center shadow-lg shadow-[#FC9D1D] bg-[#6D0500] px-4 py-6 rounded-xl"
               >
-                <h3 className="text-white text-xl font-bold">{day.date}</h3>
+                <h3 className="text-white text-xl ">{day.date}</h3>
                 <div className="h-1 bg-[#FC9D1D] rounded-full w-[30%] mx-auto mt-2 mb-4"></div>
-                <p className="text-white lg:text-lg md:text-sm">{day.task}</p>
+                <p className="text-white/90 lg:text-lg md:text-sm">{day.task}</p>
               </div>
             );
           })}
@@ -137,7 +137,7 @@ const Timeline = () => {
                 </div>
 
                 <div className="text-center shadow-lg h-auto w-[45vw] shadow-[#FC9D1D] bg-[#6D0500] px-4 py-6 rounded-xl">
-                  <h3 className="text-white  font-bold">{day.date}</h3>
+                  <h3 className="text-white">{day.date}</h3>
                   <div className="h-1 bg-[#FC9D1D] rounded-full w-[30%] mx-auto mt-2 mb-4"></div>
                   <p className="text-white sm:text-base text-sm">{day.task}</p>
                 </div>
