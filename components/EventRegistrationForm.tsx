@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import Cookies from "js-cookie";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -41,6 +41,7 @@ const EventRegistrationForm: React.FC = () => {
 
   const searchParams = useSearchParams(); // Extract event name from params
   const eventName = searchParams.get("eventName");
+  const router = useRouter();
 
   const eventConfig = eventConfigurations.find(
     (event) => event.eventName === eventName
@@ -101,6 +102,7 @@ const EventRegistrationForm: React.FC = () => {
       // console.log("Team created:", response.data);
 
       toast.success("Team Created Successfully");
+      router.push("/profile");
       reset(); // Reset the form after successful submission
     } catch (error: any) {
       toast.error(`Failed to create team: ${error.response?.data?.message}`);

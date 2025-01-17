@@ -199,7 +199,7 @@ export async function POST(req: NextRequest) {
     try {
       await axios.post(`${process.env.EMAIL_URL}/api/event`, {
         to: leaderEmail,
-        subject: `Registration Successful for ${eventName}`,
+        subject: `${getFriendlyEventName(eventName)}`,
         name: leaderName,
         eventName,
       });
