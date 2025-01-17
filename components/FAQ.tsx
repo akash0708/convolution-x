@@ -19,6 +19,11 @@ const faqData = [
     answer: 
       "Any student enrolled in any undergraduate programme interested in exploring, engaging in enthralling activities and undertaking mind boggling challenges are welcome to participate in Convolution. ",
   },
+  {
+    question: "How do I register on the website?",
+    answer: 
+      "To register for any event, click on the “Register” button and create an account. You will receive a verification email, which may land in your spam folder. After verifying your email, log in , using the credentials given during registration. Voilà! You are all set to participate in the events!",
+  },
   
   {
     question: "Is there any registration fee?",
