@@ -131,7 +131,7 @@ const Timeline = () => {
             <div className=""></div>
            
             <p className="  md:text-2xl sm:text-lg text-[10px]">
-              Algomanic (Finals)
+              Algomaniac (Finals)
             </p>
 
             <p className="  md:text-2xl sm:text-lg text-[10px]">
