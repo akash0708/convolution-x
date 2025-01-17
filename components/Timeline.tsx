@@ -49,9 +49,12 @@ const Timeline = () => {
           <Image src={timeline} alt="timeline Image" />
           {/* ------------------dates------------------- */}
           {/* ---------------day 1 morning------------ */}
-          <div className="absolute text-left top-0 right-[2%] sm:right-[8%] ">
-            <h1 className=" md:text-3xl sm:text-lg text-sm">
-              Day 1 (Morning)
+          <div className="absolute text-left top-0 w-[25%] right-[2%] sm:right-[0%] ">
+          <h1 className=" md:text-3xl sm:text-lg text-sm">
+              20th February
+            </h1>
+            <h1 className=" md:text-3xl sm:text-lg text-xs">
+             (Morning)
             </h1>
             <div className=""></div>
             <p className="  md:text-2xl sm:text-lg text-[10px]">
@@ -64,9 +67,12 @@ const Timeline = () => {
             
           </div>
           {/* ---------------day 1evening------------ */}
-          <div className="absolute text-right top-[12%] left-[2%] md:left-[5%] ">
+          <div className="absolute text-right top-[11%] w-[25%] left-[2%] md:left-[0%] ">
+          <h1 className=" md:text-3xl sm:text-lg text-sm">
+              20th February
+            </h1>
             <h1 className=" md:text-3xl sm:text-lg text-xs">
-              Day 1 (Afternoon)
+              (Afternoon)
             </h1>
             <div className=""></div>
             <p className="  md:text-2xl sm:text-lg text-[10px]">
@@ -78,9 +84,12 @@ const Timeline = () => {
           </div>
 
           {/* ---------------day 2 morning------------ */}
-          <div className="absolute text-left top-[20%] right-[2%] sm:right-[8%] ">
-            <h1 className=" md:text-3xl sm:text-lg text-sm">
-              Day 2 (Morning)
+          <div className="absolute text-left top-[20%] w-[25%] right-[2%] sm:right-[0%] ">
+          <h1 className=" md:text-3xl sm:text-lg text-sm">
+              21st February
+            </h1>
+            <h1 className=" md:text-3xl sm:text-lg text-xs">
+              (Morning)
             </h1>
             <div className=""></div>
             <p className="  md:text-2xl sm:text-lg text-[10px]">
@@ -95,9 +104,12 @@ const Timeline = () => {
             </p>
           </div>
           {/* ---------------day 2evening------------ */}
-          <div className="absolute text-right top-[30%] left-[2%] md:left-[5%] ">
+          <div className="absolute text-right top-[29%] w-[25%] left-[2%] md:left-[0%] ">
+          <h1 className=" md:text-3xl sm:text-lg text-sm">
+              21st February
+            </h1>
             <h1 className=" md:text-3xl sm:text-lg text-xs">
-              Day 2 (Afternoon)
+              (Afternoon)
             </h1>
             <div className=""></div>
             <p className=" md:text-2xl sm:text-lg text-[10px]">
@@ -109,9 +121,12 @@ const Timeline = () => {
           </div>
 
           {/* ---------------day 3 morning------------ */}
-          <div className="absolute text-left top-[39%] right-[2%] sm:right-[8%] ">
-            <h1 className=" md:text-3xl sm:text-lg text-sm">
-              Day 3 (Morning)
+          <div className="absolute text-left top-[38%] w-[25%] right-[2%] sm:right-[0%] ">
+          <h1 className=" md:text-3xl sm:text-lg text-sm">
+              22nd February
+            </h1>
+            <h1 className=" md:text-3xl sm:text-lg text-xs">
+               (Morning)
             </h1>
             <div className=""></div>
            
@@ -124,9 +139,12 @@ const Timeline = () => {
             </p>
           </div>
           {/* ---------------day 3 evening------------ */}
-          <div className="absolute text-right top-[49%] left-[2%] md:left-[5%] ">
+          <div className="absolute text-right top-[48%]  w-[25%] left-[2%] md:left-[0%] ">
+          <h1 className=" md:text-3xl sm:text-lg text-sm">
+              22nd February
+            </h1>
             <h1 className=" md:text-3xl sm:text-lg text-xs">
-              Day 3 (Afternoon)
+             (Afternoon)
             </h1>
             <div className=""></div>
             <p className=" md:text-2xl sm:text-lg text-[10px]">
