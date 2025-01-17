@@ -48,7 +48,7 @@ const Gallery = () => {
             <Image
               className="item first big object-cover w-full h-full"
               data-fancybox="gallery"
-              src="/Galleria/1.png"
+              src="/Galleria/1.webp"
               width={200}
               height={150}
               alt="gallery"

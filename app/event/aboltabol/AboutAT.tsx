@@ -80,7 +80,7 @@ const AboutAT = () => {
             </li>
           </ul>
         </div>
-        <a href="https://drive.google.com/file/d/1vGUWIRfZgKI_8rJXJhsVo43wj6Z-KTim/view?usp=sharing" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full    shadow-md text-white  transition-all duration-300 shadow-white/70 hover:shadow-white/30  bg-[#0212B4] hover:bg-white  hover:text-[#0212B4] text-[#ffff]">
+        <a href="https://drive.google.com/file/d/1rWDz31PeEpXO6IWYIYhKOKtydhtUW0hc/view?usp=sharing" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full    shadow-md text-white  transition-all duration-300 shadow-white/70 hover:shadow-white/30  bg-[#0212B4] hover:bg-white  hover:text-[#0212B4] text-[#ffff]">
           <p className="     ">Know More</p>
         </a>
       </div>
