@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
       leaderName,
     } = await req.json();
 
-    const team_events = ["sparkhack", "decisia"];
+    const team_events = ["sparkhack", "decisia", "aboltabol"];
 
     if (!team_events.includes(eventName.toLowerCase())) {
       return NextResponse.json(

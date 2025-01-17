@@ -18,44 +18,43 @@ const HeroAT = () => {
     "
     >
       {/* ----------------for bg image--------------- */}
-      
+
       <div
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0215C5] via-[#020F92] 
      to-[#010A5F] -z-20"
       >
         <div className="relative w-full h-full -z-10">
-        <Image
-          src={navImg}
-          className=" object-cover  absolute   top-10  "
-          alt="trees"
-        />
-        <Image
-          src={ray}
-          className=" object-cover top-0 left-0 md:h-[92%] md:w-auto h-1/2 sm:opacity-30 opacity-25"
-          alt="trees"
-        />
-         <Image
-          src={bubbles}
-          className=" absolute top-[15%] left-[12%] w-[22%] max-w-[160px] object-cover "
-          alt="trees"
-        />
-        <Image
-          src={darkfishes}
-          className=" absolute top-[17%] left-[45%] w-[22%] max-w-[160px] object-cover "
-          alt="trees"
-        />
+          <Image
+            src={navImg}
+            className=" object-cover  absolute   top-10  "
+            alt="trees"
+          />
+          <Image
+            src={ray}
+            className=" object-cover top-0 left-0 md:h-[92%] md:w-auto h-1/2 sm:opacity-30 opacity-25"
+            alt="trees"
+          />
+          <Image
+            src={bubbles}
+            className=" absolute top-[15%] left-[12%] w-[22%] max-w-[160px] object-cover "
+            alt="trees"
+          />
+          <Image
+            src={darkfishes}
+            className=" absolute top-[17%] left-[45%] w-[22%] max-w-[160px] object-cover "
+            alt="trees"
+          />
           <Image
             src={flow}
             className=" absolute bottom-0 right-0 min-h-[100px]  w-full object-cover "
             alt="trees"
           />
-        <Image
-          src={goldfish}
-          className=" absolute bottom-[2%] right-[5%] w-[22%] max-w-[160px] object-cover "
-          alt="trees"
-        />
-        
-      </div>
+          <Image
+            src={goldfish}
+            className=" absolute bottom-[2%] right-[5%] w-[22%] max-w-[160px] object-cover "
+            alt="trees"
+          />
+        </div>
       </div>
       {/* ----------main cotent----------------------- */}
       <div className="h-full w-full  maxWidthForSections">
@@ -63,9 +62,9 @@ const HeroAT = () => {
           about={aboutAbolTabol}
           logo="/AbolTabol/Abol Tabol logo.webp"
           buttonDesign="shadow-white/70 hover:shadow-white/30  bg-[#0212B4] hover:bg-white  hover:text-[#0212B4] text-[#ffff]"
-          registeredUiBtn='text-[#0212B4] bg-white'
+          registeredUiBtn="text-[#0212B4] bg-white"
           planet="/AbolTabol/planet.webp"
-          mode="solo"
+          mode="team"
           name="aboltabol"
         ></EventHero>
       </div>
