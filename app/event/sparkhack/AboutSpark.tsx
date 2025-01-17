@@ -10,7 +10,6 @@ const sparkhackRules = [
   "Round 1 : PPT Shortlisting : Teams must submit a concise PowerPoint presentation (max 10 slides) outlining their proposed solution. Judges will review the submissions and shortlist the top 30 teams. ",
   "Round 2 : Online Pitching : Shortlisted teams will present their ideas to the judges via Google Meet. Based on their pitches, the judges will select the top 10 teams for the next round.",
   "Round 3 : Prototype Creation:  The top 10 teams will develop and showcase their prototypes offline at the Electrical Engineering Department, Jadavpur University.",
- 
 ];
 const AboutSpark = () => {
   return (
@@ -86,7 +85,11 @@ const AboutSpark = () => {
             })}
           </ul>
         </div>
-        <a href="https://drive.google.com/file/d/1OA57qedl-NayL9hJAxgaOAYngQHQzfza/view" target="_blank"  className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#3AADD9] shadow-white/80 hover:shadow-white/40 shadow-md text-white hover:opacity-100 opacity-80 transition-all duration-300 ">
+        <a
+          href="https://drive.google.com/file/d/1jqR7P4G4X_--tL2BswTcAhX9f1cfOhvr/view?usp=sharing"
+          target="_blank"
+          className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full bg-[#3AADD9] shadow-white/80 hover:shadow-white/40 shadow-md text-white hover:opacity-100 opacity-80 transition-all duration-300 "
+        >
           <p className="     ">Know More</p>
         </a>
       </div>

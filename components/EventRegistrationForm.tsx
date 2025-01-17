@@ -17,6 +17,7 @@ const eventConfigurations = [
   { eventName: "eureka", min: 3, max: 4 },
   { eventName: "inquizzitive", min: 2, max: 4 },
   { eventName: "decisia", min: 2, max: 4 },
+  { eventName: "aboltabol", min: 0, max: 3 },
 ];
 
 const teamSchema = (min: number, max: number) =>
