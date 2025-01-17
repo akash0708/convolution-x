@@ -58,6 +58,14 @@ export async function POST(req: NextRequest) {
     // Combine leader and team members for validation
     const allMembers = [...teamMembers, leaderEmail];
 
+    // Check to ensure team size is within the limits
+    if (allMembers.length > 6) {
+      return NextResponse.json(
+        { message: "Team size not supported" },
+        { status: 400 }
+      );
+    }
+
     // Check if all of the emails are unique
     const uniqueMembers = new Set(allMembers);
 
