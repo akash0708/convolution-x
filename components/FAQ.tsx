@@ -34,6 +34,7 @@ const faqData = [
 
 
 const FAQ = () => {
+  
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number): void => {

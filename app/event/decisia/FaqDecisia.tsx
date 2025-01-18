@@ -7,7 +7,7 @@ const faqData = [
   {
       question: "Will there be any opportunities to showcase interdisciplinary projects?",
       answer: 
-        "Indeed, inter-college events often highlight interdisciplinary collaboration and innovation. It's worth inquiring about platforms to showcase projects spanning multiple disciplines, which can be advantageous for students seeking to explore cross-cutting themes and tackle complex challenges. Organizers typically provide details on participation in interdisciplinary showcases within the event program or through designated communication channels.",
+        " Indeed. Though it is not an inter-college event, your team may consist members from different streams, years or even different institutes. Since inputs from multiple disciplines very much hold the chance to make your product more optimum & easy to access & hence, you might gain a better shot at revenue.",
   },
   {
       question: "Can we bring prototypes, samples to enhance our pitch presentations?",
@@ -19,6 +19,10 @@ const faqData = [
       answer: 
         "Consider IP and confidentiality when sharing plans. Check event organizer agreements for information treatment. Mark materials as confidential and limit information dissemination. Seek legal counsel for IP protection if needed.",
   },
+  {
+    question:"I have no idea about business or pitching but want to participate. How can I get started?",
+    answer:"No worries! Start by brainstorming an idea you’re passionate about, team up with like-minded peers, and research basic business concepts like target market and revenue models. Focus on presenting your idea authentically—judges value creativity and potential. If you need guidance, feel free to reach out to our event leads. Decisia is a great learning opportunity for beginners!"
+  }
 ];
   
 const FaqDecisia = () => {

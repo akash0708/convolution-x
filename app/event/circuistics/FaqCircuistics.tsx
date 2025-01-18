@@ -1,41 +1,42 @@
 import FaqEvent from '@/components/FaqEvent'
 import Image from 'next/image';
 import React from 'react'
+import aroura2 from '@/assets/images/Circuistics/aroura2.png'
+
 import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
 import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
 const faqData = [
   {
-      question: "Will there be any opportunities to showcase interdisciplinary projects?",
+      question: "Can cross - year or cross - college teams be formed ?",
       answer: 
-        "Indeed, inter-college events often highlight interdisciplinary collaboration and innovation. It's worth inquiring about platforms to showcase projects spanning multiple disciplines, which can be advantageous for students seeking to explore cross-cutting themes and tackle complex challenges. Organizers typically provide details on participation in interdisciplinary showcases within the event program or through designated communication channels.",
+        "Teams must consist of students from the same academic year since the competition is year-based. However, forming cross-college teams is permitted. This structure ensures a level playing field by minimizing disparities in experience and resources among participants, while also fostering a stronger sense of camaraderie and collaboration within the teams.",
   },
   {
-      question: "Can we bring prototypes, samples to enhance our pitch presentations?",
+      question: "Will senior participants within a particular Tier have an advantage over others?",
       answer: 
-        "Participants are encouraged to use prototypes or visual aids to enhance pitch presentations, providing clarity and engagement. However, it's crucial to ensure relevance, seamless integration, and confirmation of logistical requirements for a successful presentation.",
+        "No, the competition is designed to be fair and unbiased. The Prelims will have separate question papers for UG1 and UG2. For the Finals, selection will be based on a normalized scoring system and the final problems will be unique for each year. This ensures that all participants, regardless of seniority, have an equal opportunity in the event.For Tier 2 as well, the level of the questions will be such that there will be no disparity in chances of qualifications for UG3 and UG4.",
   },
   {
-      question: "Are there intellectual property or confidentiality issues to be considered?",
+      question: "What will be the level of questions asked in the Prelims, and what about the Final problem?",
       answer: 
-        "Consider IP and confidentiality when sharing plans. Check event organizer agreements for information treatment. Mark materials as confidential and limit information dissemination. Seek legal counsel for IP protection if needed.",
+        "The Prelims will feature MCQ and NAT-type questions, with difficulty levels tailored to each respective Tier. The questions will be primarily conceptual and formula-based, mostly of a moderate level of difficulty. For the Finals, participants will need logical and circuit-building skills. Be prepared for an exciting challenge!",
   },
 ];
   
-const FaqDecisia = () => {
+const FaqCircuistics = () => {
   return (
     <div id='faq' className='min-h-[80vh]  relative flex justify-center items-center '>
         <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#981B0B]     
-      to-[#D33D18]"
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-t from-[#24339B]  to-[#1F267E]"
       >
         <Image
-        src={decisiaBg}
-        className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-90   top-0 right-0 -z-10"
+        src={aroura2}
+        className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-90   top-[-10%] right-0 -z-10"
         alt="trees"
       />
-      <Image
-        src={decisiaBgMobile}
-        className=" sm:hidden animate-twinkle block h-auto w-full  absolute opacity-90   top-0 right-0 -z-10"
+        <Image
+        src={aroura2}
+        className=" h-auto animate-twinkle sm:hidden block w-full  absolute opacity-90   top-[-20%] right-0 -z-10"
         alt="trees"
       />
       </div>
@@ -50,4 +51,4 @@ const FaqDecisia = () => {
   )
 }
 
-export default FaqDecisia
+export default FaqCircuistics

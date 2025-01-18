@@ -37,7 +37,7 @@ const EventJudges: React.FC<EventJudgesProps> = ({ textColor, professors }) => {
               <h2 className={`font-semibold sm:text-base text-sm ${textColor}`}>
                 {professor.name}
               </h2>
-              <Link href={professor.researchPoint}>
+              <Link target="_blank" href={professor.researchPoint}>
                 <FaInfoCircle />
               </Link>
             </div>
