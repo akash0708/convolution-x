@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import colorfulStars from "@/assets/images/faq/colorful stars.webp";
-import astroGuy from "@/assets/images/faq/cute astroNut.webp";
+import astroGuy from "@/assets/images/faq/laptopAstro.png";
 import Image from "next/image";
 const faqData = [
   {
@@ -111,7 +111,7 @@ const FAQ = () => {
             <Image
               src={astroGuy}
               alt="right bg"
-              className="  w-[80%]  object-cover animate-float-slow"
+              className="  w-[80%] max-h-[550px]  object-contain animate-float-slow"
             />
           </div>
         </div>

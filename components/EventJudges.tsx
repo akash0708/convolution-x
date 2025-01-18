@@ -19,7 +19,7 @@ interface EventJudgesProps {
 
 const EventJudges: React.FC<EventJudgesProps> = ({ textColor, professors }) => {
   return (
-    <div className="font-sans flex justify-center flex-col sm:flex-row gap-2 md:gap-x-12">
+    <div className="font-sans flex justify-center md:flex-wrap lg:flex-nowrap flex-col md:flex-row gap-2 md:gap-x-6">
       {professors.map((professor, index) => (
         <div
           key={index}

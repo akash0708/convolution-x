@@ -59,39 +59,7 @@ const TimelineAT = () => {
         <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
           Timeline
         </h2>
-        {/* <div className="flex flex-col gap-6 mt-12">
-          {timelineDetails.map((data, index) => {
-            return (
-              <div
-                key={index}
-                className={`flex w-full ${index % 2 == 0 ? "justify-end" : ""}`}
-              >
-                <div
-                  className={`bg-white/10 backdrop-blur-sm text-center shadow-lg h-auto sm:w-[45%] w-[65%] px-4 sm:px-8 py-8 rounded-xl text-white flex flex-col  gap-y-2  ${
-                    index % 2 == 0 ? "items-start" : "items-end"
-                  }`}
-                >
-                  <h1 className="sm:text-2xl text-xl">{data.date}</h1>
-                  <div className="h-1 bg-[#FC9D1D] rounded-full w-[20%] min-w-[100px]"></div>
-                  <p
-                    className={`text-[#FFBA00] ${
-                      index % 2 == 0 ? "text-left" : "text-right"
-                    }`}
-                  >
-                    {data.head}
-                  </p>
-                  <p
-                    className={`${
-                      index % 2 == 0 ? "text-left" : "text-right"
-                    } sm:text-base text-sm`}
-                  >
-                    {data.task}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div> */}
+        
 
         <div className="sm:flex hidden flex-col gap-6 mt-12">
           {timelineDetails.map((data, index) => {
@@ -101,7 +69,7 @@ const TimelineAT = () => {
                 className={`flex w-full relative ${index % 2 == 0 ? "justify-end" : ""}`}
               >
                 <div className="absolute size-8 rounded-full bg-white z-10 top-1/2 -translate-x-1/2 -translate-y-1/2  left-1/2"></div>
-               {index < (timelineDetails.length-1) && <div className="absolute h-full  bg-transparent z-10 top-1/2 -translate-x-1/2 left-1/2 border-l-[5px] border-dashed border-white/80 "></div>}
+               {index < (timelineDetails.length-1) && <div className="absolute h-full lg:h-[110%]  bg-transparent z-10 top-1/2 -translate-x-1/2 left-1/2 border-l-[5px] border-dashed border-white/80 "></div>}
                 <div
                   className={`bg-white/10 backdrop-blur-sm text-center shadow-lg h-auto sm:w-[45%] w-[65%] px-4 sm:px-8 py-8 rounded-xl text-white flex flex-col  gap-y-2  ${
                     index % 2 == 0 ? "items-start" : "items-end"
