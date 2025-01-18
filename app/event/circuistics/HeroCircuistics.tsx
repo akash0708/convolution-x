@@ -21,6 +21,16 @@ const HeroCircuistics = () => {
           {/* ----------------for bg image--------------- */}
             <div className="relative w-full h-full ">
             <Image
+            src={flakebg}
+            className=" h-auto hidden sm:block w-full  absolute opacity-90 animate-twinkle object-cover  top-0 right-0 -z-10"
+            alt="trees"
+          />
+          <Image
+            src={flakebgMobile}
+            className=" sm:hidden block h-full  object-cover absolute opacity-90 animate-twinkle   bottom-0 right-0 -z-10"
+            alt="trees"
+          />
+            <Image
             src={herobg}
             className=" h-auto hidden sm:block w-full  absolute opacity-90 object-cover  top-0 right-0 -z-10"
             alt="trees"
@@ -30,16 +40,7 @@ const HeroCircuistics = () => {
             className="  sm:hidden block w-[150vw] absolute opacity-90 object-cover  top-[22%] left-0 -z-10"
             alt="trees"
           />
-            <Image
-            src={flakebg}
-            className=" h-auto hidden sm:block w-full  absolute opacity-90 object-cover  top-0 right-0 -z-10"
-            alt="trees"
-          />
-          <Image
-            src={flakebgMobile}
-            className=" sm:hidden block h-full  object-cover absolute opacity-90   bottom-0 right-0 -z-10"
-            alt="trees"
-          />
+           
             </div>
           </div>
     
