@@ -15,7 +15,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Convolution X",
-  description: "Convolution, the annual technical fest of JUEE, is a vibrant celebration of talent, creativity, and innovation, showcasing a diverse range of competitions, events, and activities.",
+  description:
+    "Convolution, the annual technical fest of JUEE, is a vibrant celebration of talent, creativity, and innovation, showcasing a diverse range of competitions, events, and activities.",
+  keywords: [
+    "Convolution X",
+    "Jadavpur University",
+    "JUEE",
+    "fest",
+    "technical fest",
+    "electrical engineering",
+    "Convolution 2025",
+  ],
+  authors: [
+    { name: "JUEE Student's Forum", url: "https://www.convolutionjuee.in" },
+  ],
+  publisher: "Jadavpur University Electrical Engineering Students' Forum",
 };
 
 export default function RootLayout({
