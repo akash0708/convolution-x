@@ -12,9 +12,9 @@ const faqData = [
         "Teams must consist of students from the same academic year since the competition is year-based. However, forming cross-college teams is permitted. This structure ensures a level playing field by minimizing disparities in experience and resources among participants, while also fostering a stronger sense of camaraderie and collaboration within the teams.",
   },
   {
-      question: "Will senior participants within a particular Tier have an advantage over others?",
+      question: "What will the participants need to bring for the prelims and finals of the event ?",
       answer: 
-        "No, the competition is designed to be fair and unbiased. The Prelims will have separate question papers for UG1 and UG2. For the Finals, selection will be based on a normalized scoring system and the final problems will be unique for each tier. For Tier 2 as well, the level of the questions will be such that there will be no disparity in chances of qualifications for UG3 and UG4.",
+        "Participants only need to bring pens & calculators on the day of Prelims, sheets for rough working will be provided during the test. For the Finals, whatever the participants need will be provided to them, such as electronic components and datasheets.",
   },
   {
       question: "What will be the level of questions asked in the Prelims, and what about the Final problem?",
