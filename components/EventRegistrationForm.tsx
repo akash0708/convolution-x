@@ -12,10 +12,10 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import { z } from "zod";
 
 const eventConfigurations = [
-  { eventName: "circuistics", min: 3, max: 4 },
+  { eventName: "circuistics", min: 2, max: 3 },
   { eventName: "sparkhack", min: 1, max: 3 },
-  { eventName: "eureka", min: 3, max: 4 },
-  { eventName: "inquizzitive", min: 2, max: 4 },
+  { eventName: "eureka", min: 2, max: 3 },
+  { eventName: "inquizzitive", min: 1, max: 3 },
   { eventName: "decisia", min: 1, max: 4 },
   { eventName: "aboltabol", min: 0, max: 3 },
 ];
