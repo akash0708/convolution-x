@@ -6,7 +6,7 @@ import flakebg from "@/assets/images/Circuistics/whitestarbg.png";
 import herobg from "@/assets/images/Circuistics/heroBg.png";
 import herobgMobile from "@/assets/images/Circuistics/heroMobile.png";
 import flakebgMobile from "@/assets/images/Circuistics/phone white star bg.png";
-const aboutDecisia=`Get ready to unleash your inner inventor! Imagine bringing your most innovative electronics project to life, just like you've seen in the movies. Circuistics is your chance to make it happen! Join us for an experience where knowledge meets creativity and excellence is born. Design your own electronic masterpiece and compete for exciting prizes!`
+const aboutDecisia=`Get ready to unleash your inner inventor! Imagine bringing your most innovative electronics project to life. Circuistics is your chance to make it happen! Join us for an experience where knowledge meets creativity and excellence is born. Design your own electronic masterpiece and compete for exciting prizes!`
 
 const HeroCircuistics = () => {
     return (

@@ -8,7 +8,7 @@ import shantu from "@/assets/images/Circuistics/shantu.png";
 import flakebgMobile from "@/assets/images/Circuistics/phone white star bg.png";
 const rules = [
     "Teams can have 3-4 (max.) members, including the Team Lead.",
-    "Teams may not be formed across different institutes or across different years; only students from the same year and the same institute can form a team.",
+    "Teams may be formed across different institutes but not across different years; only students from the same year can form a team.",
     "Registration will be ONLINE through the official website of Convolution-X.",
     "There will be two Tiers for this event: Tier 1 for UG1 and UG2, and Tier 2 for UG3 and UG4.",
     "There will be two rounds: Prelims (Pen & Paper Mode) and Finals, conducted over a span of two days.",

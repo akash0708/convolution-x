@@ -14,7 +14,7 @@ const faqData = [
   {
       question: "Will senior participants within a particular Tier have an advantage over others?",
       answer: 
-        "No, the competition is designed to be fair and unbiased. The Prelims will have separate question papers for UG1 and UG2. For the Finals, selection will be based on a normalized scoring system and the final problems will be unique for each year. This ensures that all participants, regardless of seniority, have an equal opportunity in the event.For Tier 2 as well, the level of the questions will be such that there will be no disparity in chances of qualifications for UG3 and UG4.",
+        "No, the competition is designed to be fair and unbiased. The Prelims will have separate question papers for UG1 and UG2. For the Finals, selection will be based on a normalized scoring system and the final problems will be unique for each tier. For Tier 2 as well, the level of the questions will be such that there will be no disparity in chances of qualifications for UG3 and UG4.",
   },
   {
       question: "What will be the level of questions asked in the Prelims, and what about the Final problem?",
