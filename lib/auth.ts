@@ -24,11 +24,18 @@ export const signUp = async (email: string, password: string) => {
 
 export const signIn = async (email: string, password: string) => {
   try {
+    // debug
+    // console.log("email", email, "password", password);
+
     const userCredential = await signInWithEmailAndPassword(
       auth,
       email,
       password
     );
+
+    //debug
+    // console.log("userCredential", userCredential.user.email);
+    // console.log("userCredential emailverfi", userCredential.user.emailVerified);
 
     // Set a cookie with user information or token
     Cookies.set("users", JSON.stringify(userCredential.user), { expires: 45 }); // Expires in 45 days
@@ -48,6 +55,9 @@ export const signIn = async (email: string, password: string) => {
       email: userCredential.user.email,
       isEmailVerified: userCredential.user.emailVerified,
     });
+
+    //debug
+    // console.log("res from verify email", res);
 
     if (res.status !== 200) {
       return {
