@@ -22,7 +22,7 @@ export default function ForgotPassword() {
       setLoading(true);
       setMessage("");
       const res = await sendPasswordResetEmail(auth, email, {
-        url: `${process.env.NEXT_PUBLIC_URL}/reset-password`,
+        url: `${process.env.NEXT_PUBLIC_URL}/login`,
       });
       setMessage("Password reset email sent! Please check your inbox.");
       toast.success("Password reset email sent! Please check your inbox.");
