@@ -17,7 +17,7 @@ const Timeline = () => {
               21st January
             </h1>
             <p className="text-center md:text-xl sm:text-lg text-[10px]">
-              Abstract Submission Begins
+              PPT Submission Begins
             </p>
             <p className="text-[9px] text-black/80 sm:text-base md:text-lg text-center ">
               Participants can start submitting ppts outlining their chosen
@@ -30,10 +30,10 @@ const Timeline = () => {
               10th February
             </h1>
             <p className="text-center  md:text-xl sm:text-lg text-[10px]">
-              Abstract Submission Ends
+              PPT Submission Ends
             </p>
             <p className="text-[9px] text-black/80 sm:text-base md:text-lg text-center ">
-              Participants must submit their abstracts by 11:59 PM.{" "}
+              Participants must submit their ppts by 11:59 PM.{" "}
             </p>
           </div>
 

@@ -26,7 +26,7 @@ const EventLeadTemplate: React.FC<EventLeadsProps> = ({
               <div className="mt-8 sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
                 {teamLead.map((member) => (
                   <div className="" key={member.name}>
-                    <div className="backdrop-blur-sm sm:h-[280px] w-[43vw] px-2 py-8 flex-col  flex justify-center items-center bg-white/20  rounded-xl shadow-black/20 shadow-md font-sans ">
+                    <div className="backdrop-blur-sm sm:h-[280px] h-full w-[43vw] px-2 py-8 flex-col  flex justify-center items-center bg-white/20  rounded-xl shadow-black/20 shadow-md font-sans ">
                       <div className="flex justify-center ">
                         <Image
                           src={`/peoplePics/` + member.image}
@@ -37,7 +37,7 @@ const EventLeadTemplate: React.FC<EventLeadsProps> = ({
                         />
                       </div>
                       <div className={`${textColor} flex flex-col items-center`}>
-                        <h2 className="  text-sm mt-2 font-semibold">
+                        <h2 className="  text-sm mt-2 text-center font-semibold">
                           {member.name}
                         </h2>
                         <div className="card-actions flex gap-2 justify-evenly mt-2">
@@ -89,7 +89,7 @@ const EventLeadTemplate: React.FC<EventLeadsProps> = ({
                   />
                 </div>
                 <div className={`${textColor} flex flex-col items-center`}>
-                  <h2 className="  mt-2 font-semibold">{member.name}</h2>
+                  <h2 className="  mt-2 font-semibold text-center">{member.name}</h2>
                   <ul className="sci card-actions flex gap-2 justify-evenly mt-4">
                     <li
                       className=""

@@ -3,7 +3,7 @@ import React from "react";
 import stone1 from "@/assets/images/Circuistics/stone1.png";
 import stone2 from "@/assets/images/Circuistics/stone2.png";
 import stone3 from "@/assets/images/Circuistics/stone3.png";
-import flakebg from "@/assets/images/Circuistics/phone white star bg.png";
+import flakebg from "@/assets/images/Circuistics/whitestarbg.png";
 import flakebgMobile from "@/assets/images/Circuistics/phone white star bg.png";
 
 const timelineDetails: { date: string; task: string,head:string }[] = [
@@ -36,6 +36,11 @@ const Timeline = () => {
       <Image
             src={flakebg}
             className=" h-auto hidden sm:block w-full  absolute opacity-90 object-cover  top-0 right-0 -z-10"
+            alt="trees"
+          />
+           <Image
+            src={flakebg}
+            className=" h-auto hidden sm:block w-full  absolute opacity-90 object-cover  bottom-0 right-0 -z-10"
             alt="trees"
           />
           <Image

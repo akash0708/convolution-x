@@ -19,7 +19,7 @@ interface EventJudgesProps {
 
 const EventJudges: React.FC<EventJudgesProps> = ({ textColor, professors }) => {
   return (
-    <div className="font-sans flex justify-center flex-col sm:flex-row gap-2 md:gap-x-12">
+    <div className="font-sans flex justify-center md:flex-wrap lg:flex-nowrap flex-col md:flex-row gap-2 md:gap-x-6">
       {professors.map((professor, index) => (
         <div
           key={index}
@@ -37,7 +37,7 @@ const EventJudges: React.FC<EventJudgesProps> = ({ textColor, professors }) => {
               <h2 className={`font-semibold sm:text-base text-sm ${textColor}`}>
                 {professor.name}
               </h2>
-              <Link href={professor.researchPoint}>
+              <Link target="_blank" href={professor.researchPoint}>
                 <FaInfoCircle />
               </Link>
             </div>

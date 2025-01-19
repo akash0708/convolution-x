@@ -15,6 +15,12 @@ import Link from "next/link";
 
 
 const Footer = () => {
+
+  // ------------------------------add mail to ----------------
+  // const handleEmailClick = () => {
+  //     const recipient = "convolutionx2025@gmail.com"; 
+  //     window.location.href = `mailto:${recipient}`;
+  //   };
   return (
     <div id="contact" className="py-16 overflow-hidden relative ">
       <div className="absolute  top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2  animate-twinkle -z-30">
@@ -206,6 +212,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="h-1 mt-10 w-[80vw] mx-auto rounded-sm bg-white/80"></div>
+      <p className="font-sans text-white text-sm mt-1  text-center">Made with ❤️ by Team Convo</p>
     </div>
   );
 };

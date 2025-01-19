@@ -19,6 +19,7 @@ import starsMobile from "@/assets/images/white variant of pink stars Mobile.webp
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import NotiIcon from "@/assets/images/notification icon.webp";
+import ErrorB from "@/assets/images/exclaim.png";
 import { FaBell, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import Loading from "../loading";
@@ -298,14 +299,51 @@ export default function ProtectedComponent() {
                 <FaBell className="text-white md:text-xl text-lg" />
               </div>
               {notifications.length == 0 && (
-                <div className="flex justify-center items-center  h-full w-full">
-                  <h1 className="px-2 font-semibold text-xl ">
+                <>
+                  <div className="bg-white/80 rounded-md">
+                    <div className="flex items-center gap-2 py-2 px-4">
+                      {/* <FaBell className="text-darkBlue text-lg" /> */}
+                      <Image
+                        src={ErrorB}
+                        alt="bell icon"
+                        height={24}
+                        width={24}
+                        className="size-6  object-cover"
+                      ></Image>
+
+                      <p className="text-darkBlue md:text-base text-sm font-medium">
+                        Kindly check your spam folder for the confirmation email
+                        and mark it as 'Not Spam' for future updates.
+                      </p>
+                    </div>
+                  </div>
+                  {/* <div className="flex justify-center items-center  h-full w-full">
+                  <h1 className="px-2 font-semibold text-xl -translate-y-1/2">
                     Your messages will appear here.
                   </h1>
-                </div>
+                  
+                </div> */}
+                </>
               )}
               {notifications.length > 0 && (
                 <div className="flex flex-col gap-y-4  overflow-y-scroll h-[88%] scrollbar-hide">
+                   <div className="bg-white/80 rounded-md">
+                    <div className="flex items-center gap-2 py-2 px-4">
+                      {/* <FaBell className="text-darkBlue text-lg" /> */}
+                      <Image
+                        src={ErrorB}
+                        alt="bell icon"
+                        height={24}
+                        width={24}
+                        className="size-6  object-cover"
+                      ></Image>
+
+                      <p className="text-darkBlue md:text-base text-sm font-medium">
+                        Kindly check your spam folder for the confirmation email
+                        and mark it as 'Not Spam' for future updates.
+                      </p>
+                    </div>
+                  </div>
                   {notifications.map((data, index) => {
                     return (
                       <div

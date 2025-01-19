@@ -263,6 +263,7 @@ const EventFooter: React.FC<MyComponentProps> = ({
         </div>
       </div>
       <div className="h-1 mt-10 w-[80vw] mx-auto rounded-sm bg-white/80"></div>
+      <p className="font-sans text-white text-sm mt-1  text-center">Made with ❤️ by Team Convo</p>
     </>
   );
 };
