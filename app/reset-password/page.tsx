@@ -34,7 +34,8 @@ export default function ResetPassword() {
       toast.success(
         "Password has been reset successfully! Login with your new password."
       );
-      setTimeout(() => router.push("/login"), 3000);
+      toast.loading("Redirecting to login...");
+      setTimeout(() => router.push("/login"), 2000);
     } catch (error: any) {
       setMessage(error.message || "Failed to reset password.");
     } finally {

@@ -312,8 +312,8 @@ export default function ProtectedComponent() {
                       ></Image>
 
                       <p className="text-darkBlue md:text-base text-sm font-medium">
-                        Kindly check your spam folder for the confirmation email
-                        and mark it as 'Not Spam' for future updates.
+                        Kindly check your spam folder for the <span className="font-bold">confirmation email</span>
+                        and mark it as &apos;Not Spam&apos; for future updates.
                       </p>
                     </div>
                   </div>
