@@ -1,9 +1,6 @@
 import axios from "axios";
 import { auth } from "./firebase";
-import {
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import Cookies from "js-cookie";
 
 export const signIn = async (email: string, password: string) => {
@@ -20,8 +17,6 @@ export const signIn = async (email: string, password: string) => {
     //debug
     // console.log("userCredential", userCredential.user.email);
     // console.log("userCredential emailverfi", userCredential.user.emailVerified);
-
-    Cookies.set("tempUsers", JSON.stringify(userCredential.user), { expires: 45 });
 
     // Set a cookie with user information or token
     Cookies.set("users", JSON.stringify(userCredential.user), { expires: 45 }); // Expires in 45 days

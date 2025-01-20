@@ -15,12 +15,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.convolutionjuee.in"),
-  title: "Convolution X | Annual Techno-Management Fest of JUEE",
+  title: "Convolution 2025",
   description:
     "Convolution, the annual technical fest of JUEE, is a vibrant celebration of talent, creativity, and innovation, showcasing a diverse range of competitions, events, and activities.",
   keywords: [
-    "Convolution X",
     "Convolution 2025",
+    "Convolution X",
+    "Convolution JUEE",
+    "Convolution JU EE",
+    "Convolution Jadavpur University",
     "Jadavpur University",
     "JUEE",
     "fest",
