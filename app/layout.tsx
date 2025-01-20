@@ -33,6 +33,13 @@ export const metadata: Metadata = {
   authors: [
     { name: "JUEE Student's Forum", url: "https://www.convolutionjuee.in" },
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://www.convolutionjuee.in",
+  },
   publisher: "Jadavpur University Electrical Engineering Students' Forum",
   twitter: {
     card: "summary_large_image",
