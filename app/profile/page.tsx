@@ -312,8 +312,11 @@ export default function ProtectedComponent() {
                       ></Image>
 
                       <p className="text-darkBlue md:text-base text-sm font-medium">
-                        Kindly check your spam folder for the <span className="font-bold">confirmation email</span>
-                        and mark it as &apos;Not Spam&apos; for future updates.
+                        Kindly check your spam folder for the{" "}
+                        <span className="font-bold">confirmation email</span>{" "}
+                        and mark it as{" "}
+                        <span className="font-bold">&apos;Not Spam&apos;</span>{" "}
+                        for future updates.
                       </p>
                     </div>
                   </div>
@@ -327,7 +330,7 @@ export default function ProtectedComponent() {
               )}
               {notifications.length > 0 && (
                 <div className="flex flex-col gap-y-4  overflow-y-scroll h-[88%] scrollbar-hide">
-                   <div className="bg-white/80 rounded-md">
+                  <div className="bg-white/80 rounded-md">
                     <div className="flex items-center gap-2 py-2 px-4">
                       {/* <FaBell className="text-darkBlue text-lg" /> */}
                       <Image
@@ -339,8 +342,11 @@ export default function ProtectedComponent() {
                       ></Image>
 
                       <p className="text-darkBlue md:text-base text-sm font-medium">
-                        Kindly check your spam folder for the confirmation email
-                        and mark it as 'Not Spam' for future updates.
+                        Kindly check your spam folder for the{" "}
+                        <span className="font-bold">confirmation email</span>{" "}
+                        and mark it as{" "}
+                        <span className="font-bold">&apos;Not Spam&apos;</span>{" "}
+                        for future updates.
                       </p>
                     </div>
                   </div>

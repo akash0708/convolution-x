@@ -1,26 +1,7 @@
 import axios from "axios";
 import { auth } from "./firebase";
-import {
-  createUserWithEmailAndPassword,
-  sendEmailVerification,
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import Cookies from "js-cookie";
-
-export const signUp = async (email: string, password: string) => {
-  // Create user in Firebase
-  const userCredential = await createUserWithEmailAndPassword(
-    auth,
-    email,
-    password
-  );
-
-  // Send verification email
-  await sendEmailVerification(userCredential.user);
-
-  return userCredential;
-};
 
 export const signIn = async (email: string, password: string) => {
   try {
