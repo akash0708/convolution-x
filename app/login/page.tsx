@@ -5,15 +5,26 @@ import { useUserStore } from "@/store/userStore";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Loading from "../loading";
+import { sendEmailVerification } from "firebase/auth";
+import Cookies from "js-cookie";
 
 export default function RegisterForm() {
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showResendVerification, setShowResendVerification] = useState(false);
+  const [tempUser, setTempUser] = useState();
+
+  // run an useEffect when showResendVerification value changes, check if a cookie "tempUser" exits, if it does, use the user object from it to send a verification email
+  useEffect(() => {
+    setTempUser(Cookies.get("tempUsers"))
+    console.log("tempUser", tempUser);
+    
+  }, [showResendVerification, tempUser]);
 
   const {user} = useUserStore();
   // if(user)  router.push("/profile");
@@ -56,6 +67,11 @@ export default function RegisterForm() {
       router.push("/profile"); // Redirect after successful login
     } catch (error) {
       setError(error instanceof Error ? error.message : "An error occurred");
+
+      // if error.message is "Verify your email in order to login." then set show resendVerification to true
+      if (error instanceof Error && error.message === "Verify your email in order to login.") {
+        setShowResendVerification(true);
+      }
     } finally {
       setLoading(false);
     }
@@ -201,6 +217,17 @@ export default function RegisterForm() {
             >
               Forgot Password?
             </Link>
+            {showResendVerification && (
+              <button
+                onClick={() => {
+                  sendEmailVerification(user);
+                  toast.success("Verification email sent successfully");
+                }}
+                className="text-center hover:text-white/80 text-sm sm:text-base text-white/90"
+              >
+                Resend Verification Email
+              </button>
+            )}
           </form>
         </div>
       </div>
