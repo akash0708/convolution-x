@@ -210,6 +210,7 @@ export async function POST(req: NextRequest) {
         subject: `${getFriendlyEventName(eventName)}`,
         name: leaderName,
         eventName,
+        teamName
       });
     } catch (emailError: any) {
       console.error("Failed to send email:", emailError.message);

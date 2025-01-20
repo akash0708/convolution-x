@@ -109,6 +109,7 @@ export async function POST(req: NextRequest) {
         subject: getFriendlyEventName(eventName),
         name: leaderName,
         eventName,
+        teamName: leaderName,
       });
     } catch (emailError: any) {
       console.log(
