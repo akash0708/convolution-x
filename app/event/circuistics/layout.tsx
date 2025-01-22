@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.convolutionjuee.in"), // Replace with your actual domain
+  metadataBase: new URL("https://www.convolutionjuee.in"),
   title: "Circuistics | Convolution X",
   description:
     "Unleash your inner inventor with Circuistics! Design innovative electronics projects, showcase creativity, and compete for exciting prizes at Convolution X.",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Circuistics | Convolution X",
     description:
       "Unleash your inner inventor with Circuistics! Design your electronic masterpiece, showcase creativity, and compete for exciting prizes at Convolution X.",
-    url: "https://www.convolutionjuee.in/events/circuistics",
+    url: "https://www.convolutionjuee.in/event/circuistics",
     siteName: "Convolution X",
     images: ["/opengraph-image.png"], // Automatically resolved using metadataBase
     locale: "en_US",
