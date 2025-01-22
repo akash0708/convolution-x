@@ -25,7 +25,7 @@ const PrizesDecisia = () => {
       </div>
       
       <div className="maxWidthForSections">
-        <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
+        <h2 className="text-3xl sm:text-5xl font-medium text-white text-shadow-dark text-center ">
           Prizes
         </h2>
         {/* -------------------------prizes--------------- */}

@@ -14,7 +14,7 @@ const Timeline = () => {
           {/* top right-------------------- */}
           <div className="absolute right-[2%] top-[12%] w-[32%]">
             <h1 className="text-black text-center md:text-2xl sm:text-lg text-xs">
-              21st January
+              25th January
             </h1>
             <p className="text-center md:text-xl sm:text-lg text-[10px]">
               PPT Submission Begins
@@ -84,7 +84,7 @@ const Timeline = () => {
             Prototype Submission Round
             </p>
             <p className="text-[9px] text-black/80 sm:text-base md:text-lg text-center ">
-            Top 10 teams will present their prototypes to the judges.
+            Top 10 teams will present their prototypes offline to the judges.
             </p>
           </div>
           {/* ------------------------seventhright-------------------- */}

@@ -1,5 +1,9 @@
+import Image from "next/image";
 import React from "react";
-
+import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
+import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 import EventLeadTemplate from "@/components/EventLeadTemplate";
 
 type TeamMember = {
@@ -12,30 +16,30 @@ type TeamMember = {
 
 const teamLead: TeamMember[] = [
   {
-    name: "Sayar Paul",
-    image: "sayar.webp",
-    linkedin: "https://www.linkedin.com/in/sayar-paul?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    name: "Arghodeep Roy Choudhury",
+    image: "argho.png",
+    linkedin: "https://www.linkedin.com/in/arghodeep-roy-choudhury-b63541264/",
     instagram:
-      "https://www.instagram.com/sayar.paul.58?utm_source=qr&igsh=MThkN3pzb3ZqYzh4cQ==",
-    facebook: "https://www.facebook.com/share/154BbZXNkH/",
+      "https://www.instagram.com/_rickroyc?igsh=MWFnNzhrZzdnMzFiaw==",
+    facebook: "",
   },
   {
-    name: " Jeson Paul Kerketta",
-    image: "jason.webp",
+    name: "Soumalya Karmakar",
+    image: "soumalo.png",
     linkedin:
-      "https://www.linkedin.com/in/jeson-paul-kerketta-32bbb3259/",
+      "https://www.linkedin.com/in/soumalya-karmakar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
-      "https://www.instagram.com/jeson_kerketta_20?igsh=MXMycDJnMzQybGVh",
-    facebook: "https://www.facebook.com/share/159kUFWye2/",
+      "https://www.instagram.com/soumalya_04?igsh=MWo4cWVsOHlsMDB1cA==",
+    facebook: "",
   },
 ];
 
 const EventLead = () => {
   return (
-    <div id="team" className="relative  py-12">
+    <div id="team" className="relative  py-20">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-30 bg-gradient-to-t from-[#981B0B]     
-      to-[#D33D18]"
+        className="absolute top-0 left-0 w-full h-full -z-40 bg-gradient-to-b from-[#67C6DD] 
+    via-[#3AADD9] to-[#2CB1DF]"
       ></div>
       {/* <Image
         src={flakebg}
@@ -51,7 +55,7 @@ const EventLead = () => {
         <h2 className="text-3xl sm:text-5xl font-medium text-white text-shadow-dark text-center ">
           Event Leads
         </h2>
-        <p className="opacity-80 text-center text-white text-shadow-dark mt-2 text-base sm:text-lg font-medium">Meet the event leads of Decisia! We are ready to address all your queries.</p>
+        <p className="opacity-80 text-center text-white text-shadow-dark mt-2 text-base sm:text-xl font-medium">Meet the event leads of JU Talks! We are ready to address all your queries.</p>
 
         {/* ---------------------------For Mobile---------------------------- */}
         {/* <div className="mt-8 sm:hidden flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2">
@@ -107,7 +111,7 @@ const EventLead = () => {
         {/* <div className="mt-8 hidden sm:flex flex-wrap justify-center sm:gap-6 sm:gap-y-8 gap-y-4 gap-2 font-sans">
           {teamLead.map((member) => (
             <div className="" key={member.name}>
-              <div className="sm:block hidden relative w-[220px] h-[250px] bg-white/25   rounded-xl shadow-black/20 shadow-md backdrop-blur-md overflow-hidden teamCard">
+              <div className="sm:block hidden relative w-[220px] h-[250px] bg-white/30   rounded-xl shadow-black/20 shadow-md backdrop-filter backdrop-blur-sm overflow-hidden teamCard">
                 <div className=" px-4 py-6 flex-col flex justify-center items-center absolute top-0 right-0 left-0   cardContent">
                   <div className="flex justify-center">
                     <Image
@@ -166,8 +170,8 @@ const EventLead = () => {
             </div>
           ))}
         </div> */}
-
 <EventLeadTemplate teamLead={teamLead} textColor='text-white'></EventLeadTemplate>
+
       </div>
     </div>
   );

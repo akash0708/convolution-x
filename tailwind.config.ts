@@ -18,6 +18,7 @@ export default {
         'radial-darkBlue-to-purple': 'radial-gradient(circle, #48279A 0%, #00092B 40%)',
         'aboutBg':"url('/aboutusBg.webp')",
         'aboutGradient':'linear-gradient(10deg, rgba(72, 39, 154, 0.6) 0%, #1A0F52 36%, #00092B 100%)',
+        //  'algo-radial': 'radial-gradient(circle, #0D30BB 0%, #0A2691 30%, #071F79 40%)'
       },
       boxShadow: {
         'shadowAbout': '4px 4px 75px 17px rgba(72, 39, 154, 1)', // Using the specified color and values

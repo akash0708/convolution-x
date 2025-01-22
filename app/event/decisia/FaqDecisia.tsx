@@ -44,7 +44,7 @@ const FaqDecisia = () => {
       />
       </div>
         <div className="maxWidthForSections">
-        <h2 className="text-4xl font-medium text-white text-shadow-dark text-center ">
+        <h2 className="text-3xl sm:text-5xl font-medium text-white text-shadow-dark text-center ">
           Frequently Asked Questions
         </h2>
         <FaqEvent faq={faqData} questionStyle="text-white text-shadow-dark" answerStyle='text-white text-shadow-dark'></FaqEvent>
