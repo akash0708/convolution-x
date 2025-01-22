@@ -20,7 +20,10 @@ export const metadata: Metadata = {
     "Convolution, the annual technical fest of JUEE, is a vibrant celebration of talent, creativity, and innovation, showcasing a diverse range of competitions, events, and activities.",
   keywords: [
     "Convolution 2025",
+    "Convolution 10.0",
     "Convolution X",
+    "Convolutionx",
+    "Convolution-X",
     "Convolution JUEE",
     "Convolution JU EE",
     "Convolution Jadavpur University",
@@ -47,6 +50,16 @@ export const metadata: Metadata = {
     description:
       "Celebrate creativity and innovation at Convolution X, JUEE's annual technical fest.",
     images: ["/opengraph-image.png"],
+  },
+  other: {
+    jsonLd: `
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.convolutionjuee.in",
+      "logo": "https://www.convolutionjuee.in/favicon.ico",
+    }
+    `,
   },
 };
 
