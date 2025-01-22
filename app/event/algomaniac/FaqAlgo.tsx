@@ -8,7 +8,7 @@ const faqData = [
     {
         question: "How will the finalists be chosen?",
         answer: 
-          " The participants of the Prelims will be ordered by their total score, with ties broken by time taken to solve. Top 30 participants in the leaderboard will be selected for the Finals.",
+          " The participants of the Prelims will be ordered by their total score, with ties broken by time taken to solve. Top 20 participants in the leaderboard will be selected for the Finals.",
     },
     {
         question: "When and where will the finals be held?",
@@ -18,7 +18,7 @@ const faqData = [
     {
         question: "Will I have to carry a laptop for the final round?",
         answer: 
-          "Additionally, participants are encouraged to ensure that their laptops are equipped with the necessary software and configurations for the competition. Please be advised to bring any specific peripherals or adapters that may be required for your devices.",
+          "Finalists are requested to carry their own laptops. Additionally, participants are also encouraged to ensure that their laptops are equipped with the necessary software and configurations for the competition. Please be advised to bring any specific peripherals or adapters that may be required for your devices.",
     },
     
   ];

@@ -17,7 +17,7 @@ const timelineDetails: { date: string; task: string,head:string }[] = [
   {
     date: "17th Feb",
     head: "Preliminary Round",
-    task: "The prelims will be held on  17th February 8pm-10pm.",
+    task: "The prelims will be held on 17th February from 8-10 PM.",
   },
   {
     date: "22nd Feb",

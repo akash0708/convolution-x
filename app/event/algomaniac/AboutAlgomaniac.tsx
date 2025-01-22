@@ -7,7 +7,7 @@ const rulesDecisia = [
     "This is a competitive programming event.",
     "There will be two rounds: Prelims and Finals.",
     "Prelims will be conducted online on 17th February.",
-    "Top 30 participants will be selected for the on-site Finals.",
+    "Top 20 participants will be selected for the on-site Finals.",
     "Individual participation in both rounds (no teams).",
     "Lab computers will be available in the finals, but finalists are requested to carry laptops as backup.",
     "There will be 5-6 questions of varying difficulty in each round, with a time limit of 2 hours.",
