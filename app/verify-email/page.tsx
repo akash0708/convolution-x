@@ -1,6 +1,7 @@
 "use client";
 
-import { getAuth, sendEmailVerification } from "firebase/auth";
+import { sendEmailVerification } from "firebase/auth";
+import { auth } from "@/lib/firebase";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -14,7 +15,7 @@ const VerifyEmail = () => {
     setMessage("");
 
     try {
-      const auth = getAuth();
+      // debug
       const user = auth.currentUser;
 
       if (!user) {

@@ -1,34 +1,22 @@
 import axios from "axios";
 import { auth } from "./firebase";
-import {
-  createUserWithEmailAndPassword,
-  sendEmailVerification,
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import Cookies from "js-cookie";
-
-export const signUp = async (email: string, password: string) => {
-  // Create user in Firebase
-  const userCredential = await createUserWithEmailAndPassword(
-    auth,
-    email,
-    password
-  );
-
-  // Send verification email
-  await sendEmailVerification(userCredential.user);
-
-  return userCredential;
-};
 
 export const signIn = async (email: string, password: string) => {
   try {
+    // debug
+    // console.log("email", email, "password", password);
+
     const userCredential = await signInWithEmailAndPassword(
       auth,
       email,
       password
     );
+
+    //debug
+    // console.log("userCredential", userCredential.user.email);
+    // console.log("userCredential emailverfi", userCredential.user.emailVerified);
 
     // Set a cookie with user information or token
     Cookies.set("users", JSON.stringify(userCredential.user), { expires: 45 }); // Expires in 45 days
@@ -48,6 +36,9 @@ export const signIn = async (email: string, password: string) => {
       email: userCredential.user.email,
       isEmailVerified: userCredential.user.emailVerified,
     });
+
+    //debug
+    // console.log("res from verify email", res);
 
     if (res.status !== 200) {
       return {
