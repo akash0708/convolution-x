@@ -3,8 +3,7 @@ import Image from 'next/image';
 import React from 'react'
 import aroura2 from '@/assets/images/Circuistics/aroura2.png'
 
-import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
-import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
+
 const faqData = [
   {
       question: "Can cross - year or cross - college teams be formed ?",

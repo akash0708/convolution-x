@@ -53,6 +53,16 @@ export default function Events() {
       img: "aboltabol.webp",
     },
     {
+      event: "Circuistics",
+      redirectTo: "circuistics",
+      img: "circuistics.webp",
+    },
+    {
+      event: "Algomaniac",
+      redirectTo: "algomaniac",
+      img: "algomaniac.png",
+    },
+    {
       event: "Ju Talks",
       redirectTo: "jutalks",
       img: "jutalks.webp",
@@ -68,16 +78,7 @@ export default function Events() {
       redirectTo: "inquizzitive",
       img: "inquizzitive.webp",
     },
-    {
-      event: "Circuistics",
-      redirectTo: "circuistics",
-      img: "circuistics.webp",
-    },
-    {
-      event: "Algomaniac",
-      redirectTo: "algomaniac",
-      img: "algomaniac.png",
-    },
+    
     {
       event: "24 Frames",
       redirectTo: "24frames",

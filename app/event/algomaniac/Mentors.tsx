@@ -2,12 +2,10 @@ import Image from "next/image";
 import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
-import { Protest_Riot } from "next/font/google";
+import decisiaBgMobile from "@/assets/images/Algomaniac/starbgMobile.png";
+import decisiaBg from "@/assets/images/Algomaniac/star bg.png";
+import line1 from '@/assets/images/Algomaniac/line1.png'
 
-const protestRiot = Protest_Riot({
-  subsets: ["latin"], 
-  weight: "400", 
-});
 type Professor = {
   name: string;
   profession: string;
@@ -16,32 +14,46 @@ type Professor = {
 };
 
 const professors: Professor[] = [
-  
+  {
+    name: "Amitava Chatterjee",
+    profession:
+      "Professor at Department of Electrical Engineering, Jadavpur University",
+    researchPoint: "https://scholar.google.co.in/citations?user=hs1L7A0AAAAJ&hl=en",
+    img: "ac.png", // Replace with the actual image path or import
+  },
+  {
+    name: "Smita Sadhu",
+    profession:
+      "Professor at Department of Electrical Engineering, Jadavpur University",
+    researchPoint: "https://scholar.google.co.in/citations?user=IG1XQYkAAAAJ&hl=en",
+    img: "ss.png", // Replace with the actual image path or import
+  },
  
 ];
 
-const Judges = () => {
+const Mentors = () => {
   return (
     <div id="judges" className="relative  py-12">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-30 bg-gradient-to-b from-[#A7200D]  to-[#981B0B]"
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#6435AD]  to-[#2C1071]"
       ></div>
-      {/* <Image
-        src={flakebg}
-        className=" h-auto hidden sm:block w-full  absolute opacity-40   bottom-0 right-0 -z-10"
+      <Image
+        src={decisiaBg}
+        className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-90   top-0 right-0 -z-10"
         alt="trees"
       />
       <Image
-        src={flakebgMobile}
-        className=" sm:hidden block h-auto w-full  absolute opacity-60   bottom-0 right-0 -z-10"
+        src={decisiaBgMobile}
+        className=" sm:hidden animate-twinkle block h-auto w-full  absolute opacity-90   top-0 right-0 -z-10"
         alt="trees"
-      /> */}
+      />
+      <Image src={line1} alt='Mountain Image'  className='absolute object-contain w-full top-[80%] h- right-0 '/>
       <div className="maxWidthForSections">
-        <h2 className="text-3xl sm:text-5xl font-medium text-white text-shadow-dark text-center ">
-          Judges
+        <h2 className="sm:text-5xl text-3xl font-medium text-white text-shadow-dark text-center ">
+          Mentors
         </h2>
         <p className="opacity-80 text-white text-center mt-2 text-base sm:text-xl font-medium">
-          Meet the Judges of Decisia!
+          Meet the Mentors of Algomaniac!
         </p>
 
         <div className="mx-auto flex justify-center mt-6">
@@ -49,7 +61,7 @@ const Judges = () => {
           <div
             className={`font-sans flex justify-center flex-col sm:flex-row gap-2 md:gap-x-12`}
           >
-            {professors.length>0 && professors.map((professor, index) => (
+            {professors.map((professor, index) => (
               <div
                 key={index}
                 className="rounded-xl bg-white/20 shadow-black/20 shadow-md backdrop-blur-sm flex  py-6 px-4 items-center gap-x-4  sm:max-w-[500px] text-white "
@@ -74,9 +86,6 @@ const Judges = () => {
                 </div>
               </div>
             ))}
-            {professors.length==0 && (
-              <p className={`text-white text-xl ${protestRiot.className}`} >To be declared soon ...</p>
-            )}
           </div>
         </div>
       </div>
@@ -84,4 +93,4 @@ const Judges = () => {
   );
 };
 
-export default Judges;
+export default Mentors;

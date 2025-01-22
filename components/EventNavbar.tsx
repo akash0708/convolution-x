@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
 import { useUserStore } from "@/store/userStore";
+import profileIcon from "@/assets/images/profileIcon.webp";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -48,6 +49,19 @@ const EventNavbar: React.FC<EventNavbarProps>  = ({navTheme}) => {
               <Link href={item.href}>{item.label}</Link>
             </li>
           ))}
+          {isLogged && <li>
+            <Link href="/profile" className="rounded-full relative group">
+              <span className="absolute hidden group-hover:block transition-all top-[130%] bg-darkBlue px-4 left-1/2 -translate-x-1/2 py-1 text-sm rounded-full">
+                Profile
+              </span>
+              <Image
+                src={profileIcon}
+                alt="profile icon"
+                height={50}
+                width={50}
+              ></Image>
+            </Link>
+          </li>}
         </ul>
       </div>
 
