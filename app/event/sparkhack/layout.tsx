@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "SparkHack | Convolution X",
     description:
       "Join SparkHack, Eastern India's biggest hackathon event, where teams build products with a remarkable social impact. Register now and showcase your innovation!",
-    url: "https://www.convolutionjuee.in/events/sparkhack",
+    url: "https://www.convolutionjuee.in/event/sparkhack",
     siteName: "Convolution X",
     images: ["/opengraph-image.png"],
     locale: "en_US",

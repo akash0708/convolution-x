@@ -47,7 +47,7 @@ const HeroCircuistics = () => {
           {/* ---------main content---------- */}
           <div className="h-full w-full  maxWidthForSections">          
     
-            <EventHero registeredUiBtn="bg-[#D11100] text-white" about={aboutDecisia} logo='/Circuistics/logo.png' buttonDesign='hover:bg-[#3122B1] shadow-white hover:shadow-[#3122B1] hover:text-white  bg-white hover:opacity-90 text-[#3122B1]' planet='/Circuistics/planet.png' mode="team" name="circuistics"></EventHero>
+            <EventHero registeredUiBtn="bg-white text-[#0D30BB]" about={aboutDecisia} logo='/Circuistics/logo.png' buttonDesign='hover:bg-[#3122B1] shadow-white hover:shadow-[#3122B1] hover:text-white  bg-white hover:opacity-90 text-[#3122B1]' planet='/Circuistics/planet.png' mode="team" name="circuistics"></EventHero>
           </div>
         </div>
       );
