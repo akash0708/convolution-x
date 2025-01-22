@@ -1,8 +1,13 @@
 const eventNameMap: Record<string, string> = {
   sparkhack: "SparkHack",
-  eureka: "Eureka!",
+  eureka: "Eureka",
   decisia: "Decisia",
   aboltabol: "Abol Tabol",
+  circuistics: "Circuistics",
+  algomaniac: "Algomaniac",
+  jutalks: "JU Talks",
+  frames: "24 Frames",
+  inquizzitive: "Inquizzitive",
   // Add more mappings as needed
 };
 
