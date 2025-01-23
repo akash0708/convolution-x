@@ -14,7 +14,13 @@ export async function POST(req: NextRequest) {
       leaderName,
     } = await req.json();
 
-    const team_events = ["sparkhack", "decisia", "aboltabol", "circuistics"];
+    const team_events = [
+      "sparkhack",
+      "decisia",
+      "aboltabol",
+      "circuistics",
+      "eureka",
+    ];
 
     if (!team_events.includes(eventName.toLowerCase())) {
       return NextResponse.json(
@@ -210,7 +216,7 @@ export async function POST(req: NextRequest) {
         subject: `${getFriendlyEventName(eventName)}`,
         name: leaderName,
         eventName,
-        teamName
+        teamName,
       });
     } catch (emailError: any) {
       console.error("Failed to send email:", emailError.message);

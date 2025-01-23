@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     "Convolution, the annual technical fest of JUEE, is a vibrant celebration of talent, creativity, and innovation, showcasing a diverse range of competitions, events, and activities.",
   keywords: [
     "Convolution 2025",
+    "Convolution 25",
+    "Convolution",
     "Convolution 10.0",
     "Convolution X",
     "Convolutionx",
