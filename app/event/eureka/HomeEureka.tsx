@@ -17,7 +17,7 @@ const HomeEureka = () => {
       "
         >
           {/* ----------------------for all the snowflakes and stuff------------------- */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0D30BB] to-[#041550] -z-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-[#DFF3BB] -z-20">
             {/* ----------------for bg image--------------- */}
             <div className="relative w-full h-full ">
               <Image
