@@ -13,6 +13,17 @@ import { MdCall, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import whiteStarPhone from "@/assets/images/phone white stars.webp"
 import Link from "next/link";
 
+const events = [
+  { name: "Algomaniac", href: "/event/algomaniac" },
+  { name: "Abol Tabol", href: "/event/aboltabol" },
+  { name: "Circuistics", href: "/event/circuistics" },
+  { name: "Decisia", href: "/event/decisia" },
+  { name: "Eureka", href: "/event/eureka" },
+  { name: "Sparkhack", href: "/event/sparkhack" },
+  { name: "Inquizzitive", href: "/event/inquizitive" },
+  { name: "JU Talks", href: "/event/jutalks" },
+  { name: "24 Frames", href: "/event/24frames" },
+];
 
 const Footer = () => {
 
@@ -181,33 +192,11 @@ const Footer = () => {
           <h2 className="text-3xl  text-white">Events</h2>
           <span className="h-1 w-14 mt-2 rounded-full bg-white"></span>
           <ul className="mt-6 [&>*]:eventLinks">
-          <li>
-    <Link href="/event/decisia">Decisia</Link>
-  </li>
-  <li>
-    <Link href="/event/sparkhack">Sparkhack</Link>
-  </li>
-  <li>
-    <Link href="/event/algomaniac">Algomaniac</Link>
-  </li>
-  <li>
-    <Link href="/event/aboltabol">Abol Tabol</Link>
-  </li>
-  <li>
-    <Link href="/event/circuistics">Circuistics</Link>
-  </li>
-  <li>
-    <Link href="/event/inquizzitive">Inquizzitive</Link>
-  </li>
-  <li>
-    <Link href="/event/eureka">Eureka</Link>
-  </li>
-  <li>
-    <Link href="/event/jutalks">JU Talks</Link>
-  </li>
-  <li>
-    <Link href="/event/24frames">24 Frames</Link>
-  </li>
+          {events.map((event, index) => (
+              <li key={index} className="hover:scale-105 text-lg sm:text-left text-center">
+                <Link href={event.href}>{event.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

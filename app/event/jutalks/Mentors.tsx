@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
 type Professor = {
@@ -77,7 +75,7 @@ const Mentors = () => {
                     <h2 className="font-semibold sm:text-base text-sm  ">
                       {professor.name}
                     </h2>
-                    <Link href={professor.researchPoint} className="">
+                    <Link target="_blank" href={professor.researchPoint} className="">
                       <FaInfoCircle />
                     </Link>
                   </div>

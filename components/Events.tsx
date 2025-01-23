@@ -63,16 +63,17 @@ export default function Events() {
       img: "algomaniac.png",
     },
     {
+      event: "Eureka",
+      redirectTo: "eureka",
+      img: "eureka.webp",
+    },
+    {
       event: "Ju Talks",
       redirectTo: "jutalks",
       img: "jutalks.webp",
     },
     
-    {
-      event: "Eureka",
-      redirectTo: "eureka",
-      img: "eureka.webp",
-    },
+    
     {
       event: "Inquizitive",
       redirectTo: "inquizzitive",

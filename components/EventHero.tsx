@@ -12,8 +12,9 @@ interface MyComponentProps {
     mode: string;
     name: string; 
     registeredUiBtn:string;
+    textColor?: string;
   }
-  const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo,mode,name,registeredUiBtn }) => {
+  const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo,mode,name,registeredUiBtn,textColor = "text-white text-shadow-dark", }) => {
   const {teams} = useUserStore()
   const isRegistered=teams.includes(name)
   // console.log(isRegistered)
@@ -30,7 +31,7 @@ interface MyComponentProps {
 
           <div className="flex flex-col justify-center items-center gap-y-6">
             <Image width={400} height={400} src={logo} alt="logo" className="sm:w-[35vw] object-cover w-[70vw]"></Image>
-            <p className="text-white text-center sm:text-xl text-base text-shadow-dark">
+            <p className={`${textColor} text-center sm:text-xl text-base `}>
             {about}
             </p>
             {isRegistered? <p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full ${registeredUiBtn}`}>You have Registered for this Event</p>:

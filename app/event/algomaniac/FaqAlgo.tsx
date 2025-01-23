@@ -1,8 +1,6 @@
 import FaqEvent from '@/components/FaqEvent'
-import Image from 'next/image';
 import React from 'react'
-import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
-import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
+
 
 const faqData = [
     {
@@ -30,16 +28,7 @@ const FaqAlgo = () => {
             className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#0D30BB]     
           to-[#2C1071]"
           >
-            {/* <Image
-            src={decisiaBg}
-            className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-90   top-0 right-0 -z-10"
-            alt="trees"
-          />
-          <Image
-            src={decisiaBgMobile}
-            className=" sm:hidden animate-twinkle block h-auto w-full  absolute opacity-90   top-0 right-0 -z-10"
-            alt="trees"
-          /> */}
+            
           </div>
             <div className="maxWidthForSections">
             <h2 className="sm:text-5xl text-3xl font-medium text-white text-shadow-dark mb-8 text-center ">

@@ -11,13 +11,13 @@ interface MyComponentProps {
 }
 
 const events = [
-  { name: "Decisia", href: "/event/decisia" },
-  { name: "Sparkhack", href: "/event/sparkhack" },
   { name: "Algomaniac", href: "/event/algomaniac" },
   { name: "Abol Tabol", href: "/event/aboltabol" },
   { name: "Circuistics", href: "/event/circuistics" },
-  { name: "Inquizzitive", href: "/event/inquizitive" },
+  { name: "Decisia", href: "/event/decisia" },
   { name: "Eureka", href: "/event/eureka" },
+  { name: "Sparkhack", href: "/event/sparkhack" },
+  { name: "Inquizzitive", href: "/event/inquizitive" },
   { name: "JU Talks", href: "/event/jutalks" },
   { name: "24 Frames", href: "/event/24frames" },
 ];
