@@ -2,7 +2,7 @@ import React from "react";
 import gold from "@/assets/images/Eureka/gold prize.png";
 import silver from "@/assets/images/Eureka/silver prize.png";
 import bronze from "@/assets/images/Eureka/bronze prize.png";
-import leafBg from '@/assets/images/Eureka/leafBg.png'
+import leafBg from '@/assets/images/Eureka/leafBg2.png'
 import leafBgMobile from '@/assets/images/Eureka/leafBgMobile.png'
 
 import Image from "next/image";
@@ -15,7 +15,7 @@ const Prizes = () => {
            
             <Image
             src={leafBg}
-            className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-40   top-0 right-0 -z-10"
+            className=" h-auto hidden sm:block w-full  absolute    top-0 right-0 -z-10"
             alt="trees"
           />
           <Image

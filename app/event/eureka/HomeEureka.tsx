@@ -3,10 +3,11 @@ import React from "react";
 import Image from "next/image";
 import EventHero from "@/components/EventHero";
 import HeroBg from '@/assets/images/Eureka/hero section.png'
+import HeroBgBottom from '@/assets/images/Eureka/heroBottom.png'
 import vine1 from '@/assets/images/Eureka/vine1.png'
 import vine2 from '@/assets/images/Eureka/vine2.png'
 import birds from '@/assets/images/Eureka/white brids.png'
-const aboutDecisia = ` Welcome to “ Eureka! ”, the ultimate test of logic, reasoning, and puzzle-solving skills at our annual  techno management fest organised by JUEE ! This event will push your mental agility and problem-solving abilities to the limit with challenging riddles, complex puzzles, and mind-boggling aptitude questions. Assemble your team, sharpen your wits, and get ready to tackle Eureka's thrilling challenges that promise to be both stimulating and unforgettable!`;
+const aboutDecisia = ` Welcome to “ Eureka! ”, the ultimate test of logic, reasoning, and puzzle-solving skills at the annual  techno management fest organised by JUEE ! This event will push your mental agility and problem-solving abilities to the limit with challenging riddles, complex puzzles, and mind-boggling aptitude questions. Assemble your team, sharpen your wits, and get ready to tackle Eureka's thrilling challenges that promise to be both stimulating and unforgettable!`;
 const HomeEureka = () => {
     return (
         <div
@@ -21,7 +22,12 @@ const HomeEureka = () => {
             <div className="relative w-full h-full ">
               <Image
                 src={HeroBg}
-                className="absolute top-0 left-0 h-full object-cover"
+                className="absolute top-0 left-0 md:w-full md:h-auto h-full object-cover"
+                alt="trees"
+              />
+              <Image
+                src={HeroBgBottom}
+                className="absolute bottom-0 w-full"
                 alt="trees"
               />
               <Image

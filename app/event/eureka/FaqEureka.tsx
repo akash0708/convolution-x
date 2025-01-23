@@ -1,13 +1,13 @@
 import React from 'react'
 import FaqEvent from '@/components/FaqEvent'
 import leafBg from '@/assets/images/Eureka/leafBg.png'
-import leafBgMobile from '@/assets/images/Eureka/leafBgMobile.png'
+import leafBgMobile from '@/assets/images/Eureka/leafBgMobile2.png'
 import Image from 'next/image';
 const faqData = [
     {
         question: "Can we use any AI tools for the  event?",
         answer: 
-          " Feel free to utilize any AI tools of your choice for the event. We encourage participants to explore a diverse range of AI tools to enhance their experience and contribute to the innovative atmosphere at the Electrical Engineering Department, Jadavpur University.",
+          "For Round 2, feel free to utilize any AI tools of your choice for the event. We encourage participants to explore a diverse range of AI tools to enhance their experience and contribute to the innovative atmosphere at the Electrical Engineering Department, Jadavpur University.",
     },
     {
         question: "Will there be any charging points and internet available?",
@@ -17,7 +17,7 @@ const faqData = [
     {
         question: "Is it mandatory to form a team with students of the same department?",
         answer: 
-          "Participation is entirely voluntary, and forming a team is open to  students from any department or college. Embrace the flexibility to collaborate across disciplines and create diverse teams at your convenience. Join us in this non-mandatory opportunity to foster  interdisciplinary connections and showcase your collective talents  at the Electrical Engineering Department, Jadavpur University.",
+          "Participation is entirely voluntary, and forming a team is open to  students from any department or college. Embrace the flexibility to collaborate across disciplines and create diverse teams at your convenience. Join us in this opportunity to foster  interdisciplinary connections and showcase your collective talents  at the Electrical Engineering Department, Jadavpur University.",
     },
     {
         question: "Who can participate in this event?",
@@ -27,7 +27,7 @@ const faqData = [
     {
         question: " Where will the event be held?",
         answer: 
-          "The event will be held on campus at the Electrical Engineering Department, Jadavpur University. It promises to be an insightful gathering, featuring the latest in electrical engineering and opportunities for enriching discussions.",
+          "The event will be held on campus at the Electrical Engineering Department, Jadavpur University. It promises to be an insightful gathering, featuring the latest breakthrough in electrical engineering and opportunities for enriching discussions.",
     },
     
   ];
@@ -37,7 +37,7 @@ const FaqEureka = () => {
         <div id='faq' className='py-12 min-h-screen relative flex justify-center items-center '>
            <Image
             src={leafBg}
-            className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-40   top-0 right-0 -z-10"
+            className=" h-auto  hidden sm:block w-full  absolute opacity-60   top-0 right-0 -z-10"
             alt="trees"
           />
           <Image
