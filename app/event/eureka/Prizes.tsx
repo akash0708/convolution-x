@@ -90,7 +90,7 @@ const Prizes = () => {
             </div>
           </div>
         </div>
-      );Eureka
+      );
 }
 
 export default Prizes
