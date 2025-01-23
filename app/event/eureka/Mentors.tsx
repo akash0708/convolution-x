@@ -2,8 +2,10 @@ import Image from "next/image";
 import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
-import decisiaBgMobile from '@/assets/images/Decisia/asteroid bg mobile.png'
-import decisiaBg from '@/assets/images/Decisia/asteroid bg.png'
+import decisiaBgMobile from "@/assets/images/Algomaniac/starbgMobile.png";
+import decisiaBg from "@/assets/images/Algomaniac/star bg.png";
+import line1 from '@/assets/images/Algomaniac/line1.png'
+
 type Professor = {
   name: string;
   profession: string;
@@ -13,12 +15,13 @@ type Professor = {
 
 const professors: Professor[] = [
   {
-    name: "Arpan Kumar Pradhan",
+    name: "Susanta Ray",
     profession:
       "Professor at Department of Electrical Engineering, Jadavpur University",
-    researchPoint: "https://scholar.google.co.in/citations?user=fqBBOAYAAAAJ&hl=en",
-    img: "ap.png", // Replace with the actual image path or import
+    researchPoint: "https://www.researchgate.net/profile/Susanta-Ray",
+    img: "sr.png", // Replace with the actual image path or import
   },
+  
  
 ];
 
@@ -26,9 +29,9 @@ const Mentors = () => {
   return (
     <div id="judges" className="relative  py-12">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#D33D18]  to-[#A7200D]"
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#85C14B]  to-[#a79f0f]"
       ></div>
-      <Image
+      {/* <Image
         src={decisiaBg}
         className=" h-auto animate-twinkle hidden sm:block w-full  absolute opacity-90   top-0 right-0 -z-10"
         alt="trees"
@@ -38,12 +41,13 @@ const Mentors = () => {
         className=" sm:hidden animate-twinkle block h-auto w-full  absolute opacity-90   top-0 right-0 -z-10"
         alt="trees"
       />
+      <Image src={line1} alt='Mountain Image'  className='absolute object-contain w-full top-[80%] h- right-0 '/> */}
       <div className="maxWidthForSections">
-        <h2 className="text-3xl sm:text-5xl font-medium text-white text-shadow-dark text-center ">
+        <h2 className="sm:text-5xl text-3xl font-medium text-[#115211] text-center ">
           Mentors
         </h2>
-        <p className="opacity-80 text-white text-center mt-2 text-base sm:text-xl font-medium">
-          Meet the Mentors of Decisia!
+        <p className="opacity-80 text-[#115211] text-center mt-2 text-base sm:text-xl font-medium">
+          Meet the Mentors of Eureka!
         </p>
 
         <div className="mx-auto flex justify-center mt-6">
@@ -54,7 +58,7 @@ const Mentors = () => {
             {professors.map((professor, index) => (
               <div
                 key={index}
-                className="rounded-xl bg-white/20 shadow-black/20 shadow-md backdrop-blur-sm flex  py-6 px-4 items-center gap-x-4  sm:max-w-[500px] text-white "
+                className="rounded-xl bg-white/20 shadow-black/20 shadow-md backdrop-blur-sm flex  py-6 px-4 items-center gap-x-4  sm:max-w-[500px] text-[#115211] "
               >
                 <Image
                   src={`/MentorJudges/` + professor.img}

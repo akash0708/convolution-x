@@ -77,7 +77,7 @@ const Mentors = () => {
                     <h2 className="font-semibold sm:text-base text-sm  ">
                       {professor.name}
                     </h2>
-                    <Link href={professor.researchPoint} className="">
+                    <Link target="_blank" href={professor.researchPoint} className="">
                       <FaInfoCircle />
                     </Link>
                   </div>

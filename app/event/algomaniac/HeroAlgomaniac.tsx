@@ -51,7 +51,7 @@ const HeroAlgomaniac = () => {
       {/* ---------main content---------- */}
       <div className="h-full w-full  maxWidthForSections">
         <EventHero
-          registeredUiBtn="bg-[#D11100] text-white"
+          registeredUiBtn="bg-white text-[#0D30BB]"
           about={aboutDecisia}
           logo="/Algomaniac/logo.png"
           buttonDesign="shadow-white/70 hover:shadow-white/30  bg-[#0D30BB] hover:bg-white/90  hover:text-[#041550] text-[#ffffff]"
