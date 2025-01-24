@@ -27,12 +27,30 @@ export function middleware(req: NextRequest) {
 
       const userID = JSON.parse(userCredential.value);
 
-      if (
-        userID.uid !== process.env.ADMIN_ID ||
-        userID.uid !== process.env.ADMIN_2_ID ||
-        userID.uid !== process.env.ADMIN_3_ID ||
-        userID.uid !== process.env.ADMIN_4_ID
-      ) {
+      const allowedAdmins = [
+        process.env.ADMIN_ID,
+        process.env.ADMIN_2_ID,
+        process.env.ADMIN_3_ID,
+        process.env.ADMIN_4_ID,
+        process.env.ADMIN_5_ID,
+        process.env.ADMIN_6_ID,
+        process.env.ADMIN_7_ID,
+        process.env.ADMIN_8_ID,
+        process.env.ADMIN_9_ID,
+        process.env.ADMIN_10_ID,
+        process.env.ADMIN_11_ID,
+        process.env.ADMIN_12_ID,
+        process.env.ADMIN_13_ID,
+        process.env.ADMIN_14_ID,
+        process.env.ADMIN_15_ID,
+        process.env.ADMIN_16_ID,
+        process.env.ADMIN_17_ID,
+        process.env.ADMIN_18_ID,
+        process.env.ADMIN_19_ID,
+        process.env.ADMIN_20_ID,
+      ];
+
+      if (!allowedAdmins.includes(userID.uid)) {
         // console.log(typeof userID.uid);
         // console.log(typeof process.env.ADMIN_ID);
         // console.log("User:", userID.uid);
