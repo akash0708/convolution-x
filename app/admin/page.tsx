@@ -103,14 +103,23 @@ const AdminPanel = () => {
         <label htmlFor="eventName" className="block text-sm font-medium mb-2">
           Event Name
         </label>
-        <input
+        <select
           id="eventName"
-          type="text"
           className="border border-gray-300 rounded px-3 py-2 w-full"
-          placeholder="Enter event name"
           value={eventName}
           onChange={(e) => setEventName(e.target.value)}
-        />
+        >
+          <option value="">Select an event</option> {/* Default option */}
+          <option value="sparkhack">sparkhack</option>
+          <option value="decisia">decisia</option>
+          <option value="aboltabol">aboltabol</option>
+          <option value="circuistics">circuistics</option>
+          <option value="eureka">eureka</option>
+          <option value="frames">frames</option>
+          <option value="inquizzitive">inquizzitive</option>
+          <option value="algomaniac">algomaniac</option>
+          <option value="jutalks">jutalks</option>
+        </select>
       </div>
 
       <div className="mb-4">
@@ -126,7 +135,7 @@ const AdminPanel = () => {
       </div>
 
       <button
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:opacity-50"
+        className="bg-blue-500 text-white px-4 py-2 mr-4 rounded hover:bg-blue-600 disabled:opacity-50"
         onClick={fetchTeams}
         disabled={loading}
       >
