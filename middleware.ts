@@ -19,6 +19,31 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
+  // Admin routes extract the user from the userCookie
+  if (req.nextUrl.pathname.startsWith("/admin")) {
+    try {
+      const userCredential =
+        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
+
+      const userID = JSON.parse(userCredential.value);
+
+      if (
+        userID.uid !== process.env.ADMIN_ID ||
+        userID.uid !== process.env.ADMIN_2_ID ||
+        userID.uid !== process.env.ADMIN_3_ID ||
+        userID.uid !== process.env.ADMIN_4_ID
+      ) {
+        // console.log(typeof userID.uid);
+        // console.log(typeof process.env.ADMIN_ID);
+        // console.log("User:", userID.uid);
+        // console.log("Admin:", process.env.ADMIN_ID);
+        return NextResponse.redirect(new URL("/profile", req.url));
+      }
+    } catch (error) {
+      console.error("Error parsing userCookie:", error);
+    }
+  }
+
   // Redirect unauthenticated users from /event/register-solo or /event/register-team to /login
   if (
     !userCookie &&
