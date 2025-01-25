@@ -82,7 +82,7 @@ export default function Events() {
     
     {
       event: "24 Frames",
-      redirectTo: "24frames",
+      redirectTo: "frames",
       img: "24frames.webp",
     },
   ];
