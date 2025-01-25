@@ -1,8 +1,7 @@
 "use client"
-import Image from 'next/image';
-import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
+
 import FaqEvent from '@/components/FaqEvent';
+
 const faqData = [
     {
       question: " What is the objective of JU Talks?",
@@ -29,26 +28,19 @@ const faqData = [
 const FaqTalks = () => {
     
   return (
-    <div id='faq' className='min-h-screen relative flex justify-center items-center  '>
-      <div className="absolute top-0 bottom-0 left-0 right-0 w-full  bg-gradient-to-b from-[#2CB1DF] via-[#3AADD9] to-[#67C6DD] 
-     -z-20"></div>
- {/* <Image
-        src={flakebg}
-        className=" h-auto hidden sm:block w-full  absolute opacity-40  top-0 right-0 -z-10"
-        alt="trees"
-      />
-      <Image
-        src={flakebgMobile}
-        className=" sm:hidden block h-full w-auto object-cover  absolute opacity-60   bottom-0 right-0 -z-10"
-        alt="trees"
-      /> */}
+    <div id='faq' className='py-12 relative flex justify-center items-center  '>
+      <div className="absolute top-0 bottom-0 left-0 right-0 w-full  bg-[#f6a5c1] 
+     -z-50"></div>
+      
+
+
         <div className="maxWidthForSections">
-        <h2 className="sm:text-5xl text-3xl mb-8 font-medium text-white text-shadow-dark text-center ">
+        <h2 className="sm:text-5xl text-3xl mb-8 font-medium text-[#552614] text-center ">
           Frequently Asked Questions
         </h2>
         
 
-        <FaqEvent faq={faqData} questionStyle="text-white text-shadow-dark" answerStyle='text-white text-shadow-dark'></FaqEvent>
+        <FaqEvent faq={faqData} questionStyle="text-[#552614]" answerStyle='text-[#552614]'></FaqEvent>
 
         </div>
     </div>
