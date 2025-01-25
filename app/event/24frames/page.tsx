@@ -21,7 +21,7 @@ const page = () => {
   return (
      <Suspense fallback={ <Loading/>}>
 <EventNavbar
-          navTheme="bg-[#1BA0E8] "
+          navTheme="bg-gradient-to-b from-[#3e8df7] via-[#709dfd] via-[#829ffb] via-[#b8b1fc] via-[#948ded]  to-[#795ff4] "
         ></EventNavbar>
    <div className={`${protestRiot.className} h-screen`}>
     {/* <ComingSoon></ComingSoon> */}

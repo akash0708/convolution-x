@@ -17,8 +17,8 @@ const HeroFrames = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-[#1BA0E8] -z-20">
         {/* ----------------for bg image--------------- */}
       </div>
-        <Image src={heroBg} alt="hero" className="absolute md:top-20 top-16 left-1/2 -translate-x-1/2" />
-        <Image src={heroBgBottom} alt="hero" className="absolute bottom-0 left-1/2 -translate-x-1/2" />
+        <Image src={heroBg} alt="hero" className="absolute md:top-20 top-16 left-1/2 -translate-x-1/2 -z-10" />
+        <Image src={heroBgBottom} alt="hero" className="absolute bottom-0 left-1/2 -translate-x-1/2 -z-10" />
 
       {/* ---------main content---------- */}
       <div className="h-full w-full  maxWidthForSections">
@@ -29,7 +29,7 @@ const HeroFrames = () => {
           buttonDesign="hover:bg-[#ffff] text-[#1BA0E8]  shadow-[#ffff] hover:shadow-[#fff]/90 bg-white hover:opacity-80 "
           planet="/Frames/planet.png"
           mode="solo"
-          name="24frames"
+          name="frames"
         ></EventHero>
       </div>
     </div>

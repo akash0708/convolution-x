@@ -12,12 +12,12 @@ const PrizesFrames = () => {
       <Image
         src={bgUp}
         alt="hero"
-        className="absolute hidden md:block top-0 left-1/2 -translate-x-1/2"
+        className="absolute hidden md:block top-0 left-1/2 -translate-x-1/2 -z-10"
       />
       <Image
         src={bgDown}
         alt="hero"
-        className="absolute hidden md:block bottom-[-1.2px] left-1/2 -translate-x-1/2"
+        className="absolute hidden md:block bottom-[-1.2px] left-1/2 -translate-x-1/2 -z-10"
       />
       <Image
         src={bgMobile}

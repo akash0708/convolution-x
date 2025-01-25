@@ -120,7 +120,7 @@ export default function ProtectedComponent() {
     "sparkhack",
     "eureka",
     "jutalks",
-    "24frames",
+    "frames",
     "circuistics",
     "algomaniac",
     "inquizzitive",

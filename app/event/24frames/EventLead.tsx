@@ -15,7 +15,7 @@ type TeamMember = {
 
 const teamLead: TeamMember[] = [
   {
-    name: "Gaurav Das",
+    name: "Gourav Das",
     image: "gourav.png",
     linkedin: "https://www.linkedin.com/in/gourav-das-103a6424a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
@@ -42,12 +42,12 @@ const EventLead = () => {
       <Image
         src={bgDown}
         alt="hero"
-        className="absolute hidden md:block top-0 left-1/2 -translate-x-1/2 -scale-y-100"
+        className="absolute hidden md:block top-0 left-1/2 -translate-x-1/2 -scale-y-100 -z-10"
       />
       <Image
         src={bgUp}
         alt="hero"
-        className="absolute hidden md:block bottom-0 left-1/2 -translate-x-1/2 -scale-y-100"
+        className="absolute hidden md:block bottom-0 left-1/2 -translate-x-1/2 -scale-y-100 -z-10"
       />
        <Image
         src={bgMobile}
