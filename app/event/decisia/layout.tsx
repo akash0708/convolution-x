@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Decisia | Convolution X",
     description:
       "Pitch your dream business idea in front of a panel of esteemed judges. Showcase your product, depict the profit margins, and take your business to the next level at Decisia!",
-    url: "https://www.convolutionjuee.in/events/decisia",
+    url: "https://www.convolutionjuee.in/event/decisia",
     siteName: "Convolution X",
     images: ["/opengraph-image.png"],
     locale: "en_US",
