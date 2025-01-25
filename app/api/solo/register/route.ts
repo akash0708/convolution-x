@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
       leaderName,
     });
 
-    const solo_events = ["aboltabol", "algomaniac"];
+    const solo_events = ["aboltabol", "algomaniac", "jutalks"];
 
     if (!solo_events.includes(eventName.toLowerCase())) {
       return NextResponse.json(
