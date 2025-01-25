@@ -4,7 +4,7 @@ import person1 from "@/assets/images/JuTalks/1.png";
 import person2 from "@/assets/images/JuTalks/2.png";
 import person3 from "@/assets/images/JuTalks/3.png";
 import person4 from "@/assets/images/JuTalks/4.png";
-import person5 from "@/assets/images/JuTalks/5.png"; 
+import person5 from "@/assets/images/JuTalks/5.png";
 import stripBg from '@/assets/images/JuTalks/stripBg.png'
 
 const items: { name: string; description: string }[] = [
