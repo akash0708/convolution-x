@@ -11,7 +11,7 @@ const faqData = [
     {
       question: "Who will be the speakers at the event?",
       answer: 
-        "Various prominent figures will attend such an occasion, ranging from industrialists, veterans to technology specialists & well known faces from artistic fields. Every speaker would discuss the aspects in a little wider sense by narrating their experiences and opinions.",
+        "In the previous editions of JU Talks, various prominent figures have attended such an occasion, ranging from industrialists, veterans to technology specialists & well known faces from artistic fields. The panelists of this edition will be announced soon, so stay tuned !",
     },
     {
       question: "How can the audience participate during JU Talks?",
@@ -21,7 +21,7 @@ const faqData = [
     {
       question: "Will there be any specified topic?",
       answer: 
-        "Yes, a topic will be selected by the event leads related to modern societal issues & our panelists will be giving their valuable insights on that particular subject.",
+        "Yes, a topic will be selected by our team related to modern societal issues & our panelists will be giving their valuable insights on that particular subject.",
     },
     
   ];

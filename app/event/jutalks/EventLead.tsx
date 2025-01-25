@@ -40,7 +40,7 @@ const EventLead = () => {
         className="absolute top-0 left-0 w-full h-full -z-40 bg-gradient-to-b from-[#f8bcd0] 
      to-[#f6a5c1] "
       ></div>
-      <Image src={sparkles} alt="strip bg" className=" absolute h-screen top-0 left-0 -z-20"></Image>
+      <Image src={sparkles} alt="strip bg" className=" absolute object-cover h-screen top-0 left-0 -z-20"></Image>
       
       <div className="maxWidthForSections">
         <h2 className="text-3xl sm:text-5xl font-medium text-[#552614] text-center ">

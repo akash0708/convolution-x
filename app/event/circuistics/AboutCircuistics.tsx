@@ -29,11 +29,11 @@ const AboutCircuistics = () => {
           ></div>
           {/* --------------------------flake Images background-------------- */}
           
-          <Image
+          {/* <Image
             src={shantu}
             className=" h-auto hidden sm:block w-full max-w-[800px]  absolute  object-cover opacity-50 -scale-x-100  top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 -z-10"
             alt="trees"
-          />
+          /> */}
           <Image
             src={flakebg}
             className=" h-auto hidden sm:block w-full  absolute  object-cover  top-0 right-0 -z-10"
@@ -46,7 +46,7 @@ const AboutCircuistics = () => {
           />
           <div className="maxWidthForSections flex flex-col items-center">
             <div
-              className={`rounded-xl sm:py-12 py-6 sm:px-8 px-4 bg-white/5 backdrop-filter backdrop-blur-sm relative shadow-white/20 shadow-lg `}
+              className={`rounded-xl sm:py-12 py-6 sm:px-8 px-4 bg-white/10 backdrop-filter backdrop-blur-sm relative shadow-white/20 shadow-lg `}
             >
               {/* ----------------------pendant hanging-------------------------- */}
               <>

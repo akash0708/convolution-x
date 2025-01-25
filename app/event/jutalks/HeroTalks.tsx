@@ -4,7 +4,7 @@ import Image from "next/image";
 import sparkles from '@/assets/images/JuTalks/sparkles.png'
 import confetti from '@/assets/images/JuTalks/confetti.png'
 
-const aboutDecisia = `A dynamic panel discussion featuring industry professionals, field veterans, and technology experts exploring trends, challenges, and innovations shaping today's world. Speakers will share unique insights and personal experiences, fostering a rich exchange of unconventional ideas.`;
+const aboutDecisia = `A dynamic panel discussion featuring industry professionals, field veterans from across various fields, and technology experts exploring the trends, challenges, and innovations shaping today's world. Speakers will share unique insights and personal experiences, fostering a rich exchange of unconventional ideas.`;
 const HeroTalks = () => {
   return (
     <div
@@ -33,7 +33,7 @@ const HeroTalks = () => {
           logo="/JU Talks/logo.png"
           buttonDesign="hover:bg-[#FCF0C4] shadow-[#FCF0C4] hover:shadow-[#512511]  bg-[#512511] hover:opacity-90 text-[#FCF0C4] hover:text-[#512511]"
           planet="/JU Talks/planet.png"
-          mode="team"
+          mode="solo"
           name="jutalks"
         ></EventHero>
       </div>

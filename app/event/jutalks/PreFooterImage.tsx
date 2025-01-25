@@ -12,7 +12,7 @@ const PreFooterImage = () => {
       <div className="absolute top-0 bottom-0 left-0 right-0 w-full  bg-[#f6a5c1] -z-20">
       </div>
       <Image src={sprinkles} alt="strip bg" className=" absolute object-cover h-screen bottom-0 left-0 -z-20"></Image>
-      <Image src={sparkles} alt="strip bg" className=" absolute h-screen -top-1/2 left-0 -z-20"></Image>
+      <Image src={sparkles} alt="strip bg" className=" absolute object-cover h-screen -top-1/2 left-0 -z-20"></Image>
 
       {/* -----------------rocket svg--------------- */}
       <div className="relative">

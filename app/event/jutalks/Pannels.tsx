@@ -4,15 +4,20 @@ import person1 from "@/assets/images/JuTalks/1.png";
 import person2 from "@/assets/images/JuTalks/2.png";
 import person3 from "@/assets/images/JuTalks/3.png";
 import person4 from "@/assets/images/JuTalks/4.png";
+import person5 from "@/assets/images/JuTalks/5.png";
 import stripBg from '@/assets/images/JuTalks/stripBg.png'
 
 const items: { name: string; description: string }[] = [
+  {
+    name: "Mr. Sabyasachi Chakraborty",
+    description: "Renowned for portraying the iconic detectives, Feluda and Kakababu.",
+  },
   {
     name: "Mr. Kalyan Mukhopadhyay",
     description: "Renowned Ex- IPS and Retired. Additional CP of Kolkata",
   },
   {
-    name: "Paramita Mukherjee",
+    name: "Ms. Paramita Mukherjee",
     description: "Eminent Psychologist with 23+ years of experience.",
   },
   {
@@ -25,7 +30,7 @@ const items: { name: string; description: string }[] = [
       "Film Director and Writer of films like Aparajito, Bhobishyoter Bhoot, BorunBabur Bondhu.",
   },
 ];
-const pics = [person1, person2, person3, person4];
+const pics = [person5,person1, person2, person3, person4];
 const Pannels = () => {
   return (
     <div id="panelist" className=" py-12 relative  flex items-center  ">

@@ -22,9 +22,7 @@ const AboutTalks = () => {
               industry experts, veterans, and tech leaders exploring trends,
               challenges, and innovations shaping our world. Speakers will share
               unique insights and experiences, fostering an engaging exchange of
-              ideas. This interactive event invites audience questions and
-              encourages participation, sparking curiosity and offering students
-              a fresh perspective on today’s world.
+              ideas. This event invites the audience to question , encourages them to participate in this highly dignified conversation and promises to offer them a fresh perspective on today’s world.
             </p>
           </div>
           <div className="md:flex justify-center hidden ">
