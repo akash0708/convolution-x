@@ -1,14 +1,13 @@
 import EventHero from "@/components/EventHero";
 import React from "react";
 import Image from "next/image";
-import sparkles from '@/assets/images/JuTalks/sparkles.png'
-import confetti from '@/assets/images/JuTalks/confetti.png'
+import sparkles from "@/assets/images/JuTalks/sparkles.png";
+import confetti from "@/assets/images/JuTalks/confetti.png";
 
 const aboutDecisia = `A dynamic panel discussion featuring industry professionals, field veterans from across various fields, and technology experts exploring the trends, challenges, and innovations shaping today's world. Speakers will share unique insights and personal experiences, fostering a rich exchange of unconventional ideas.`;
 const HeroTalks = () => {
   return (
     <div
-      
       className="min-h-screen pt-24 md:pt-0 flex justify-center items-center  relative
         
         "
@@ -20,8 +19,16 @@ const HeroTalks = () => {
       >
         {/* ----------------for bg image--------------- */}
         <div className="relative w-full h-full ">
-        <Image src={sparkles} alt="strip bg" className="h-full absolute object-cover "></Image>
-        <Image src={confetti} alt="strip bg" className="h-full absolute object-cover bottom-0 left-0"></Image>
+          <Image
+            src={sparkles}
+            alt="strip bg"
+            className="h-full absolute object-cover "
+          ></Image>
+          <Image
+            src={confetti}
+            alt="strip bg"
+            className="h-full absolute object-cover bottom-0 left-0"
+          ></Image>
         </div>
       </div>
 
