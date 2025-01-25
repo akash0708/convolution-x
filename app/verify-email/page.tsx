@@ -49,24 +49,27 @@ const VerifyEmail = () => {
         verify your account.
       </p>
       <div className="flex space-x-4">
-        <button
-          onClick={handleResendEmail}
-          disabled={isSending}
-          className={`px-6 py-2 rounded-md font-medium text-white transition 
+        {auth.currentUser ? (
+          <button
+            onClick={handleResendEmail}
+            disabled={isSending}
+            className={`px-6 py-2 rounded-md font-medium text-white transition 
         ${
           isSending
             ? "bg-gray-300 cursor-not-allowed"
             : "bg-blue-500 hover:bg-blue-600"
         }`}
-        >
-          {isSending ? "Sending..." : "Resend Verification Email"}
-        </button>
-        <button
-          onClick={handleLoginRedirect}
-          className="px-6 py-2 rounded-md font-medium text-white bg-green-500 hover:bg-green-600 transition"
-        >
-          Go to Login
-        </button>
+          >
+            {isSending ? "Sending..." : "Resend Verification Email"}
+          </button>
+        ) : (
+          <button
+            onClick={handleLoginRedirect}
+            className="px-6 py-2 rounded-md font-medium text-white bg-green-500 hover:bg-green-600 transition"
+          >
+            Go to Login
+          </button>
+        )}
       </div>
       {message && <p className="mt-6 text-gray-500 text-center">{message}</p>}
     </div>
