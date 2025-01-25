@@ -11,27 +11,21 @@ type Professor = {
 
 const professors: Professor[] = [
   {
-    name: "Debangshu Dey",
+    name: "Arindam Kumar Sil",
     profession:
       "Professor at Department of Electrical Engineering, Jadavpur University",
-    researchPoint: "https://scholar.google.com/citations?user=tlzV8CAAAAAJ&hl=en",
-    img: "dsd.png", // Replace with the actual image path or import
+    researchPoint: "https://scholar.google.com/citations?user=ypKGGcsAAAAJ&hl=en",
+    img: "aks.png", // Replace with the actual image path or import
   },
-  {
-    name: "Suddhasatwa Chakraborty",
-    profession:
-      "Professor at Department of Electrical Engineering, Jadavpur University",
-    researchPoint: "https://www.researchgate.net/profile/Suddhasatwa-Chakraborty",
-    img: "sdc.png", // Replace with the actual image path or import
-  },
+  
 ];
 
 const Mentors = () => {
   return (
-    <div id="judges" className="relative  py-20">
+    <div id="mentor" className="relative  py-20">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-white    
-     to-[#2CB1DF]"
+        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-[#FFE1C9]    
+     to-[#fad2e0]"
       >
         
       </div>
@@ -46,11 +40,11 @@ const Mentors = () => {
         alt="trees"
       /> */}
       <div className="maxWidthForSections">
-        <h2 className="text-3xl sm:text-5xl font-medium text-black text-center ">
-          Judges & Mentors
+        <h2 className="text-3xl sm:text-5xl font-medium text-[#552614] text-center ">
+          Mentor
         </h2>
-        <p className="opacity-80 text-center mt-2 text-base sm:text-xl font-medium">
-          Meet the Judges and Mentors of Sparkhack!
+        <p className="opacity-80 text-center mt-2 text-base text-[#552614] sm:text-xl font-medium">
+          Meet the Mentor of Ju Talks!
         </p>
 
         <div className="mx-auto flex justify-center mt-6">
