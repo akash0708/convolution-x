@@ -105,7 +105,7 @@ const EventRegistrationForm: React.FC = () => {
       router.push("/profile");
       reset(); // Reset the form after successful submission
     } catch (error: any) {
-      console.error("Team error:", error);
+      // console.error("Team error:", error);
       toast.error(`Failed to create team: ${error.response?.data?.message}`);
     }
   };

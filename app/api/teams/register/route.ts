@@ -242,3 +242,8 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+
+// GET route to check health of the API
+export async function GET() {
+  return NextResponse.json({ message: "API is live" });
+}
