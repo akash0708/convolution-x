@@ -8,6 +8,10 @@ import EventLead from './EventLead';
 import FaqFrames from './FaqFrames';
 import EventNavbar from '@/components/EventNavbar';
 import Footer from './Footer';
+import Timeline from './Timeline';
+import Mentors from './Mentors';
+import PrizesFrames from './PrizesFrames';
+import PreFooter from './PreFooter';
 const protestRiot = Protest_Riot({
   subsets: ["latin"], // You can specify subsets if needed
   weight: "400", // Adjust the weight based on your requirements
@@ -16,17 +20,20 @@ const protestRiot = Protest_Riot({
 const page = () => {
   return (
      <Suspense fallback={ <Loading/>}>
-{/* <EventNavbar
-          navTheme="bg-gradient-to-t from-[#DE5C00] via-[#77340F] 
-      via-[#931308] to-[#5B0804]"
-        ></EventNavbar> */}
+<EventNavbar
+          navTheme="bg-[#1BA0E8] "
+        ></EventNavbar>
    <div className={`${protestRiot.className} h-screen`}>
-    <ComingSoon></ComingSoon>
-    {/* <HeroFrames/>
+    {/* <ComingSoon></ComingSoon> */}
+    <HeroFrames/>
     <AboutFrames/>
+    <Timeline/>
+    <Mentors/>
+    <PrizesFrames/>
     <EventLead/>
     <FaqFrames/>
-    <Footer/> */}
+    <PreFooter/>
+    <Footer/>
    </div>
      </Suspense>
   )
