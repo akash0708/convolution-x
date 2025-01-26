@@ -5,7 +5,19 @@ export const metadata: Metadata = {
   title: "Decisia | Convolution X",
   description:
     "Decisia is your platform to pitch your dream business idea. Become the CEO, showcase your product, depict profit margins, and pitch it to our esteemed panel of judges. Get ready to swim with the sharks!",
-  openGraph: {
+  keywords: [
+    "Decisia",
+    "Convolution 2025 Decisia",
+    "Convolution 25 Decisia",
+    "Convolution X Decisia",
+    "business pitch",
+    "entrepreneurship",
+    "business idea",
+    "startup",
+    "JUEE",
+    "business competition",
+  ],
+    openGraph: {
     title: "Decisia | Convolution X",
     description:
       "Pitch your dream business idea in front of a panel of esteemed judges. Showcase your product, depict the profit margins, and take your business to the next level at Decisia!",
