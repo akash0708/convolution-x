@@ -17,7 +17,7 @@ const events = [
   { name: "Decisia", href: "/event/decisia" },
   { name: "Eureka", href: "/event/eureka" },
   { name: "Sparkhack", href: "/event/sparkhack" },
-  { name: "Inquizzitive", href: "/event/inquizitive" },
+  { name: "Inquizzitive", href: "/event/inquizzitive" },
   { name: "JU Talks", href: "/event/jutalks" },
   { name: "24 Frames", href: "/event/frames" },
 ];
