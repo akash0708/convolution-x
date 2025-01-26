@@ -5,6 +5,23 @@ export const metadata: Metadata = {
   title: "Algomaniac | Convolution X",
   description:
     "Challenge your mind with Algomaniac! Solve puzzling problems and mind-boggling tasks in this competitive programming event at Convolution X.",
+    keywords: [
+      "Algomaniac",
+      "Convolution X Algomaniac",
+      "Convolution 2025 Algomaniac",
+      "competitive programming",
+      "Convolution 2025",
+      "Convolution 25",
+      "Convolution X",
+      "coding challenges",
+      "problem solving",
+      "algorithm contest",
+      "data structures",
+      "JUEE events",
+      "coding competitions",
+      "programming contests",
+      "Convolution X coding",
+    ],
   openGraph: {
     title: "Algomaniac | Convolution X",
     description:
