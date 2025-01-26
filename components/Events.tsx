@@ -292,7 +292,7 @@ export default function Events() {
 
       {/* ---------------------for tab-mobile ------------------------ */}
       <div className="md:hidden py-12 block">
-        <h1 className="text-4xl  text-center font-bold">Events</h1>
+        <h1 className="text-4xl  text-center ">Events</h1>
         <div className="relative mt-6" 
         onMouseEnter={() => setShowArrows(true)}
         onMouseLeave={() => setShowArrows(false)}>
