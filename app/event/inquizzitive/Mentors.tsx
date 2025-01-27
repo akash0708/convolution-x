@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
-import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
 type Professor = {
@@ -13,46 +11,30 @@ type Professor = {
 
 const professors: Professor[] = [
   {
-    name: "Debangshu Dey",
-    profession:
-      "Professor at Department of Electrical Engineering, Jadavpur University",
-    researchPoint: "https://scholar.google.com/citations?user=tlzV8CAAAAAJ&hl=en",
-    img: "dsd.png", // Replace with the actual image path or import
-  },
-  {
-    name: "Suddhasatwa Chakraborty",
+    name: "Biswajit Bhattacharyya",
     profession:
       "Associate Professor at Department of Electrical Engineering, Jadavpur University",
-    researchPoint: "https://www.researchgate.net/profile/Suddhasatwa-Chakraborty",
-    img: "sdc.png", // Replace with the actual image path or import
+    researchPoint: "https://jaduniv.irins.org/profile/57106",
+    img: "bjb.png", // Replace with the actual image path or import
   },
+  
 ];
 
 const Mentors = () => {
   return (
     <div id="judges" className="relative  py-20">
       <div
-        className="absolute top-0 left-0 w-full h-full -z-20 bg-gradient-to-b from-white    
-     to-[#2CB1DF]"
+        className="absolute top-0 left-0 w-full h-full -z-30 bg-[#1A0F52]"
       >
         
       </div>
-      <Image
-        src={flakebg}
-        className=" h-auto hidden sm:block w-full  absolute opacity-40   top-0 right-0 -z-10"
-        alt="trees"
-      />
-      <Image
-        src={flakebgMobile}
-        className=" sm:hidden block h-auto w-full  absolute opacity-60   top-0 right-0 -z-10"
-        alt="trees"
-      />
+      
       <div className="maxWidthForSections">
-        <h2 className="text-3xl sm:text-5xl font-medium text-black text-center ">
-          Judges & Mentors
+        <h2 className="text-3xl sm:text-5xl font-medium text-white text-center ">
+          Mentor
         </h2>
-        <p className="opacity-80 text-center mt-2 text-base sm:text-xl font-medium">
-          Meet the Judges and Mentors of Sparkhack!
+        <p className="opacity-80 text-center mt-2 text-base sm:text-xl font-medium text-white">
+          Meet the Mentor of Inquizzitive!
         </p>
 
         <div className="mx-auto flex justify-center mt-6">
@@ -63,7 +45,7 @@ const Mentors = () => {
             {professors.map((professor, index) => (
               <div
                 key={index}
-                className="rounded-xl bg-white/20 shadow-black/20 shadow-md backdrop-blur-sm flex  py-6 px-4 items-center gap-x-4  sm:max-w-[500px] "
+                className="rounded-xl text-white bg-white/20 shadow-black/20 shadow-md backdrop-blur-sm flex  py-6 px-4 items-center gap-x-4  sm:max-w-[500px] "
               >
                 <Image
                   src={`/MentorJudges/` + professor.img}

@@ -15,7 +15,7 @@ const professors: Professor[] = [
   {
     name: "Arpan Kumar Pradhan",
     profession:
-      "Professor at Department of Electrical Engineering, Jadavpur University",
+      "Assistant Professor at Department of Electrical Engineering, Jadavpur University",
     researchPoint: "https://scholar.google.co.in/citations?user=fqBBOAYAAAAJ&hl=en",
     img: "ap.png", // Replace with the actual image path or import
   },

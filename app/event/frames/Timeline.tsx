@@ -29,7 +29,7 @@ const Timeline = () => {
           <Image src={hotair} alt="timeline Image" className="absolute top-[20%] right-[2%] w-[20%] max-w-[220px] -z-10"  />
 
           <div className="absolute right-[8%]  top-[0%] shadow-md shadow-white/20 w-[40%]  bg-white/10 rounded-xl backdrop-blur-md py-4 px-2 sm:px-6 sm:py-8  text-center">
-            <h1 className=" md:text-3xl sm:text-lg text-sm">25th January</h1>
+            <h1 className=" md:text-3xl sm:text-lg text-sm">26th January</h1>
             <div className="h-[2px] sm:h-1 w-[50%] bg-white rounded-full mx-auto sm:my-2 my-1"></div>
             <h1 className=" md:text-3xl sm:text-lg text-xs">
               Photograph Submission Starts
@@ -56,7 +56,7 @@ const Timeline = () => {
           <h1 className=" md:text-3xl sm:text-lg text-sm">22nd February</h1>
             <div className="h-[2px] sm:h-1 w-[50%] bg-white rounded-full mx-auto sm:my-2 my-1"></div>
             <h1 className=" md:text-3xl sm:text-lg text-xs">
-            Results will be declared.
+           Declaration of results.
             </h1>
           </div>
           

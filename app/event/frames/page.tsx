@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react'
+"use client";
+import React, { Suspense, useEffect } from 'react'
 import ComingSoon from '@/components/ComingSoon'
 import { Protest_Riot } from "next/font/google";
 import Loading from '@/app/loading';
@@ -12,12 +13,24 @@ import Timeline from './Timeline';
 import Mentors from './Mentors';
 import PrizesFrames from './PrizesFrames';
 import PreFooter from './PreFooter';
+import { useUserStore } from '@/store/userStore';
 const protestRiot = Protest_Riot({
   subsets: ["latin"], // You can specify subsets if needed
   weight: "400", // Adjust the weight based on your requirements
 });
 
-const page = () => {
+const Page = () => {
+  const { user, authCheck, loading, setIsLogged } = useUserStore();
+      useEffect(() => {
+        
+        if (!user) {
+          setIsLogged(true);
+          authCheck();
+        }
+      }, [user]);
+      if (loading) {
+        return <Loading />;
+      }
   return (
      <Suspense fallback={ <Loading/>}>
 <EventNavbar
@@ -39,4 +52,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
