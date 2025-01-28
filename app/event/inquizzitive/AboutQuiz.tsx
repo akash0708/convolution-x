@@ -8,7 +8,8 @@ import dots from "@/assets/images/Inquizzitive/dots.png"
 
 const rulesDecisia = [
     "Teams can have 2-4 (max.) members, including the Team Lead.",
-    "Teams may be formed across different institutes and different classes but all participants must be students.",
+    "Teams may be formed across different institutes and different years but all participants must be students.",
+    "Use of any unfair means will lead to disqualification.",
     "Registration will be ONLINE through the official website of Convolution-X.",
     "On-spot registrations may be allowed depending on vacancy.",
     "There will be two rounds: Prelims and Finals.",

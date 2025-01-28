@@ -20,7 +20,7 @@ const faqData = [
     {
         question: "Will questions be asked only on Electrical Engineering subjects?",
         answer: 
-          "No , not at all. It will be a general knowledge quiz competition where your knowledge will be tested.",
+          "No , not at all. It will be a general knowledge quiz where your wit will be put to the test.",
     },
    
     

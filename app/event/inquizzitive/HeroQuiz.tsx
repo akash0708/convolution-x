@@ -8,7 +8,7 @@ import pixelBox from "@/assets/images/Inquizzitive/pixelBox.png"
 import pixel1 from "@/assets/images/Inquizzitive/pixel1.png"
 import pixel2 from "@/assets/images/Inquizzitive/pixel2.png"
 
-const aboutDecisia = `Inquizzitive is an exciting quiz competition organized to challenge participants’ knowledge across a variety of topics, including general knowledge, current affairs, science, history, and pop culture. It promotes curiosity, learning, and team spirit.`;
+const aboutDecisia = `Inquizzitive is an exciting quiz competition organized to challenge participants’ knowledge across a variety of topics, including general knowledge, current affairs, science, history, and music. It promotes curiosity, learning, and team spirit.`;
 const HeroQuiz = () => {
     return (
         <div
