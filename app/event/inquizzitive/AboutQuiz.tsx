@@ -3,6 +3,8 @@ import Image from "next/image";
 import heroBgBottom from "@/assets/images/Inquizzitive/heroBottom.png"
 import mech1 from "@/assets/images/Inquizzitive/mech1.png"
 import mech3 from "@/assets/images/Inquizzitive/mech3.png"
+import arrow from "@/assets/images/Inquizzitive/arrow.png"
+import dots from "@/assets/images/Inquizzitive/dots.png"
 
 const rulesDecisia = [
     "Teams can have 2-4 (max.) members, including the Team Lead.",
@@ -24,6 +26,8 @@ const AboutQuiz = () => {
           <Image src={heroBgBottom} alt="hero" className="absolute top-0 left-0 -z-10 -scale-y-100" />
           <Image src={mech1} alt="hero" className="absolute top-0 left-0 -z-10 w-[35vw] sm:max-w-[500px] sm:w-[27vw] -scale-y-100" />
           <Image src={mech3} alt="hero" className="absolute bottom-[-15%] right-0 -z-10 w-[35vw] sm:max-w-[500px] object-cover sm:w-[27vw] " />
+          <Image src={arrow} alt="hero" className="absolute  -z-10   object-cover top-[5%] right-[2%] sm:w-[150px] w-[90px]" />
+          <Image src={dots} alt="hero" className="absolute  -z-10   object-cover bottom-0 left-1/2 -translate-x-1/2 sm:w-[150px] w-[90px]" />
           {/* --------------------------about Image background-------------- */}
          
         
@@ -42,9 +46,9 @@ const AboutQuiz = () => {
                 
               </ul>
             </div>
-            <a href="https://drive.google.com/file/d/1VuQRbYo6fMCprIjqWwuVfH7PQyCCKAOI/view?usp=sharing" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full shadow-md shadow-white/70 hover:shadow-white/30  hover:bg-[#34246B] bg-[#ffff]  hover:text-white text-[#34246B]  transition-all duration-300 ">
+            {/* <a href="https://drive.google.com/file/d/1VuQRbYo6fMCprIjqWwuVfH7PQyCCKAOI/view?usp=sharing" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full shadow-md shadow-white/70 hover:shadow-white/30  hover:bg-[#34246B] bg-[#ffff]  hover:text-white text-[#34246B]  transition-all duration-300 ">
               <p className="     ">Know More</p>
-            </a>
+            </a> */}
           </div>
         </div>
       );

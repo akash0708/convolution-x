@@ -1,6 +1,6 @@
 import React from "react";
-
 import EventLeadTemplate from "@/components/EventLeadTemplate";
+import Image from "next/image";
 
 
 type TeamMember = {
@@ -38,6 +38,7 @@ const EventLead = () => {
         className="absolute top-0 left-0 w-full h-full -z-30 bg-[#1A0F52]   
       "
       ></div>
+     
        
 
       <div className="maxWidthForSections">

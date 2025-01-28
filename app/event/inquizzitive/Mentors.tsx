@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
+import pixelBox from "@/assets/images/Inquizzitive/pixelBox.png"
+
 type Professor = {
   name: string;
   profession: string;
@@ -22,12 +24,13 @@ const professors: Professor[] = [
 
 const Mentors = () => {
   return (
-    <div id="judges" className="relative  py-20">
+    <div id="mentor" className="relative  py-20">
       <div
         className="absolute top-0 left-0 w-full h-full -z-30 bg-[#1A0F52]"
       >
         
       </div>
+      <Image src={pixelBox} alt="hero" className="absolute top-[2%] left-[-5%] -z-10 object-cover max-w-[350px] min-w-[200px] w-[20vw]" />
       
       <div className="maxWidthForSections">
         <h2 className="text-3xl sm:text-5xl font-medium text-white text-center ">

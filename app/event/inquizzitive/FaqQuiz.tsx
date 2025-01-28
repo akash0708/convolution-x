@@ -31,7 +31,7 @@ const FaqQuiz = () => {
         <div id='faq' className='py-12 relative flex justify-center items-center '>
            
             <div
-            className="absolute top-0 left-0 w-full h-full -z-20 bg-[#1A0F52]"
+            className="absolute top-0 left-0 w-full h-full -z-30 bg-[#1A0F52]"
           >
             
           </div>
