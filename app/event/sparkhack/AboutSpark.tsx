@@ -76,7 +76,7 @@ const AboutSpark = () => {
           <li
                   className="text-white sm:text-xl text-sm text-shadow-dark "
                 >
-                  SparkHack features multiple tracks, including an <span className="underline">Open Track </span>  where teams (2-4 members, including a team lead) work on a problem statement to create real-world solutions. Teams can consist of members from different streams and academic years, but all must belong to the same institution.
+                  SparkHack features multiple tracks, including an <span className="underline">Open Track </span>  where teams (2-4 members, including a team lead) work on a problem statement to create real-world solutions. Teams can consist of members from different streams and academic years and are open to both undergraduate and postgraduate students. Cross-college teams are allowed.
                 </li>
             {sparkhackRules.map((rule, index) => {
               return (

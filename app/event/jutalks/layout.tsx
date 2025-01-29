@@ -8,7 +8,12 @@ export const metadata: Metadata = {
   keywords: [
     "JU Talks",
     "Convolution 2025 jutalks",
+    "Convolution X jutalks",
+    "Convolution JUEE jutalks",
+    "JU Talks 2025",
     "panel discussion",
+    "industry professionals",
+    "field veterans",
     "JUEE",
     "Convolution JUEE",
   ],
