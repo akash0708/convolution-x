@@ -73,12 +73,12 @@ export function middleware(req: NextRequest) {
       const userID = JSON.parse(userCredential.value);
 
       const allowedSuperAdmins = [
-        process.env.SUPERADMIN_ID,
-        process.env.SUPERADMIN_2_ID,
-        process.env.SUPERADMIN_3_ID,
-        process.env.SUPERADMIN_4_ID,
-        process.env.SUPERADMIN_5_ID,
-        process.env.SUPERADMIN_10_ID,
+        process.env.ADMIN_ID,
+        process.env.ADMIN_2_ID,
+        process.env.ADMIN_3_ID,
+        process.env.ADMIN_4_ID,
+        process.env.ADMIN_5_ID,
+        process.env.ADMIN_10_ID,
       ];
 
       if (!allowedSuperAdmins.includes(userID.uid)) {
