@@ -6,7 +6,7 @@ import pendant2 from "@/assets/images/SparkHack/pendant2.webp";
 import flakebg from "@/assets/images/SparkHack/flakeBg.webp";
 import flakebgMobile from "@/assets/images/SparkHack/flakeBgMobile.webp";
 const sparkhackRules = [
-  "SparkHack features multiple tracks where teams (2-4 members, including a team lead) work on a problem statement to create real-world solutions. Teams can consist of members from different streams and academic years, but all must belong to the same institution.",
+ 
   "Round 1 : PPT Shortlisting : Teams must submit a concise PowerPoint presentation (max 10 slides) outlining their proposed solution. Judges will review the submissions and shortlist the top 30 teams. ",
   "Round 2 : Online Pitching : Shortlisted teams will present their ideas to the judges via Google Meet. Based on their pitches, the judges will select the top 10 teams for the next round.",
   "Round 3 : Prototype Creation:  The top 10 teams will develop and showcase their prototypes offline at the Electrical Engineering Department, Jadavpur University.",
@@ -34,7 +34,7 @@ const AboutSpark = () => {
       />
       <div className="maxWidthForSections flex flex-col items-center">
         <div
-          className={`rounded-xl sm:py-12 py-6 sm:px-8 px-4 bg-gradient-to-l from-white/20 to-white/5 backdrop-filter backdrop-blur-sm relative shadow-black/10 shadow-md `}
+          className={`rounded-xl sm:py-12 py-6 sm:px-8 px-4 bg-white/5 backdrop-filter backdrop-blur-sm relative shadow-black/10 shadow-md `}
         >
           {/* ----------------------pendant hanging-------------------------- */}
           <>
@@ -73,6 +73,11 @@ const AboutSpark = () => {
             Rules & Regulations
           </h1>
           <ul className="space-y-3 list-disc list-inside">
+          <li
+                  className="text-white sm:text-xl text-sm text-shadow-dark "
+                >
+                  SparkHack features multiple tracks, including an <span className="underline">Open Track </span>  where teams (2-4 members, including a team lead) work on a problem statement to create real-world solutions. Teams can consist of members from different streams and academic years and are open to both undergraduate and postgraduate students. Cross-college teams are allowed.
+                </li>
             {sparkhackRules.map((rule, index) => {
               return (
                 <li

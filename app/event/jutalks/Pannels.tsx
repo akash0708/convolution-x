@@ -45,27 +45,7 @@ const Pannels = () => {
           Current Edition Panelists
         </h2>
         <p className="text-center sm:text-2xl text-lg  text-[#552614]/90">To be declared soon ...</p>
-        {/* <div className="grid md:grid-cols-4 grid-cols-2 gap-2  sm:gap-4">
-          {items.map((item, index) => {
-            return (
-              <div
-                key={item.name}
-                className="flex flex-col sm:gap-y-2 items-center font-sans sm:px-4 sm:py-8 px-2 py-6 text-[#512511] bg-[#ffff]/20 shadow-sm shadow-black/20 backdrop:blur-sm  rounded-2xl"
-              >
-                <div className="overflow-hidden flex items-center rounded-full size-32 ">
-                  <Image src={pics[index]} alt="kaku" className=""></Image>
-                </div>
-
-                <h1 className="sm:text-lg text-sm text-center font-semibold">
-                  {item.name}{" "}
-                </h1>
-                <p className="text-center sm:text-base text-xs">
-                  {item.description}
-                </p>
-              </div>
-            );
-          })}
-        </div> */}
+        
         <h2 className="sm:text-5xl text-2xl font-medium text-[#552614] mt-16  mb-8 text-center ">
           Previous Edition Panelists
         </h2>

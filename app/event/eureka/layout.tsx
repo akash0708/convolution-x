@@ -5,7 +5,23 @@ export const metadata: Metadata = {
   title: "Eureka | Convolution X",
   description:
     "Test your logic, reasoning, and puzzle-solving skills with Eureka! Join us at Convolution X for thrilling challenges that will push your mental agility to the limit.",
-  openGraph: {
+  keywords: [
+    "Eureka",
+    "Convolution 2025 Eureka",
+    "Convolution 25 Eureka",
+    "Convolution X Eureka",
+    "puzzles",
+    "riddles",
+    "aptitude challenges",
+    "logic",
+    "reasoning",
+    "JUEE",
+    "logic puzzles",
+    "puzzle solving",
+    "brain teasers",
+    "Convolution X puzzles",
+  ],
+    openGraph: {
     title: "Eureka | Convolution X",
     description:
       "Welcome to Eureka! The ultimate test of logic, reasoning, and problem-solving at Convolution X. Assemble your team and take on thrilling challenges now!",

@@ -20,6 +20,7 @@ export async function POST(req: NextRequest) {
       "aboltabol",
       "circuistics",
       "eureka",
+      "inquizzitive",
     ];
 
     if (!team_events.includes(eventName.toLowerCase())) {

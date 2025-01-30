@@ -2,9 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
-import decisiaBgMobile from "@/assets/images/Algomaniac/starbgMobile.png";
-import decisiaBg from "@/assets/images/Algomaniac/star bg.png";
-import line1 from '@/assets/images/Algomaniac/line1.png'
+
 
 type Professor = {
   name: string;
@@ -17,7 +15,7 @@ const professors: Professor[] = [
   {
     name: "Susanta Ray",
     profession:
-      "Professor at Department of Electrical Engineering, Jadavpur University",
+      "Associate Professor at Department of Electrical Engineering, Jadavpur University",
     researchPoint: "https://www.researchgate.net/profile/Susanta-Ray",
     img: "sr.png", // Replace with the actual image path or import
   },
