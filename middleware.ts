@@ -62,6 +62,33 @@ export function middleware(req: NextRequest) {
     }
   }
 
+  // now similar to the admin routes, we have a superadmin route
+  // so we need to check if the user is a superadmin
+
+  if (req.nextUrl.pathname.startsWith("/superadmin")) {
+    try {
+      const userCredential =
+        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
+
+      const userID = JSON.parse(userCredential.value);
+
+      const allowedSuperAdmins = [
+        process.env.SUPERADMIN_ID,
+        process.env.SUPERADMIN_2_ID,
+        process.env.SUPERADMIN_3_ID,
+        process.env.SUPERADMIN_4_ID,
+        process.env.SUPERADMIN_5_ID,
+        process.env.SUPERADMIN_10_ID,
+      ];
+
+      if (!allowedSuperAdmins.includes(userID.uid)) {
+        return NextResponse.redirect(new URL("/profile", req.url));
+      }
+    } catch (error) {
+      console.error("Error parsing userCookie:", error);
+    }
+  }
+
   // Redirect unauthenticated users from /event/register-solo or /event/register-team to /login
   if (
     !userCookie &&

@@ -16,7 +16,7 @@ const protestRiot = Protest_Riot({
   weight: "400", // Adjust the weight based on your requirements
 });
 
-const page = () => {
+const Page = () => {
   return (
      <Suspense fallback={ <Loading/>}>
 <EventNavbar
@@ -39,4 +39,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     "Convolution Jadavpur University",
     "Jadavpur University",
     "JUEE",
+    "Jadavpur University Techfest",
+    "JU EE Techfest",
     "fest",
     "technical fest",
     "electrical engineering",
