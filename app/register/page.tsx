@@ -18,7 +18,7 @@ const registrationSchema = z.object({
   phone: z.string().regex(/^\d{10}$/, "Phone number must be 10 digits"),
   institution: z.string().nonempty("Institution is required"),
   department: z.string().nonempty("Department is required"),
-  year: z.enum(["UG1", "UG2", "UG3", "UG4", "PG"], {
+  year: z.enum(["UG1", "UG2", "UG3", "UG4", "PG", "Other", "School"], {
     invalid_type_error: "Invalid year selected",
   }),
 });
@@ -251,11 +251,13 @@ export default function RegisterForm() {
                       <option value="" disabled selected hidden>
                         (e.g., UG1, PG1)
                       </option>
+                      <option value="School">School</option>
                       <option value="UG1">UG1</option>
                       <option value="UG2">UG2</option>
                       <option value="UG3">UG3</option>
                       <option value="UG4">UG4</option>
                       <option value="PG">PG</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
                 </div>
