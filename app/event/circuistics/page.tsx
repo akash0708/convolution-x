@@ -1,3 +1,4 @@
+"use client"
 import React, { Suspense, useEffect } from 'react'
 import ComingSoon from '@/components/ComingSoon'
 import { Protest_Riot } from "next/font/google";
