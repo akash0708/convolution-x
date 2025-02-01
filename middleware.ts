@@ -19,14 +19,19 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
-  // Admin routes extract the user from the userCookie
+  // Admin routes: Ensure the user is authenticated and is an admin
   if (req.nextUrl.pathname.startsWith("/admin")) {
+    // If there's no userCookie, redirect to login
+    if (!userCookie) {
+      return NextResponse.redirect(new URL("/login", req.url));
+    }
+
     try {
-      const userCredential =
-        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
+      // Parse the userCookie to get user credentials
+      const userCredential = JSON.parse(userCookie.value);
+      const userID = userCredential.uid;
 
-      const userID = JSON.parse(userCredential.value);
-
+      // List of allowed admin IDs
       const allowedAdmins = [
         process.env.ADMIN_ID,
         process.env.ADMIN_2_ID,
@@ -50,28 +55,29 @@ export function middleware(req: NextRequest) {
         process.env.ADMIN_20_ID,
       ];
 
-      if (!allowedAdmins.includes(userID.uid)) {
-        // console.log(typeof userID.uid);
-        // console.log(typeof process.env.ADMIN_ID);
-        // console.log("User:", userID.uid);
-        // console.log("Admin:", process.env.ADMIN_ID);
+      // Check if the user is an allowed admin
+      if (!allowedAdmins.includes(userID)) {
         return NextResponse.redirect(new URL("/profile", req.url));
       }
     } catch (error) {
       console.error("Error parsing userCookie:", error);
+      return NextResponse.redirect(new URL("/login", req.url));
     }
   }
 
-  // now similar to the admin routes, we have a superadmin route
-  // so we need to check if the user is a superadmin
-
+  // Superadmin routes: Ensure the user is authenticated and is a superadmin
   if (req.nextUrl.pathname.startsWith("/superadmin")) {
+    // If there's no userCookie, redirect to login
+    if (!userCookie) {
+      return NextResponse.redirect(new URL("/login", req.url));
+    }
+
     try {
-      const userCredential =
-        typeof userCookie === "string" ? JSON.parse(userCookie) : userCookie;
+      // Parse the userCookie to get user credentials
+      const userCredential = JSON.parse(userCookie.value);
+      const userID = userCredential.uid;
 
-      const userID = JSON.parse(userCredential.value);
-
+      // List of allowed superadmin IDs
       const allowedSuperAdmins = [
         process.env.ADMIN_ID,
         process.env.ADMIN_2_ID,
@@ -81,11 +87,13 @@ export function middleware(req: NextRequest) {
         process.env.ADMIN_10_ID,
       ];
 
-      if (!allowedSuperAdmins.includes(userID.uid)) {
+      // Check if the user is an allowed superadmin
+      if (!allowedSuperAdmins.includes(userID)) {
         return NextResponse.redirect(new URL("/profile", req.url));
       }
     } catch (error) {
       console.error("Error parsing userCookie:", error);
+      return NextResponse.redirect(new URL("/login", req.url));
     }
   }
 
