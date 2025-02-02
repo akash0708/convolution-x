@@ -26,6 +26,20 @@ const professors: Professor[] = [
     researchPoint: "https://www.researchgate.net/profile/Suddhasatwa-Chakraborty",
     img: "sdc.png", // Replace with the actual image path or import
   },
+  {
+    name: "Ram Sarkar",
+    profession:
+      "Professor at Department of Computer Science Engineering, Jadavpur University",
+    researchPoint: "https://scholar.google.co.in/citations?user=bDj0BUEAAAAJ&hl=en",
+    img: "ram.png", // Replace with the actual image path or import
+  },
+  {
+    name: "Sounak Dey",
+    profession:
+      "Senior Scientist, TCS Research",
+    researchPoint: "https://www.linkedin.com/in/sounak-dey-707a6b50/?originalSubdomain=in",
+    img: "shounak.png", // Replace with the actual image path or import
+  },
 ];
 
 const Mentors = () => {
@@ -58,7 +72,7 @@ const Mentors = () => {
         <div className="mx-auto flex justify-center mt-6">
           {/* ------------------mentor names---------------- */}
           <div
-            className={`font-sans flex justify-center flex-col sm:flex-row gap-2 md:gap-x-12`}
+            className={`font-sans grid sm:grid-cols-2 grid-cols-1 gap-2 md:gap-x-6`}
           >
             {professors.map((professor, index) => (
               <div

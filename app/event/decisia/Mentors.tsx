@@ -19,6 +19,13 @@ const professors: Professor[] = [
     researchPoint: "https://scholar.google.co.in/citations?user=fqBBOAYAAAAJ&hl=en",
     img: "ap.png", // Replace with the actual image path or import
   },
+  {
+    name: "Mihir Hembram",
+    profession:
+      "Assistant Professor at Department of Electrical Engineering, Jadavpur University",
+    researchPoint: "https://search.app/wU7Njj6pRtruheaQA",
+    img: "mh.png", // Replace with the actual image path or import
+  },
  
 ];
 
