@@ -43,7 +43,7 @@ const AboutFrames = () => {
            
           </ul>
         </div>
-        <a href="https://drive.google.com/file/d/1Cdy-Rf26dAwwKbE_Jh-4jcUJdETNZajv/view" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full hover:bg-[#ffff] text-[#1BA0E8]  shadow-[#ffff] hover:shadow-[#fff]/90 bg-white hover:opacity-80  transition-all duration-300 ">
+        <a href="https://drive.google.com/file/d/1noJ319D70hwlqKx28YPHJoVPMmVrF2lm/view?usp=sharing" target="_blank" className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full hover:bg-[#ffff] text-[#1BA0E8]  shadow-[#ffff] hover:shadow-[#fff]/90 bg-white hover:opacity-80  transition-all duration-300 ">
           <p className="     ">Know More</p>
         </a>
       </div>

@@ -90,6 +90,8 @@ const AboutSpark = () => {
             })}
           </ul>
         </div>
+        <div className="flex items-center justify-center gap-4">
+
         <a
           href="https://drive.google.com/file/d/1y2x3A7acVrhfbIZEpMQXXJ5RIyZXeasN/view?usp=drive_link"
           target="_blank"
@@ -97,9 +99,19 @@ const AboutSpark = () => {
         >
           <p className="     ">Know More</p>
         </a>
+        <a
+          href="https://drive.google.com/file/d/1LHM8BT1vGKQvbfzyKo43gLwJ5VU1uWWi/view"
+          target="_blank"
+          className="mt-4 self-center py-2 sm:px-8 px-6 sm:text-xl rounded-full hover:bg-[#3AADD9] text-[#3AADD9]  bg-white shadow-white/80 hover:shadow-white/40 shadow-md hover:text-white hover:opacity-100 opacity-80 transition-all duration-300 "
+        >
+          <p className="     ">Problem Statements</p>
+        </a>
+        </div>
       </div>
     </div>
   );
 };
 
 export default AboutSpark;
+
+
