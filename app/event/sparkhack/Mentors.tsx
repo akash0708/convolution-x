@@ -37,7 +37,7 @@ const professors: Professor[] = [
     name: "Sounak Dey",
     profession:
       "Senior Scientist, TCS Research",
-    researchPoint: "https://www.linkedin.com/in/sounak-dey-707a6b50/?originalSubdomain=in",
+    researchPoint: "https://search.app/bvRyV7gRuhw2ssPJA",
     img: "shounak.png", // Replace with the actual image path or import
   },
 ];
