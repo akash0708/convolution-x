@@ -42,7 +42,7 @@ const QuizMaster = () => {
                   </div>
           
                 <p className="text-center sm:text-base text-xs">
-                Samanway Banerjee is a quizmaster and media professional, known for hosting engaging quizzes across schools, colleges, and corporates.
+                A renowned quizmaster and media professional, known for hosting engaging quizzes across schools, colleges, and corporates.
                 </p>
         </div>
       </div>
