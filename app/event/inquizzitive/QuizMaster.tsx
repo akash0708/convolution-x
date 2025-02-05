@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import texture1 from "@/assets/images/Inquizzitive/texture1.png";
-import qm from "@/assets/images/Inquizzitive/qm.png";
+import qm from "@/assets/images/Inquizzitive/Qm.png";
 import pixelBox from "@/assets/images/Inquizzitive/pixelBox.png";
 import Link from "next/link";
 import { FaInfoCircle } from "react-icons/fa";
