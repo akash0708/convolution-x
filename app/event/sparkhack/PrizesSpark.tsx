@@ -33,7 +33,7 @@ const PrizesSpark = () => {
           <div className=" relative flex flex-col justify-end">
             <div className="absolute bg-gradient-to-br rounded-md shadow-white/80 shadow-lg from-white/10 to-white/20 h-[70%] bottom-0  w-[85%] left-1/2 -translate-x-1/2 flex items-end -z-10">
               <div className="bg-white/60 mt-1 w-full backdrop-blur-sm rounded-b-md py-2 sm:py-[20px] sm:text-xl text-base">
-                <p className="text-center sm:text-lg text-sm">Stay Tuned!</p>
+                <p className="text-center sm:text-xl text-base">₹ 4000</p>
               </div>
             </div>
             <Image
@@ -46,7 +46,7 @@ const PrizesSpark = () => {
             </p>
 
             <div className="bg-white/60 mt-1 opacity-0 backdrop-blur-sm rounded-md py-2 sm:py-[24px] sm:text-xl text-base">
-              <p className="text-center sm:text-lg text-sm">Stay Tuned!</p>
+              <p className="text-center sm:text-xl text-base">₹ 4000</p>
             </div>
           </div>
           {/* ----------------------gold-----------------/ */}
@@ -54,7 +54,7 @@ const PrizesSpark = () => {
           <div className=" relative ">
             <div className="absolute bg-gradient-to-br rounded-md shadow-white/80 shadow-lg from-white/10 to-white/20 h-[70%] bottom-0 w-[85%] left-1/2 -translate-x-1/2 flex items-end -z-10">
               <div className="bg-white/60 mt-1 w-full backdrop-blur-sm rounded-b-md py-2 sm:py-[20px] sm:text-xl text-base">
-                <p className="text-center sm:text-lg text-sm">Stay Tuned!</p>
+                <p className="text-center sm:text-xl text-base">₹ 6000</p>
               </div>
             </div>
             <Image
@@ -66,7 +66,7 @@ const PrizesSpark = () => {
               Gold Prize
             </p>
             <div className="bg-white/60 opacity-0 mt-1 backdrop-blur-sm rounded-md py-2 sm:py-[24px] sm:text-xl text-base">
-              <p className="text-center sm:text-lg text-sm">Stay Tuned!</p>
+              <p className="text-center sm:text-xl text-base">₹ 6000</p>
             </div>
           </div>
           {/* ----------------------bronze-----------------/ */}
@@ -74,7 +74,7 @@ const PrizesSpark = () => {
           <div className=" relative ">
             <div className="absolute bg-gradient-to-br rounded-md shadow-white/80 shadow-lg from-white/10 to-white/20 h-[70%] bottom-0 w-[85%] left-1/2 -translate-x-1/2 flex items-end -z-10">
               <div className="bg-white/60 mt-1 w-full backdrop-blur-sm rounded-b-md py-2 sm:py-[20px] sm:text-xl text-base">
-                <p className="text-center sm:text-lg text-sm">Stay Tuned!</p>
+                <p className="text-center sm:text-xl text-base">₹ 2000</p>
               </div>
             </div>
             <Image
@@ -87,7 +87,7 @@ const PrizesSpark = () => {
             </p>
 
             <div className="bg-white/60 opacity-0 mt-1 backdrop-blur-sm rounded-md py-2 sm:py-[24px] sm:text-xl text-base">
-              <p className="text-center sm:text-lg text-sm">Stay Tuned!</p>
+              <p className="text-center sm:text-xl text-base">₹ 2000</p>
             </div>
           </div>
         </div>
