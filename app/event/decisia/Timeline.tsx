@@ -13,8 +13,8 @@ const timelineDetails: { date: string; task: string }[] = [
     task: "Abstract Submission Starts - the participants will have to submit an abstract of their business ideas",
   },
   {
-    date: "11th Feb",
-    task: "Abstract Submission Ends - Participants will have to submit their abstracts by 11:59pm on 11th February.",
+    date: "15th Feb",
+    task: "Abstract Submission Ends - Participants will have to submit their abstracts by 11:59pm on 15th February.",
   },
   {
     date: "18th Feb",
