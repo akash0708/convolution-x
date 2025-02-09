@@ -32,7 +32,7 @@ const faqData = [
     {
       question: "When will registration end?",
       answer: 
-        "Registration for SparkHack will  end on 10th February at 5:30 PM .",
+        "The deadline for registering for SparkHack is on 11th February, 6:30pm while that for the submissions is open till 11th February, 11:59pm .",
     },
   ];
 const FaqSpark = () => {
