@@ -23,10 +23,12 @@ interface UserStore {
   fetchUser: (email: string) => Promise<void>; // Fetches user data based on email
   authCheck: () => void;
   setIsLogged: (data) => void;
+  closed:string[];
 }
 
 export const useUserStore = create<UserStore>((set, get) => ({
   user: null,
+  closed:[],
   notifications: [],
   teams: [],
   isLogged: false,

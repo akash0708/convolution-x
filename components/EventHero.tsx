@@ -15,8 +15,9 @@ interface MyComponentProps {
     textColor?: string;
   }
   const EventHero : React.FC<MyComponentProps> = ({ planet,about,buttonDesign,logo,mode,name,registeredUiBtn,textColor = "text-white text-shadow-dark", }) => {
-  const {teams} = useUserStore()
+  const {teams,closed} = useUserStore()
   const isRegistered=teams.includes(name)
+  const isClosed = closed.includes(name)
   // console.log(isRegistered)
   return (
     <div>
@@ -34,14 +35,17 @@ interface MyComponentProps {
             <p className={`${textColor} text-center sm:text-xl text-base `}>
             {about}
             </p>
-            {isRegistered? <p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full ${registeredUiBtn}`}>You have Registered for this Event</p>:
+            {isRegistered? <p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full ${registeredUiBtn}`}>You have Registered for this Event</p>:(isClosed? <p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full ${registeredUiBtn}`}>Registrations Closed</p>:
+
             <Link 
               href={`/event/register-${mode}?eventName=${name}`} 
               className={`shadow-lg py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full  transition-all duration-300 ${buttonDesign}`}>
                 <p className="">
                   Register Now
                 </p>
-            </Link>}
+            </Link>
+            )
+            }
            
           </div>
         </div>

@@ -9,8 +9,9 @@ import Link from "next/link";
 import { useUserStore } from "@/store/userStore";
 
 const HeroSpark = () => {
-  const {teams} = useUserStore()
+  const {teams,closed} = useUserStore()
     const isRegistered=teams.includes('sparkhack')
+    const isClosed = closed.includes('sparkhack')
   return (
     <div id="about"
       className="min-h-screen pt-24 md:pt-0 flex justify-center items-center  relative
@@ -50,11 +51,12 @@ const HeroSpark = () => {
             <p className="text-white text-center sm:text-xl text-base text-shadow-dark">
             Welcome to Eastern India&apos;s biggest hackathon event, which is solely focused on engineering technological solutions to modern world problems. Here, teams build prototypes of products with remarkable social impact. Your idea, judged by renowned academicians & industry experts, might just become the next groundbreaking innovation! Got the spark within you? Then don&apos;t procrastinate- register now for Sparkhack!!
             </p>
-            {isRegistered?<p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full text-white text-shadow-dark bg-[#8FE3F0]`}>You have Registered for this Event</p> :<Link href="/event/register-team?eventName=sparkhack" className="bg-[#8FE3F0] shadow-sparkhack-register py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full hover:bg-white hover:text-[#8FE3F0] hover:text-shadow-light hover:opacity-90 text-white transition-all duration-300 hover:shadow-sparkhack-register-hover text-shadow-dark">
-                <p className="    ">
+            {isRegistered?<p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full text-white text-shadow-dark bg-[#8FE3F0]`}>You have Registered for this Event</p> :(isClosed? <p className={`py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full text-white text-shadow-dark bg-[#8FE3F0]`}>Registrations Closed</p>:<Link href="/event/register-team?eventName=sparkhack" className="bg-[#8FE3F0] shadow-sparkhack-register py-2 sm:px-8 px-6 text-base sm:text-xl rounded-full hover:bg-white hover:text-[#8FE3F0] hover:text-shadow-light hover:opacity-90 text-white transition-all duration-300 hover:shadow-sparkhack-register-hover text-shadow-dark">
+                <p className="">
                   Register Now
                 </p>
-            </Link>}
+            </Link>)
+            }
            
           </div>
         </div>
