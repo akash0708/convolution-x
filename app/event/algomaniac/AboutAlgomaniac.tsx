@@ -12,7 +12,8 @@ const rulesDecisia = [
     "Lab computers will be available in the finals, but finalists are requested to carry laptops as backup.",
     "There will be 5-6 questions of varying difficulty in each round, with a time limit of 2 hours.",
     "Score per question will be based on difficulty, with ties between participants broken by time taken to solve.",
-    "Both rounds will be conducted on Hackerrank."
+    "Both rounds will be conducted on Hackerrank.",
+    "Finalists are to carry laptops."
   ]
   ;
 const AboutAlgomaniac = () => {
