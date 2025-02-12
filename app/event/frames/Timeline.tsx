@@ -37,7 +37,7 @@ const Timeline = () => {
           </div>
 
           <div className="absolute top-[22%]  right-[47%] shadow-md shadow-white/20 w-[40%]  bg-white/10 rounded-xl backdrop-blur-md py-4 px-2 sm:px-6 sm:py-8  text-center ">
-            <h1 className=" md:text-3xl sm:text-lg text-sm">12th February</h1>
+            <h1 className=" md:text-3xl sm:text-lg text-sm">15th February</h1>
             <div className="h-[2px] sm:h-1 w-[50%] bg-white rounded-full mx-auto sm:my-2 my-1"></div>
             <h1 className=" md:text-3xl sm:text-lg text-xs">
             Photograph Submission Ends on 12th Feb 11:59 PM
