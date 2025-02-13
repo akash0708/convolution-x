@@ -21,7 +21,7 @@ const timelineDetails: { date: string; task: string }[] = [
     task: "Result Announcement of Prelims - Top 10 teams will be shortlisted for the 2nd round after their online pitching",
   },
   {
-    date: "21st Feb",
+    date: "20th Feb",
     task: "Finals - The shortlisted participants will have to pitch their ideas in front of the judges.",
   },
 ];
