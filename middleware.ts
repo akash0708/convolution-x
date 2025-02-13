@@ -44,11 +44,14 @@ export function middleware(req: NextRequest) {
 
   const userCookie = req.cookies.get("users");
   let userID: string | null = null;
+  let emailVerified = false;
 
   // Parse userCookie once (if it exists)
   if (userCookie) {
     try {
-      userID = JSON.parse(userCookie.value).uid;
+      const userCredential = JSON.parse(userCookie.value);
+      userID = userCredential.uid ?? null;
+      emailVerified = userCredential.emailVerified ?? false;
     } catch (error) {
       console.error("Error parsing userCookie:", error);
       return NextResponse.redirect(new URL("/login", req.url));
@@ -85,6 +88,16 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL(isAuthenticated ? "/profile" : "/login", req.url));
   }
 
+  // (4) Redirect unauthenticated users from /event/register-* to /login
+  if (!isAuthenticated && pathname.startsWith("/event/register")) {
+    return NextResponse.redirect(new URL("/login", req.url));
+  }
+
+  // (5) Prevent verified users from accessing /verify-email
+  if (isAuthenticated && emailVerified && pathname.startsWith("/verify-email")) {
+    return NextResponse.redirect(new URL("/profile", req.url));
+  }
+
   return NextResponse.next();
 }
 
@@ -96,5 +109,7 @@ export const config = {
     "/login",
     "/admin/:path*",
     "/superadmin/:path*",
+    "/event/register-:path*",
+    "/verify-email",
   ],
 };
