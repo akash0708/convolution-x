@@ -9,7 +9,7 @@ const PreFooter = () => {
     <div className="pt-8  overflow-hidden relative">
       <div
         className="absolute top-0 bottom-0 left-0  w-full  bg-gradient-to-tr from-[#0215C5] via-[#020F92] 
-     to-[#010A5F] -z-50"
+     to-[#010A5F] -z-[62]"
       ></div>
       <div className="relative">
         <Image

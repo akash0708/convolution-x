@@ -33,14 +33,14 @@ const FaqAT = () => {
     <div id='faq' className='min-h-screen  relative flex justify-center items-center '>
         <div
         className="absolute top-0 left-0 w-full h-full  bg-gradient-to-br from-[#0215C5] via-[#020F92] 
-     to-[#010A5F] -z-40"
+     to-[#010A5F] -z-[61]"
       >
         <div className="relative">
-        <Image
+        {/* <Image
           src={wave}
           className="hidden md:block absolute w-[full] lg:h-auto  object-cover left-1/2 opacity-30 -translate-x-1/2 -z-20"
           alt="trees"
-        />
+        /> */}
         <Image
           src={wavemobile}
           className="block md:hidden absolute  object-cover left-1/2 opacity-30 -translate-x-1/2 "
