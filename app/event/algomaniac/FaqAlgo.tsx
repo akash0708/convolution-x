@@ -11,7 +11,7 @@ const faqData = [
     {
         question: "When and where will the finals be held?",
         answer: 
-          "The final round is set for February 22, 2024 (Sunday) at the Central Computer Laboratory, Department of Electrical Engineering, Jadavpur University. Please plan your travel accordingly, and on-site parking will be available for your convenience. Looking forward to a successful event!",
+          "The final round is set for February 22, 2024 (Saturday) at the Central Computer Laboratory, Department of Electrical Engineering, Jadavpur University. Please plan your travel accordingly, and on-site parking will be available for your convenience. Looking forward to a successful event!",
     },
     {
         question: "Will I have to carry a laptop for the final round?",
