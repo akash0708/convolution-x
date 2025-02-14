@@ -36,7 +36,7 @@ const PrizesFrames = () => {
           <div className=" relative ">
             <div className="absolute bg-gradient-to-br rounded-md shadow-white/80 shadow-lg from-white/10 to-white/20 h-[70%] bottom-0 w-full left-1/2 -translate-x-1/2 flex items-end -z-10">
               <div className="bg-white/60 mt-1 w-full backdrop-blur-sm rounded-b-md py-4 sm:py-[20px] sm:text-xl text-base">
-                <p className="text-center sm:text-xl text-base">₹ 1500</p>
+                <p className="text-center sm:text-xl text-base">₹ 2000</p>
               </div>
             </div>
             <Image
@@ -50,7 +50,7 @@ const PrizesFrames = () => {
               </p>
             </div>
             <div className="bg-white/60 opacity-0 mt-1 backdrop-blur-sm rounded-md py-4 sm:py-[24px] sm:text-xl text-base">
-              <p className="text-center sm:text-xl text-base">₹ 1500</p>
+              <p className="text-center sm:text-xl text-base">₹ 2000</p>
             </div>
           </div>
 
