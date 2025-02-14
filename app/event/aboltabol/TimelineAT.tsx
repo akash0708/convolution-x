@@ -10,12 +10,12 @@ const timelineDetails: { date: string; head: string; task: string }[] = [
     task: "The fray begins! All registered participants will be submitting a presentation.",
   },
   {
-    date: "12th Feb",
+    date: "17th Feb",
     head: "Abstract Submission Ends",
     task: "All abstracts to be submitted by 11:59pm on 12th February.",
   },
   {
-    date: "15th Feb",
+    date: "18th Feb",
     head: "Announcing Results of Prelims",
     task: "The top 9 teams will be shortlisted for the final round.",
   },
