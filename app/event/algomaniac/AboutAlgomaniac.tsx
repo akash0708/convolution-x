@@ -9,7 +9,6 @@ const rulesDecisia = [
     "Prelims will be conducted online on 17th February.",
     "Top 20 participants will be selected for the on-site Finals.",
     "Individual participation in both rounds (no teams).",
-    "Lab computers will be available in the finals, but finalists are requested to carry laptops as backup.",
     "There will be 5-6 questions of varying difficulty in each round, with a time limit of 2 hours.",
     "Score per question will be based on difficulty, with ties between participants broken by time taken to solve.",
     "Both rounds will be conducted on Hackerrank.",
