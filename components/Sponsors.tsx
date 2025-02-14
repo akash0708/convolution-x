@@ -43,9 +43,7 @@ const Sponsors: React.FC = () => {
           Co-Sponsor
         </p>
         <div className="flex gap-4 justify-center mb-10">
-          <a
-            href="https://megatherm.com/"
-            target="_blank"
+          <p
             className="bg-white/90  rounded-md"
           >
             <Image
@@ -53,7 +51,7 @@ const Sponsors: React.FC = () => {
               alt="megatherm image"
               className=" h-[80px] w-auto  "
             ></Image>
-          </a>
+          </p>
           
         </div>
 
