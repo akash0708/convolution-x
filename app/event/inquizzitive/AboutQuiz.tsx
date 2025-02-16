@@ -11,9 +11,9 @@ const rulesDecisia = [
     "Teams may be formed across different institutes and different years but all participants must be students.",
     "Use of any unfair means will lead to disqualification.",
     "Registration will be ONLINE through the official website of Convolution-X.",
-    "On-spot registrations may be allowed depending on vacancy.",
-    "There will be two rounds: Prelims and Finals.",
-    "The top 8 teams will move to the Finals from the prelims."
+    // "On-spot registrations may be allowed depending on vacancy.",
+    "There will be 3 rounds. Elimination round 1 and 2. Followed by the Finals.",
+    "The top 8 teams will move to the Finals .",
   ];
 const AboutQuiz = () => {
     return (
