@@ -75,11 +75,15 @@ const Timeline = () => {
               (Afternoon)
             </h1>
             <div className=""></div>
+            
             <p className="  md:text-2xl sm:text-lg text-[10px]">
             Inquizzitive (Prelims)
             </p>
             <p className=" md:text-2xl sm:text-lg text-[10px]">
             Inquizzitive (Finals)
+            </p>
+            <p className=" md:text-2xl sm:text-lg text-[10px]">
+            Decisia (Finals)
             </p>
           </div>
 
@@ -112,9 +116,7 @@ const Timeline = () => {
               (Afternoon)
             </h1>
             <div className=""></div>
-            <p className=" md:text-2xl sm:text-lg text-[10px]">
-            Decisia (Finals)
-            </p>
+           
             <p className=" md:text-2xl sm:text-lg text-[10px]">
             Abol Tabol (Finals) 
             </p>
