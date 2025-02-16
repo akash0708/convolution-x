@@ -13,6 +13,7 @@ const rulesDecisia = [
     "Registration will be ONLINE through the official website of Convolution-X.",
     // "On-spot registrations may be allowed depending on vacancy.",
     "There will be 3 rounds. Elimination round 1 and 2. Followed by the Finals.",
+    "Top 20  teams from elimination Round 1 move to elimination Round 2.",
     "The top 8 teams will move to the Finals .",
   ];
 const AboutQuiz = () => {
