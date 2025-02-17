@@ -23,6 +23,25 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Check if number to registrations for jutalks has crossed 220, if yes, return error with message
+    if (eventName.toLowerCase() === "jutalks") {
+      const jutalksRegistrations = await prisma.team.count({
+        where: {
+          eventName: "jutalks",
+        },
+      });
+
+      if (jutalksRegistrations >= 220) {
+        return NextResponse.json(
+          {
+            message:
+              "Registrations for Jutalks have been closed as we have reached the maximum number of participants.",
+          },
+          { status: 400 }
+        );
+      }
+    }
+
     // Check if user exists and email is verified
     const userExists = await prisma.user.findUnique({
       where: {
