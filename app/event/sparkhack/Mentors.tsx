@@ -40,6 +40,13 @@ const professors: Professor[] = [
     researchPoint: "https://search.app/bvRyV7gRuhw2ssPJA",
     img: "shounak.png", // Replace with the actual image path or import
   },
+  {
+    name: "Narendra Nath Chatterjee",
+    profession:
+      "Android Developer at Stockgro, Finance Expert.",
+    researchPoint: "https://www.linkedin.com/in/narendra-nath-chatterjee-8a7651133/",
+    img: "newJudge.jpg", // Replace with the actual image path or import
+  },
 ];
 
 const Mentors = () => {

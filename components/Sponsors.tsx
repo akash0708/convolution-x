@@ -11,6 +11,7 @@ import raydus from "@/assets/images/ConvoSponsors/raydus.png";
 import deis from "@/assets/images/ConvoSponsors/deis.png";
 import sps from "@/assets/images/ConvoSponsors/sps.png";
 import telegraph from "@/assets/images/ConvoSponsors/telegrapg.png";
+import comsoc from "@/assets/images/ConvoSponsors/comsoc.png";
 
 
 const Sponsors: React.FC = () => {
@@ -133,7 +134,17 @@ const Sponsors: React.FC = () => {
               className=" h-[80px] w-auto object-contain "
             ></Image>
           </a>
-          
+          <a
+            href="https://www.comsoc.org/"
+            target="_blank"
+            className="bg-white/90 p-2 rounded-md"
+          >
+            <Image
+              src={comsoc}
+              alt="exide image"
+              className=" h-[80px] w-auto object-contain "
+            ></Image>
+          </a>
           <a
             href="https://www.neoteletronix.com/"
             target="_blank"
@@ -145,6 +156,7 @@ const Sponsors: React.FC = () => {
               className=" h-[80px] w-auto object-contain "
             ></Image>
           </a>
+          
         </div>
 
 {/* ---------------------------------media partners--------------------- */}
