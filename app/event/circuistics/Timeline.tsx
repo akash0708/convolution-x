@@ -38,11 +38,11 @@ const Timeline = () => {
             className=" h-auto hidden sm:block w-full  absolute opacity-90 object-cover  top-0 right-0 -z-10"
             alt="trees"
           />
-           <Image
+           {/* <Image
             src={flakebg}
             className=" h-auto hidden sm:block w-full  absolute opacity-90 object-cover  bottom-0 right-0 -z-10"
             alt="trees"
-          />
+          /> */}
           <Image
             src={flakebgMobile}
             className=" sm:hidden block h-full  object-cover absolute opacity-90   bottom-0 right-0 -z-10"
