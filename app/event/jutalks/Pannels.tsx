@@ -36,7 +36,7 @@ const items: { name: string; description: string }[] = [
 ];
 
 const thisYr: { name: string; description: string }[] = [
-  {
+  { 
     name: "Ms. Swastika Mukherjee",
     description: "Celebrated Indian Actor, known for her work in Bengali and Hindi films and television.",
   },
