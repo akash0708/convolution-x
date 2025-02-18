@@ -28,7 +28,7 @@ interface UserStore {
 
 export const useUserStore = create<UserStore>((set, get) => ({
   user: null,
-  closed:['sparkhack', 'frames', 'algomaniac'],
+  closed:['sparkhack', 'frames', 'algomaniac', 'decisia', 'circuistics', 'aboltabol'],
   notifications: [],
   teams: [],
   isLogged: false,

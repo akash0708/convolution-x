@@ -78,8 +78,8 @@ const Pannels = () => {
       <h2 className="sm:text-5xl text-2xl font-medium text-[#552614]  mb-8 text-center ">
           Current Edition Panelists
         </h2>
-        <p className="text-center sm:text-2xl text-lg  text-[#552614]/90">To be declared soon ...</p>
-        {/* <div className="sm:flex flex-wrap gap-2 grid justify-center grid-cols-2 sm:gap-4">
+        {/* <p className="text-center sm:text-2xl text-lg  text-[#552614]/90">To be declared soon ...</p> */}
+        <div className="sm:flex flex-wrap gap-2 grid justify-center grid-cols-2 sm:gap-4">
           {thisYr.map((item, index) => {
             return (
               <div
@@ -99,7 +99,7 @@ const Pannels = () => {
               </div>
             );
           })}
-        </div> */}
+        </div>
         
 
         {/* ----------------------prev yrs-------------------------------- */}
