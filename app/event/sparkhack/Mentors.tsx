@@ -43,7 +43,7 @@ const professors: Professor[] = [
   {
     name: "Narendra Nath Chatterjee",
     profession:
-      "Android Developer at Stockgro, Finance Expert.",
+      "Android Developer at Stockgro",
     researchPoint: "https://www.linkedin.com/in/narendra-nath-chatterjee-8a7651133/",
     img: "newJudge.jpg", // Replace with the actual image path or import
   },
