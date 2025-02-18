@@ -3,7 +3,8 @@ import React from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
 import { Protest_Riot } from "next/font/google";
-
+import sd from '@/assets/images/Decisia/sd.png'
+import partha from '@/assets/images/Decisia/partha.png'
 const protestRiot = Protest_Riot({
   subsets: ["latin"], 
   weight: "400", 
@@ -19,6 +20,20 @@ const professors: Professor[] = [
   
  
 ];
+
+const thisYr: { name: string; description: string }[] = [
+  { 
+    name: "Prof. Partha Priya Datta",
+    description: "Professor at IIM Calcutta.",
+  },
+  {
+    name: "Mr. Shibasis Dutt",
+    description: "Managing Director at Nouvelle Automations Pvt. Ltd.",
+  },
+  
+  
+];
+const pics2 = [partha,sd];
 
 const Judges = () => {
   return (
@@ -37,16 +52,37 @@ const Judges = () => {
         alt="trees"
       /> */}
       <div className="maxWidthForSections">
-        <h2 className="text-3xl sm:text-5xl font-medium text-white text-shadow-dark text-center ">
+        <h2 className="text-3xl sm:text-5xl font-medium text-white text-shadow-dark text-center mb-8">
           Judges
         </h2>
-        <p className="opacity-80 text-white text-center mt-2 text-base sm:text-xl font-medium">
+        {/* <p className="opacity-80 text-white text-center mt-2 text-base sm:text-xl font-medium">
           Meet the Judges of Decisia!
-        </p>
+        </p> */}
+        <div className="sm:flex flex-wrap gap-2 grid justify-center grid-cols-2 sm:gap-4">
+                  {thisYr.map((item, index) => {
+                    return (
+                      <div
+                        key={item.name}
+                        className="flex flex-col sm:gap-y-2 gap-y-1 items-center font-sans sm:px-4 sm:py-8 px-2 py-6 text-[#fff] bg-[#ffff]/20 shadow-sm shadow-black/20 backdrop:blur-sm sm:w-[250px] w-auto rounded-2xl"
+                      >
+                        <div className="overflow-hidden flex items-center rounded-full size-32 ">
+                          <Image src={pics2[index]} alt="kaku" className=""></Image>
+                        </div>
+        
+                        <h1 className="sm:text-lg text-sm text-center font-semibold">
+                          {item.name}{" "}
+                        </h1>
+                        <p className="text-center sm:text-base text-xs">
+                          {item.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
 
         <div className="mx-auto flex justify-center mt-6">
           {/* ------------------mentor names---------------- */}
-          <div
+          {/* <div
             className={`font-sans flex justify-center flex-col sm:flex-row gap-2 md:gap-x-12`}
           >
             {professors.length>0 && professors.map((professor, index) => (
@@ -77,7 +113,7 @@ const Judges = () => {
             {professors.length==0 && (
               <p className={`text-white text-xl ${protestRiot.className}`} >To be declared soon ...</p>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
