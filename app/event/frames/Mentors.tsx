@@ -19,6 +19,22 @@ const professors: Professor[] = [
   },
   
 ];
+const prelimJudges: Professor[] = [  
+    {
+      name: "Souvik Saha",
+      profession:
+        " Student, Power Engineering UG4, Jadavpur University",
+      researchPoint: "https://souviksahaphotography.vercel.app/",
+      img: "souvik.png", // Replace with the actual image path or import
+    },  
+    {
+      name: "Munjarita Mondal",
+      profession:
+        "Scholar, Jawaharlal Nehru University.",
+      researchPoint: "https://www.instagram.com/anxiet_rex/",
+      img: "judge2.png", // Replace with the actual image path or import
+    },
+]
 
 const Mentors = () => {
   return (
@@ -69,6 +85,42 @@ const Mentors = () => {
               </div>
             ))}
           </div>
+
+        </div>
+        {/* <h2 className="text-3xl sm:text-5xl font-medium text-black text-center mt-8">
+          Judges for the Prelims
+        </h2> */}
+        <div className="mx-auto flex justify-center ">
+
+          <div
+            className={`font-sans grid  sm:grid-cols-2 grid-cols-1 gap-2 md:gap-x-12 mt-4`}
+          >
+            {prelimJudges.map((professor, index) => (
+              <div
+                key={index}
+                className="rounded-xl bg-white/20 shadow-black/20 shadow-md backdrop-blur-sm flex  py-6 px-4 items-center gap-x-4  sm:max-w-[500px] "
+              >
+                <Image
+                  src={`/MentorJudges/` + professor.img}
+                  alt={`${professor.name} image`}
+                  className="size-20 sm:size-28 rounded-full shadow-white shadow sm"
+                  width={112} // Adjust width
+                  height={112} // Adjust height
+                />
+                <div className="">
+                  <div className="flex items-center gap-2">
+                    <h2 className="font-semibold sm:text-base text-sm  ">
+                      {professor.name}
+                    </h2>
+                    <Link target="_blank" href={professor.researchPoint} className="">
+                      <FaInfoCircle />
+                    </Link>
+                  </div>
+                  <p className="text-xs sm:text-sm ">{professor.profession}</p>
+                </div>
+              </div>
+            ))}
+          </div>  
         </div>
       </div>
     </div>
